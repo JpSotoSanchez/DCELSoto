@@ -727,6 +727,7 @@ def reconstruir_topologia(aristas):
         a.siguiente = siguiente
         siguiente.anterior = a
 
+
 def procesar_interseccion(
     vertice_x: NodoVertice,
     aristas_intersecadas: List[NodoArista],
@@ -1175,7 +1176,7 @@ def dibujarCara(cara, subPlot, color, rellenar=False, label=None):
 fig = plt.figure()
 ax  = fig.add_subplot()
 
-listaLayers = ["layer01", "layer03", "layer04", "layer02", "layer05"]
+listaLayers = ["layer05"]
 colores = coloresPorLayer(listaLayers)
 
 # Variables globales para albergar el universo DCEL total
@@ -1440,11 +1441,62 @@ for punto, segs in R_ordenado:
 
 # ── Unificar vértices compartidos entre layers y reconstruir ─────────────────
 print("\n[DEBUG] Unificando vértices compartidos entre layers...")
+def merge_collinear_edges(lista_aristas, lista_caras):
+    """
+    Fusiona aristas duplicadas que comparten mismos vértices origen y destino.
+    Elimina los ciclos degenerados de área cero.
+    """
+    print("[DEBUG] Iniciando fusión de aristas colineales duplicadas...")
+    grupos = defaultdict(list)
+    for a in lista_aristas:
+        # Usar nombres de vértices (hashables) como clave
+        start_name = a.verticeOriginal.nombre
+        end_name = a.pareja.verticeOriginal.nombre
+        grupos[(start_name, end_name)].append(a)
+
+    duplicados = {k: v for k, v in grupos.items() if len(v) > 1}
+    if not duplicados:
+        print("[DEBUG] No se encontraron aristas duplicadas para fusionar.")
+        return
+
+    for (start_name, end_name), aristas in duplicados.items():
+        representante = aristas[0]
+        # Ajustar las aristas duplicadas que serán eliminadas
+        for dup in aristas[1:]:
+            # Quitar dup de la cadena de su cara (anterior/siguiente)
+            if dup.anterior:
+                dup.anterior.siguiente = dup.siguiente
+            if dup.siguiente:
+                dup.siguiente.anterior = dup.anterior
+            # Actualizar la pareja de dup para que apunte al representante
+            twin = dup.pareja
+            if twin:
+                twin.pareja = representante
+            # Reemplazar en las aristas internas de las caras si aparece
+            for c in lista_caras:
+                if dup in c.aristasInternos:
+                    idx = c.aristasInternos.index(dup)
+                    c.aristasInternos[idx] = representante
+        # Eliminar las aristas duplicadas de la lista global
+        lista_aristas[:] = [a for a in lista_aristas if a not in aristas[1:]]
+        print(f"[DEBUG] Fusionadas {len(aristas)-1} duplicadas de ({start_name} -> {end_name})")
+
+    # Después de fusionar, reconstruir caras para limpiar ciclos degenerados
+    rearmar_caras(lista_aristas, lista_caras)
+
+# ── Llamada a la función justo después de la unificación de vértices ─────
+# ── Unificar vértices compartidos entre layers y fusionar aristas duplicadas ─
+print("\n[DEBUG] Unificando vértices compartidos entre layers...")
 unificar_vertices_coincidentes(todosLosVertices, todasLasAristas)
+
+# Fusionar aristas colineales duplicadas (ciclos degenerados de área 0)
+merge_collinear_edges(todasLasAristas, todasLasCaras)
+
+# Reconstruir topología y volver a calcular caras
 reconstruir_topologia(todasLasAristas)
 rearmar_caras(todasLasAristas, todasLasCaras)
-print(f"[DEBUG] Topología final: {len(todasLasAristas)} aristas, {len(todasLasCaras)} caras.")
 
+print(f"[DEBUG] Topología final: {len(todasLasAristas)} aristas, {len(todasLasCaras)} caras.")
 # ══════════════════════════════════════════════════════════════════════════════
 # RENOMBRADO FINAL DE LA DCEL
 # ══════════════════════════════════════════════════════════════════════════════

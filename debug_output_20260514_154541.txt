@@ -1,0 +1,29 @@
+[DEBUG] Evento en y=10.0000, x=0.0000  |U|=1 |L|=0 |C|=0
+[DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=1 |C|=0
+
+[DEBUG] Intersecciones encontradas por la línea de barrido:
+[DEBUG] Total: 0
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Procesando intersecciones como nuevos vértices ===
+
+[DEBUG] Unificando vértices compartidos entre layers...
+
+[DEBUG] Unificando vértices compartidos entre layers...
+[DEBUG] Iniciando fusión de aristas colineales duplicadas...
+[DEBUG] No se encontraron aristas duplicadas para fusionar.
+
+[DEBUG] --- Recalculando caras (total aristas: 2) ---
+[DEBUG]   No se detectaron ciclos.
+[DEBUG] Topología final: 2 aristas, 0 caras.
+
+[DEBUG] Renombrando todos los elementos de la DCEL...
+[DEBUG] [renombrar_dcel] 2 vértices, 2 aristas, 0 caras renombrados correctamente.
+
+Exportando nuevos archivos .vertices y .aristas...
+Archivos 'resultado.vertices' y 'resultado.aristas' generados exitosamente.
+
+Exportando nuevos archivos .caras y .activos...
+Archivos generados exitosamente.
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
