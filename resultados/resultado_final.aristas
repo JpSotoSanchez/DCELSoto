@@ -1,0 +1,24 @@
+Archivo de aristas
+#########################################################################
+Nombre                   Origen              Pareja                   Cara                Sigue                    Antes                    
+#########################################################################
+s31_layer03              p3_layer03          s32_layer03              CARA_UNBOUNDED      s11_layer03_P_V_0.000_10.000s21_layer03_PP_V_0.000_10.000
+s32_layer03              p1_layer03          s31_layer03              CARA_RECONSTRUIDA_1 s22_layer03_P_V_0.000_10.000s12_layer03_PP_V_0.000_10.000
+s41_layer04              p4_layer04          s42_layer04              CARA_RECONSTRUIDA_1 s51_layer04_P_V_2.000_5.000s61_layer04_PP_V_2.000_5.000
+s42_layer04              p5_layer04          s41_layer04              CARA_RECONSTRUIDA_2 s62_layer04_P_V_2.000_5.000s52_layer04_PP_V_2.000_5.000
+s21_layer03_P_V_0.000_10.000p2_layer03          s22_layer03_PP_V_0.000_10.000CARA_UNBOUNDED      s11_layer03_PP_V_0.000_10.000s11_layer03_PP_V_0.000_10.000
+s21_layer03_PP_V_0.000_10.000V_0.000_10.000      s22_layer03_P_V_0.000_10.000CARA_UNBOUNDED      s31_layer03              s12_layer03_P_V_0.000_10.000
+s22_layer03_P_V_0.000_10.000p3_layer03          s21_layer03_PP_V_0.000_10.000CARA_RECONSTRUIDA_1 s12_layer03_PP_V_0.000_10.000s32_layer03              
+s22_layer03_PP_V_0.000_10.000V_0.000_10.000      s21_layer03_P_V_0.000_10.000CARA_UNBOUNDED      s12_layer03_P_V_0.000_10.000s11_layer03_P_V_0.000_10.000
+s11_layer03_P_V_0.000_10.000p1_layer03          s12_layer03_PP_V_0.000_10.000CARA_UNBOUNDED      s22_layer03_PP_V_0.000_10.000s31_layer03              
+s11_layer03_PP_V_0.000_10.000V_0.000_10.000      s12_layer03_P_V_0.000_10.000CARA_UNBOUNDED      s21_layer03_P_V_0.000_10.000s21_layer03_P_V_0.000_10.000
+s12_layer03_P_V_0.000_10.000p2_layer03          s11_layer03_PP_V_0.000_10.000CARA_UNBOUNDED      s21_layer03_PP_V_0.000_10.000s22_layer03_PP_V_0.000_10.000
+s12_layer03_PP_V_0.000_10.000V_0.000_10.000      s11_layer03_P_V_0.000_10.000CARA_RECONSTRUIDA_1 s32_layer03              s22_layer03_P_V_0.000_10.000
+s51_layer04_P_V_2.000_5.000p5_layer04          s52_layer04_PP_V_2.000_5.000CARA_RECONSTRUIDA_1 s61_layer04_PP_V_2.000_5.000s41_layer04              
+s51_layer04_PP_V_2.000_5.000V_2.000_5.000       s52_layer04_P_V_2.000_5.000CARA_RECONSTRUIDA_2 s61_layer04_P_V_2.000_5.000s62_layer04_P_V_2.000_5.000
+s52_layer04_P_V_2.000_5.000p6_layer04          s51_layer04_PP_V_2.000_5.000CARA_RECONSTRUIDA_1 s62_layer04_PP_V_2.000_5.000s62_layer04_PP_V_2.000_5.000
+s52_layer04_PP_V_2.000_5.000V_2.000_5.000       s51_layer04_P_V_2.000_5.000CARA_RECONSTRUIDA_2 s42_layer04              s61_layer04_P_V_2.000_5.000
+s61_layer04_P_V_2.000_5.000p6_layer04          s62_layer04_PP_V_2.000_5.000CARA_RECONSTRUIDA_2 s52_layer04_PP_V_2.000_5.000s51_layer04_PP_V_2.000_5.000
+s61_layer04_PP_V_2.000_5.000V_2.000_5.000       s62_layer04_P_V_2.000_5.000CARA_RECONSTRUIDA_1 s41_layer04              s51_layer04_P_V_2.000_5.000
+s62_layer04_P_V_2.000_5.000p4_layer04          s61_layer04_PP_V_2.000_5.000CARA_RECONSTRUIDA_2 s51_layer04_PP_V_2.000_5.000s42_layer04              
+s62_layer04_PP_V_2.000_5.000V_2.000_5.000       s61_layer04_P_V_2.000_5.000CARA_RECONSTRUIDA_1 s52_layer04_P_V_2.000_5.000s52_layer04_P_V_2.000_5.000

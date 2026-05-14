@@ -1,0 +1,7 @@
+Archivo de caras
+#######################################################
+Nombre                   Interno                            Externo             
+#######################################################
+CARA_UNBOUNDED           [s31_layer03,s21_layer03_P_V_0.000_10.000]None                
+CARA_RECONSTRUIDA_1      [s41_layer04,s52_layer04_P_V_2.000_5.000]s32_layer03         
+CARA_RECONSTRUIDA_2      None                               s42_layer04         

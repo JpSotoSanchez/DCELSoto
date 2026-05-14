@@ -1,0 +1,18 @@
+Archivo de vértices
+#################################
+Nombre         x         y         Incidente      
+#################################
+p1_layer03     0         0         s11_layer03    
+p2_layer03     0         10        s21_layer03    
+p3_layer03     8         5         s31_layer03    
+p4_layer04     10        10        s41_layer04    
+p5_layer04     10        0         s51_layer04    
+p6_layer04     2         5         s61_layer04    
+V_0.000_10.000 0         10        s22_layer03_PP_V_0.000_10.000
+V_2.000_5.000  2         5         s61_layer04_PP_V_2.000_5.000
+V_0.000_0.000  0         0         None           
+V_8.000_5.000  8         5         None           
+V_10.000_0.000 10        0         None           
+V_10.000_10.00010        10        None           
+V_5.000_6.875  5         6.875     None           
+V_5.000_3.125  5         3.125     None           
