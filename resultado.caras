@@ -2,9 +2,23 @@ Archivo de caras
 #######################
 Nombre   Interno              Externo
 #######################
-CARA2    None                 A1
-CARA3    None                 A1_T
-CARA4    None                 A5
-CARA5    None                 A5_T
-CARA1    None                 A8
-CARA6    None                 A8_T
+CARA2    [A40]                A1
+CARA1    None                 A1_T
+CARA3    None                 A2
+CARA4    None                 A3
+CARA5    [A3]                 A3_T
+CARA6    None                 A4
+CARA7    [A4,A27,A47]         A4_T
+CARA8    [A10]                A5
+CARA9    None                 A10
+CARA10   None                 A12
+CARA11   [A26]                A11_T
+CARA12   None                 A13
+CARA13   [A24,A25]            A16
+CARA14   None                 A24
+CARA15   None                 A25
+CARA16   None                 A26
+CARA17   None                 A27
+CARA18   None                 A38
+CARA19   None                 A40
+CARA20   None                 A47

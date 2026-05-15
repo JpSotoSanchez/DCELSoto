@@ -1,0 +1,512 @@
+[DEBUG] Evento en y=11.0000, x=9.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=10.5000, x=13.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=10.0000, x=0.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=10.0000, x=10.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=9.0000, x=3.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=4.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=9.0000, x=10.0000  |U|=2 |L|=2 |C|=0
+[DEBUG] Evento en y=9.0000, x=12.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.0000, x=2.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=8.0000, x=4.0000  |U|=2 |L|=2 |C|=0
+[DEBUG] Evento en y=8.0000, x=5.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.0000, x=13.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=7.9065, x=12.7290  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=7.0000, x=10.1000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=6.0000, x=14.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=3.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=5.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=4.0000, x=8.0000  |U|=2 |L|=0 |C|=1
+[DEBUG] Evento en y=3.0000, x=4.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=3.0000, x=8.0000  |U|=2 |L|=2 |C|=1
+[DEBUG] Evento en y=3.0000, x=10.0000  |U|=3 |L|=3 |C|=0
+[DEBUG] Evento en y=3.0000, x=12.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=2.0000, x=2.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=2.0000, x=8.0000  |U|=0 |L|=4 |C|=0
+[DEBUG] Evento en y=0.0000, x=0.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=2 |C|=0
+
+[DEBUG] Intersecciones encontradas por la línea de barrido:
+  Punto(x=8.0, y=3.0) → ['p1soto']
+  Punto(x=8.0, y=3.0) → ['p2soto', 'j1layer05']
+  Punto(x=8.0, y=3.0) → ['h3soto', 'j1layer05', 'p1soto', 'h2soto', 'p2soto']
+  Punto(x=12.0, y=3.0) → ['p3soto']
+  Punto(x=10.0, y=3.0) → ['e2soto', 'k1layer05', 'p2soto', 'l1layer05', 'e3soto', 'p3soto']
+  Punto(x=12.0, y=3.0) → ['p4soto', 'p3soto']
+  Punto(x=14.0, y=6.0) → ['p5soto', 'p4soto']
+  Punto(x=10.0, y=9.0) → ['p6soto']
+  Punto(x=4.0, y=8.0) → ['h4soto']
+  Punto(x=8.0, y=8.0) → ['h4soto']
+  Punto(x=5.0, y=5.0) → ['g1layer05']
+  Punto(x=2.0, y=2.0) → ['h1soto', 'h6soto']
+  Punto(x=10.0, y=3.0) → ['p3soto']
+  Punto(x=0.0, y=10.0) → ['e5soto', 'e6soto']
+  Punto(x=8.0, y=3.0) → ['h3soto', 'p1soto']
+  Punto(x=0.0, y=0.0) → ['e1soto', 'e6soto']
+  Punto(x=8.0, y=9.0) → ['p7soto', 'm1layer05']
+  Punto(x=8.0, y=8.0) → ['h3soto', 'h4soto']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+  Punto(x=4.0, y=9.0) → ['p7soto']
+  Punto(x=0.0, y=0.0) → ['e1soto']
+  Punto(x=4.0, y=3.0) → ['p9soto', 'p1soto']
+  Punto(x=10.0, y=3.0) → ['p2soto', 'e3soto']
+  Punto(x=2.0, y=8.0) → ['h5soto']
+  Punto(x=3.0, y=5.0) → ['g1layer05']
+  Punto(x=10.0, y=9.0) → ['p7soto']
+  Punto(x=10.0, y=10.0) → ['e5soto', 'e4soto']
+  Punto(x=12.0, y=9.0) → ['p6soto']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'i1layer05']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'h2soto']
+  Punto(x=10.1, y=7.0) → ['p1layer05', 'n1layer05']
+  Punto(x=13.0, y=8.0) → ['p1layer05', 'q1layer05']
+  Punto(x=8.0, y=3.0) → ['j1layer05', 'p1soto']
+  Punto(x=8.0, y=4.0) → ['h3soto', 'l1layer05', 'j1layer05']
+  Punto(x=0.0, y=10.0) → ['e5soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'p9soto']
+  Punto(x=4.0, y=3.0) → ['p1soto']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'j1layer05']
+  Punto(x=10.0, y=10.0) → ['e5soto']
+  Punto(x=10.0, y=9.0) → ['p7soto', 'e3soto', 'p6soto', 'e4soto']
+  Punto(x=10.0, y=9.0) → ['e3soto', 'p6soto']
+  Punto(x=10.0, y=9.0) → ['p7soto', 'e4soto']
+  Punto(x=8.5, y=10.0) → ['e5soto', 'm1layer05']
+  Punto(x=8.0, y=3.0) → ['p2soto', 'h2soto']
+  Punto(x=3.0, y=8.0) → ['f1layer05', 'h5soto']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 'g1layer05']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'j1layer05', 'k1layer05', 'h2soto']
+  Punto(x=10.0, y=3.0) → ['p2soto']
+  Punto(x=12.728971962616823, y=7.906542056074766) → ['p1layer05', 'p5soto']
+  Punto(x=12.0, y=9.0) → ['p5soto', 'p6soto']
+  Punto(x=5.0, y=8.0) → ['h4soto', 'i1layer05']
+  Punto(x=2.0, y=8.0) → ['h6soto', 'h5soto']
+  Punto(x=4.0, y=5.0) → ['g1layer05', 'p9soto']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=10.0, y=-0.0) → ['e2soto', 'e1soto']
+  Punto(x=4.0, y=8.0) → ['p8soto', 'h5soto']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'k1layer05']
+  Punto(x=4.0, y=8.0) → ['h5soto']
+  Punto(x=10.0, y=3.0) → ['e2soto', 'p3soto']
+  Punto(x=2.0, y=2.0) → ['h1soto']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=4.0, y=9.0) → ['p7soto', 'p8soto']
+  Punto(x=8.0, y=9.0) → ['n1layer05', 'm1layer05']
+  Punto(x=10.0, y=0.0) → ['e1soto']
+  Punto(x=8.0, y=3.0) → ['p2soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'p8soto', 'p9soto', 'h5soto']
+  Punto(x=8.0, y=2.0) → ['h1soto']
+[DEBUG] Total: 68
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===
+
+[DEBUG] Total de intersecciones después de fuerza bruta: 33
+  Punto(x=8.0, y=3.0) → ['h3soto', 'j1layer05', 'p1soto', 'h2soto', 'p2soto']
+  Punto(x=10.0, y=3.0) → ['e2soto', 'k1layer05', 'p2soto', 'l1layer05', 'e3soto', 'p3soto']
+  Punto(x=12.0, y=3.0) → ['p4soto', 'p3soto']
+  Punto(x=14.0, y=6.0) → ['p5soto', 'p4soto']
+  Punto(x=2.0, y=2.0) → ['h1soto', 'h6soto']
+  Punto(x=0.0, y=10.0) → ['e5soto', 'e6soto']
+  Punto(x=0.0, y=0.0) → ['e1soto', 'e6soto']
+  Punto(x=8.0, y=8.0) → ['h3soto', 'h4soto']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+  Punto(x=4.0, y=3.0) → ['p9soto', 'p1soto']
+  Punto(x=10.0, y=10.0) → ['e5soto', 'e4soto']
+  Punto(x=8.0, y=9.0) → ['p7soto', 'n1layer05', 'm1layer05']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=10.1, y=7.0) → ['p1layer05', 'n1layer05']
+  Punto(x=13.0, y=8.0) → ['p1layer05', 'q1layer05']
+  Punto(x=12.728971963, y=7.906542056) → ['p1layer05', 'p5soto']
+  Punto(x=8.0, y=4.0) → ['h3soto', 'l1layer05', 'j1layer05']
+  Punto(x=10.0, y=9.0) → ['p7soto', 'e3soto', 'p6soto', 'e4soto']
+  Punto(x=8.5, y=10.0) → ['e5soto', 'm1layer05']
+  Punto(x=3.0, y=8.0) → ['f1layer05', 'h5soto']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 'g1layer05']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'j1layer05', 'k1layer05', 'h2soto']
+  Punto(x=12.0, y=9.0) → ['p5soto', 'p6soto']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'h4soto', 'i1layer05']
+  Punto(x=4.0, y=8.5) → ['p8soto', 'i1layer05']
+  Punto(x=2.0, y=8.0) → ['h6soto', 'h5soto']
+  Punto(x=4.0, y=5.0) → ['g1layer05', 'p9soto']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=10.0, y=-0.0) → ['e2soto', 'e1soto']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=4.0, y=9.0) → ['p7soto', 'p8soto']
+  Punto(x=10.0, y=7.095238095) → ['n1layer05', 'e3soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'p8soto', 'p9soto', 'h5soto']
+Intersecciones completas guardadas en 'intersecciones_completas.txt'
+
+[DEBUG] === Procesando intersecciones como nuevos vértices ===
+[DEBUG]   Intersección en Punto(x=9.0, y=11.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=13.0, y=10.5) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=0.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.5, y=10.0): e5soto será dividida (d1=1.5000, d2=8.5000)
+[DEBUG]   Intersección en Punto(x=8.5, y=10.0): m1layer05 será dividida (d1=1.1180, d2=1.1180)
+
+[DEBUG] >> Creando vértice V_INT_1 en Punto(x=8.5, y=10.0)
+
+[DEBUG] === Nueva intersección: vértice V_INT_1 en Punto(x=8.5, y=10.0) ===
+[DEBUG] Aristas a dividir: ['e5soto', 'm1layer05']
+[DEBUG]   Creando semi-aristas para e5soto:
+          e5soto_P  (V3soto -> V_INT_1)
+          e5soto_PP (V_INT_1 -> V4soto)
+          e5_psoto_P (V4soto -> V_INT_1)
+          e5_psoto_PP (V_INT_1 -> V3soto)
+[DEBUG]   Creando semi-aristas para m1layer05:
+          m1layer05_P  (Ilayer05 -> V_INT_1)
+          m1layer05_PP (V_INT_1 -> Hlayer05)
+          m2layer05_P (Hlayer05 -> V_INT_1)
+          m2layer05_PP (V_INT_1 -> Ilayer05)
+[DEBUG] Aristas salientes de V_INT_1 ordenadas:
+          m2layer05_PP -> Ilayer05, ángulo=-116.57°
+          e5_psoto_PP -> V3soto, ángulo=0.00°
+          m1layer05_PP -> Hlayer05, ángulo=63.43°
+          e5soto_PP -> V4soto, ángulo=180.00°
+[DEBUG]   Enlace: m1layer05_P.siguiente = e5_psoto_PP
+[DEBUG]   Enlace: e5soto_P.siguiente = m1layer05_PP
+[DEBUG]   Enlace: m2layer05_P.siguiente = e5soto_PP
+[DEBUG]   Enlace: e5_psoto_P.siguiente = m2layer05_PP
+[DEBUG] V_INT_1.aristaAdyacente = m2layer05_PP
+[DEBUG] Aristas totales actuales: 70
+
+[DEBUG] --- Recalculando caras (total aristas: 70) ---
+[DEBUG]   Ciclo detectado: 35 aristas, área=70.0000, comienza en e1soto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-18.0000, comienza en e3soto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en e3_psoto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en h1_psoto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en h3_psoto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-7.0000, comienza en f1layer05
+[DEBUG]   Ciclo detectado: 4 aristas, área=7.0000, comienza en f2layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
+[DEBUG]   Cara infinita: ciclo con área=70.0000
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA5', 'CARA6', 'CARA7', 'CARA8', 'CARA9']
+[DEBUG]   Hueco detectado: CARA8 dentro de CARA3
+[DEBUG]   Hueco detectado: CARA9 dentro de CARA3
+[DEBUG]   Hueco detectado: CARA4 dentro de CARA5
+[DEBUG]   Hueco detectado: CARA6 dentro de CARA5
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA5
+[DEBUG] Caras después de procesar intersección: 9
+        CARA1     externo: e1soto      inactiva
+        CARA2     externo: e3soto      ACTIVA
+        CARA3     externo: e3_psoto    ACTIVA
+        CARA4     externo: h1_psoto    ACTIVA
+        CARA5     externo: h3_psoto    ACTIVA
+        CARA6     externo: f1layer05   ACTIVA
+        CARA7     externo: f2layer05   ACTIVA
+        CARA8     externo: l1layer05   ACTIVA
+        CARA9     externo: l2layer05   ACTIVA
+[DEBUG]   Intersección en Punto(x=10.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=9.0): p7soto será dividida (d1=2.0000, d2=4.0000)
+[DEBUG]   Intersección en Punto(x=8.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=12.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=8.5): p8soto será dividida (d1=0.5000, d2=0.5000)
+[DEBUG]   Intersección en Punto(x=4.0, y=8.5): i1layer05 será dividida (d1=1.1180, d2=1.1180)
+
+[DEBUG] >> Creando vértice V_INT_2 en Punto(x=4.0, y=8.5)
+
+[DEBUG] === Nueva intersección: vértice V_INT_2 en Punto(x=4.0, y=8.5) ===
+[DEBUG] Aristas a dividir: ['p8soto', 'i1layer05']
+[DEBUG]   Creando semi-aristas para p8soto:
+          p8soto_P  (V13soto -> V_INT_2)
+          p8soto_PP (V_INT_2 -> I2soto)
+          p8_psoto_P (I2soto -> V_INT_2)
+          p8_psoto_PP (V_INT_2 -> V13soto)
+[DEBUG]   Creando semi-aristas para i1layer05:
+          i1layer05_P  (Dlayer05 -> V_INT_2)
+          i1layer05_PP (V_INT_2 -> Clayer05)
+          i2layer05_P (Clayer05 -> V_INT_2)
+          i2layer05_PP (V_INT_2 -> Dlayer05)
+[DEBUG] Aristas salientes de V_INT_2 ordenadas:
+          p8soto_PP -> I2soto, ángulo=-90.00°
+          i1layer05_PP -> Clayer05, ángulo=-26.57°
+          p8_psoto_PP -> V13soto, ángulo=90.00°
+          i2layer05_PP -> Dlayer05, ángulo=153.43°
+[DEBUG]   Enlace: p8_psoto_P.siguiente = i1layer05_PP
+[DEBUG]   Enlace: i2layer05_P.siguiente = p8_psoto_PP
+[DEBUG]   Enlace: p8soto_P.siguiente = i2layer05_PP
+[DEBUG]   Enlace: i1layer05_P.siguiente = p8soto_PP
+[DEBUG] V_INT_2.aristaAdyacente = p8soto_PP
+[DEBUG] Aristas totales actuales: 74
+
+[DEBUG] --- Recalculando caras (total aristas: 74) ---
+[DEBUG]   Ciclo detectado: 53 aristas, área=54.0000, comienza en e1soto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-18.0000, comienza en e3soto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en h1_psoto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en h3_psoto
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
+[DEBUG]   Cara infinita: ciclo con área=54.0000
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA5', 'CARA6']
+[DEBUG]   Hueco detectado: CARA3 dentro de CARA4
+[DEBUG] Caras después de procesar intersección: 6
+        CARA1     externo: e1soto      inactiva
+        CARA2     externo: e3soto      ACTIVA
+        CARA3     externo: h1_psoto    ACTIVA
+        CARA4     externo: h3_psoto    ACTIVA
+        CARA5     externo: l1layer05   ACTIVA
+        CARA6     externo: l2layer05   ACTIVA
+[DEBUG]   Intersección en Punto(x=2.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=8.0): f1layer05 será dividida (d1=3.0000, d2=1.0000)
+[DEBUG]   Intersección en Punto(x=3.0, y=8.0): h5soto será dividida (d1=1.0000, d2=1.0000)
+
+[DEBUG] >> Creando vértice V_INT_3 en Punto(x=3.0, y=8.0)
+
+[DEBUG] === Nueva intersección: vértice V_INT_3 en Punto(x=3.0, y=8.0) ===
+[DEBUG] Aristas a dividir: ['f1layer05', 'h5soto']
+[DEBUG]   Creando semi-aristas para f1layer05:
+          f1layer05_P  (Alayer05 -> V_INT_3)
+          f1layer05_PP (V_INT_3 -> Dlayer05)
+          f2layer05_P (Dlayer05 -> V_INT_3)
+          f2layer05_PP (V_INT_3 -> Alayer05)
+[DEBUG]   Creando semi-aristas para h5soto:
+          h5soto_P  (I2soto -> V_INT_3)
+          h5soto_PP (V_INT_3 -> V6soto)
+          h5_psoto_P (V6soto -> V_INT_3)
+          h5_psoto_PP (V_INT_3 -> I2soto)
+[DEBUG] Aristas salientes de V_INT_3 ordenadas:
+          f2layer05_PP -> Alayer05, ángulo=-90.00°
+          h5_psoto_PP -> I2soto, ángulo=0.00°
+          f1layer05_PP -> Dlayer05, ángulo=90.00°
+          h5soto_PP -> V6soto, ángulo=180.00°
+[DEBUG]   Enlace: f1layer05_P.siguiente = h5_psoto_PP
+[DEBUG]   Enlace: h5soto_P.siguiente = f1layer05_PP
+[DEBUG]   Enlace: f2layer05_P.siguiente = h5soto_PP
+[DEBUG]   Enlace: h5_psoto_P.siguiente = f2layer05_PP
+[DEBUG] V_INT_3.aristaAdyacente = f2layer05_PP
+[DEBUG] Aristas totales actuales: 78
+
+[DEBUG] --- Recalculando caras (total aristas: 78) ---
+[DEBUG]   Ciclo detectado: 37 aristas, área=70.7500, comienza en e1soto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-18.0000, comienza en e3soto
+[DEBUG]   Ciclo detectado: 22 aristas, área=-32.0000, comienza en e3_psoto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en h3_psoto
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
+[DEBUG]   Ciclo detectado: 4 aristas, área=-0.7500, comienza en i1layer05_P
+[DEBUG]   Cara infinita: ciclo con área=70.7500
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA5', 'CARA6', 'CARA7']
+[DEBUG]   Hueco detectado: CARA5 dentro de CARA3
+[DEBUG]   Hueco detectado: CARA6 dentro de CARA3
+[DEBUG] Caras después de procesar intersección: 7
+        CARA1     externo: e1soto      inactiva
+        CARA2     externo: e3soto      ACTIVA
+        CARA3     externo: e3_psoto    ACTIVA
+        CARA4     externo: h3_psoto    ACTIVA
+        CARA5     externo: l1layer05   ACTIVA
+        CARA6     externo: l2layer05   ACTIVA
+        CARA7     externo: i1layer05_P  ACTIVA
+[DEBUG]   Intersección en Punto(x=4.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=5.0, y=8.0): h4soto será dividida (d1=3.0000, d2=1.0000)
+[DEBUG]   Intersección en Punto(x=5.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=13.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=12.728971963, y=7.906542056): p1layer05 será dividida (d1=0.2867, d2=2.7809)
+[DEBUG]   Intersección en Punto(x=12.728971963, y=7.906542056): p5soto será dividida (d1=2.2914, d2=1.3142)
+
+[DEBUG] >> Creando vértice V_INT_4 en Punto(x=12.728971963, y=7.906542056)
+
+[DEBUG] === Nueva intersección: vértice V_INT_4 en Punto(x=12.728971963, y=7.906542056) ===
+[DEBUG] Aristas a dividir: ['p1layer05', 'p5soto']
+[DEBUG]   Creando semi-aristas para p1layer05:
+          p1layer05_P  (Klayer05 -> V_INT_4)
+          p1layer05_PP (V_INT_4 -> Jlayer05)
+          p2layer05_P (Jlayer05 -> V_INT_4)
+          p2layer05_PP (V_INT_4 -> Klayer05)
+[DEBUG]   Creando semi-aristas para p5soto:
+          p5soto_P  (V11soto -> V_INT_4)
+          p5soto_PP (V_INT_4 -> V12soto)
+          p5_psoto_P (V12soto -> V_INT_4)
+          p5_psoto_PP (V_INT_4 -> V11soto)
+[DEBUG] Aristas salientes de V_INT_4 ordenadas:
+          p1layer05_PP -> Jlayer05, ángulo=-160.97°
+          p5_psoto_PP -> V11soto, ángulo=-56.31°
+          p2layer05_PP -> Klayer05, ángulo=19.03°
+          p5soto_PP -> V12soto, ángulo=123.69°
+[DEBUG]   Enlace: p2layer05_P.siguiente = p5_psoto_PP
+[DEBUG]   Enlace: p5soto_P.siguiente = p2layer05_PP
+[DEBUG]   Enlace: p1layer05_P.siguiente = p5soto_PP
+[DEBUG]   Enlace: p5_psoto_P.siguiente = p1layer05_PP
+[DEBUG] V_INT_4.aristaAdyacente = p1layer05_PP
+[DEBUG] Aristas totales actuales: 82
+
+[DEBUG] --- Recalculando caras (total aristas: 82) ---
+[DEBUG]   Ciclo detectado: 11 aristas, área=124.9322, comienza en e1soto
+[DEBUG]   Ciclo detectado: 27 aristas, área=-65.2500, comienza en e1_psoto
+[DEBUG]   Ciclo detectado: 22 aristas, área=-32.0000, comienza en e3_psoto
+[DEBUG]   Ciclo detectado: 8 aristas, área=-6.9322, comienza en e4soto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en h3_psoto
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
+[DEBUG]   Ciclo detectado: 4 aristas, área=-0.7500, comienza en i1layer05_P
+[DEBUG]   Cara infinita: ciclo con área=124.9322
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA5', 'CARA6', 'CARA7', 'CARA8']
+[DEBUG]   Hueco detectado: CARA6 dentro de CARA3
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA3
+[DEBUG] Caras después de procesar intersección: 8
+        CARA1     externo: e1soto      inactiva
+        CARA2     externo: e1_psoto    ACTIVA
+        CARA3     externo: e3_psoto    ACTIVA
+        CARA4     externo: e4soto      ACTIVA
+        CARA5     externo: h3_psoto    ACTIVA
+        CARA6     externo: l1layer05   ACTIVA
+        CARA7     externo: l2layer05   ACTIVA
+        CARA8     externo: i1layer05_P  ACTIVA
+[DEBUG]   Intersección en Punto(x=10.0, y=7.095238095): n1layer05 será dividida (d1=0.1381, d2=2.7619)
+[DEBUG]   Intersección en Punto(x=10.0, y=7.095238095): e3soto será dividida (d1=4.0952, d2=1.9048)
+
+[DEBUG] >> Creando vértice V_INT_5 en Punto(x=10.0, y=7.095238095)
+
+[DEBUG] === Nueva intersección: vértice V_INT_5 en Punto(x=10.0, y=7.095238095) ===
+[DEBUG] Aristas a dividir: ['n1layer05', 'e3soto']
+[DEBUG]   Creando semi-aristas para n1layer05:
+          n1layer05_P  (Jlayer05 -> V_INT_5)
+          n1layer05_PP (V_INT_5 -> Ilayer05)
+          n2layer05_P (Ilayer05 -> V_INT_5)
+          n2layer05_PP (V_INT_5 -> Jlayer05)
+[DEBUG]   Creando semi-aristas para e3soto:
+          e3soto_P  (I3soto -> V_INT_5)
+          e3soto_PP (V_INT_5 -> I4soto)
+          e3_psoto_P (I4soto -> V_INT_5)
+          e3_psoto_PP (V_INT_5 -> I3soto)
+[DEBUG] Aristas salientes de V_INT_5 ordenadas:
+          e3_psoto_PP -> I3soto, ángulo=-90.00°
+          n2layer05_PP -> Jlayer05, ángulo=-43.60°
+          e3soto_PP -> I4soto, ángulo=90.00°
+          n1layer05_PP -> Ilayer05, ángulo=136.40°
+[DEBUG]   Enlace: e3soto_P.siguiente = n2layer05_PP
+[DEBUG]   Enlace: n1layer05_P.siguiente = e3soto_PP
+[DEBUG]   Enlace: e3_psoto_P.siguiente = n1layer05_PP
+[DEBUG]   Enlace: n2layer05_P.siguiente = e3_psoto_PP
+[DEBUG] V_INT_5.aristaAdyacente = e3_psoto_PP
+[DEBUG] Aristas totales actuales: 86
+
+[DEBUG] --- Recalculando caras (total aristas: 86) ---
+[DEBUG]   Ciclo detectado: 11 aristas, área=124.9322, comienza en e1soto
+[DEBUG]   Ciclo detectado: 42 aristas, área=-79.2500, comienza en e1_psoto
+[DEBUG]   Ciclo detectado: 8 aristas, área=-6.9322, comienza en e4soto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en h3_psoto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-14.1370, comienza en p3_psoto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-3.8630, comienza en p6_psoto
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
+[DEBUG]   Ciclo detectado: 4 aristas, área=-0.7500, comienza en i1layer05_P
+[DEBUG]   Cara infinita: ciclo con área=124.9322
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA5', 'CARA6', 'CARA7', 'CARA8', 'CARA9']
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA8 dentro de CARA2
+[DEBUG] Caras después de procesar intersección: 9
+        CARA1     externo: e1soto      inactiva
+        CARA2     externo: e1_psoto    ACTIVA
+        CARA3     externo: e4soto      ACTIVA
+        CARA4     externo: h3_psoto    ACTIVA
+        CARA5     externo: p3_psoto    ACTIVA
+        CARA6     externo: p6_psoto    ACTIVA
+        CARA7     externo: l1layer05   ACTIVA
+        CARA8     externo: l2layer05   ACTIVA
+        CARA9     externo: i1layer05_P  ACTIVA
+[DEBUG]   Intersección en Punto(x=10.1, y=7.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=14.0, y=6.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=5.0): g1layer05 será dividida (d1=1.0000, d2=1.0000)
+[DEBUG]   Intersección en Punto(x=4.0, y=5.0): p9soto será dividida (d1=3.0000, d2=2.0000)
+
+[DEBUG] >> Creando vértice V_INT_6 en Punto(x=4.0, y=5.0)
+
+[DEBUG] === Nueva intersección: vértice V_INT_6 en Punto(x=4.0, y=5.0) ===
+[DEBUG] Aristas a dividir: ['g1layer05', 'p9soto']
+[DEBUG]   Creando semi-aristas para g1layer05:
+          g1layer05_P  (Blayer05 -> V_INT_6)
+          g1layer05_PP (V_INT_6 -> Alayer05)
+          g2layer05_P (Alayer05 -> V_INT_6)
+          g2layer05_PP (V_INT_6 -> Blayer05)
+[DEBUG]   Creando semi-aristas para p9soto:
+          p9soto_P  (I2soto -> V_INT_6)
+          p9soto_PP (V_INT_6 -> V9soto)
+          p9_psoto_P (V9soto -> V_INT_6)
+          p9_psoto_PP (V_INT_6 -> I2soto)
+[DEBUG] Aristas salientes de V_INT_6 ordenadas:
+          p9soto_PP -> V9soto, ángulo=-90.00°
+          g2layer05_PP -> Blayer05, ángulo=0.00°
+          p9_psoto_PP -> I2soto, ángulo=90.00°
+          g1layer05_PP -> Alayer05, ángulo=180.00°
+[DEBUG]   Enlace: p9_psoto_P.siguiente = g2layer05_PP
+[DEBUG]   Enlace: g1layer05_P.siguiente = p9_psoto_PP
+[DEBUG]   Enlace: p9soto_P.siguiente = g1layer05_PP
+[DEBUG]   Enlace: g2layer05_P.siguiente = p9soto_PP
+[DEBUG] V_INT_6.aristaAdyacente = p9soto_PP
+[DEBUG] Aristas totales actuales: 90
+
+[DEBUG] --- Recalculando caras (total aristas: 90) ---
+[DEBUG]   Ciclo detectado: 11 aristas, área=124.9322, comienza en e1soto
+[DEBUG]   Ciclo detectado: 38 aristas, área=-83.2500, comienza en e1_psoto
+[DEBUG]   Ciclo detectado: 8 aristas, área=-6.9322, comienza en e4soto
+[DEBUG]   Ciclo detectado: 8 aristas, área=-13.0000, comienza en h1_psoto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-14.1370, comienza en p3_psoto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-3.8630, comienza en p6_psoto
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
+[DEBUG]   Ciclo detectado: 4 aristas, área=-0.7500, comienza en i1layer05_P
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0000, comienza en f1layer05_P
+[DEBUG]   Cara infinita: ciclo con área=124.9322
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA5', 'CARA6', 'CARA7', 'CARA8', 'CARA9', 'CARA10']
+[DEBUG]   Hueco detectado: CARA4 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA8 dentro de CARA2
+[DEBUG] Caras después de procesar intersección: 10
+        CARA1     externo: e1soto      inactiva
+        CARA2     externo: e1_psoto    ACTIVA
+        CARA3     externo: e4soto      ACTIVA
+        CARA4     externo: h1_psoto    ACTIVA
+        CARA5     externo: p3_psoto    ACTIVA
+        CARA6     externo: p6_psoto    ACTIVA
+        CARA7     externo: l1layer05   ACTIVA
+        CARA8     externo: l2layer05   ACTIVA
+        CARA9     externo: i1layer05_P  ACTIVA
+        CARA10    externo: f1layer05_P  ACTIVA
+[DEBUG]   Intersección en Punto(x=5.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=4.0): h3soto será dividida (d1=1.0000, d2=4.0000)
+[DEBUG]   Intersección en Punto(x=8.0, y=4.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=3.0): j1layer05 será dividida (d1=1.0000, d2=1.0000)
+[DEBUG]   Intersección en Punto(x=8.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=12.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=2.0, y=2.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=2.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=0.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=-0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+
+[DEBUG] Unificando vértices compartidos entre layers...
+
+[DEBUG] Unificando vértices compartidos entre layers...
+[DEBUG] Iniciando fusión de aristas colineales duplicadas...
+[DEBUG] No se encontraron aristas duplicadas para fusionar.
+
+[DEBUG] --- Recalculando caras (total aristas: 90) ---
+[DEBUG]   Ciclo detectado: 11 aristas, área=124.9322, comienza en e1soto
+[DEBUG]   Ciclo detectado: 49 aristas, área=-95.2500, comienza en e1_psoto
+[DEBUG]   Ciclo detectado: 8 aristas, área=-6.9322, comienza en e4soto
+[DEBUG]   Ciclo detectado: 3 aristas, área=-1.0000, comienza en h2soto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-14.1370, comienza en p3_psoto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-3.8630, comienza en p6_psoto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-0.7500, comienza en i1layer05_P
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0000, comienza en f1layer05_P
+[DEBUG]   Cara infinita: ciclo con área=124.9322
+[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA5', 'CARA6', 'CARA7', 'CARA8']
+[DEBUG] Topología final: 90 aristas, 8 caras.
+
+[DEBUG] Renombrando todos los elementos de la DCEL...
+[DEBUG] [renombrar_dcel] 33 vértices, 90 aristas, 8 caras renombrados correctamente.
+
+Exportando nuevos archivos .vertices y .aristas...
+Archivos 'resultado.vertices' y 'resultado.aristas' generados exitosamente.
+
+Exportando nuevos archivos .caras y .activos...
+Archivos generados exitosamente.
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html

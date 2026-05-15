@@ -432,25 +432,43 @@ def punto_en_poligono(pt, vertices):
     return adentro
 
 def obtener_punto_prueba(cara):
-    if not cara.aristasExternos: return None
+    if not cara.aristasExternos:
+        return None
     pts = []
     actual = cara.aristasExternos
     inicio = actual
     while True:
         pts.append(actual.verticeOriginal.coordenadas)
         actual = actual.siguiente
-        if actual == inicio: break
-    
-    # Centroide básico
-    cx = sum(p.x for p in pts) / len(pts)
-    cy = sum(p.y for p in pts) / len(pts)
-    
-    # Truco: Si el centroide cae fuera (casos cóncavos), 
-    # tomamos el punto medio entre el primer vértice y el centroide para acercarlo al borde interior
-    p_test = Punto(cx, cy)
-    if not punto_en_poligono(p_test, pts):
-        return Punto((pts[0].x + cx)/2, (pts[0].y + cy)/2)
-    return p_test
+        if actual == inicio or actual is None:
+            break
+    if len(pts) < 3:
+        return None
+
+    # Tomamos el punto medio de la primera arista
+    p1 = pts[0]
+    p2 = pts[1]
+    medio = Punto((p1.x + p2.x) / 2.0, (p1.y + p2.y) / 2.0)
+
+    # Calculamos el vector hacia el interior usando el producto cruz
+    # Asumimos que el polígono está orientado en sentido antihorario
+    # (si no, se invierte la dirección)
+    dx = p2.x - p1.x
+    dy = p2.y - p1.y
+    # Normal interior: perpendicular a la arista, apuntando hacia el interior
+    # Para un polígono CCW, el interior está a la izquierda de la arista
+    # Vector normal izquierdo: (-dy, dx)
+    nx = -dy
+    ny = dx
+    # Normalizamos
+    length = math.hypot(nx, ny)
+    if length > 1e-9:
+        nx /= length
+        ny /= length
+    # Movemos el punto medio una pequeña fracción hacia el interior
+    epsilon = 1e-4
+    punto_interior = Punto(medio.x + nx * epsilon, medio.y + ny * epsilon)
+    return punto_interior
 
 def segALinea(segmento):
     x1, x2 = segmento.p1.x, segmento.p2.x
@@ -1176,7 +1194,7 @@ def dibujarCara(cara, subPlot, color, rellenar=False, label=None):
 fig = plt.figure()
 ax  = fig.add_subplot()
 
-listaLayers = ["layer05"]
+listaLayers = ["layer03", "layer04", "layer05", "layer01", "layer02"]
 colores = coloresPorLayer(listaLayers)
 
 # Variables globales para albergar el universo DCEL total
@@ -1397,7 +1415,68 @@ with open(txt_filename, "w", encoding="utf-8") as f:
 
 print(f"Intersecciones guardadas en {txt_filename}")
 
+# ══════════════════════════════════════════════════════════════════════════════
+# FUERZA BRUTA O(N²) PARA ASEGURAR TODAS LAS INTERSECCIONES
+# ══════════════════════════════════════════════════════════════════════════════
+print("\n[DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===")
 
+# Diccionario para acumular todas las intersecciones (clave: punto redondeado -> set de segmentos)
+todas_intersecciones = {}
+
+# 1. Convertir R actual (salida de la línea de barrido) a este diccionario
+for punto, segs in R:
+    key = _llave(punto)
+    if key not in todas_intersecciones:
+        todas_intersecciones[key] = set()
+    todas_intersecciones[key].update(segs)
+
+# 2. Fuerza bruta sobre todos los pares de segmentos
+lista_segmentos = list(S)   # S es el conjunto de todos los segmentos (de todas las capas)
+total_pares = len(lista_segmentos) * (len(lista_segmentos) - 1) // 2
+contador = 0
+
+for i in range(len(lista_segmentos)):
+    s1 = lista_segmentos[i]
+    for j in range(i+1, len(lista_segmentos)):
+        s2 = lista_segmentos[j]
+        contador += 1
+        if contador % 1000 == 0:
+            print(f"[DEBUG] Procesando par {contador}/{total_pares}...")
+        
+        # Calcular todas las intersecciones entre s1 y s2 (puede dar 0, 1 o 2 puntos)
+        inter_pts = interseccionSeg(s1, s2)
+        for p in inter_pts:
+            key = _llave(p)
+            if key not in todas_intersecciones:
+                todas_intersecciones[key] = set()
+            todas_intersecciones[key].add(s1)
+            todas_intersecciones[key].add(s2)
+
+# 3. Reconstruir R como conjunto de tuplas (punto, frozenset(segmentos))
+R_nuevo = set()
+for key, seg_set in todas_intersecciones.items():
+    # Reconstruir el punto a partir de la clave (puede haber pequeña pérdida, pero es la misma que se usará después)
+    punto = Punto(key[0], key[1])
+    R_nuevo.add((punto, frozenset(seg_set)))
+
+# Reemplazar R
+R = R_nuevo
+
+print(f"\n[DEBUG] Total de intersecciones después de fuerza bruta: {len(R)}")
+for punto, segs in R:
+    nombres = [s.name for s in segs]
+    print(f"  {punto} → {nombres}")
+
+# Guardar también en archivo de texto (opcional)
+with open("intersecciones_completas.txt", "w", encoding="utf-8") as f:
+    f.write(f"Total de intersecciones (fuerza bruta): {len(R)}\n")
+    f.write("=" * 40 + "\n")
+    R_ordenado_bruto = sorted(R, key=lambda t: (-t[0].y, t[0].x))
+    for i, (punto, segs) in enumerate(R_ordenado_bruto, 1):
+        nombres = sorted(s.name for s in segs)
+        f.write(f"{i:>4}. ({punto.x:.6g}, {punto.y:.6g})  →  {', '.join(nombres)}\n")
+
+print("Intersecciones completas guardadas en 'intersecciones_completas.txt'")
 # ══════════════════════════════════════════════════════════════════════════════
 # PARTE 3 — ACTUALIZACIÓN FINAL DE LA DCEL (Aplicación del algoritmo)
 # ══════════════════════════════════════════════════════════════════════════════

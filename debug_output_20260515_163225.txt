@@ -1,0 +1,1142 @@
+[DEBUG] Evento en y=11.0000, x=9.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=10.5000, x=13.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=10.0000, x=0.0000  |U|=3 |L|=0 |C|=0
+[DEBUG] Evento en y=10.0000, x=10.0000  |U|=3 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=3.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.8491, x=8.1585  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=8.5122, x=8.5122  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=8.1250, x=3.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=8.0000, x=5.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.0000, x=13.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=7.3000, x=3.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=7.0952, x=10.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=7.0000, x=10.1000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=6.8750, x=5.0000  |U|=0 |L|=0 |C|=3
+[DEBUG] Evento en y=6.3115, x=4.0984  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=6.1538, x=6.1538  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.6250, x=3.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.5000, x=5.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.2632, x=5.2632  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.0000, x=2.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=3.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=5.0000  |U|=0 |L|=2 |C|=1
+[DEBUG] Evento en y=5.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=4.0984, x=6.5574  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=4.0000, x=8.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=3.8462, x=3.8462  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=3.1250, x=5.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=3.0000, x=10.0000  |U|=1 |L|=1 |C|=1
+[DEBUG] Evento en y=2.8000, x=8.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=2.2857, x=8.5714  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=2.0000, x=8.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=1.0000, x=10.0000  |U|=0 |L|=1 |C|=1
+[DEBUG] Evento en y=0.0000, x=0.0000  |U|=0 |L|=3 |C|=0
+[DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=2 |C|=0
+
+[DEBUG] Intersecciones encontradas por la línea de barrido:
+  Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
+  Punto(x=3.0, y=7.3) → ['f1layer05', 's11layer01']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=8.0, y=2.8) → ['j1layer05', 's11layer01']
+  Punto(x=0.0, y=0.0) → ['s21layer02', 's11layer03', 's31layer03']
+  Punto(x=10.0, y=3.0) → ['l1layer05', 'k1layer05', 's41layer04']
+  Punto(x=0.0, y=10.0) → ['s11layer01', 's21layer03', 's11layer03']
+  Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
+  Punto(x=8.0, y=2.0) → ['j1layer05', 'k1layer05']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=8.0, y=4.0) → ['l1layer05', 'j1layer05']
+  Punto(x=6.557377049180328, y=4.098360655737705) → ['s11layer01', 's31layer03']
+  Punto(x=5.0, y=5.0) → ['g1layer05', 's21layer02']
+  Punto(x=8.158490566037733, y=8.849056603773583) → ['n1layer05', 's61layer04']
+  Punto(x=5.0, y=3.125) → ['s51layer04', 's31layer03']
+  Punto(x=5.0, y=5.5) → ['s11layer01', 'h1layer05']
+  Punto(x=5.2631578947368425, y=5.2631578947368425) → ['s11layer01', 's21layer02']
+  Punto(x=5.0, y=5.0) → ['g1layer05', 'h1layer05']
+  Punto(x=8.571428571428571, y=2.2857142857142856) → ['s11layer01', 'k1layer05']
+  Punto(x=5.0, y=5.0) → ['g1layer05']
+  Punto(x=2.0, y=5.0) → ['s51layer04', 's61layer04']
+  Punto(x=5.0, y=8.0) → ['i1layer05', 'h1layer05']
+  Punto(x=8.0, y=9.0) → ['n1layer05', 'm1layer05']
+  Punto(x=10.0, y=7.095238095238091) → ['s41layer04', 'n1layer05']
+  Punto(x=3.0, y=8.125) → ['f1layer05', 's21layer03']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=3.8461538461538463, y=3.8461538461538463) → ['s51layer04', 's21layer02']
+  Punto(x=5.0, y=5.0) → ['s21layer02', 'g1layer05', 'h1layer05']
+  Punto(x=13.0, y=8.0) → ['q1layer05', 'p1layer05']
+  Punto(x=10.0, y=10.0) → ['s41layer04', 's21layer02', 's61layer04']
+  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=6.153846153846154, y=6.153846153846154) → ['s21layer03', 's21layer02']
+  Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=3.0, y=5.0) → ['g1layer05']
+  Punto(x=8.512195121951217, y=8.512195121951217) → ['n1layer05', 's21layer02']
+  Punto(x=10.0, y=1.0) → ['s11layer01', 's41layer04']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+  Punto(x=4.098360655737705, y=6.311475409836065) → ['s11layer01', 's61layer04']
+[DEBUG] Total: 39
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===
+
+[DEBUG] Total de intersecciones después de fuerza bruta: 35
+  Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
+  Punto(x=3.0, y=7.3) → ['f1layer05', 's11layer01']
+  Punto(x=10.0, y=1.0) → ['s11layer01', 's41layer04']
+  Punto(x=5.263157895, y=5.263157895) → ['s11layer01', 's21layer02']
+  Punto(x=3.846153846, y=3.846153846) → ['s51layer04', 's21layer02']
+  Punto(x=8.0, y=2.8) → ['j1layer05', 's11layer01']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=0.0, y=0.0) → ['s21layer02', 's11layer03', 's31layer03']
+  Punto(x=10.0, y=3.0) → ['l1layer05', 'k1layer05', 's41layer04']
+  Punto(x=0.0, y=10.0) → ['s11layer01', 's21layer03', 's11layer03']
+  Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
+  Punto(x=8.0, y=2.0) → ['j1layer05', 'k1layer05']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=8.0, y=4.0) → ['l1layer05', 'j1layer05']
+  Punto(x=4.098360656, y=6.31147541) → ['s11layer01', 's61layer04']
+  Punto(x=5.0, y=3.125) → ['s51layer04', 's31layer03']
+  Punto(x=8.571428571, y=2.285714286) → ['s11layer01', 'k1layer05']
+  Punto(x=5.0, y=5.5) → ['s11layer01', 'h1layer05']
+  Punto(x=2.0, y=5.0) → ['s51layer04', 's61layer04']
+  Punto(x=5.0, y=8.0) → ['i1layer05', 'h1layer05']
+  Punto(x=8.0, y=9.0) → ['n1layer05', 'm1layer05']
+  Punto(x=3.0, y=8.125) → ['f1layer05', 's21layer03']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=6.557377049, y=4.098360656) → ['s11layer01', 's31layer03']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 'g1layer05', 's21layer02']
+  Punto(x=8.158490566, y=8.849056604) → ['n1layer05', 's61layer04']
+  Punto(x=13.0, y=8.0) → ['q1layer05', 'p1layer05']
+  Punto(x=10.0, y=10.0) → ['s41layer04', 's21layer02', 's61layer04']
+  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
+  Punto(x=10.0, y=7.095238095) → ['s41layer04', 'n1layer05']
+  Punto(x=8.512195122, y=8.512195122) → ['n1layer05', 's21layer02']
+  Punto(x=6.153846154, y=6.153846154) → ['s21layer03', 's21layer02']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+Intersecciones completas guardadas en 'intersecciones_completas.txt'
+
+[DEBUG] === Procesando intersecciones como nuevos vértices ===
+[DEBUG]   Intersección en Punto(x=9.0, y=11.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=13.0, y=10.5) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=0.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.158490566, y=8.849056604): n1layer05 será dividida (d1=2.6811, d2=0.2189)
+[DEBUG]   Intersección en Punto(x=8.158490566, y=8.849056604): s61layer04 será dividida (d1=7.2624, d2=2.1716)
+
+[DEBUG] >> Creando vértice V_INT_1 en Punto(x=8.158490566, y=8.849056604)
+
+[DEBUG] === Nueva intersección: vértice V_INT_1 en Punto(x=8.158490566, y=8.849056604) ===
+[DEBUG] Aristas a dividir: ['n1layer05', 's61layer04']
+[DEBUG]   Creando semi-aristas para n1layer05:
+          n1layer05_P  (Jlayer05 -> V_INT_1)
+          n1layer05_PP (V_INT_1 -> Ilayer05)
+          n2layer05_P (Ilayer05 -> V_INT_1)
+          n2layer05_PP (V_INT_1 -> Jlayer05)
+[DEBUG]   Creando semi-aristas para s61layer04:
+          s61layer04_P  (p6layer04 -> V_INT_1)
+          s61layer04_PP (V_INT_1 -> p4layer04)
+          s62layer04_P (p4layer04 -> V_INT_1)
+          s62layer04_PP (V_INT_1 -> p6layer04)
+[DEBUG] Aristas salientes de V_INT_1 ordenadas:
+          s62layer04_PP -> p6layer04, ángulo=-147.99°
+          n2layer05_PP -> Jlayer05, ángulo=-43.60°
+          s61layer04_PP -> p4layer04, ángulo=32.01°
+          n1layer05_PP -> Ilayer05, ángulo=136.40°
+[DEBUG]   Enlace: s61layer04_P.siguiente = n2layer05_PP
+[DEBUG]   Enlace: n1layer05_P.siguiente = s61layer04_PP
+[DEBUG]   Enlace: s62layer04_P.siguiente = n1layer05_PP
+[DEBUG]   Enlace: n2layer05_P.siguiente = s62layer04_PP
+[DEBUG] V_INT_1.aristaAdyacente = s62layer04_PP
+[DEBUG] Aristas totales actuales: 44
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 44) ---
+[DEBUG]   Ciclo detectado: 3 aristas, área=-40.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=40.0000
+[DEBUG]   Ciclo detectado: 20 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 4 aristas, área=-7.0000
+[DEBUG]   Ciclo detectado: 4 aristas, área=7.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 2 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 2 aristas, área=0.0000
+[DEBUG]   Hole (área=-40.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=0.0000) asignado a cara outer (área=40.0000)
+[DEBUG]   Hole (área=-7.0000) asignado a cara outer (área=7.0000)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Total caras: 4  (1 infinita + 3 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=4
+[DEBUG]     CARA2: outer=s12layer03, #holes=1
+[DEBUG]     CARA3: outer=f2layer05, #holes=1
+[DEBUG]     CARA4: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: ['CARA3']
+[DEBUG] Caras después de procesar intersección: 4
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+        CARA3     externo: f2layer05   ACTIVA
+        CARA4     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=8.512195122, y=8.512195122): n1layer05_P será dividida (d1=2.1927, d2=0.4884)
+[DEBUG]   Intersección en Punto(x=8.512195122, y=8.512195122): s21layer02 será dividida (d1=12.0381, d2=2.1041)
+
+[DEBUG] >> Creando vértice V_INT_2 en Punto(x=8.512195122, y=8.512195122)
+
+[DEBUG] === Nueva intersección: vértice V_INT_2 en Punto(x=8.512195122, y=8.512195122) ===
+[DEBUG] Aristas a dividir: ['n1layer05_P', 's21layer02']
+[DEBUG]   Creando semi-aristas para n1layer05_P:
+          n1layer05_P_P  (Jlayer05 -> V_INT_2)
+          n1layer05_P_PP (V_INT_2 -> V_INT_1)
+          n2layer05_PP_P (V_INT_1 -> V_INT_2)
+          n2layer05_PP_PP (V_INT_2 -> Jlayer05)
+[DEBUG]   Creando semi-aristas para s21layer02:
+          s21layer02_P  (p3layer02 -> V_INT_2)
+          s21layer02_PP (V_INT_2 -> p4layer02)
+          s22layer02_P (p4layer02 -> V_INT_2)
+          s22layer02_PP (V_INT_2 -> p3layer02)
+[DEBUG] Aristas salientes de V_INT_2 ordenadas:
+          s22layer02_PP -> p3layer02, ángulo=-135.00°
+          n2layer05_PP_PP -> Jlayer05, ángulo=-43.60°
+          s21layer02_PP -> p4layer02, ángulo=45.00°
+          n1layer05_P_PP -> V_INT_1, ángulo=136.40°
+[DEBUG]   Enlace: s21layer02_P.siguiente = n2layer05_PP_PP
+[DEBUG]   Enlace: n1layer05_P_P.siguiente = s21layer02_PP
+[DEBUG]   Enlace: s22layer02_P.siguiente = n1layer05_P_PP
+[DEBUG]   Enlace: n2layer05_PP_P.siguiente = s22layer02_PP
+[DEBUG] V_INT_2.aristaAdyacente = s22layer02_PP
+[DEBUG] Aristas totales actuales: 48
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 48) ---
+[DEBUG]   Ciclo detectado: 3 aristas, área=-40.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=40.0000
+[DEBUG]   Ciclo detectado: 26 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 4 aristas, área=-7.0000
+[DEBUG]   Ciclo detectado: 4 aristas, área=7.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 2 aristas, área=0.0000
+[DEBUG]   Hole (área=-40.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-7.0000) asignado a cara outer (área=7.0000)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Total caras: 5  (1 infinita + 4 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=3
+[DEBUG]     CARA2: outer=s12layer03, #holes=0
+[DEBUG]     CARA3: outer=s41layer04, #holes=0
+[DEBUG]     CARA4: outer=f2layer05, #holes=1
+[DEBUG]     CARA5: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: ['CARA4']
+[DEBUG] Caras después de procesar intersección: 5
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+        CARA3     externo: s41layer04  inactiva
+        CARA4     externo: f2layer05   ACTIVA
+        CARA5     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=3.0, y=8.125): f1layer05 será dividida (d1=3.1250, d2=0.8750)
+[DEBUG]   Intersección en Punto(x=3.0, y=8.125): s21layer03 será dividida (d1=3.5377, d2=5.8962)
+
+[DEBUG] >> Creando vértice V_INT_3 en Punto(x=3.0, y=8.125)
+
+[DEBUG] === Nueva intersección: vértice V_INT_3 en Punto(x=3.0, y=8.125) ===
+[DEBUG] Aristas a dividir: ['f1layer05', 's21layer03']
+[DEBUG]   Creando semi-aristas para f1layer05:
+          f1layer05_P  (Alayer05 -> V_INT_3)
+          f1layer05_PP (V_INT_3 -> Dlayer05)
+          f2layer05_P (Dlayer05 -> V_INT_3)
+          f2layer05_PP (V_INT_3 -> Alayer05)
+[DEBUG]   Creando semi-aristas para s21layer03:
+          s21layer03_P  (p2layer03 -> V_INT_3)
+          s21layer03_PP (V_INT_3 -> p3layer03)
+          s22layer03_P (p3layer03 -> V_INT_3)
+          s22layer03_PP (V_INT_3 -> p2layer03)
+[DEBUG] Aristas salientes de V_INT_3 ordenadas:
+          f2layer05_PP -> Alayer05, ángulo=-90.00°
+          s21layer03_PP -> p3layer03, ángulo=-32.01°
+          f1layer05_PP -> Dlayer05, ángulo=90.00°
+          s22layer03_PP -> p2layer03, ángulo=147.99°
+[DEBUG]   Enlace: f1layer05_P.siguiente = s21layer03_PP
+[DEBUG]   Enlace: s22layer03_P.siguiente = f1layer05_PP
+[DEBUG]   Enlace: f2layer05_P.siguiente = s22layer03_PP
+[DEBUG]   Enlace: s21layer03_P.siguiente = f2layer05_PP
+[DEBUG] V_INT_3.aristaAdyacente = f2layer05_PP
+[DEBUG] Aristas totales actuales: 52
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 52) ---
+[DEBUG]   Ciclo detectado: 18 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 26 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 2 aristas, área=0.0000
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=3
+[DEBUG]     CARA2: outer=s41layer04, #holes=0
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s41layer04  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=5.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=13.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=7.3): f1layer05_P será dividida (d1=2.3000, d2=0.8250)
+[DEBUG]   Intersección en Punto(x=3.0, y=7.3): s11layer01 será dividida (d1=4.0361, d2=9.4175)
+
+[DEBUG] >> Creando vértice V_INT_4 en Punto(x=3.0, y=7.3)
+
+[DEBUG] === Nueva intersección: vértice V_INT_4 en Punto(x=3.0, y=7.3) ===
+[DEBUG] Aristas a dividir: ['f1layer05_P', 's11layer01']
+[DEBUG]   Creando semi-aristas para f1layer05_P:
+          f1layer05_P_P  (Alayer05 -> V_INT_4)
+          f1layer05_P_PP (V_INT_4 -> V_INT_3)
+          f2layer05_PP_P (V_INT_3 -> V_INT_4)
+          f2layer05_PP_PP (V_INT_4 -> Alayer05)
+[DEBUG]   Creando semi-aristas para s11layer01:
+          s11layer01_P  (p1layer01 -> V_INT_4)
+          s11layer01_PP (V_INT_4 -> p2layer01)
+          s12layer01_P (p2layer01 -> V_INT_4)
+          s12layer01_PP (V_INT_4 -> p1layer01)
+[DEBUG] Aristas salientes de V_INT_4 ordenadas:
+          f2layer05_PP_PP -> Alayer05, ángulo=-90.00°
+          s11layer01_PP -> p2layer01, ángulo=-41.99°
+          f1layer05_P_PP -> V_INT_3, ángulo=90.00°
+          s12layer01_PP -> p1layer01, ángulo=138.01°
+[DEBUG]   Enlace: f1layer05_P_P.siguiente = s11layer01_PP
+[DEBUG]   Enlace: s12layer01_P.siguiente = f1layer05_P_PP
+[DEBUG]   Enlace: f2layer05_PP_P.siguiente = s12layer01_PP
+[DEBUG]   Enlace: s11layer01_P.siguiente = f2layer05_PP_PP
+[DEBUG] V_INT_4.aristaAdyacente = f2layer05_PP_PP
+[DEBUG] Aristas totales actuales: 56
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 56) ---
+[DEBUG]   Ciclo detectado: 24 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 26 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=2
+[DEBUG]     CARA2: outer=s41layer04, #holes=0
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s41layer04  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=10.0, y=7.095238095): s41layer04 será dividida (d1=2.9048, d2=7.0952)
+[DEBUG]   Intersección en Punto(x=10.0, y=7.095238095): n1layer05_P_P será dividida (d1=0.1381, d2=2.0546)
+
+[DEBUG] >> Creando vértice V_INT_5 en Punto(x=10.0, y=7.095238095)
+
+[DEBUG] === Nueva intersección: vértice V_INT_5 en Punto(x=10.0, y=7.095238095) ===
+[DEBUG] Aristas a dividir: ['s41layer04', 'n1layer05_P_P']
+[DEBUG]   Creando semi-aristas para s41layer04:
+          s41layer04_P  (p4layer04 -> V_INT_5)
+          s41layer04_PP (V_INT_5 -> p5layer04)
+          s42layer04_P (p5layer04 -> V_INT_5)
+          s42layer04_PP (V_INT_5 -> p4layer04)
+[DEBUG]   Creando semi-aristas para n1layer05_P_P:
+          n1layer05_P_P_P  (Jlayer05 -> V_INT_5)
+          n1layer05_P_P_PP (V_INT_5 -> V_INT_2)
+          n2layer05_PP_PP_P (V_INT_2 -> V_INT_5)
+          n2layer05_PP_PP_PP (V_INT_5 -> Jlayer05)
+[DEBUG] Aristas salientes de V_INT_5 ordenadas:
+          s41layer04_PP -> p5layer04, ángulo=-90.00°
+          n2layer05_PP_PP_PP -> Jlayer05, ángulo=-43.60°
+          s42layer04_PP -> p4layer04, ángulo=90.00°
+          n1layer05_P_P_PP -> V_INT_2, ángulo=136.40°
+[DEBUG]   Enlace: s42layer04_P.siguiente = n2layer05_PP_PP_PP
+[DEBUG]   Enlace: n1layer05_P_P_P.siguiente = s42layer04_PP
+[DEBUG]   Enlace: s41layer04_P.siguiente = n1layer05_P_P_PP
+[DEBUG]   Enlace: n2layer05_PP_PP_P.siguiente = s41layer04_PP
+[DEBUG] V_INT_5.aristaAdyacente = s41layer04_PP
+[DEBUG] Aristas totales actuales: 60
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 60) ---
+[DEBUG]   Ciclo detectado: 24 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 7 aristas, área=-37.3254
+[DEBUG]   Ciclo detectado: 9 aristas, área=51.7754
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Hole (área=0.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-37.3254) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=51.7754)
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=51.7754)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=3
+[DEBUG]     CARA2: outer=s52layer04, #holes=2
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s52layer04  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=10.1, y=7.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=5.0, y=6.875): s21layer03_PP será dividida (d1=2.3585, d2=3.5377)
+[DEBUG]   Intersección en Punto(x=5.0, y=6.875): h1layer05 será dividida (d1=1.1250, d2=1.8750)
+[DEBUG]   Intersección en Punto(x=5.0, y=6.875): s61layer04_P será dividida (d1=3.5377, d2=3.7246)
+
+[DEBUG] >> Creando vértice V_INT_6 en Punto(x=5.0, y=6.875)
+
+[DEBUG] === Nueva intersección: vértice V_INT_6 en Punto(x=5.0, y=6.875) ===
+[DEBUG] Aristas a dividir: ['s21layer03_PP', 'h1layer05', 's61layer04_P']
+[DEBUG]   Creando semi-aristas para s21layer03_PP:
+          s21layer03_PP_P  (V_INT_3 -> V_INT_6)
+          s21layer03_PP_PP (V_INT_6 -> p3layer03)
+          s22layer03_P_P (p3layer03 -> V_INT_6)
+          s22layer03_P_PP (V_INT_6 -> V_INT_3)
+[DEBUG]   Creando semi-aristas para h1layer05:
+          h1layer05_P  (Clayer05 -> V_INT_6)
+          h1layer05_PP (V_INT_6 -> Blayer05)
+          h2layer05_P (Blayer05 -> V_INT_6)
+          h2layer05_PP (V_INT_6 -> Clayer05)
+[DEBUG]   Creando semi-aristas para s61layer04_P:
+          s61layer04_P_P  (p6layer04 -> V_INT_6)
+          s61layer04_P_PP (V_INT_6 -> V_INT_1)
+          s62layer04_PP_P (V_INT_1 -> V_INT_6)
+          s62layer04_PP_PP (V_INT_6 -> p6layer04)
+[DEBUG] Aristas salientes de V_INT_6 ordenadas:
+          s62layer04_PP_PP -> p6layer04, ángulo=-147.99°
+          h1layer05_PP -> Blayer05, ángulo=-90.00°
+          s21layer03_PP_PP -> p3layer03, ángulo=-32.01°
+          s61layer04_P_PP -> V_INT_1, ángulo=32.01°
+          h2layer05_PP -> Clayer05, ángulo=90.00°
+          s22layer03_P_PP -> V_INT_3, ángulo=147.99°
+[DEBUG]   Enlace: s61layer04_P_P.siguiente = h1layer05_PP
+[DEBUG]   Enlace: h2layer05_P.siguiente = s21layer03_PP_PP
+[DEBUG]   Enlace: s22layer03_P_P.siguiente = s61layer04_P_PP
+[DEBUG]   Enlace: s62layer04_PP_P.siguiente = h2layer05_PP
+[DEBUG]   Enlace: h1layer05_P.siguiente = s22layer03_P_PP
+[DEBUG]   Enlace: s21layer03_PP_P.siguiente = s62layer04_PP_PP
+[DEBUG] V_INT_6.aristaAdyacente = s62layer04_PP_PP
+[DEBUG] Aristas totales actuales: 66
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 66) ---
+[DEBUG]   Ciclo detectado: 10 aristas, área=-35.0000
+[DEBUG]   Ciclo detectado: 32 aristas, área=51.4500
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Hole (área=-35.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=51.4500)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=51.4500)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=3
+[DEBUG]     CARA2: outer=s12layer03, #holes=2
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=4.098360656, y=6.31147541): s11layer01_PP será dividida (d1=1.4777, d2=7.9398)
+[DEBUG]   Intersección en Punto(x=4.098360656, y=6.31147541): s61layer04_P_P será dividida (d1=2.4745, d2=1.0633)
+
+[DEBUG] >> Creando vértice V_INT_7 en Punto(x=4.098360656, y=6.31147541)
+
+[DEBUG] === Nueva intersección: vértice V_INT_7 en Punto(x=4.098360656, y=6.31147541) ===
+[DEBUG] Aristas a dividir: ['s11layer01_PP', 's61layer04_P_P']
+[DEBUG]   Creando semi-aristas para s11layer01_PP:
+          s11layer01_PP_P  (V_INT_4 -> V_INT_7)
+          s11layer01_PP_PP (V_INT_7 -> p2layer01)
+          s12layer01_P_P (p2layer01 -> V_INT_7)
+          s12layer01_P_PP (V_INT_7 -> V_INT_4)
+[DEBUG]   Creando semi-aristas para s61layer04_P_P:
+          s61layer04_P_P_P  (p6layer04 -> V_INT_7)
+          s61layer04_P_P_PP (V_INT_7 -> V_INT_6)
+          s62layer04_PP_PP_P (V_INT_6 -> V_INT_7)
+          s62layer04_PP_PP_PP (V_INT_7 -> p6layer04)
+[DEBUG] Aristas salientes de V_INT_7 ordenadas:
+          s62layer04_PP_PP_PP -> p6layer04, ángulo=-147.99°
+          s11layer01_PP_PP -> p2layer01, ángulo=-41.99°
+          s61layer04_P_P_PP -> V_INT_6, ángulo=32.01°
+          s12layer01_P_PP -> V_INT_4, ángulo=138.01°
+[DEBUG]   Enlace: s61layer04_P_P_P.siguiente = s11layer01_PP_PP
+[DEBUG]   Enlace: s12layer01_P_P.siguiente = s61layer04_P_P_PP
+[DEBUG]   Enlace: s62layer04_PP_PP_P.siguiente = s12layer01_P_PP
+[DEBUG]   Enlace: s11layer01_PP_P.siguiente = s62layer04_PP_PP_PP
+[DEBUG] V_INT_7.aristaAdyacente = s62layer04_PP_PP_PP
+[DEBUG] Aristas totales actuales: 70
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 70) ---
+[DEBUG]   Ciclo detectado: 10 aristas, área=-35.0000
+[DEBUG]   Ciclo detectado: 32 aristas, área=53.0301
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Hole (área=-35.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=53.0301)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=53.0301)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-1.5801) asignado a cara outer (área=53.0301)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=3
+[DEBUG]     CARA2: outer=s12layer03, #holes=3
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=6.153846154, y=6.153846154): s21layer03_PP_PP será dividida (d1=1.3607, d2=2.1771)
+[DEBUG]   Intersección en Punto(x=6.153846154, y=6.153846154): s21layer02_P será dividida (d1=8.7029, d2=3.3352)
+
+[DEBUG] >> Creando vértice V_INT_8 en Punto(x=6.153846154, y=6.153846154)
+
+[DEBUG] === Nueva intersección: vértice V_INT_8 en Punto(x=6.153846154, y=6.153846154) ===
+[DEBUG] Aristas a dividir: ['s21layer03_PP_PP', 's21layer02_P']
+[DEBUG]   Creando semi-aristas para s21layer03_PP_PP:
+          s21layer03_PP_PP_P  (V_INT_6 -> V_INT_8)
+          s21layer03_PP_PP_PP (V_INT_8 -> p3layer03)
+          s22layer03_P_P_P (p3layer03 -> V_INT_8)
+          s22layer03_P_P_PP (V_INT_8 -> V_INT_6)
+[DEBUG]   Creando semi-aristas para s21layer02_P:
+          s21layer02_P_P  (p3layer02 -> V_INT_8)
+          s21layer02_P_PP (V_INT_8 -> V_INT_2)
+          s22layer02_PP_P (V_INT_2 -> V_INT_8)
+          s22layer02_PP_PP (V_INT_8 -> p3layer02)
+[DEBUG] Aristas salientes de V_INT_8 ordenadas:
+          s22layer02_PP_PP -> p3layer02, ángulo=-135.00°
+          s21layer03_PP_PP_PP -> p3layer03, ángulo=-32.01°
+          s21layer02_P_PP -> V_INT_2, ángulo=45.00°
+          s22layer03_P_P_PP -> V_INT_6, ángulo=147.99°
+[DEBUG]   Enlace: s21layer02_P_P.siguiente = s21layer03_PP_PP_PP
+[DEBUG]   Enlace: s22layer03_P_P_P.siguiente = s21layer02_P_PP
+[DEBUG]   Enlace: s22layer02_PP_P.siguiente = s22layer03_P_P_PP
+[DEBUG]   Enlace: s21layer03_PP_PP_P.siguiente = s22layer02_PP_PP
+[DEBUG] V_INT_8.aristaAdyacente = s22layer02_PP_PP
+[DEBUG] Aristas totales actuales: 74
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 74) ---
+[DEBUG]   Ciclo detectado: 13 aristas, área=-35.0000
+[DEBUG]   Ciclo detectado: 29 aristas, área=56.1222
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Hole (área=-35.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=56.1222)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=56.1222)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=56.1222)
+[DEBUG]   Hole (área=-1.5801) asignado a cara outer (área=56.1222)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=3
+[DEBUG]     CARA2: outer=s12layer03, #holes=4
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=3.0, y=5.625): f1layer05_P_P será dividida (d1=0.6250, d2=1.6750)
+[DEBUG]   Intersección en Punto(x=3.0, y=5.625): s61layer04_P_P_P será dividida (d1=1.1792, d2=1.2952)
+
+[DEBUG] >> Creando vértice V_INT_9 en Punto(x=3.0, y=5.625)
+
+[DEBUG] === Nueva intersección: vértice V_INT_9 en Punto(x=3.0, y=5.625) ===
+[DEBUG] Aristas a dividir: ['f1layer05_P_P', 's61layer04_P_P_P']
+[DEBUG]   Creando semi-aristas para f1layer05_P_P:
+          f1layer05_P_P_P  (Alayer05 -> V_INT_9)
+          f1layer05_P_P_PP (V_INT_9 -> V_INT_4)
+          f2layer05_PP_PP_P (V_INT_4 -> V_INT_9)
+          f2layer05_PP_PP_PP (V_INT_9 -> Alayer05)
+[DEBUG]   Creando semi-aristas para s61layer04_P_P_P:
+          s61layer04_P_P_P_P  (p6layer04 -> V_INT_9)
+          s61layer04_P_P_P_PP (V_INT_9 -> V_INT_7)
+          s62layer04_PP_PP_PP_P (V_INT_7 -> V_INT_9)
+          s62layer04_PP_PP_PP_PP (V_INT_9 -> p6layer04)
+[DEBUG] Aristas salientes de V_INT_9 ordenadas:
+          s62layer04_PP_PP_PP_PP -> p6layer04, ángulo=-147.99°
+          f2layer05_PP_PP_PP -> Alayer05, ángulo=-90.00°
+          s61layer04_P_P_P_PP -> V_INT_7, ángulo=32.01°
+          f1layer05_P_P_PP -> V_INT_4, ángulo=90.00°
+[DEBUG]   Enlace: s61layer04_P_P_P_P.siguiente = f2layer05_PP_PP_PP
+[DEBUG]   Enlace: f1layer05_P_P_P.siguiente = s61layer04_P_P_P_PP
+[DEBUG]   Enlace: s62layer04_PP_PP_PP_P.siguiente = f1layer05_P_P_PP
+[DEBUG]   Enlace: f2layer05_PP_PP_P.siguiente = s62layer04_PP_PP_PP_PP
+[DEBUG] V_INT_9.aristaAdyacente = s62layer04_PP_PP_PP_PP
+[DEBUG] Aristas totales actuales: 78
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 78) ---
+[DEBUG]   Ciclo detectado: 36 aristas, área=24.5421
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 7 aristas, área=-2.5000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.5000) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-1.5801) asignado a cara INFINITA
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=24.5421)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=4
+[DEBUG]     CARA2: outer=s11layer03, #holes=4
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s11layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=5.0, y=5.5): s11layer01_PP_PP será dividida (d1=1.2130, d2=6.7268)
+[DEBUG]   Intersección en Punto(x=5.0, y=5.5): h1layer05_PP será dividida (d1=1.3750, d2=0.5000)
+
+[DEBUG] >> Creando vértice V_INT_10 en Punto(x=5.0, y=5.5)
+
+[DEBUG] === Nueva intersección: vértice V_INT_10 en Punto(x=5.0, y=5.5) ===
+[DEBUG] Aristas a dividir: ['s11layer01_PP_PP', 'h1layer05_PP']
+[DEBUG]   Creando semi-aristas para s11layer01_PP_PP:
+          s11layer01_PP_PP_P  (V_INT_7 -> V_INT_10)
+          s11layer01_PP_PP_PP (V_INT_10 -> p2layer01)
+          s12layer01_P_P_P (p2layer01 -> V_INT_10)
+          s12layer01_P_P_PP (V_INT_10 -> V_INT_7)
+[DEBUG]   Creando semi-aristas para h1layer05_PP:
+          h1layer05_PP_P  (V_INT_6 -> V_INT_10)
+          h1layer05_PP_PP (V_INT_10 -> Blayer05)
+          h2layer05_P_P (Blayer05 -> V_INT_10)
+          h2layer05_P_PP (V_INT_10 -> V_INT_6)
+[DEBUG] Aristas salientes de V_INT_10 ordenadas:
+          h1layer05_PP_PP -> Blayer05, ángulo=-90.00°
+          s11layer01_PP_PP_PP -> p2layer01, ángulo=-41.99°
+          h2layer05_P_PP -> V_INT_6, ángulo=90.00°
+          s12layer01_P_P_PP -> V_INT_7, ángulo=138.01°
+[DEBUG]   Enlace: h2layer05_P_P.siguiente = s11layer01_PP_PP_PP
+[DEBUG]   Enlace: s12layer01_P_P_P.siguiente = h2layer05_P_PP
+[DEBUG]   Enlace: h1layer05_PP_P.siguiente = s12layer01_P_P_PP
+[DEBUG]   Enlace: s11layer01_PP_PP_P.siguiente = h1layer05_PP_PP
+[DEBUG] V_INT_10.aristaAdyacente = h1layer05_PP_PP
+[DEBUG] Aristas totales actuales: 82
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 82) ---
+[DEBUG]   Ciclo detectado: 39 aristas, área=24.5421
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-1.5801) asignado a cara INFINITA
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=24.5421)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=24.5421)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=4
+[DEBUG]     CARA2: outer=s11layer03, #holes=5
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s11layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=5.263157895, y=5.263157895): s11layer01_PP_PP_PP será dividida (d1=0.3540, d2=6.3728)
+[DEBUG]   Intersección en Punto(x=5.263157895, y=5.263157895): s21layer02_P_P será dividida (d1=7.4432, d2=1.2596)
+
+[DEBUG] >> Creando vértice V_INT_11 en Punto(x=5.263157895, y=5.263157895)
+
+[DEBUG] === Nueva intersección: vértice V_INT_11 en Punto(x=5.263157895, y=5.263157895) ===
+[DEBUG] Aristas a dividir: ['s11layer01_PP_PP_PP', 's21layer02_P_P']
+[DEBUG]   Creando semi-aristas para s11layer01_PP_PP_PP:
+          s11layer01_PP_PP_PP_P  (V_INT_10 -> V_INT_11)
+          s11layer01_PP_PP_PP_PP (V_INT_11 -> p2layer01)
+          s12layer01_P_P_P_P (p2layer01 -> V_INT_11)
+          s12layer01_P_P_P_PP (V_INT_11 -> V_INT_10)
+[DEBUG]   Creando semi-aristas para s21layer02_P_P:
+          s21layer02_P_P_P  (p3layer02 -> V_INT_11)
+          s21layer02_P_P_PP (V_INT_11 -> V_INT_8)
+          s22layer02_PP_PP_P (V_INT_8 -> V_INT_11)
+          s22layer02_PP_PP_PP (V_INT_11 -> p3layer02)
+[DEBUG] Aristas salientes de V_INT_11 ordenadas:
+          s22layer02_PP_PP_PP -> p3layer02, ángulo=-135.00°
+          s11layer01_PP_PP_PP_PP -> p2layer01, ángulo=-41.99°
+          s21layer02_P_P_PP -> V_INT_8, ángulo=45.00°
+          s12layer01_P_P_P_PP -> V_INT_10, ángulo=138.01°
+[DEBUG]   Enlace: s21layer02_P_P_P.siguiente = s11layer01_PP_PP_PP_PP
+[DEBUG]   Enlace: s12layer01_P_P_P_P.siguiente = s21layer02_P_P_PP
+[DEBUG]   Enlace: s22layer02_PP_PP_P.siguiente = s12layer01_P_P_P_PP
+[DEBUG]   Enlace: s11layer01_PP_PP_PP_P.siguiente = s22layer02_PP_PP_PP
+[DEBUG] V_INT_11.aristaAdyacente = s22layer02_PP_PP_PP
+[DEBUG] Aristas totales actuales: 86
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 86) ---
+[DEBUG]   Ciclo detectado: 39 aristas, área=25.5580
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=25.5580)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=25.5580)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=25.5580)
+[DEBUG]   Hole (área=-1.5801) asignado a cara INFINITA
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=25.5580)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=25.5580)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=25.5580)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=4
+[DEBUG]     CARA2: outer=s11layer03, #holes=6
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s11layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=2.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=5.0, y=5.0): s21layer02_P_P_P será dividida (d1=7.0711, d2=0.3722)
+[DEBUG]   Intersección en Punto(x=5.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=6.557377049, y=4.098360656): s11layer01_PP_PP_PP_PP será dividida (d1=1.7412, d2=4.6316)
+[DEBUG]   Intersección en Punto(x=6.557377049, y=4.098360656): s31layer03 será dividida (d1=1.7012, d2=7.7328)
+
+[DEBUG] >> Creando vértice V_INT_12 en Punto(x=6.557377049, y=4.098360656)
+
+[DEBUG] === Nueva intersección: vértice V_INT_12 en Punto(x=6.557377049, y=4.098360656) ===
+[DEBUG] Aristas a dividir: ['s11layer01_PP_PP_PP_PP', 's31layer03']
+[DEBUG]   Creando semi-aristas para s11layer01_PP_PP_PP_PP:
+          s11layer01_PP_PP_PP_PP_P  (V_INT_11 -> V_INT_12)
+          s11layer01_PP_PP_PP_PP_PP (V_INT_12 -> p2layer01)
+          s12layer01_P_P_P_P_P (p2layer01 -> V_INT_12)
+          s12layer01_P_P_P_P_PP (V_INT_12 -> V_INT_11)
+[DEBUG]   Creando semi-aristas para s31layer03:
+          s31layer03_P  (p3layer03 -> V_INT_12)
+          s31layer03_PP (V_INT_12 -> p1layer03)
+          s32layer03_P (p1layer03 -> V_INT_12)
+          s32layer03_PP (V_INT_12 -> p3layer03)
+[DEBUG] Aristas salientes de V_INT_12 ordenadas:
+          s31layer03_PP -> p1layer03, ángulo=-147.99°
+          s11layer01_PP_PP_PP_PP_PP -> p2layer01, ángulo=-41.99°
+          s32layer03_PP -> p3layer03, ángulo=32.01°
+          s12layer01_P_P_P_P_PP -> V_INT_11, ángulo=138.01°
+[DEBUG]   Enlace: s32layer03_P.siguiente = s11layer01_PP_PP_PP_PP_PP
+[DEBUG]   Enlace: s12layer01_P_P_P_P_P.siguiente = s32layer03_PP
+[DEBUG]   Enlace: s31layer03_P.siguiente = s12layer01_P_P_P_P_PP
+[DEBUG]   Enlace: s11layer01_PP_PP_PP_PP_P.siguiente = s31layer03_PP
+[DEBUG] V_INT_12.aristaAdyacente = s31layer03_PP
+[DEBUG] Aristas totales actuales: 90
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 90) ---
+[DEBUG]   Ciclo detectado: 39 aristas, área=28.3177
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=28.3177)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=28.3177)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=28.3177)
+[DEBUG]   Hole (área=-1.5801) asignado a cara INFINITA
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=28.3177)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=28.3177)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=28.3177)
+[DEBUG]   Hole (área=-2.7597) asignado a cara INFINITA
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=5
+[DEBUG]     CARA2: outer=s11layer03, #holes=6
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s11layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=8.0, y=4.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.846153846, y=3.846153846): s51layer04 será dividida (d1=7.2569, d2=2.1771)
+[DEBUG]   Intersección en Punto(x=3.846153846, y=3.846153846): s21layer02_P_P_P será dividida (d1=5.4393, d2=2.0039)
+
+[DEBUG] >> Creando vértice V_INT_13 en Punto(x=3.846153846, y=3.846153846)
+
+[DEBUG] === Nueva intersección: vértice V_INT_13 en Punto(x=3.846153846, y=3.846153846) ===
+[DEBUG] Aristas a dividir: ['s51layer04', 's21layer02_P_P_P']
+[DEBUG]   Creando semi-aristas para s51layer04:
+          s51layer04_P  (p5layer04 -> V_INT_13)
+          s51layer04_PP (V_INT_13 -> p6layer04)
+          s52layer04_P (p6layer04 -> V_INT_13)
+          s52layer04_PP (V_INT_13 -> p5layer04)
+[DEBUG]   Creando semi-aristas para s21layer02_P_P_P:
+          s21layer02_P_P_P_P  (p3layer02 -> V_INT_13)
+          s21layer02_P_P_P_PP (V_INT_13 -> V_INT_11)
+          s22layer02_PP_PP_PP_P (V_INT_11 -> V_INT_13)
+          s22layer02_PP_PP_PP_PP (V_INT_13 -> p3layer02)
+[DEBUG] Aristas salientes de V_INT_13 ordenadas:
+          s22layer02_PP_PP_PP_PP -> p3layer02, ángulo=-135.00°
+          s52layer04_PP -> p5layer04, ángulo=-32.01°
+          s21layer02_P_P_P_PP -> V_INT_11, ángulo=45.00°
+          s51layer04_PP -> p6layer04, ángulo=147.99°
+[DEBUG]   Enlace: s21layer02_P_P_P_P.siguiente = s52layer04_PP
+[DEBUG]   Enlace: s51layer04_P.siguiente = s21layer02_P_P_P_PP
+[DEBUG]   Enlace: s22layer02_PP_PP_PP_P.siguiente = s51layer04_PP
+[DEBUG]   Enlace: s52layer04_P.siguiente = s22layer02_PP_PP_PP_PP
+[DEBUG] V_INT_13.aristaAdyacente = s22layer02_PP_PP_PP_PP
+[DEBUG] Aristas totales actuales: 94
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 94) ---
+[DEBUG]   Ciclo detectado: 36 aristas, área=30.4267
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 7 aristas, área=-2.1091
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-2.1091) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-2.0000) asignado a cara INFINITA
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-1.5801) asignado a cara INFINITA
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=30.4267)
+[DEBUG]   Hole (área=-2.7597) asignado a cara outer (área=30.4267)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=4
+[DEBUG]     CARA2: outer=s11layer03, #holes=8
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s11layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=5.0, y=3.125): s51layer04_P será dividida (d1=5.8962, d2=1.3607)
+[DEBUG]   Intersección en Punto(x=5.0, y=3.125): s31layer03_PP será dividida (d1=1.8365, d2=5.8962)
+
+[DEBUG] >> Creando vértice V_INT_14 en Punto(x=5.0, y=3.125)
+
+[DEBUG] === Nueva intersección: vértice V_INT_14 en Punto(x=5.0, y=3.125) ===
+[DEBUG] Aristas a dividir: ['s51layer04_P', 's31layer03_PP']
+[DEBUG]   Creando semi-aristas para s51layer04_P:
+          s51layer04_P_P  (p5layer04 -> V_INT_14)
+          s51layer04_P_PP (V_INT_14 -> V_INT_13)
+          s52layer04_PP_P (V_INT_13 -> V_INT_14)
+          s52layer04_PP_PP (V_INT_14 -> p5layer04)
+[DEBUG]   Creando semi-aristas para s31layer03_PP:
+          s31layer03_PP_P  (V_INT_12 -> V_INT_14)
+          s31layer03_PP_PP (V_INT_14 -> p1layer03)
+          s32layer03_P_P (p1layer03 -> V_INT_14)
+          s32layer03_P_PP (V_INT_14 -> V_INT_12)
+[DEBUG] Aristas salientes de V_INT_14 ordenadas:
+          s31layer03_PP_PP -> p1layer03, ángulo=-147.99°
+          s52layer04_PP_PP -> p5layer04, ángulo=-32.01°
+          s32layer03_P_PP -> V_INT_12, ángulo=32.01°
+          s51layer04_P_PP -> V_INT_13, ángulo=147.99°
+[DEBUG]   Enlace: s32layer03_P_P.siguiente = s52layer04_PP_PP
+[DEBUG]   Enlace: s51layer04_P_P.siguiente = s32layer03_P_PP
+[DEBUG]   Enlace: s31layer03_PP_P.siguiente = s51layer04_P_PP
+[DEBUG]   Enlace: s52layer04_PP_P.siguiente = s31layer03_PP_PP
+[DEBUG] V_INT_14.aristaAdyacente = s31layer03_PP_PP
+[DEBUG] Aristas totales actuales: 98
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 98) ---
+[DEBUG]   Ciclo detectado: 12 aristas, área=-26.2500
+[DEBUG]   Ciclo detectado: 15 aristas, área=82.5254
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 7 aristas, área=-2.1091
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 9 aristas, área=-22.9834
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653
+[DEBUG]   Hole (área=-26.2500) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.1091) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.5801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-22.9834) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.7597) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.8653) asignado a cara outer (área=82.5254)
+[DEBUG]   Total caras: 3  (1 infinita + 2 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=2
+[DEBUG]     CARA2: outer=s12layer03, #holes=13
+[DEBUG]     CARA3: outer=l2layer05, #holes=0
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 3
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+        CARA3     externo: l2layer05   inactiva
+[DEBUG]   Intersección en Punto(x=10.0, y=3.0): s41layer04_PP será dividida (d1=4.0952, d2=3.0000)
+[DEBUG]   Intersección en Punto(x=10.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=2.8): j1layer05 será dividida (d1=0.8000, d2=1.2000)
+[DEBUG]   Intersección en Punto(x=8.0, y=2.8): s11layer01_PP_PP_PP_PP_PP será dividida (d1=1.9409, d2=2.6907)
+
+[DEBUG] >> Creando vértice V_INT_15 en Punto(x=8.0, y=2.8)
+
+[DEBUG] === Nueva intersección: vértice V_INT_15 en Punto(x=8.0, y=2.8) ===
+[DEBUG] Aristas a dividir: ['j1layer05', 's11layer01_PP_PP_PP_PP_PP']
+[DEBUG]   Creando semi-aristas para j1layer05:
+          j1layer05_P  (Flayer05 -> V_INT_15)
+          j1layer05_PP (V_INT_15 -> Elayer05)
+          j2layer05_P (Elayer05 -> V_INT_15)
+          j2layer05_PP (V_INT_15 -> Flayer05)
+[DEBUG]   Creando semi-aristas para s11layer01_PP_PP_PP_PP_PP:
+          s11layer01_PP_PP_PP_PP_PP_P  (V_INT_12 -> V_INT_15)
+          s11layer01_PP_PP_PP_PP_PP_PP (V_INT_15 -> p2layer01)
+          s12layer01_P_P_P_P_P_P (p2layer01 -> V_INT_15)
+          s12layer01_P_P_P_P_P_PP (V_INT_15 -> V_INT_12)
+[DEBUG] Aristas salientes de V_INT_15 ordenadas:
+          j2layer05_PP -> Flayer05, ángulo=-90.00°
+          s11layer01_PP_PP_PP_PP_PP_PP -> p2layer01, ángulo=-41.99°
+          j1layer05_PP -> Elayer05, ángulo=90.00°
+          s12layer01_P_P_P_P_P_PP -> V_INT_12, ángulo=138.01°
+[DEBUG]   Enlace: j1layer05_P.siguiente = s11layer01_PP_PP_PP_PP_PP_PP
+[DEBUG]   Enlace: s12layer01_P_P_P_P_P_P.siguiente = j1layer05_PP
+[DEBUG]   Enlace: j2layer05_P.siguiente = s12layer01_P_P_P_P_P_PP
+[DEBUG]   Enlace: s11layer01_PP_PP_PP_PP_PP_P.siguiente = j2layer05_PP
+[DEBUG] V_INT_15.aristaAdyacente = j2layer05_PP
+[DEBUG] Aristas totales actuales: 102
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 102) ---
+[DEBUG]   Ciclo detectado: 12 aristas, área=-26.2500
+[DEBUG]   Ciclo detectado: 15 aristas, área=82.5254
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 7 aristas, área=-2.1091
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 13 aristas, área=-20.9834
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653
+[DEBUG]   Hole (área=-26.2500) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.1091) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-20.9834) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.5801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.7597) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.8653) asignado a cara outer (área=82.5254)
+[DEBUG]   Total caras: 2  (1 infinita + 1 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=2
+[DEBUG]     CARA2: outer=s12layer03, #holes=13
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 2
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+[DEBUG]   Intersección en Punto(x=8.571428571, y=2.285714286): s11layer01_PP_PP_PP_PP_PP_PP será dividida (d1=0.7688, d2=1.9219)
+[DEBUG]   Intersección en Punto(x=8.571428571, y=2.285714286): k1layer05 será dividida (d1=1.5972, d2=0.6389)
+
+[DEBUG] >> Creando vértice V_INT_16 en Punto(x=8.571428571, y=2.285714286)
+
+[DEBUG] === Nueva intersección: vértice V_INT_16 en Punto(x=8.571428571, y=2.285714286) ===
+[DEBUG] Aristas a dividir: ['s11layer01_PP_PP_PP_PP_PP_PP', 'k1layer05']
+[DEBUG]   Creando semi-aristas para s11layer01_PP_PP_PP_PP_PP_PP:
+          s11layer01_PP_PP_PP_PP_PP_PP_P  (V_INT_15 -> V_INT_16)
+          s11layer01_PP_PP_PP_PP_PP_PP_PP (V_INT_16 -> p2layer01)
+          s12layer01_P_P_P_P_P_P_P (p2layer01 -> V_INT_16)
+          s12layer01_P_P_P_P_P_P_PP (V_INT_16 -> V_INT_15)
+[DEBUG]   Creando semi-aristas para k1layer05:
+          k1layer05_P  (Glayer05 -> V_INT_16)
+          k1layer05_PP (V_INT_16 -> Flayer05)
+          k2layer05_P (Flayer05 -> V_INT_16)
+          k2layer05_PP (V_INT_16 -> Glayer05)
+[DEBUG] Aristas salientes de V_INT_16 ordenadas:
+          k1layer05_PP -> Flayer05, ángulo=-153.43°
+          s11layer01_PP_PP_PP_PP_PP_PP_PP -> p2layer01, ángulo=-41.99°
+          k2layer05_PP -> Glayer05, ángulo=26.57°
+          s12layer01_P_P_P_P_P_P_PP -> V_INT_15, ángulo=138.01°
+[DEBUG]   Enlace: k2layer05_P.siguiente = s11layer01_PP_PP_PP_PP_PP_PP_PP
+[DEBUG]   Enlace: s12layer01_P_P_P_P_P_P_P.siguiente = k2layer05_PP
+[DEBUG]   Enlace: k1layer05_P.siguiente = s12layer01_P_P_P_P_P_P_PP
+[DEBUG]   Enlace: s11layer01_PP_PP_PP_PP_PP_PP_P.siguiente = k1layer05_PP
+[DEBUG] V_INT_16.aristaAdyacente = k1layer05_PP
+[DEBUG] Aristas totales actuales: 106
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 106) ---
+[DEBUG]   Ciclo detectado: 12 aristas, área=-26.2500
+[DEBUG]   Ciclo detectado: 15 aristas, área=82.5254
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 7 aristas, área=-2.1091
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.7714
+[DEBUG]   Ciclo detectado: 16 aristas, área=-20.9834
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.2286
+[DEBUG]   Hole (área=-26.2500) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.1091) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.7714) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-20.9834) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.6746) asignado a cara INFINITA
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.5801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.7597) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.8653) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.2286) asignado a cara outer (área=82.5254)
+[DEBUG]   Total caras: 2  (1 infinita + 1 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=2
+[DEBUG]     CARA2: outer=s12layer03, #holes=14
+[DEBUG]   Caras activas: []
+[DEBUG] Caras después de procesar intersección: 2
+        CARA1     externo: None        inactiva
+        CARA2     externo: s12layer03  inactiva
+[DEBUG]   Intersección en Punto(x=8.0, y=2.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=1.0): s41layer04_PP será dividida (d1=6.0952, d2=1.0000)
+[DEBUG]   Intersección en Punto(x=10.0, y=1.0) NO generó al menos 2 aristas para dividir (encontradas: 1), se omite.
+[DEBUG]   Intersección en Punto(x=0.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+
+[DEBUG] Unificando vértices compartidos entre layers...
+
+[DEBUG] Unificando vértices compartidos entre layers...
+[DEBUG] Iniciando fusión de aristas colineales duplicadas...
+[DEBUG] No se encontraron aristas duplicadas para fusionar.
+
+[DEBUG] --- Recalculando caras De Berg (total aristas: 106) ---
+[DEBUG]   Ciclo detectado: 6 aristas, área=-21.4067
+[DEBUG]   Ciclo detectado: 15 aristas, área=82.5254
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 5 aristas, área=-1.8801
+[DEBUG]   Ciclo detectado: 7 aristas, área=-2.1091
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.7714
+[DEBUG]   Ciclo detectado: 16 aristas, área=-20.9834
+[DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.5137
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.1609
+[DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921
+[DEBUG]   Ciclo detectado: 3 aristas, área=-1.2375
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199
+[DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597
+[DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653
+[DEBUG]   Ciclo detectado: 3 aristas, área=-3.6058
+[DEBUG]   Ciclo detectado: 3 aristas, área=-0.2286
+[DEBUG]   Hole (área=-21.4067) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.0000) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.8801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.1091) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.7714) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-20.9834) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-11.7754) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.5137) asignado a cara INFINITA
+[DEBUG]   Hole (área=-2.1609) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-3.0921) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.2375) asignado a cara INFINITA
+[DEBUG]   Hole (área=-1.5801) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.9199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-0.6199) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-1.0159) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.7597) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-2.8653) asignado a cara outer (área=82.5254)
+[DEBUG]   Hole (área=-3.6058) asignado a cara INFINITA
+[DEBUG]   Hole (área=-0.2286) asignado a cara outer (área=82.5254)
+[DEBUG]   Total caras: 2  (1 infinita + 1 bounded)
+[DEBUG]     CARA1: outer=None(inf), #holes=4
+[DEBUG]     CARA2: outer=s12layer03, #holes=15
+[DEBUG]   Caras activas: []
+[DEBUG] Topología final: 106 aristas, 2 caras.
+
+[DEBUG] Renombrando todos los elementos de la DCEL...
+[DEBUG] [renombrar_dcel] 35 vértices, 106 aristas, 2 caras renombrados correctamente.
+
+Exportando nuevos archivos .vertices y .aristas...
+Archivos 'resultado.vertices' y 'resultado.aristas' generados exitosamente.
+
+Exportando nuevos archivos .caras y .activos...
+Archivos generados exitosamente.
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html

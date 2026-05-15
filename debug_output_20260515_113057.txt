@@ -1,0 +1,48 @@
+[INFO] Total segmentos geométricos: 21
+
+[DEBUG] Intersecciones encontradas (fuerza bruta completa):
+  Punto(x=0.0, y=10.0) → ['e5soto', 'e6soto']
+  Punto(x=10.0, y=10.0) → ['e4soto', 'e5soto']
+  Punto(x=4.0, y=9.0) → ['p7soto', 'p8soto']
+  Punto(x=10.0, y=9.0) → ['e3soto', 'e4soto', 'p6soto', 'p7soto']
+  Punto(x=12.0, y=9.0) → ['p5soto', 'p6soto']
+  Punto(x=2.0, y=8.0) → ['h5soto', 'h6soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'h5soto', 'p8soto', 'p9soto']
+  Punto(x=8.0, y=8.0) → ['h3soto', 'h4soto']
+  Punto(x=14.0, y=6.0) → ['p4soto', 'p5soto']
+  Punto(x=4.0, y=3.0) → ['p1soto', 'p9soto']
+  Punto(x=8.0, y=3.0) → ['h2soto', 'h3soto', 'p1soto', 'p2soto']
+  Punto(x=10.0, y=3.0) → ['e2soto', 'e3soto', 'p2soto', 'p3soto']
+  Punto(x=12.0, y=3.0) → ['p3soto', 'p4soto']
+  Punto(x=2.0, y=2.0) → ['h1soto', 'h6soto']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'h2soto']
+  Punto(x=0.0, y=0.0) → ['e1soto', 'e6soto']
+  Punto(x=10.0, y=0.0) → ['e1soto', 'e2soto']
+[DEBUG] Total: 17
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Reconstruyendo DCEL desde subdivisión planar ===
+[DEBUG] Sub-segmentos creados: 21 pares (42 semi-aristas), 17 vértices.
+
+[DEBUG] --- Recalculando caras (total aristas: 42) ---
+[DEBUG]   Ciclo detectado: 9 aristas, área=118.0000, comienza en A1
+[DEBUG]   Ciclo detectado: 12 aristas, área=-48.0000, comienza en A1_T
+[DEBUG]   Ciclo detectado: 5 aristas, área=-18.0000, comienza en A3
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en A3_T
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en A7_T
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en A9_T
+[DEBUG]   Cara infinita: ciclo con área=118.0000
+[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5', 'CARA6']
+[DEBUG]   Hueco detectado: CARA5 dentro de CARA6
+[DEBUG] Topología final: 42 aristas, 6 caras, 17 vértices.
+
+[DEBUG] Renombrando todos los elementos de la DCEL...
+[DEBUG] [renombrar_dcel] 17 vértices, 42 aristas, 6 caras renombrados correctamente.
+
+Exportando nuevos archivos .vertices y .aristas...
+Archivos 'resultado.vertices' y 'resultado.aristas' generados exitosamente.
+
+Exportando nuevos archivos .caras y .activos...
+Archivos generados exitosamente.
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html

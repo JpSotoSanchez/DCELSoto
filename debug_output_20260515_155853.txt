@@ -1,0 +1,144 @@
+[DEBUG] Evento en y=10.0000, x=0.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=10.0000, x=10.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=6.8750, x=5.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.0000, x=2.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=3.1250, x=5.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=0.0000, x=0.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=2 |C|=0
+
+[DEBUG] Intersecciones encontradas por la línea de barrido:
+  Punto(x=5.0, y=6.875) → ['s61layer04', 's21layer03']
+  Punto(x=2.0, y=5.0) → ['s61layer04', 's51layer04']
+  Punto(x=10.0, y=10.0) → ['s61layer04', 's41layer04']
+  Punto(x=0.0, y=10.0) → ['s11layer03', 's21layer03']
+  Punto(x=0.0, y=0.0) → ['s11layer03', 's31layer03']
+  Punto(x=5.0, y=3.125) → ['s31layer03', 's51layer04']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
+[DEBUG] Total: 8
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===
+
+[DEBUG] Total de intersecciones después de fuerza bruta: 8
+  Punto(x=5.0, y=6.875) → ['s61layer04', 's21layer03']
+  Punto(x=2.0, y=5.0) → ['s61layer04', 's51layer04']
+  Punto(x=10.0, y=10.0) → ['s61layer04', 's41layer04']
+  Punto(x=0.0, y=0.0) → ['s11layer03', 's31layer03']
+  Punto(x=0.0, y=10.0) → ['s11layer03', 's21layer03']
+  Punto(x=5.0, y=3.125) → ['s31layer03', 's51layer04']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
+Intersecciones completas guardadas en 'intersecciones_completas.txt'
+
+[DEBUG] === Procesando intersecciones como nuevos vértices ===
+[DEBUG]   Intersección en Punto(x=0.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=5.0, y=6.875): s61layer04 será dividida (d1=3.5377, d2=5.8962)
+[DEBUG]   Intersección en Punto(x=5.0, y=6.875): s21layer03 será dividida (d1=5.8962, d2=3.5377)
+
+[DEBUG] >> Creando vértice V_INT_1 en Punto(x=5.0, y=6.875)
+
+[DEBUG] === Nueva intersección: vértice V_INT_1 en Punto(x=5.0, y=6.875) ===
+[DEBUG] Aristas a dividir: ['s61layer04', 's21layer03']
+[DEBUG]   Creando semi-aristas para s61layer04:
+          s61layer04_P  (p6layer04 -> V_INT_1)
+          s61layer04_PP (V_INT_1 -> p4layer04)
+          s62layer04_P (p4layer04 -> V_INT_1)
+          s62layer04_PP (V_INT_1 -> p6layer04)
+[DEBUG]   Creando semi-aristas para s21layer03:
+          s21layer03_P  (p2layer03 -> V_INT_1)
+          s21layer03_PP (V_INT_1 -> p3layer03)
+          s22layer03_P (p3layer03 -> V_INT_1)
+          s22layer03_PP (V_INT_1 -> p2layer03)
+[DEBUG] Aristas salientes de V_INT_1 ordenadas:
+          s62layer04_PP -> p6layer04, ángulo=-147.99°
+          s21layer03_PP -> p3layer03, ángulo=-32.01°
+          s61layer04_PP -> p4layer04, ángulo=32.01°
+          s22layer03_PP -> p2layer03, ángulo=147.99°
+[DEBUG]   Enlace: s61layer04_P.siguiente = s21layer03_PP
+[DEBUG]   Enlace: s22layer03_P.siguiente = s61layer04_PP
+[DEBUG]   Enlace: s62layer04_P.siguiente = s22layer03_PP
+[DEBUG]   Enlace: s21layer03_P.siguiente = s62layer04_PP
+[DEBUG] V_INT_1.aristaAdyacente = s62layer04_PP
+[DEBUG] Aristas totales actuales: 16
+
+[DEBUG] --- Recalculando caras (total aristas: 16) ---
+[DEBUG]   Ciclo detectado: 16 aristas, área=0.0000, comienza en s11layer03
+[DEBUG] Ciclo de área 0: ['p1layer03', 'p2layer03', 'V_INT_1', 'p6layer04', 'p5layer04', 'p4layer04', 'V_INT_1', 'p2layer03', 'p1layer03', 'p3layer03', 'V_INT_1', 'p4layer04', 'p5layer04', 'p6layer04', 'V_INT_1', 'p3layer03']
+[DEBUG]   Cara infinita: ciclo con área=0.0000
+[DEBUG]   Caras activas después de clasificar: []
+[DEBUG] Caras después de procesar intersección: 1
+        CARA1     externo: s11layer03  inactiva
+[DEBUG]   Intersección en Punto(x=2.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=5.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=5.0, y=3.125): s31layer03 será dividida (d1=3.5377, d2=5.8962)
+[DEBUG]   Intersección en Punto(x=5.0, y=3.125): s51layer04 será dividida (d1=5.8962, d2=3.5377)
+
+[DEBUG] >> Creando vértice V_INT_2 en Punto(x=5.0, y=3.125)
+
+[DEBUG] === Nueva intersección: vértice V_INT_2 en Punto(x=5.0, y=3.125) ===
+[DEBUG] Aristas a dividir: ['s31layer03', 's51layer04']
+[DEBUG]   Creando semi-aristas para s31layer03:
+          s31layer03_P  (p3layer03 -> V_INT_2)
+          s31layer03_PP (V_INT_2 -> p1layer03)
+          s32layer03_P (p1layer03 -> V_INT_2)
+          s32layer03_PP (V_INT_2 -> p3layer03)
+[DEBUG]   Creando semi-aristas para s51layer04:
+          s51layer04_P  (p5layer04 -> V_INT_2)
+          s51layer04_PP (V_INT_2 -> p6layer04)
+          s52layer04_P (p6layer04 -> V_INT_2)
+          s52layer04_PP (V_INT_2 -> p5layer04)
+[DEBUG] Aristas salientes de V_INT_2 ordenadas:
+          s31layer03_PP -> p1layer03, ángulo=-147.99°
+          s52layer04_PP -> p5layer04, ángulo=-32.01°
+          s32layer03_PP -> p3layer03, ángulo=32.01°
+          s51layer04_PP -> p6layer04, ángulo=147.99°
+[DEBUG]   Enlace: s32layer03_P.siguiente = s52layer04_PP
+[DEBUG]   Enlace: s51layer04_P.siguiente = s32layer03_PP
+[DEBUG]   Enlace: s31layer03_P.siguiente = s51layer04_PP
+[DEBUG]   Enlace: s52layer04_P.siguiente = s31layer03_PP
+[DEBUG] V_INT_2.aristaAdyacente = s31layer03_PP
+[DEBUG] Aristas totales actuales: 20
+
+[DEBUG] --- Recalculando caras (total aristas: 20) ---
+[DEBUG]   Ciclo detectado: 5 aristas, área=-28.7500, comienza en s11layer03
+[DEBUG]   Ciclo detectado: 6 aristas, área=68.7500, comienza en s12layer03
+[DEBUG]   Ciclo detectado: 5 aristas, área=-28.7500, comienza en s41layer04
+[DEBUG]   Ciclo detectado: 4 aristas, área=-11.2500, comienza en s61layer04_P
+[DEBUG]   Cara infinita: ciclo con área=68.7500
+[DEBUG]   Caras activas después de clasificar: []
+[DEBUG] Caras después de procesar intersección: 4
+        CARA2     externo: s11layer03  inactiva
+        CARA1     externo: s12layer03  inactiva
+        CARA3     externo: s41layer04  inactiva
+        CARA4     externo: s61layer04_P  inactiva
+[DEBUG]   Intersección en Punto(x=0.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+
+[DEBUG] Unificando vértices compartidos entre layers...
+
+[DEBUG] Unificando vértices compartidos entre layers...
+[DEBUG] Iniciando fusión de aristas colineales duplicadas...
+[DEBUG] No se encontraron aristas duplicadas para fusionar.
+
+[DEBUG] --- Recalculando caras (total aristas: 20) ---
+[DEBUG]   Ciclo detectado: 5 aristas, área=-28.7500, comienza en s11layer03
+[DEBUG]   Ciclo detectado: 6 aristas, área=68.7500, comienza en s12layer03
+[DEBUG]   Ciclo detectado: 5 aristas, área=-28.7500, comienza en s41layer04
+[DEBUG]   Ciclo detectado: 4 aristas, área=-11.2500, comienza en s61layer04_P
+[DEBUG]   Cara infinita: ciclo con área=68.7500
+[DEBUG]   Caras activas después de clasificar: []
+[DEBUG] Topología final: 20 aristas, 4 caras.
+
+[DEBUG] Renombrando todos los elementos de la DCEL...
+[DEBUG] [renombrar_dcel] 8 vértices, 20 aristas, 4 caras renombrados correctamente.
+
+Exportando nuevos archivos .vertices y .aristas...
+Archivos 'resultado.vertices' y 'resultado.aristas' generados exitosamente.
+
+Exportando nuevos archivos .caras y .activos...
+Archivos generados exitosamente.
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html

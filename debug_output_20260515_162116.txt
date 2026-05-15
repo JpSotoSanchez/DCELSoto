@@ -1,0 +1,163 @@
+[DEBUG] Evento en y=11.0000, x=9.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=10.5000, x=13.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=10.0000, x=0.0000  |U|=3 |L|=0 |C|=0
+[DEBUG] Evento en y=10.0000, x=10.0000  |U|=3 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=3.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.8491, x=8.1585  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=8.5122, x=8.5122  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=8.1250, x=3.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=8.0000, x=5.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.0000, x=13.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=7.3000, x=3.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=7.0952, x=10.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=7.0000, x=10.1000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=6.8750, x=5.0000  |U|=0 |L|=0 |C|=3
+[DEBUG] Evento en y=6.3115, x=4.0984  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=6.1538, x=6.1538  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.6250, x=3.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.5000, x=5.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.2632, x=5.2632  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=5.0000, x=2.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=3.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=5.0000, x=5.0000  |U|=0 |L|=2 |C|=1
+[DEBUG] Evento en y=5.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=4.0984, x=6.5574  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=4.0000, x=8.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=3.8462, x=3.8462  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=3.1250, x=5.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=3.0000, x=10.0000  |U|=1 |L|=1 |C|=1
+[DEBUG] Evento en y=2.8000, x=8.0000  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=2.2857, x=8.5714  |U|=0 |L|=0 |C|=2
+[DEBUG] Evento en y=2.0000, x=8.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=1.0000, x=10.0000  |U|=0 |L|=1 |C|=1
+[DEBUG] Evento en y=0.0000, x=0.0000  |U|=0 |L|=3 |C|=0
+[DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=2 |C|=0
+
+[DEBUG] Intersecciones encontradas por la línea de barrido:
+  Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+  Punto(x=5.0, y=5.0) → ['g1layer05']
+  Punto(x=0.0, y=0.0) → ['s11layer03', 's21layer02', 's31layer03']
+  Punto(x=10.0, y=1.0) → ['s41layer04', 's11layer01']
+  Punto(x=8.0, y=9.0) → ['n1layer05', 'm1layer05']
+  Punto(x=10.0, y=10.0) → ['s41layer04', 's61layer04', 's21layer02']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=10.0, y=0.0) → ['s41layer04', 's51layer04']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'i1layer05']
+  Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
+  Punto(x=13.0, y=8.0) → ['q1layer05', 'p1layer05']
+  Punto(x=5.2631578947368425, y=5.2631578947368425) → ['s21layer02', 's11layer01']
+  Punto(x=3.0, y=5.0) → ['g1layer05']
+  Punto(x=3.8461538461538463, y=3.8461538461538463) → ['s21layer02', 's51layer04']
+  Punto(x=8.0, y=4.0) → ['j1layer05', 'l1layer05']
+  Punto(x=8.0, y=2.8) → ['j1layer05', 's11layer01']
+  Punto(x=3.0, y=7.3) → ['f1layer05', 's11layer01']
+  Punto(x=6.557377049180328, y=4.098360655737705) → ['s31layer03', 's11layer01']
+  Punto(x=8.158490566037733, y=8.849056603773583) → ['n1layer05', 's61layer04']
+  Punto(x=8.571428571428571, y=2.2857142857142856) → ['s11layer01', 'k1layer05']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=3.0, y=8.125) → ['f1layer05', 's21layer03']
+  Punto(x=5.0, y=5.5) → ['h1layer05', 's11layer01']
+  Punto(x=10.0, y=3.0) → ['s41layer04', 'l1layer05', 'k1layer05']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 's21layer02', 'g1layer05']
+  Punto(x=2.0, y=5.0) → ['s61layer04', 's51layer04']
+  Punto(x=6.153846153846154, y=6.153846153846154) → ['s21layer03', 's21layer02']
+  Punto(x=5.0, y=3.125) → ['s31layer03', 's51layer04']
+  Punto(x=8.0, y=2.0) → ['j1layer05', 'k1layer05']
+  Punto(x=4.098360655737705, y=6.311475409836065) → ['s61layer04', 's11layer01']
+  Punto(x=8.512195121951217, y=8.512195121951217) → ['n1layer05', 's21layer02']
+  Punto(x=5.0, y=5.0) → ['s21layer02', 'g1layer05']
+  Punto(x=10.0, y=7.095238095238091) → ['n1layer05', 's41layer04']
+  Punto(x=0.0, y=10.0) → ['s11layer03', 's21layer03', 's11layer01']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 'g1layer05']
+[DEBUG] Total: 39
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===
+
+[DEBUG] Total de intersecciones después de fuerza bruta: 35
+  Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+  Punto(x=10.0, y=7.095238095) → ['n1layer05', 's41layer04']
+  Punto(x=0.0, y=0.0) → ['s11layer03', 's21layer02', 's31layer03']
+  Punto(x=10.0, y=1.0) → ['s41layer04', 's11layer01']
+  Punto(x=8.0, y=9.0) → ['n1layer05', 'm1layer05']
+  Punto(x=10.0, y=10.0) → ['s41layer04', 's61layer04', 's21layer02']
+  Punto(x=10.0, y=0.0) → ['s41layer04', 's51layer04']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'i1layer05']
+  Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
+  Punto(x=13.0, y=8.0) → ['q1layer05', 'p1layer05']
+  Punto(x=8.0, y=2.8) → ['j1layer05', 's11layer01']
+  Punto(x=8.0, y=4.0) → ['j1layer05', 'l1layer05']
+  Punto(x=4.098360656, y=6.31147541) → ['s61layer04', 's11layer01']
+  Punto(x=3.0, y=7.3) → ['f1layer05', 's11layer01']
+  Punto(x=8.571428571, y=2.285714286) → ['s11layer01', 'k1layer05']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=3.0, y=8.125) → ['f1layer05', 's21layer03']
+  Punto(x=5.0, y=5.5) → ['h1layer05', 's11layer01']
+  Punto(x=10.0, y=3.0) → ['s41layer04', 'l1layer05', 'k1layer05']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 's21layer02', 'g1layer05']
+  Punto(x=2.0, y=5.0) → ['s61layer04', 's51layer04']
+  Punto(x=6.557377049, y=4.098360656) → ['s31layer03', 's11layer01']
+  Punto(x=8.158490566, y=8.849056604) → ['n1layer05', 's61layer04']
+  Punto(x=5.0, y=3.125) → ['s31layer03', 's51layer04']
+  Punto(x=8.0, y=2.0) → ['j1layer05', 'k1layer05']
+  Punto(x=3.846153846, y=3.846153846) → ['s21layer02', 's51layer04']
+  Punto(x=6.153846154, y=6.153846154) → ['s21layer03', 's21layer02']
+  Punto(x=8.512195122, y=8.512195122) → ['n1layer05', 's21layer02']
+  Punto(x=5.263157895, y=5.263157895) → ['s21layer02', 's11layer01']
+  Punto(x=0.0, y=10.0) → ['s11layer03', 's21layer03', 's11layer01']
+Intersecciones completas guardadas en 'intersecciones_completas.txt'
+
+[DEBUG] === Procesando intersecciones como nuevos vértices ===
+[DEBUG]   Intersección en Punto(x=9.0, y=11.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=13.0, y=10.5) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=0.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=3.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.158490566, y=8.849056604): n1layer05 será dividida (d1=2.6811, d2=0.2189)
+[DEBUG]   Intersección en Punto(x=8.158490566, y=8.849056604): s61layer04 será dividida (d1=7.2624, d2=2.1716)
+
+[DEBUG] >> Creando vértice V_INT_1 en Punto(x=8.158490566, y=8.849056604)
+
+[DEBUG] === Nueva intersección: vértice V_INT_1 en Punto(x=8.158490566, y=8.849056604) ===
+[DEBUG] Aristas a dividir: ['n1layer05', 's61layer04']
+[DEBUG]   Creando semi-aristas para n1layer05:
+          n1layer05_P  (Jlayer05 -> V_INT_1)
+          n1layer05_PP (V_INT_1 -> Ilayer05)
+          n2layer05_P (Ilayer05 -> V_INT_1)
+          n2layer05_PP (V_INT_1 -> Jlayer05)
+[DEBUG]   Creando semi-aristas para s61layer04:
+          s61layer04_P  (p6layer04 -> V_INT_1)
+          s61layer04_PP (V_INT_1 -> p4layer04)
+          s62layer04_P (p4layer04 -> V_INT_1)
+          s62layer04_PP (V_INT_1 -> p6layer04)
+[DEBUG] Aristas salientes de V_INT_1 ordenadas:
+          s62layer04_PP -> p6layer04, ángulo=-147.99°
+          n2layer05_PP -> Jlayer05, ángulo=-43.60°
+          s61layer04_PP -> p4layer04, ángulo=32.01°
+          n1layer05_PP -> Ilayer05, ángulo=136.40°
+[DEBUG]   Enlace: s61layer04_P.siguiente = n2layer05_PP
+[DEBUG]   Enlace: n1layer05_P.siguiente = s61layer04_PP
+[DEBUG]   Enlace: s62layer04_P.siguiente = n1layer05_PP
+[DEBUG]   Enlace: n2layer05_P.siguiente = s62layer04_PP
+[DEBUG] V_INT_1.aristaAdyacente = s62layer04_PP
+[DEBUG] Aristas totales actuales: 44
+
+[DEBUG] --- Recalculando caras (total aristas: 44) ---
+[DEBUG]   Ciclo detectado: 3 aristas, área=-40.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=40.0000
+[DEBUG]   Ciclo detectado: 20 aristas, área=0.0000
+[DEBUG]   Ciclo detectado: 4 aristas, área=-7.0000
+[DEBUG]   Ciclo detectado: 4 aristas, área=7.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000
+[DEBUG]   Ciclo detectado: 3 aristas, área=2.0000

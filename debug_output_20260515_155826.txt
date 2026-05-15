@@ -1,0 +1,136 @@
+[DEBUG] Evento en y=10.0000, x=0.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=10.0000, x=10.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=9.0000, x=4.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=9.0000, x=10.0000  |U|=2 |L|=2 |C|=0
+[DEBUG] Evento en y=9.0000, x=12.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=8.0000, x=2.0000  |U|=2 |L|=0 |C|=0
+[DEBUG] Evento en y=8.0000, x=4.0000  |U|=2 |L|=2 |C|=0
+[DEBUG] Evento en y=8.0000, x=8.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=6.0000, x=14.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=3.0000, x=4.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=3.0000, x=8.0000  |U|=2 |L|=2 |C|=0
+[DEBUG] Evento en y=3.0000, x=10.0000  |U|=2 |L|=2 |C|=0
+[DEBUG] Evento en y=3.0000, x=12.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=2.0000, x=2.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=2.0000, x=8.0000  |U|=0 |L|=2 |C|=0
+[DEBUG] Evento en y=0.0000, x=0.0000  |U|=1 |L|=1 |C|=0
+[DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=2 |C|=0
+
+[DEBUG] Intersecciones encontradas por la línea de barrido:
+  Punto(x=8.0, y=3.0) → ['h2soto', 'p2soto']
+  Punto(x=10.0, y=9.0) → ['p7soto']
+  Punto(x=0.0, y=0.0) → ['e6soto', 'e1soto']
+  Punto(x=10.0, y=3.0) → ['p3soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'p9soto']
+  Punto(x=10.0, y=9.0) → ['e4soto', 'p7soto']
+  Punto(x=10.0, y=9.0) → ['e4soto', 'p6soto', 'p7soto', 'e3soto']
+  Punto(x=10.0, y=3.0) → ['e3soto', 'p2soto']
+  Punto(x=10.0, y=0.0) → ['e1soto']
+  Punto(x=8.0, y=8.0) → ['h4soto', 'h3soto']
+  Punto(x=10.0, y=10.0) → ['e4soto', 'e5soto']
+  Punto(x=12.0, y=9.0) → ['p6soto', 'p5soto']
+  Punto(x=4.0, y=8.0) → ['h5soto']
+  Punto(x=10.0, y=3.0) → ['p2soto']
+  Punto(x=0.0, y=10.0) → ['e6soto', 'e5soto']
+  Punto(x=12.0, y=3.0) → ['p4soto', 'p3soto']
+  Punto(x=10.0, y=3.0) → ['e3soto', 'p3soto', 'e2soto', 'p2soto']
+  Punto(x=8.0, y=3.0) → ['p1soto']
+  Punto(x=14.0, y=6.0) → ['p4soto', 'p5soto']
+  Punto(x=2.0, y=2.0) → ['h1soto', 'h6soto']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'h2soto']
+  Punto(x=10.0, y=3.0) → ['p3soto', 'e2soto']
+  Punto(x=10.0, y=-0.0) → ['e2soto', 'e1soto']
+  Punto(x=10.0, y=9.0) → ['p6soto']
+  Punto(x=4.0, y=9.0) → ['p8soto', 'p7soto']
+  Punto(x=10.0, y=10.0) → ['e5soto']
+  Punto(x=0.0, y=0.0) → ['e1soto']
+  Punto(x=0.0, y=10.0) → ['e5soto']
+  Punto(x=2.0, y=8.0) → ['h6soto', 'h5soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'p9soto', 'p8soto', 'h5soto']
+  Punto(x=8.0, y=3.0) → ['p2soto']
+  Punto(x=10.0, y=9.0) → ['p6soto', 'e3soto']
+  Punto(x=8.0, y=3.0) → ['h3soto', 'p1soto']
+  Punto(x=8.0, y=3.0) → ['h3soto', 'h2soto', 'p1soto', 'p2soto']
+  Punto(x=8.0, y=8.0) → ['h4soto']
+  Punto(x=12.0, y=9.0) → ['p6soto']
+  Punto(x=4.0, y=8.0) → ['p8soto', 'h5soto']
+  Punto(x=2.0, y=2.0) → ['h1soto']
+  Punto(x=4.0, y=8.0) → ['h4soto']
+  Punto(x=2.0, y=8.0) → ['h5soto']
+  Punto(x=12.0, y=3.0) → ['p3soto']
+  Punto(x=4.0, y=3.0) → ['p9soto', 'p1soto']
+  Punto(x=4.0, y=3.0) → ['p1soto']
+  Punto(x=8.0, y=2.0) → ['h1soto']
+  Punto(x=4.0, y=9.0) → ['p7soto']
+[DEBUG] Total: 45
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===
+
+[DEBUG] Total de intersecciones después de fuerza bruta: 17
+  Punto(x=8.0, y=3.0) → ['h2soto', 'h3soto', 'p1soto', 'p2soto']
+  Punto(x=0.0, y=0.0) → ['e6soto', 'e1soto']
+  Punto(x=10.0, y=10.0) → ['e4soto', 'e5soto']
+  Punto(x=12.0, y=9.0) → ['p6soto', 'p5soto']
+  Punto(x=4.0, y=9.0) → ['p8soto', 'p7soto']
+  Punto(x=0.0, y=10.0) → ['e6soto', 'e5soto']
+  Punto(x=12.0, y=3.0) → ['p4soto', 'p3soto']
+  Punto(x=2.0, y=8.0) → ['h6soto', 'h5soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'p9soto', 'p8soto', 'h5soto']
+  Punto(x=4.0, y=3.0) → ['p9soto', 'p1soto']
+  Punto(x=10.0, y=3.0) → ['e2soto', 'p3soto', 'e3soto', 'p2soto']
+  Punto(x=14.0, y=6.0) → ['p4soto', 'p5soto']
+  Punto(x=2.0, y=2.0) → ['h1soto', 'h6soto']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'h2soto']
+  Punto(x=10.0, y=9.0) → ['e4soto', 'p6soto', 'p7soto', 'e3soto']
+  Punto(x=8.0, y=8.0) → ['h4soto', 'h3soto']
+  Punto(x=10.0, y=0.0) → ['e2soto', 'e1soto']
+Intersecciones completas guardadas en 'intersecciones_completas.txt'
+
+[DEBUG] === Procesando intersecciones como nuevos vértices ===
+[DEBUG]   Intersección en Punto(x=0.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=10.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=12.0, y=9.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=2.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=14.0, y=6.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=4.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=12.0, y=3.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=2.0, y=2.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=8.0, y=2.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=0.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+[DEBUG]   Intersección en Punto(x=10.0, y=0.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
+
+[DEBUG] Unificando vértices compartidos entre layers...
+
+[DEBUG] Unificando vértices compartidos entre layers...
+[DEBUG] Iniciando fusión de aristas colineales duplicadas...
+[DEBUG] No se encontraron aristas duplicadas para fusionar.
+
+[DEBUG] --- Recalculando caras (total aristas: 42) ---
+[DEBUG]   Ciclo detectado: 9 aristas, área=118.0000, comienza en e1soto
+[DEBUG]   Ciclo detectado: 12 aristas, área=-48.0000, comienza en e1_psoto
+[DEBUG]   Ciclo detectado: 5 aristas, área=-18.0000, comienza en e3soto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en e3_psoto
+[DEBUG]   Ciclo detectado: 6 aristas, área=-16.0000, comienza en h1_psoto
+[DEBUG]   Ciclo detectado: 4 aristas, área=-20.0000, comienza en h3_psoto
+[DEBUG]   Cara infinita: ciclo con área=118.0000
+[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5', 'CARA6']
+[DEBUG]   Hueco detectado: CARA5 dentro de CARA6
+[DEBUG] Topología final: 42 aristas, 6 caras.
+
+[DEBUG] Renombrando todos los elementos de la DCEL...
+[DEBUG] [renombrar_dcel] 17 vértices, 42 aristas, 6 caras renombrados correctamente.
+
+Exportando nuevos archivos .vertices y .aristas...
+Archivos 'resultado.vertices' y 'resultado.aristas' generados exitosamente.
+
+Exportando nuevos archivos .caras y .activos...
+Archivos generados exitosamente.
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html

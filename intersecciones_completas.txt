@@ -1,4 +1,4 @@
-Total de intersecciones: 39
+Total de intersecciones (fuerza bruta): 35
 ========================================
    1. (9, 11)  →  m1layer05, r1layer05
    2. (13, 10.5)  →  q1layer05, r1layer05
@@ -22,20 +22,16 @@ Total de intersecciones: 39
   20. (5.26316, 5.26316)  →  s11layer01, s21layer02
   21. (2, 5)  →  s51layer04, s61layer04
   22. (3, 5)  →  f1layer05, g1layer05
-  23. (3, 5)  →  g1layer05
-  24. (5, 5)  →  g1layer05, s21layer02
-  25. (5, 5)  →  g1layer05, h1layer05, s21layer02
-  26. (5, 5)  →  g1layer05
-  27. (5, 5)  →  g1layer05, h1layer05
-  28. (8, 5)  →  s21layer03, s31layer03
-  29. (6.55738, 4.09836)  →  s11layer01, s31layer03
-  30. (8, 4)  →  j1layer05, l1layer05
-  31. (3.84615, 3.84615)  →  s21layer02, s51layer04
-  32. (5, 3.125)  →  s31layer03, s51layer04
-  33. (10, 3)  →  k1layer05, l1layer05, s41layer04
-  34. (8, 2.8)  →  j1layer05, s11layer01
-  35. (8.57143, 2.28571)  →  k1layer05, s11layer01
-  36. (8, 2)  →  j1layer05, k1layer05
-  37. (10, 1)  →  s11layer01, s41layer04
-  38. (0, 0)  →  s11layer03, s21layer02, s31layer03
-  39. (10, 0)  →  s41layer04, s51layer04
+  23. (5, 5)  →  g1layer05, h1layer05, s21layer02
+  24. (8, 5)  →  s21layer03, s31layer03
+  25. (6.55738, 4.09836)  →  s11layer01, s31layer03
+  26. (8, 4)  →  j1layer05, l1layer05
+  27. (3.84615, 3.84615)  →  s21layer02, s51layer04
+  28. (5, 3.125)  →  s31layer03, s51layer04
+  29. (10, 3)  →  k1layer05, l1layer05, s41layer04
+  30. (8, 2.8)  →  j1layer05, s11layer01
+  31. (8.57143, 2.28571)  →  k1layer05, s11layer01
+  32. (8, 2)  →  j1layer05, k1layer05
+  33. (10, 1)  →  s11layer01, s41layer04
+  34. (0, 0)  →  s11layer03, s21layer02, s31layer03
+  35. (10, 0)  →  s41layer04, s51layer04

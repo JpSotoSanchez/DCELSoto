@@ -1,0 +1,41 @@
+[INFO] Total segmentos geométricos: 33
+
+[DEBUG] Intersecciones encontradas (fuerza bruta completa):
+  Punto(x=9.0, y=11.0) → ['m1layer05', 'r1layer05']
+  Punto(x=13.0, y=10.5) → ['q1layer05', 'r1layer05']
+  Punto(x=0.0, y=10.0) → ['e5soto', 'e6soto']
+  Punto(x=8.5, y=10.0) → ['e5soto', 'm1layer05']
+  Punto(x=10.0, y=10.0) → ['e4soto', 'e5soto']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=4.0, y=9.0) → ['p7soto', 'p8soto']
+  Punto(x=8.0, y=9.0) → ['m1layer05', 'n1layer05', 'p7soto']
+  Punto(x=10.0, y=9.0) → ['e3soto', 'e4soto', 'p6soto', 'p7soto']
+  Punto(x=12.0, y=9.0) → ['p5soto', 'p6soto']
+  Punto(x=4.0, y=8.5) → ['i1layer05', 'p8soto']
+  Punto(x=2.0, y=8.0) → ['h5soto', 'h6soto']
+  Punto(x=3.0, y=8.0) → ['f1layer05', 'h5soto']
+  Punto(x=4.0, y=8.0) → ['h4soto', 'h5soto', 'p8soto', 'p9soto']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'h4soto', 'i1layer05']
+  Punto(x=8.0, y=8.0) → ['h3soto', 'h4soto']
+  Punto(x=13.0, y=8.0) → ['p1layer05', 'q1layer05']
+  Punto(x=12.728971962616823, y=7.906542056074766) → ['p1layer05', 'p5soto']
+  Punto(x=10.0, y=7.095238095238092) → ['e3soto', 'n1layer05']
+  Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
+  Punto(x=14.0, y=6.0) → ['p4soto', 'p5soto']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=4.0, y=5.0) → ['g1layer05', 'p9soto']
+  Punto(x=5.0, y=5.0) → ['g1layer05', 'h1layer05']
+  Punto(x=8.0, y=4.0) → ['h3soto', 'j1layer05', 'l1layer05']
+  Punto(x=4.0, y=3.0) → ['p1soto', 'p9soto']
+  Punto(x=8.0, y=3.0) → ['h2soto', 'h3soto', 'j1layer05', 'p1soto', 'p2soto']
+  Punto(x=10.0, y=3.0) → ['e2soto', 'e3soto', 'k1layer05', 'l1layer05', 'p2soto', 'p3soto']
+  Punto(x=12.0, y=3.0) → ['p3soto', 'p4soto']
+  Punto(x=2.0, y=2.0) → ['h1soto', 'h6soto']
+  Punto(x=8.0, y=2.0) → ['h1soto', 'h2soto', 'j1layer05', 'k1layer05']
+  Punto(x=0.0, y=0.0) → ['e1soto', 'e6soto']
+  Punto(x=10.0, y=0.0) → ['e1soto', 'e2soto']
+[DEBUG] Total: 33
+Intersecciones guardadas en intersecciones.txt
+
+[DEBUG] === Reconstruyendo DCEL desde subdivisión planar ===
+[DEBUG] Sub-segmentos creados: 49 pares (98 semi-aristas), 33 vértices.
