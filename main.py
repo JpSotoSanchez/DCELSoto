@@ -1687,6 +1687,39 @@ print("\n[DEBUG] Renombrando todos los elementos de la DCEL...")
 renombrar_dcel(todosLosVertices, todasLasAristas, todasLasCaras)
 
 # ══════════════════════════════════════════════════════════════════════════════
+# VISUALIZACIÓN DE CARAS CON COLORES DISTINTOS (para verificar)
+# ══════════════════════════════════════════════════════════════════════════════
+fig_caras, ax_caras = plt.subplots(figsize=(10, 7))
+ax_caras.set_title("Caras finales de la DCEL (cada color distinto)")
+
+# Usar un colormap con suficientes colores
+num_caras = len(todasLasCaras)
+cmap_caras = cm.get_cmap('tab20', num_caras)
+
+for i, cara in enumerate(todasLasCaras):
+    color = cmap_caras(i)
+    # La cara infinita (CARA1) no se rellena para no tapar todo
+    if cara.nombre == "CARA1":
+        continue
+    dibujarCara(cara, ax_caras, color=color, rellenar=True, label=cara.nombre)
+
+# Dibujar aristas en gris tenue para referencia
+for a in todasLasAristas:
+    p1 = a.verticeOriginal.coordenadas
+    p2 = a.pareja.verticeOriginal.coordenadas
+    ax_caras.plot([p1.x, p2.x], [p1.y, p2.y], color='gray', lw=0.5, alpha=0.5)
+
+# Dibujar todos los vértices
+v_x = [v.coordenadas.x for v in todosLosVertices]
+v_y = [v.coordenadas.y for v in todosLosVertices]
+ax_caras.scatter(v_x, v_y, color='black', s=10, zorder=10)
+
+ax_caras.legend(loc='upper right', fontsize='small')
+ax_caras.set_aspect('equal')
+plt.tight_layout()
+plt.show()
+
+# ══════════════════════════════════════════════════════════════════════════════
 # PARTE 4 — EXPORTAR RESULTADOS (Nuevos Vértices y Aristas)
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -2185,4 +2218,3 @@ while running:
 
 pygame.quit()
 log_file.close()
-

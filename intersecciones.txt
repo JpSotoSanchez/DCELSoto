@@ -23,10 +23,10 @@ Total de intersecciones: 39
   21. (2, 5)  →  s51layer04, s61layer04
   22. (3, 5)  →  f1layer05, g1layer05
   23. (3, 5)  →  g1layer05
-  24. (5, 5)  →  g1layer05, s21layer02
+  24. (5, 5)  →  g1layer05, h1layer05
   25. (5, 5)  →  g1layer05, h1layer05, s21layer02
   26. (5, 5)  →  g1layer05
-  27. (5, 5)  →  g1layer05, h1layer05
+  27. (5, 5)  →  g1layer05, s21layer02
   28. (8, 5)  →  s21layer03, s31layer03
   29. (6.55738, 4.09836)  →  s11layer01, s31layer03
   30. (8, 4)  →  j1layer05, l1layer05

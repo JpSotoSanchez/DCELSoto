@@ -35,86 +35,86 @@
 [DEBUG] Evento en y=0.0000, x=10.0000  |U|=0 |L|=2 |C|=0
 
 [DEBUG] Intersecciones encontradas por la línea de barrido:
-  Punto(x=5.0, y=5.0) → ['h1layer05', 'g1layer05']
-  Punto(x=5.0, y=5.0) → ['s21layer02', 'h1layer05', 'g1layer05']
-  Punto(x=3.8461538461538463, y=3.8461538461538463) → ['s51layer04', 's21layer02']
   Punto(x=4.098360655737705, y=6.311475409836065) → ['s11layer01', 's61layer04']
-  Punto(x=8.0, y=9.0) → ['m1layer05', 'n1layer05']
-  Punto(x=6.557377049180328, y=4.098360655737705) → ['s11layer01', 's31layer03']
-  Punto(x=6.153846153846154, y=6.153846153846154) → ['s21layer03', 's21layer02']
-  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
-  Punto(x=8.0, y=2.0) → ['k1layer05', 'j1layer05']
-  Punto(x=3.0, y=8.125) → ['s21layer03', 'f1layer05']
-  Punto(x=0.0, y=10.0) → ['s21layer03', 's11layer01', 's11layer03']
-  Punto(x=8.512195121951217, y=8.512195121951217) → ['n1layer05', 's21layer02']
-  Punto(x=2.0, y=5.0) → ['s51layer04', 's61layer04']
-  Punto(x=10.0, y=7.095238095238091) → ['n1layer05', 's41layer04']
-  Punto(x=10.0, y=3.0) → ['k1layer05', 'l1layer05', 's41layer04']
-  Punto(x=10.0, y=1.0) → ['s11layer01', 's41layer04']
-  Punto(x=13.0, y=10.5) → ['r1layer05', 'q1layer05']
+  Punto(x=8.512195121951217, y=8.512195121951217) → ['s21layer02', 'n1layer05']
   Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
-  Punto(x=8.571428571428571, y=2.2857142857142856) → ['k1layer05', 's11layer01']
+  Punto(x=3.8461538461538463, y=3.8461538461538463) → ['s21layer02', 's51layer04']
+  Punto(x=8.0, y=2.8) → ['s11layer01', 'j1layer05']
+  Punto(x=8.571428571428571, y=2.2857142857142856) → ['s11layer01', 'k1layer05']
+  Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
+  Punto(x=3.0, y=7.3) → ['s11layer01', 'f1layer05']
+  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=2.0, y=5.0) → ['s51layer04', 's61layer04']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'i1layer05']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=6.557377049180328, y=4.098360655737705) → ['s11layer01', 's31layer03']
+  Punto(x=10.0, y=3.0) → ['l1layer05', 'k1layer05', 's41layer04']
+  Punto(x=5.0, y=5.0) → ['h1layer05', 'g1layer05']
+  Punto(x=13.0, y=8.0) → ['q1layer05', 'p1layer05']
+  Punto(x=0.0, y=0.0) → ['s31layer03', 's21layer02', 's11layer03']
+  Punto(x=5.2631578947368425, y=5.2631578947368425) → ['s11layer01', 's21layer02']
+  Punto(x=5.0, y=5.0) → ['s21layer02', 'h1layer05', 'g1layer05']
+  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
   Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=8.0, y=4.0) → ['l1layer05', 'j1layer05']
   Punto(x=8.158490566037733, y=8.849056603773583) → ['n1layer05', 's61layer04']
   Punto(x=5.0, y=5.0) → ['g1layer05']
-  Punto(x=0.0, y=0.0) → ['s11layer03', 's31layer03', 's21layer02']
-  Punto(x=5.2631578947368425, y=5.2631578947368425) → ['s11layer01', 's21layer02']
-  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=0.0, y=10.0) → ['s11layer01', 's21layer03', 's11layer03']
   Punto(x=5.0, y=5.0) → ['s21layer02', 'g1layer05']
-  Punto(x=13.0, y=8.0) → ['p1layer05', 'q1layer05']
-  Punto(x=5.0, y=8.0) → ['i1layer05', 'h1layer05']
-  Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
-  Punto(x=8.0, y=2.8) → ['s11layer01', 'j1layer05']
-  Punto(x=10.0, y=10.0) → ['s61layer04', 's21layer02', 's41layer04']
-  Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
+  Punto(x=8.0, y=2.0) → ['k1layer05', 'j1layer05']
+  Punto(x=10.0, y=7.095238095238091) → ['n1layer05', 's41layer04']
   Punto(x=3.0, y=5.0) → ['g1layer05']
+  Punto(x=3.0, y=8.125) → ['f1layer05', 's21layer03']
+  Punto(x=10.0, y=10.0) → ['s21layer02', 's61layer04', 's41layer04']
+  Punto(x=6.153846153846154, y=6.153846153846154) → ['s21layer02', 's21layer03']
   Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
-  Punto(x=5.0, y=5.5) → ['s11layer01', 'h1layer05']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=13.0, y=10.5) → ['r1layer05', 'q1layer05']
+  Punto(x=10.0, y=1.0) → ['s11layer01', 's41layer04']
   Punto(x=5.0, y=3.125) → ['s51layer04', 's31layer03']
-  Punto(x=8.0, y=4.0) → ['l1layer05', 'j1layer05']
-  Punto(x=9.0, y=11.0) → ['m1layer05', 'r1layer05']
-  Punto(x=3.0, y=7.3) → ['f1layer05', 's11layer01']
+  Punto(x=8.0, y=9.0) → ['m1layer05', 'n1layer05']
+  Punto(x=5.0, y=5.5) → ['s11layer01', 'h1layer05']
 [DEBUG] Total: 39
 Intersecciones guardadas en intersecciones.txt
 
 [DEBUG] === Iniciando fuerza bruta para encontrar TODAS las intersecciones ===
 
 [DEBUG] Total de intersecciones después de fuerza bruta: 35
-  Punto(x=5.0, y=5.0) → ['s21layer02', 'h1layer05', 'g1layer05']
-  Punto(x=8.0, y=9.0) → ['m1layer05', 'n1layer05']
-  Punto(x=5.263157895, y=5.263157895) → ['s11layer01', 's21layer02']
-  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
-  Punto(x=8.0, y=2.0) → ['k1layer05', 'j1layer05']
-  Punto(x=3.0, y=8.125) → ['s21layer03', 'f1layer05']
-  Punto(x=0.0, y=10.0) → ['s21layer03', 's11layer01', 's11layer03']
-  Punto(x=6.153846154, y=6.153846154) → ['s21layer03', 's21layer02']
-  Punto(x=8.512195122, y=8.512195122) → ['n1layer05', 's21layer02']
-  Punto(x=2.0, y=5.0) → ['s51layer04', 's61layer04']
-  Punto(x=10.0, y=3.0) → ['k1layer05', 'l1layer05', 's41layer04']
-  Punto(x=10.0, y=1.0) → ['s11layer01', 's41layer04']
-  Punto(x=8.571428571, y=2.285714286) → ['k1layer05', 's11layer01']
-  Punto(x=3.846153846, y=3.846153846) → ['s51layer04', 's21layer02']
-  Punto(x=13.0, y=10.5) → ['r1layer05', 'q1layer05']
   Punto(x=10.1, y=7.0) → ['n1layer05', 'p1layer05']
-  Punto(x=8.0, y=4.0) → ['l1layer05', 'j1layer05']
-  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
-  Punto(x=6.557377049, y=4.098360656) → ['s11layer01', 's31layer03']
-  Punto(x=0.0, y=0.0) → ['s11layer03', 's31layer03', 's21layer02']
-  Punto(x=10.0, y=7.095238095) → ['n1layer05', 's41layer04']
-  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
-  Punto(x=4.098360656, y=6.31147541) → ['s11layer01', 's61layer04']
-  Punto(x=13.0, y=8.0) → ['p1layer05', 'q1layer05']
-  Punto(x=5.0, y=8.0) → ['i1layer05', 'h1layer05']
   Punto(x=8.0, y=2.8) → ['s11layer01', 'j1layer05']
-  Punto(x=10.0, y=10.0) → ['s61layer04', 's21layer02', 's41layer04']
-  Punto(x=3.0, y=7.3) → ['f1layer05', 's11layer01']
-  Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
-  Punto(x=5.0, y=5.5) → ['s11layer01', 'h1layer05']
-  Punto(x=5.0, y=3.125) → ['s51layer04', 's31layer03']
-  Punto(x=8.158490566, y=8.849056604) → ['n1layer05', 's61layer04']
+  Punto(x=8.571428571, y=2.285714286) → ['s11layer01', 'k1layer05']
   Punto(x=10.0, y=0.0) → ['s51layer04', 's41layer04']
-  Punto(x=9.0, y=11.0) → ['m1layer05', 'r1layer05']
+  Punto(x=3.0, y=7.3) → ['s11layer01', 'f1layer05']
+  Punto(x=5.0, y=6.875) → ['s21layer03', 'h1layer05', 's61layer04']
+  Punto(x=2.0, y=5.0) → ['s51layer04', 's61layer04']
+  Punto(x=5.0, y=8.0) → ['h1layer05', 'i1layer05']
+  Punto(x=10.0, y=7.095238095) → ['n1layer05', 's41layer04']
+  Punto(x=9.0, y=11.0) → ['r1layer05', 'm1layer05']
+  Punto(x=5.0, y=5.5) → ['s11layer01', 'h1layer05']
+  Punto(x=10.0, y=3.0) → ['l1layer05', 'k1layer05', 's41layer04']
+  Punto(x=5.0, y=3.125) → ['s51layer04', 's31layer03']
+  Punto(x=13.0, y=8.0) → ['q1layer05', 'p1layer05']
+  Punto(x=0.0, y=0.0) → ['s31layer03', 's21layer02', 's11layer03']
+  Punto(x=5.0, y=5.0) → ['s21layer02', 'h1layer05', 'g1layer05']
   Punto(x=3.0, y=5.0) → ['f1layer05', 'g1layer05']
+  Punto(x=8.0, y=5.0) → ['s21layer03', 's31layer03']
+  Punto(x=3.846153846, y=3.846153846) → ['s21layer02', 's51layer04']
+  Punto(x=8.0, y=4.0) → ['l1layer05', 'j1layer05']
+  Punto(x=4.098360656, y=6.31147541) → ['s11layer01', 's61layer04']
+  Punto(x=0.0, y=10.0) → ['s11layer01', 's21layer03', 's11layer03']
+  Punto(x=6.557377049, y=4.098360656) → ['s11layer01', 's31layer03']
+  Punto(x=8.0, y=2.0) → ['k1layer05', 'j1layer05']
+  Punto(x=3.0, y=8.125) → ['f1layer05', 's21layer03']
+  Punto(x=10.0, y=10.0) → ['s21layer02', 's61layer04', 's41layer04']
+  Punto(x=8.158490566, y=8.849056604) → ['n1layer05', 's61layer04']
+  Punto(x=3.0, y=5.625) → ['f1layer05', 's61layer04']
+  Punto(x=3.0, y=9.0) → ['f1layer05', 'i1layer05']
+  Punto(x=10.0, y=1.0) → ['s11layer01', 's41layer04']
+  Punto(x=6.153846154, y=6.153846154) → ['s21layer02', 's21layer03']
+  Punto(x=5.263157895, y=5.263157895) → ['s11layer01', 's21layer02']
+  Punto(x=8.0, y=9.0) → ['m1layer05', 'n1layer05']
+  Punto(x=13.0, y=10.5) → ['r1layer05', 'q1layer05']
+  Punto(x=8.512195122, y=8.512195122) → ['s21layer02', 'n1layer05']
 Intersecciones completas guardadas en 'intersecciones_completas.txt'
 
 [DEBUG] === Procesando intersecciones como nuevos vértices ===
@@ -163,34 +163,34 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
 [DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
 [DEBUG]   Cara infinita: ciclo con área=-40.0000
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5']
+[DEBUG]   Caras activas después de clasificar: ['CARA5']
 [DEBUG]   Hueco detectado: CARA4 dentro de CARA2
 [DEBUG]   Hueco detectado: CARA5 dentro de CARA2
 [DEBUG] Caras después de procesar intersección: 7
         CARA1     externo: s11layer03  inactiva
         CARA2     externo: s12layer03  inactiva
-        CARA3     externo: s41layer04  ACTIVA
-        CARA4     externo: f1layer05   ACTIVA
+        CARA3     externo: s41layer04  inactiva
+        CARA4     externo: f1layer05   inactiva
         CARA5     externo: f2layer05   ACTIVA
         CARA6     externo: l1layer05   inactiva
         CARA7     externo: l2layer05   inactiva
-[DEBUG]   Intersección en Punto(x=8.512195122, y=8.512195122): n1layer05_P será dividida (d1=2.1927, d2=0.4884)
 [DEBUG]   Intersección en Punto(x=8.512195122, y=8.512195122): s21layer02 será dividida (d1=12.0381, d2=2.1041)
+[DEBUG]   Intersección en Punto(x=8.512195122, y=8.512195122): n1layer05_P será dividida (d1=2.1927, d2=0.4884)
 
 [DEBUG] >> Creando vértice V_INT_2 en Punto(x=8.512195122, y=8.512195122)
 
 [DEBUG] === Nueva intersección: vértice V_INT_2 en Punto(x=8.512195122, y=8.512195122) ===
-[DEBUG] Aristas a dividir: ['n1layer05_P', 's21layer02']
-[DEBUG]   Creando semi-aristas para n1layer05_P:
-          n1layer05_P_P  (Jlayer05 -> V_INT_2)
-          n1layer05_P_PP (V_INT_2 -> V_INT_1)
-          n2layer05_PP_P (V_INT_1 -> V_INT_2)
-          n2layer05_PP_PP (V_INT_2 -> Jlayer05)
+[DEBUG] Aristas a dividir: ['s21layer02', 'n1layer05_P']
 [DEBUG]   Creando semi-aristas para s21layer02:
           s21layer02_P  (p3layer02 -> V_INT_2)
           s21layer02_PP (V_INT_2 -> p4layer02)
           s22layer02_P (p4layer02 -> V_INT_2)
           s22layer02_PP (V_INT_2 -> p3layer02)
+[DEBUG]   Creando semi-aristas para n1layer05_P:
+          n1layer05_P_P  (Jlayer05 -> V_INT_2)
+          n1layer05_P_PP (V_INT_2 -> V_INT_1)
+          n2layer05_PP_P (V_INT_1 -> V_INT_2)
+          n2layer05_PP_PP (V_INT_2 -> Jlayer05)
 [DEBUG] Aristas salientes de V_INT_2 ordenadas:
           s22layer02_PP -> p3layer02, ángulo=-135.00°
           n2layer05_PP_PP -> Jlayer05, ángulo=-43.60°
@@ -212,34 +212,34 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
 [DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
 [DEBUG]   Cara infinita: ciclo con área=-40.0000
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5']
+[DEBUG]   Caras activas después de clasificar: ['CARA5']
 [DEBUG]   Hueco detectado: CARA4 dentro de CARA2
 [DEBUG]   Hueco detectado: CARA5 dentro de CARA2
 [DEBUG] Caras después de procesar intersección: 7
         CARA1     externo: s11layer03  inactiva
         CARA2     externo: s12layer03  inactiva
-        CARA3     externo: s41layer04  ACTIVA
-        CARA4     externo: f1layer05   ACTIVA
+        CARA3     externo: s41layer04  inactiva
+        CARA4     externo: f1layer05   inactiva
         CARA5     externo: f2layer05   ACTIVA
         CARA6     externo: l1layer05   inactiva
         CARA7     externo: l2layer05   inactiva
-[DEBUG]   Intersección en Punto(x=3.0, y=8.125): s21layer03 será dividida (d1=3.5377, d2=5.8962)
 [DEBUG]   Intersección en Punto(x=3.0, y=8.125): f1layer05 será dividida (d1=3.1250, d2=0.8750)
+[DEBUG]   Intersección en Punto(x=3.0, y=8.125): s21layer03 será dividida (d1=3.5377, d2=5.8962)
 
 [DEBUG] >> Creando vértice V_INT_3 en Punto(x=3.0, y=8.125)
 
 [DEBUG] === Nueva intersección: vértice V_INT_3 en Punto(x=3.0, y=8.125) ===
-[DEBUG] Aristas a dividir: ['s21layer03', 'f1layer05']
-[DEBUG]   Creando semi-aristas para s21layer03:
-          s21layer03_P  (p2layer03 -> V_INT_3)
-          s21layer03_PP (V_INT_3 -> p3layer03)
-          s22layer03_P (p3layer03 -> V_INT_3)
-          s22layer03_PP (V_INT_3 -> p2layer03)
+[DEBUG] Aristas a dividir: ['f1layer05', 's21layer03']
 [DEBUG]   Creando semi-aristas para f1layer05:
           f1layer05_P  (Alayer05 -> V_INT_3)
           f1layer05_PP (V_INT_3 -> Dlayer05)
           f2layer05_P (Dlayer05 -> V_INT_3)
           f2layer05_PP (V_INT_3 -> Alayer05)
+[DEBUG]   Creando semi-aristas para s21layer03:
+          s21layer03_P  (p2layer03 -> V_INT_3)
+          s21layer03_PP (V_INT_3 -> p3layer03)
+          s22layer03_P (p3layer03 -> V_INT_3)
+          s22layer03_PP (V_INT_3 -> p2layer03)
 [DEBUG] Aristas salientes de V_INT_3 ordenadas:
           f2layer05_PP -> Alayer05, ángulo=-90.00°
           s21layer03_PP -> p3layer03, ángulo=-32.01°
@@ -259,31 +259,31 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
 [DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
 [DEBUG]   Cara infinita: ciclo con área=-2.0000
-[DEBUG]   Caras activas después de clasificar: ['CARA3']
+[DEBUG]   Caras activas después de clasificar: []
 [DEBUG] Caras después de procesar intersección: 4
         CARA2     externo: s11layer03  inactiva
-        CARA3     externo: s41layer04  ACTIVA
+        CARA3     externo: s41layer04  inactiva
         CARA1     externo: l1layer05   inactiva
         CARA4     externo: l2layer05   inactiva
 [DEBUG]   Intersección en Punto(x=5.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
 [DEBUG]   Intersección en Punto(x=13.0, y=8.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
-[DEBUG]   Intersección en Punto(x=3.0, y=7.3): f1layer05_P será dividida (d1=2.3000, d2=0.8250)
 [DEBUG]   Intersección en Punto(x=3.0, y=7.3): s11layer01 será dividida (d1=4.0361, d2=9.4175)
+[DEBUG]   Intersección en Punto(x=3.0, y=7.3): f1layer05_P será dividida (d1=2.3000, d2=0.8250)
 
 [DEBUG] >> Creando vértice V_INT_4 en Punto(x=3.0, y=7.3)
 
 [DEBUG] === Nueva intersección: vértice V_INT_4 en Punto(x=3.0, y=7.3) ===
-[DEBUG] Aristas a dividir: ['f1layer05_P', 's11layer01']
-[DEBUG]   Creando semi-aristas para f1layer05_P:
-          f1layer05_P_P  (Alayer05 -> V_INT_4)
-          f1layer05_P_PP (V_INT_4 -> V_INT_3)
-          f2layer05_PP_P (V_INT_3 -> V_INT_4)
-          f2layer05_PP_PP (V_INT_4 -> Alayer05)
+[DEBUG] Aristas a dividir: ['s11layer01', 'f1layer05_P']
 [DEBUG]   Creando semi-aristas para s11layer01:
           s11layer01_P  (p1layer01 -> V_INT_4)
           s11layer01_PP (V_INT_4 -> p2layer01)
           s12layer01_P (p2layer01 -> V_INT_4)
           s12layer01_PP (V_INT_4 -> p1layer01)
+[DEBUG]   Creando semi-aristas para f1layer05_P:
+          f1layer05_P_P  (Alayer05 -> V_INT_4)
+          f1layer05_P_PP (V_INT_4 -> V_INT_3)
+          f2layer05_PP_P (V_INT_3 -> V_INT_4)
+          f2layer05_PP_PP (V_INT_4 -> Alayer05)
 [DEBUG] Aristas salientes de V_INT_4 ordenadas:
           f2layer05_PP_PP -> Alayer05, ángulo=-90.00°
           s11layer01_PP -> p2layer01, ángulo=-41.99°
@@ -303,10 +303,10 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-2.0000, comienza en l1layer05
 [DEBUG]   Ciclo detectado: 3 aristas, área=2.0000, comienza en l2layer05
 [DEBUG]   Cara infinita: ciclo con área=-2.0000
-[DEBUG]   Caras activas después de clasificar: ['CARA3']
+[DEBUG]   Caras activas después de clasificar: []
 [DEBUG] Caras después de procesar intersección: 4
         CARA2     externo: s11layer03  inactiva
-        CARA3     externo: s41layer04  ACTIVA
+        CARA3     externo: s41layer04  inactiva
         CARA1     externo: l1layer05   inactiva
         CARA4     externo: l2layer05   inactiva
 [DEBUG]   Intersección en Punto(x=10.0, y=7.095238095): n1layer05_P_P será dividida (d1=0.1381, d2=2.0546)
@@ -348,16 +348,17 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754, comienza en m1layer05
 [DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746, comienza en s61layer04_PP
 [DEBUG]   Cara infinita: ciclo con área=51.7754
-[DEBUG]   Caras activas después de clasificar: ['CARA6', 'CARA7']
+[DEBUG]   Caras activas después de clasificar: ['CARA7']
 [DEBUG]   Hueco detectado: CARA4 dentro de CARA3
 [DEBUG]   Hueco detectado: CARA5 dentro de CARA3
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
 [DEBUG] Caras después de procesar intersección: 7
         CARA2     externo: s11layer03  inactiva
         CARA3     externo: s51layer04  inactiva
         CARA1     externo: s52layer04  inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
 [DEBUG]   Intersección en Punto(x=10.1, y=7.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
 [DEBUG]   Intersección en Punto(x=5.0, y=6.875): s21layer03_PP será dividida (d1=2.3585, d2=3.5377)
@@ -408,14 +409,15 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 8 aristas, área=-11.7754, comienza en m1layer05
 [DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746, comienza en s61layer04_PP
 [DEBUG]   Cara infinita: ciclo con área=51.4500
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA6', 'CARA7']
+[DEBUG]   Caras activas después de clasificar: ['CARA7']
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
 [DEBUG] Caras después de procesar intersección: 7
         CARA2     externo: s11layer03  inactiva
         CARA1     externo: s12layer03  inactiva
-        CARA3     externo: i1layer05   ACTIVA
+        CARA3     externo: i1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
 [DEBUG]   Intersección en Punto(x=4.098360656, y=6.31147541): s11layer01_PP será dividida (d1=1.4777, d2=7.9398)
 [DEBUG]   Intersección en Punto(x=4.098360656, y=6.31147541): s61layer04_P_P será dividida (d1=2.4745, d2=1.0633)
@@ -456,33 +458,35 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 6 aristas, área=-2.6746, comienza en s61layer04_PP
 [DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801, comienza en f1layer05_P_PP
 [DEBUG]   Cara infinita: ciclo con área=53.0301
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA6', 'CARA7', 'CARA8']
+[DEBUG]   Caras activas después de clasificar: ['CARA7']
+[DEBUG]   Hueco detectado: CARA8 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
 [DEBUG] Caras después de procesar intersección: 8
         CARA2     externo: s11layer03  inactiva
         CARA1     externo: s12layer03  inactiva
-        CARA3     externo: i1layer05   ACTIVA
+        CARA3     externo: i1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
-        CARA8     externo: f1layer05_P_PP  ACTIVA
-[DEBUG]   Intersección en Punto(x=6.153846154, y=6.153846154): s21layer03_PP_PP será dividida (d1=1.3607, d2=2.1771)
+        CARA8     externo: f1layer05_P_PP  inactiva
 [DEBUG]   Intersección en Punto(x=6.153846154, y=6.153846154): s21layer02_P será dividida (d1=8.7029, d2=3.3352)
+[DEBUG]   Intersección en Punto(x=6.153846154, y=6.153846154): s21layer03_PP_PP será dividida (d1=1.3607, d2=2.1771)
 
 [DEBUG] >> Creando vértice V_INT_8 en Punto(x=6.153846154, y=6.153846154)
 
 [DEBUG] === Nueva intersección: vértice V_INT_8 en Punto(x=6.153846154, y=6.153846154) ===
-[DEBUG] Aristas a dividir: ['s21layer03_PP_PP', 's21layer02_P']
-[DEBUG]   Creando semi-aristas para s21layer03_PP_PP:
-          s21layer03_PP_PP_P  (V_INT_6 -> V_INT_8)
-          s21layer03_PP_PP_PP (V_INT_8 -> p3layer03)
-          s22layer03_P_P_P (p3layer03 -> V_INT_8)
-          s22layer03_P_P_PP (V_INT_8 -> V_INT_6)
+[DEBUG] Aristas a dividir: ['s21layer02_P', 's21layer03_PP_PP']
 [DEBUG]   Creando semi-aristas para s21layer02_P:
           s21layer02_P_P  (p3layer02 -> V_INT_8)
           s21layer02_P_PP (V_INT_8 -> V_INT_2)
           s22layer02_PP_P (V_INT_2 -> V_INT_8)
           s22layer02_PP_PP (V_INT_8 -> p3layer02)
+[DEBUG]   Creando semi-aristas para s21layer03_PP_PP:
+          s21layer03_PP_PP_P  (V_INT_6 -> V_INT_8)
+          s21layer03_PP_PP_PP (V_INT_8 -> p3layer03)
+          s22layer03_P_P_P (p3layer03 -> V_INT_8)
+          s22layer03_P_P_PP (V_INT_8 -> V_INT_6)
 [DEBUG] Aristas salientes de V_INT_8 ordenadas:
           s22layer02_PP_PP -> p3layer02, ángulo=-135.00°
           s21layer03_PP_PP_PP -> p3layer03, ángulo=-32.01°
@@ -506,17 +510,19 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-3.0921, comienza en n2layer05_PP_P
 [DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801, comienza en f1layer05_P_PP
 [DEBUG]   Cara infinita: ciclo con área=56.1222
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA6', 'CARA7', 'CARA9']
+[DEBUG]   Caras activas después de clasificar: ['CARA7', 'CARA8']
+[DEBUG]   Hueco detectado: CARA9 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
 [DEBUG] Caras después de procesar intersección: 9
         CARA2     externo: s11layer03  inactiva
         CARA1     externo: s12layer03  inactiva
-        CARA3     externo: i1layer05   ACTIVA
+        CARA3     externo: i1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
-        CARA8     externo: n2layer05_PP_P  inactiva
-        CARA9     externo: f1layer05_P_PP  ACTIVA
+        CARA8     externo: n2layer05_PP_P  ACTIVA
+        CARA9     externo: f1layer05_P_PP  inactiva
 [DEBUG]   Intersección en Punto(x=3.0, y=5.625): f1layer05_P_P será dividida (d1=0.6250, d2=1.6750)
 [DEBUG]   Intersección en Punto(x=3.0, y=5.625): s61layer04_P_P_P será dividida (d1=1.1792, d2=1.2952)
 
@@ -558,17 +564,19 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-1.5801, comienza en f1layer05_P_PP
 [DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199, comienza en s11layer01_PP_P
 [DEBUG]   Cara infinita: ciclo con área=24.5421
-[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA6', 'CARA7', 'CARA9', 'CARA10']
+[DEBUG]   Caras activas después de clasificar: ['CARA7', 'CARA8', 'CARA10']
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
+[DEBUG]   Hueco detectado: CARA10 dentro de CARA9
 [DEBUG] Caras después de procesar intersección: 10
         CARA1     externo: s11layer03  inactiva
-        CARA2     externo: i1layer05   ACTIVA
-        CARA3     externo: g1layer05   ACTIVA
+        CARA2     externo: i1layer05   inactiva
+        CARA3     externo: g1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
-        CARA8     externo: n2layer05_PP_P  inactiva
-        CARA9     externo: f1layer05_P_PP  ACTIVA
+        CARA8     externo: n2layer05_PP_P  ACTIVA
+        CARA9     externo: f1layer05_P_PP  inactiva
         CARA10    externo: s11layer01_PP_P  ACTIVA
 [DEBUG]   Intersección en Punto(x=5.0, y=5.5): s11layer01_PP_PP será dividida (d1=1.2130, d2=6.7268)
 [DEBUG]   Intersección en Punto(x=5.0, y=5.5): h1layer05_PP será dividida (d1=1.3750, d2=0.5000)
@@ -612,17 +620,20 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-0.9199, comienza en s11layer01_PP_P
 [DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199, comienza en s61layer04_P_P_PP
 [DEBUG]   Cara infinita: ciclo con área=24.5421
-[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA6', 'CARA7', 'CARA9', 'CARA10', 'CARA11']
+[DEBUG]   Caras activas después de clasificar: ['CARA7', 'CARA8', 'CARA10', 'CARA11']
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
+[DEBUG]   Hueco detectado: CARA10 dentro de CARA9
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA9
 [DEBUG] Caras después de procesar intersección: 11
         CARA1     externo: s11layer03  inactiva
-        CARA2     externo: i1layer05   ACTIVA
-        CARA3     externo: g1layer05   ACTIVA
+        CARA2     externo: i1layer05   inactiva
+        CARA3     externo: g1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
-        CARA8     externo: n2layer05_PP_P  inactiva
-        CARA9     externo: f1layer05_P_PP  ACTIVA
+        CARA8     externo: n2layer05_PP_P  ACTIVA
+        CARA9     externo: f1layer05_P_PP  inactiva
         CARA10    externo: s11layer01_PP_P  ACTIVA
         CARA11    externo: s61layer04_P_P_PP  ACTIVA
 [DEBUG]   Intersección en Punto(x=5.263157895, y=5.263157895): s11layer01_PP_PP_PP será dividida (d1=0.3540, d2=6.3728)
@@ -668,17 +679,21 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-0.6199, comienza en s61layer04_P_P_PP
 [DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159, comienza en s21layer03_PP_PP_P
 [DEBUG]   Cara infinita: ciclo con área=25.5580
-[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA6', 'CARA7', 'CARA9', 'CARA10', 'CARA11']
+[DEBUG]   Caras activas después de clasificar: ['CARA7', 'CARA8', 'CARA10', 'CARA11']
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
+[DEBUG]   Hueco detectado: CARA12 dentro de CARA8
+[DEBUG]   Hueco detectado: CARA10 dentro de CARA9
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA9
 [DEBUG] Caras después de procesar intersección: 12
         CARA1     externo: s11layer03  inactiva
-        CARA2     externo: i1layer05   ACTIVA
-        CARA3     externo: g1layer05   ACTIVA
+        CARA2     externo: i1layer05   inactiva
+        CARA3     externo: g1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
-        CARA8     externo: n2layer05_PP_P  inactiva
-        CARA9     externo: f1layer05_P_PP  ACTIVA
+        CARA8     externo: n2layer05_PP_P  ACTIVA
+        CARA9     externo: f1layer05_P_PP  inactiva
         CARA10    externo: s11layer01_PP_P  ACTIVA
         CARA11    externo: s61layer04_P_P_PP  ACTIVA
         CARA12    externo: s21layer03_PP_PP_P  inactiva
@@ -731,39 +746,43 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159, comienza en s21layer03_PP_PP_P
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597, comienza en s21layer03_PP_PP_PP
 [DEBUG]   Cara infinita: ciclo con área=28.3177
-[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA6', 'CARA7', 'CARA9', 'CARA10', 'CARA11']
+[DEBUG]   Caras activas después de clasificar: ['CARA7', 'CARA8', 'CARA10', 'CARA11']
+[DEBUG]   Hueco detectado: CARA7 dentro de CARA6
+[DEBUG]   Hueco detectado: CARA12 dentro de CARA8
+[DEBUG]   Hueco detectado: CARA10 dentro de CARA9
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA9
 [DEBUG] Caras después de procesar intersección: 13
         CARA1     externo: s11layer03  inactiva
-        CARA2     externo: i1layer05   ACTIVA
-        CARA3     externo: g1layer05   ACTIVA
+        CARA2     externo: i1layer05   inactiva
+        CARA3     externo: g1layer05   inactiva
         CARA4     externo: l1layer05   inactiva
         CARA5     externo: l2layer05   inactiva
-        CARA6     externo: m1layer05   ACTIVA
+        CARA6     externo: m1layer05   inactiva
         CARA7     externo: s61layer04_PP  ACTIVA
-        CARA8     externo: n2layer05_PP_P  inactiva
-        CARA9     externo: f1layer05_P_PP  ACTIVA
+        CARA8     externo: n2layer05_PP_P  ACTIVA
+        CARA9     externo: f1layer05_P_PP  inactiva
         CARA10    externo: s11layer01_PP_P  ACTIVA
         CARA11    externo: s61layer04_P_P_PP  ACTIVA
         CARA12    externo: s21layer03_PP_PP_P  inactiva
         CARA13    externo: s21layer03_PP_PP_PP  inactiva
 [DEBUG]   Intersección en Punto(x=8.0, y=4.0) NO generó al menos 2 aristas para dividir (encontradas: 0), se omite.
-[DEBUG]   Intersección en Punto(x=3.846153846, y=3.846153846): s51layer04 será dividida (d1=7.2569, d2=2.1771)
 [DEBUG]   Intersección en Punto(x=3.846153846, y=3.846153846): s21layer02_P_P_P será dividida (d1=5.4393, d2=2.0039)
+[DEBUG]   Intersección en Punto(x=3.846153846, y=3.846153846): s51layer04 será dividida (d1=7.2569, d2=2.1771)
 
 [DEBUG] >> Creando vértice V_INT_13 en Punto(x=3.846153846, y=3.846153846)
 
 [DEBUG] === Nueva intersección: vértice V_INT_13 en Punto(x=3.846153846, y=3.846153846) ===
-[DEBUG] Aristas a dividir: ['s51layer04', 's21layer02_P_P_P']
-[DEBUG]   Creando semi-aristas para s51layer04:
-          s51layer04_P  (p5layer04 -> V_INT_13)
-          s51layer04_PP (V_INT_13 -> p6layer04)
-          s52layer04_P (p6layer04 -> V_INT_13)
-          s52layer04_PP (V_INT_13 -> p5layer04)
+[DEBUG] Aristas a dividir: ['s21layer02_P_P_P', 's51layer04']
 [DEBUG]   Creando semi-aristas para s21layer02_P_P_P:
           s21layer02_P_P_P_P  (p3layer02 -> V_INT_13)
           s21layer02_P_P_P_PP (V_INT_13 -> V_INT_11)
           s22layer02_PP_PP_PP_P (V_INT_11 -> V_INT_13)
           s22layer02_PP_PP_PP_PP (V_INT_13 -> p3layer02)
+[DEBUG]   Creando semi-aristas para s51layer04:
+          s51layer04_P  (p5layer04 -> V_INT_13)
+          s51layer04_PP (V_INT_13 -> p6layer04)
+          s52layer04_P (p6layer04 -> V_INT_13)
+          s52layer04_PP (V_INT_13 -> p5layer04)
 [DEBUG] Aristas salientes de V_INT_13 ordenadas:
           s22layer02_PP_PP_PP_PP -> p3layer02, ángulo=-135.00°
           s52layer04_PP -> p5layer04, ángulo=-32.01°
@@ -792,18 +811,23 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-1.0159, comienza en s21layer03_PP_PP_P
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597, comienza en s21layer03_PP_PP_PP
 [DEBUG]   Cara infinita: ciclo con área=30.4267
-[DEBUG]   Caras activas después de clasificar: ['CARA2', 'CARA3', 'CARA4', 'CARA7', 'CARA8', 'CARA10', 'CARA11', 'CARA12']
+[DEBUG]   Caras activas después de clasificar: ['CARA4', 'CARA8', 'CARA9', 'CARA11', 'CARA12']
+[DEBUG]   Hueco detectado: CARA3 dentro de CARA4
+[DEBUG]   Hueco detectado: CARA8 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA13 dentro de CARA9
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA10
+[DEBUG]   Hueco detectado: CARA12 dentro de CARA10
 [DEBUG] Caras después de procesar intersección: 14
         CARA1     externo: s11layer03  inactiva
-        CARA2     externo: i1layer05   ACTIVA
-        CARA3     externo: g1layer05   ACTIVA
+        CARA2     externo: i1layer05   inactiva
+        CARA3     externo: g1layer05   inactiva
         CARA4     externo: g2layer05   ACTIVA
         CARA5     externo: l1layer05   inactiva
         CARA6     externo: l2layer05   inactiva
-        CARA7     externo: m1layer05   ACTIVA
+        CARA7     externo: m1layer05   inactiva
         CARA8     externo: s61layer04_PP  ACTIVA
-        CARA9     externo: n2layer05_PP_P  inactiva
-        CARA10    externo: f1layer05_P_PP  ACTIVA
+        CARA9     externo: n2layer05_PP_P  ACTIVA
+        CARA10    externo: f1layer05_P_PP  inactiva
         CARA11    externo: s11layer01_PP_P  ACTIVA
         CARA12    externo: s61layer04_P_P_PP  ACTIVA
         CARA13    externo: s21layer03_PP_PP_P  inactiva
@@ -856,21 +880,28 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597, comienza en s21layer03_PP_PP_PP
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653, comienza en s11layer01_PP_PP_PP_PP_P
 [DEBUG]   Cara infinita: ciclo con área=82.5254
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5', 'CARA8', 'CARA9', 'CARA11', 'CARA13', 'CARA14']
+[DEBUG]   Caras activas después de clasificar: ['CARA5', 'CARA9', 'CARA10', 'CARA13', 'CARA14']
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA4 dentro de CARA5
+[DEBUG]   Hueco detectado: CARA9 dentro de CARA8
+[DEBUG]   Hueco detectado: CARA15 dentro de CARA10
+[DEBUG]   Hueco detectado: CARA13 dentro de CARA11
+[DEBUG]   Hueco detectado: CARA14 dentro de CARA11
 [DEBUG]   Hueco detectado: CARA6 dentro de CARA12
 [DEBUG]   Hueco detectado: CARA7 dentro de CARA12
+[DEBUG]   Hueco detectado: CARA16 dentro de CARA12
 [DEBUG] Caras después de procesar intersección: 17
         CARA2     externo: s11layer03  inactiva
         CARA1     externo: s12layer03  inactiva
-        CARA3     externo: i1layer05   ACTIVA
-        CARA4     externo: g1layer05   ACTIVA
+        CARA3     externo: i1layer05   inactiva
+        CARA4     externo: g1layer05   inactiva
         CARA5     externo: g2layer05   ACTIVA
         CARA6     externo: l1layer05   inactiva
         CARA7     externo: l2layer05   inactiva
-        CARA8     externo: m1layer05   ACTIVA
+        CARA8     externo: m1layer05   inactiva
         CARA9     externo: s61layer04_PP  ACTIVA
-        CARA10    externo: n2layer05_PP_P  inactiva
-        CARA11    externo: f1layer05_P_PP  ACTIVA
+        CARA10    externo: n2layer05_PP_P  ACTIVA
+        CARA11    externo: f1layer05_P_PP  inactiva
         CARA12    externo: s41layer04_PP  inactiva
         CARA13    externo: s11layer01_PP_P  ACTIVA
         CARA14    externo: s61layer04_P_P_PP  ACTIVA
@@ -926,41 +957,49 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.7597, comienza en s21layer03_PP_PP_PP
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653, comienza en s11layer01_PP_PP_PP_PP_P
 [DEBUG]   Cara infinita: ciclo con área=82.5254
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5', 'CARA8', 'CARA9', 'CARA11', 'CARA12', 'CARA13']
+[DEBUG]   Caras activas después de clasificar: ['CARA5', 'CARA9', 'CARA10', 'CARA12', 'CARA13']
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA4 dentro de CARA5
+[DEBUG]   Hueco detectado: CARA6 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA15 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA9 dentro de CARA8
+[DEBUG]   Hueco detectado: CARA14 dentro de CARA10
+[DEBUG]   Hueco detectado: CARA12 dentro de CARA11
+[DEBUG]   Hueco detectado: CARA13 dentro de CARA11
 [DEBUG] Caras después de procesar intersección: 16
         CARA2     externo: s11layer03  inactiva
         CARA1     externo: s12layer03  inactiva
-        CARA3     externo: i1layer05   ACTIVA
-        CARA4     externo: g1layer05   ACTIVA
+        CARA3     externo: i1layer05   inactiva
+        CARA4     externo: g1layer05   inactiva
         CARA5     externo: g2layer05   ACTIVA
         CARA6     externo: l1layer05   inactiva
         CARA7     externo: l2layer05   inactiva
-        CARA8     externo: m1layer05   ACTIVA
+        CARA8     externo: m1layer05   inactiva
         CARA9     externo: s61layer04_PP  ACTIVA
-        CARA10    externo: n2layer05_PP_P  inactiva
-        CARA11    externo: f1layer05_P_PP  ACTIVA
+        CARA10    externo: n2layer05_PP_P  ACTIVA
+        CARA11    externo: f1layer05_P_PP  inactiva
         CARA12    externo: s11layer01_PP_P  ACTIVA
         CARA13    externo: s61layer04_P_P_PP  ACTIVA
         CARA14    externo: s21layer03_PP_PP_P  inactiva
         CARA15    externo: s21layer03_PP_PP_PP  inactiva
         CARA16    externo: s11layer01_PP_PP_PP_PP_P  inactiva
-[DEBUG]   Intersección en Punto(x=8.571428571, y=2.285714286): k1layer05 será dividida (d1=1.5972, d2=0.6389)
 [DEBUG]   Intersección en Punto(x=8.571428571, y=2.285714286): s11layer01_PP_PP_PP_PP_PP_PP será dividida (d1=0.7688, d2=1.9219)
+[DEBUG]   Intersección en Punto(x=8.571428571, y=2.285714286): k1layer05 será dividida (d1=1.5972, d2=0.6389)
 
 [DEBUG] >> Creando vértice V_INT_16 en Punto(x=8.571428571, y=2.285714286)
 
 [DEBUG] === Nueva intersección: vértice V_INT_16 en Punto(x=8.571428571, y=2.285714286) ===
-[DEBUG] Aristas a dividir: ['k1layer05', 's11layer01_PP_PP_PP_PP_PP_PP']
-[DEBUG]   Creando semi-aristas para k1layer05:
-          k1layer05_P  (Glayer05 -> V_INT_16)
-          k1layer05_PP (V_INT_16 -> Flayer05)
-          k2layer05_P (Flayer05 -> V_INT_16)
-          k2layer05_PP (V_INT_16 -> Glayer05)
+[DEBUG] Aristas a dividir: ['s11layer01_PP_PP_PP_PP_PP_PP', 'k1layer05']
 [DEBUG]   Creando semi-aristas para s11layer01_PP_PP_PP_PP_PP_PP:
           s11layer01_PP_PP_PP_PP_PP_PP_P  (V_INT_15 -> V_INT_16)
           s11layer01_PP_PP_PP_PP_PP_PP_PP (V_INT_16 -> p2layer01)
           s12layer01_P_P_P_P_P_P_P (p2layer01 -> V_INT_16)
           s12layer01_P_P_P_P_P_P_PP (V_INT_16 -> V_INT_15)
+[DEBUG]   Creando semi-aristas para k1layer05:
+          k1layer05_P  (Glayer05 -> V_INT_16)
+          k1layer05_PP (V_INT_16 -> Flayer05)
+          k2layer05_P (Flayer05 -> V_INT_16)
+          k2layer05_PP (V_INT_16 -> Glayer05)
 [DEBUG] Aristas salientes de V_INT_16 ordenadas:
           k1layer05_PP -> Flayer05, ángulo=-153.43°
           s11layer01_PP_PP_PP_PP_PP_PP_PP -> p2layer01, ángulo=-41.99°
@@ -992,19 +1031,28 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 4 aristas, área=-2.8653, comienza en s11layer01_PP_PP_PP_PP_P
 [DEBUG]   Ciclo detectado: 3 aristas, área=-0.2286, comienza en j1layer05_P
 [DEBUG]   Cara infinita: ciclo con área=82.5254
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5', 'CARA8', 'CARA9', 'CARA11', 'CARA12', 'CARA13']
+[DEBUG]   Caras activas después de clasificar: ['CARA5', 'CARA9', 'CARA10', 'CARA12', 'CARA13']
+[DEBUG]   Hueco detectado: CARA11 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA4 dentro de CARA5
+[DEBUG]   Hueco detectado: CARA6 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA15 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA17 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA9 dentro de CARA8
+[DEBUG]   Hueco detectado: CARA14 dentro de CARA10
+[DEBUG]   Hueco detectado: CARA12 dentro de CARA11
+[DEBUG]   Hueco detectado: CARA13 dentro de CARA11
 [DEBUG] Caras después de procesar intersección: 17
         CARA2     externo: s11layer03  inactiva
         CARA1     externo: s12layer03  inactiva
-        CARA3     externo: i1layer05   ACTIVA
-        CARA4     externo: g1layer05   ACTIVA
+        CARA3     externo: i1layer05   inactiva
+        CARA4     externo: g1layer05   inactiva
         CARA5     externo: g2layer05   ACTIVA
         CARA6     externo: l1layer05   inactiva
         CARA7     externo: l2layer05   inactiva
-        CARA8     externo: m1layer05   ACTIVA
+        CARA8     externo: m1layer05   inactiva
         CARA9     externo: s61layer04_PP  ACTIVA
-        CARA10    externo: n2layer05_PP_P  inactiva
-        CARA11    externo: f1layer05_P_PP  ACTIVA
+        CARA10    externo: n2layer05_PP_P  ACTIVA
+        CARA11    externo: f1layer05_P_PP  inactiva
         CARA12    externo: s11layer01_PP_P  ACTIVA
         CARA13    externo: s61layer04_P_P_PP  ACTIVA
         CARA14    externo: s21layer03_PP_PP_P  inactiva
@@ -1045,7 +1093,16 @@ Intersecciones completas guardadas en 'intersecciones_completas.txt'
 [DEBUG]   Ciclo detectado: 3 aristas, área=-3.6058, comienza en s21layer02_P_P_P_P
 [DEBUG]   Ciclo detectado: 3 aristas, área=-0.2286, comienza en j1layer05_P
 [DEBUG]   Cara infinita: ciclo con área=82.5254
-[DEBUG]   Caras activas después de clasificar: ['CARA3', 'CARA4', 'CARA5', 'CARA8', 'CARA9', 'CARA10', 'CARA13', 'CARA14', 'CARA15']
+[DEBUG]   Caras activas después de clasificar: ['CARA5', 'CARA9', 'CARA10', 'CARA11', 'CARA14', 'CARA15']
+[DEBUG]   Hueco detectado: CARA19 dentro de CARA2
+[DEBUG]   Hueco detectado: CARA4 dentro de CARA5
+[DEBUG]   Hueco detectado: CARA6 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA17 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA20 dentro de CARA7
+[DEBUG]   Hueco detectado: CARA9 dentro de CARA8
+[DEBUG]   Hueco detectado: CARA16 dentro de CARA11
+[DEBUG]   Hueco detectado: CARA14 dentro de CARA13
+[DEBUG]   Hueco detectado: CARA15 dentro de CARA13
 [DEBUG] Topología final: 106 aristas, 20 caras.
 
 [DEBUG] Renombrando todos los elementos de la DCEL...
