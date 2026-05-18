@@ -1,116 +1,3097 @@
 === INICIO DEL PROCESO DE OVERLAY ===
 
-========== Cargando capa: layer04 ==========
-  Vértice leído: p4layer04 (10.0, 10.0) incidente=s41
-  Vértice leído: p5layer04 (10.0, 0.0) incidente=s51
-  Vértice leído: p6layer04 (2.0, 5.0) incidente=s61
-  Arista leída: s41layer04 orig=p4 pareja=s42 cara=f3 sig=s51 ant=s61
-  Arista leída: s42layer04 orig=p5 pareja=s41 cara=f4 sig=s62 ant=s52
-  Arista leída: s51layer04 orig=p5 pareja=s52 cara=f3 sig=s61 ant=s41
-  Arista leída: s52layer04 orig=p6 pareja=s51 cara=f4 sig=s42 ant=s62
-  Arista leída: s61layer04 orig=p6 pareja=s62 cara=f3 sig=s41 ant=s51
-  Arista leída: s62layer04 orig=p4 pareja=s61 cara=f4 sig=s52 ant=s42
-  Cara leída: f3layer04 externo=None internos=[s41]
-  Cara leída: f4layer04 externo=s42 internos=None
-  [AVISO] No se encontró layer04.activos
-  Resuelta arista s41layer04: vertOrig=p4layer04 pareja=s42layer04 cara=f3layer04 sig=s51layer04 ant=s61layer04
-  Resuelta arista s42layer04: vertOrig=p5layer04 pareja=s41layer04 cara=f4layer04 sig=s62layer04 ant=s52layer04
-  Resuelta arista s51layer04: vertOrig=p5layer04 pareja=s52layer04 cara=f3layer04 sig=s61layer04 ant=s41layer04
-  Resuelta arista s52layer04: vertOrig=p6layer04 pareja=s51layer04 cara=f4layer04 sig=s42layer04 ant=s62layer04
-  Resuelta arista s61layer04: vertOrig=p6layer04 pareja=s62layer04 cara=f3layer04 sig=s41layer04 ant=s51layer04
-  Resuelta arista s62layer04: vertOrig=p4layer04 pareja=s61layer04 cara=f4layer04 sig=s52layer04 ant=s42layer04
-  Vértice p4layer04: incidente=s41layer04
-  Vértice p5layer04: incidente=s51layer04
-  Vértice p6layer04: incidente=s61layer04
-  Cara resuelta f3layer04: externo=None internos=['s41layer04']
-  Cara resuelta f4layer04: externo=s42layer04 internos=[]
-  Capa layer04: 3 vértices, 6 aristas, 2 caras, 0 activas
-  Segmento extraído: s41layer04 de layer04 (10.0,10.0)->(10.0,0.0)
-  Segmento extraído: s51layer04 de layer04 (10.0,0.0)->(2.0,5.0)
-  Segmento extraído: s61layer04 de layer04 (2.0,5.0)->(10.0,10.0)
+========== Cargando capa: soto ==========
+  Vértice leído: V1soto (0.0, 0.0) incidente=e1
+  Vértice leído: V2soto (10.0, 0.0) incidente=e2
+  Vértice leído: V3soto (10.0, 10.0) incidente=e5
+  Vértice leído: V4soto (0.0, 10.0) incidente=e6
+  Vértice leído: V5soto (2.0, 2.0) incidente=h1
+  Vértice leído: V6soto (2.0, 8.0) incidente=h6
+  Vértice leído: V7soto (8.0, 8.0) incidente=h4
+  Vértice leído: V8soto (8.0, 2.0) incidente=h2
+  Vértice leído: V9soto (4.0, 3.0) incidente=p1
+  Vértice leído: V10soto (12.0, 3.0) incidente=p4
+  Vértice leído: V11soto (14.0, 6.0) incidente=p5
+  Vértice leído: V12soto (12.0, 9.0) incidente=p6
+  Vértice leído: V13soto (4.0, 9.0) incidente=p8
+  Vértice leído: I1soto (8.0, 3.0) incidente=h3
+  Vértice leído: I2soto (4.0, 8.0) incidente=p9
+  Vértice leído: I3soto (10.0, 3.0) incidente=e3
+  Vértice leído: I4soto (10.0, 9.0) incidente=e4
+  Arista leída: e1soto orig=V1 pareja=e1_p cara=C_OUTER sig=e2 ant=e6
+  Arista leída: e1_psoto orig=V2 pareja=e1 cara=C_INF sig=e6_p ant=e2_p
+  Arista leída: e2soto orig=V2 pareja=e2_p cara=C_OUTER sig=p2_p ant=e1
+  Arista leída: e2_psoto orig=I3 pareja=e2 cara=C_INF sig=e1_p ant=p3_p
+  Arista leída: e3soto orig=I3 pareja=e3_p cara=C_PEN_IN sig=p7 ant=p2
+  Arista leída: e3_psoto orig=I4 pareja=e3 cara=C_PEN_OUT sig=p3 ant=p6
+  Arista leída: e4soto orig=I4 pareja=e4_p cara=C_OUTER sig=e5 ant=p7_p
+  Arista leída: e4_psoto orig=V3 pareja=e4 cara=C_INF sig=p6_p ant=e5_p
+  Arista leída: e5soto orig=V3 pareja=e5_p cara=C_OUTER sig=e6 ant=e4
+  Arista leída: e5_psoto orig=V4 pareja=e5 cara=C_INF sig=e4_p ant=e6_p
+  Arista leída: e6soto orig=V4 pareja=e6_p cara=C_OUTER sig=e1 ant=e5
+  Arista leída: e6_psoto orig=V1 pareja=e6 cara=C_INF sig=e5_p ant=e1_p
+  Arista leída: h1soto orig=V5 pareja=h1_p cara=C_HOLE_EMPTY sig=h2 ant=h6
+  Arista leída: h1_psoto orig=V8 pareja=h1 cara=C_OUTER sig=h6_p ant=h2_p
+  Arista leída: h2soto orig=V8 pareja=h2_p cara=C_HOLE_EMPTY sig=p1_p ant=h1
+  Arista leída: h2_psoto orig=I1 pareja=h2 cara=C_OUTER sig=h1_p ant=p2_p
+  Arista leída: h3soto orig=I1 pareja=h3_p cara=C_PEN_HOLE sig=h4 ant=p1
+  Arista leída: h3_psoto orig=V7 pareja=h3 cara=C_PEN_IN sig=p2 ant=h4_p
+  Arista leída: h4soto orig=V7 pareja=h4_p cara=C_PEN_HOLE sig=p9 ant=h3
+  Arista leída: h4_psoto orig=I2 pareja=h4 cara=C_PEN_IN sig=h3_p ant=p8
+  Arista leída: h5soto orig=I2 pareja=h5_p cara=C_HOLE_EMPTY sig=h6 ant=p9_p
+  Arista leída: h5_psoto orig=V6 pareja=h5 cara=C_OUTER sig=p8_p ant=h6_p
+  Arista leída: h6soto orig=V6 pareja=h6_p cara=C_HOLE_EMPTY sig=h1 ant=h5
+  Arista leída: h6_psoto orig=V5 pareja=h6 cara=C_OUTER sig=h5_p ant=h1_p
+  Arista leída: p1soto orig=V9 pareja=p1_p cara=C_PEN_HOLE sig=h3 ant=p9
+  Arista leída: p1_psoto orig=I1 pareja=p1 cara=C_HOLE_EMPTY sig=p9_p ant=h2
+  Arista leída: p2soto orig=I1 pareja=p2_p cara=C_PEN_IN sig=e3 ant=h3_p
+  Arista leída: p2_psoto orig=I3 pareja=p2 cara=C_OUTER sig=h2_p ant=e2
+  Arista leída: p3soto orig=I3 pareja=p3_p cara=C_PEN_OUT sig=p4 ant=e3_p
+  Arista leída: p3_psoto orig=V10 pareja=p3 cara=C_INF sig=e2_p ant=p4_p
+  Arista leída: p4soto orig=V10 pareja=p4_p cara=C_PEN_OUT sig=p5 ant=p3
+  Arista leída: p4_psoto orig=V11 pareja=p4 cara=C_INF sig=p3_p ant=p5_p
+  Arista leída: p5soto orig=V11 pareja=p5_p cara=C_PEN_OUT sig=p6 ant=p4
+  Arista leída: p5_psoto orig=V12 pareja=p5 cara=C_INF sig=p4_p ant=p6_p
+  Arista leída: p6soto orig=V12 pareja=p6_p cara=C_PEN_OUT sig=e3_p ant=p5
+  Arista leída: p6_psoto orig=I4 pareja=p6 cara=C_INF sig=p5_p ant=e4_p
+  Arista leída: p7soto orig=I4 pareja=p7_p cara=C_PEN_IN sig=p8 ant=e3
+  Arista leída: p7_psoto orig=V13 pareja=p7 cara=C_OUTER sig=e4 ant=p8_p
+  Arista leída: p8soto orig=V13 pareja=p8_p cara=C_PEN_IN sig=h4_p ant=p7
+  Arista leída: p8_psoto orig=I2 pareja=p8 cara=C_OUTER sig=p7_p ant=h5_p
+  Arista leída: p9soto orig=I2 pareja=p9_p cara=C_PEN_HOLE sig=p1 ant=h4
+  Arista leída: p9_psoto orig=V9 pareja=p9 cara=C_HOLE_EMPTY sig=h5 ant=p1_p
+  Cara leída: C_INFsoto externo=None internos=[e1_p]
+  Cara leída: C_OUTERsoto externo=e1 internos=None
+  Cara leída: C_PEN_OUTsoto externo=p3 internos=None
+  Cara leída: C_PEN_INsoto externo=e3 internos=None
+  Cara leída: C_PEN_HOLEsoto externo=h3 internos=None
+  Cara leída: C_HOLE_EMPTYsoto externo=h1 internos=None
+  Activa leída: C_PEN_OUTsoto
+  Activa leída: C_PEN_INsoto
+  Activa leída: C_PEN_HOLEsoto
+  Resuelta arista e1soto: vertOrig=V1soto pareja=e1_psoto cara=C_OUTERsoto sig=e2soto ant=e6soto
+  Resuelta arista e1_psoto: vertOrig=V2soto pareja=e1soto cara=C_INFsoto sig=e6_psoto ant=e2_psoto
+  Resuelta arista e2soto: vertOrig=V2soto pareja=e2_psoto cara=C_OUTERsoto sig=p2_psoto ant=e1soto
+  Resuelta arista e2_psoto: vertOrig=I3soto pareja=e2soto cara=C_INFsoto sig=e1_psoto ant=p3_psoto
+  Resuelta arista e3soto: vertOrig=I3soto pareja=e3_psoto cara=C_PEN_INsoto sig=p7soto ant=p2soto
+  Resuelta arista e3_psoto: vertOrig=I4soto pareja=e3soto cara=C_PEN_OUTsoto sig=p3soto ant=p6soto
+  Resuelta arista e4soto: vertOrig=I4soto pareja=e4_psoto cara=C_OUTERsoto sig=e5soto ant=p7_psoto
+  Resuelta arista e4_psoto: vertOrig=V3soto pareja=e4soto cara=C_INFsoto sig=p6_psoto ant=e5_psoto
+  Resuelta arista e5soto: vertOrig=V3soto pareja=e5_psoto cara=C_OUTERsoto sig=e6soto ant=e4soto
+  Resuelta arista e5_psoto: vertOrig=V4soto pareja=e5soto cara=C_INFsoto sig=e4_psoto ant=e6_psoto
+  Resuelta arista e6soto: vertOrig=V4soto pareja=e6_psoto cara=C_OUTERsoto sig=e1soto ant=e5soto
+  Resuelta arista e6_psoto: vertOrig=V1soto pareja=e6soto cara=C_INFsoto sig=e5_psoto ant=e1_psoto
+  Resuelta arista h1soto: vertOrig=V5soto pareja=h1_psoto cara=C_HOLE_EMPTYsoto sig=h2soto ant=h6soto
+  Resuelta arista h1_psoto: vertOrig=V8soto pareja=h1soto cara=C_OUTERsoto sig=h6_psoto ant=h2_psoto
+  Resuelta arista h2soto: vertOrig=V8soto pareja=h2_psoto cara=C_HOLE_EMPTYsoto sig=p1_psoto ant=h1soto
+  Resuelta arista h2_psoto: vertOrig=I1soto pareja=h2soto cara=C_OUTERsoto sig=h1_psoto ant=p2_psoto
+  Resuelta arista h3soto: vertOrig=I1soto pareja=h3_psoto cara=C_PEN_HOLEsoto sig=h4soto ant=p1soto
+  Resuelta arista h3_psoto: vertOrig=V7soto pareja=h3soto cara=C_PEN_INsoto sig=p2soto ant=h4_psoto
+  Resuelta arista h4soto: vertOrig=V7soto pareja=h4_psoto cara=C_PEN_HOLEsoto sig=p9soto ant=h3soto
+  Resuelta arista h4_psoto: vertOrig=I2soto pareja=h4soto cara=C_PEN_INsoto sig=h3_psoto ant=p8soto
+  Resuelta arista h5soto: vertOrig=I2soto pareja=h5_psoto cara=C_HOLE_EMPTYsoto sig=h6soto ant=p9_psoto
+  Resuelta arista h5_psoto: vertOrig=V6soto pareja=h5soto cara=C_OUTERsoto sig=p8_psoto ant=h6_psoto
+  Resuelta arista h6soto: vertOrig=V6soto pareja=h6_psoto cara=C_HOLE_EMPTYsoto sig=h1soto ant=h5soto
+  Resuelta arista h6_psoto: vertOrig=V5soto pareja=h6soto cara=C_OUTERsoto sig=h5_psoto ant=h1_psoto
+  Resuelta arista p1soto: vertOrig=V9soto pareja=p1_psoto cara=C_PEN_HOLEsoto sig=h3soto ant=p9soto
+  Resuelta arista p1_psoto: vertOrig=I1soto pareja=p1soto cara=C_HOLE_EMPTYsoto sig=p9_psoto ant=h2soto
+  Resuelta arista p2soto: vertOrig=I1soto pareja=p2_psoto cara=C_PEN_INsoto sig=e3soto ant=h3_psoto
+  Resuelta arista p2_psoto: vertOrig=I3soto pareja=p2soto cara=C_OUTERsoto sig=h2_psoto ant=e2soto
+  Resuelta arista p3soto: vertOrig=I3soto pareja=p3_psoto cara=C_PEN_OUTsoto sig=p4soto ant=e3_psoto
+  Resuelta arista p3_psoto: vertOrig=V10soto pareja=p3soto cara=C_INFsoto sig=e2_psoto ant=p4_psoto
+  Resuelta arista p4soto: vertOrig=V10soto pareja=p4_psoto cara=C_PEN_OUTsoto sig=p5soto ant=p3soto
+  Resuelta arista p4_psoto: vertOrig=V11soto pareja=p4soto cara=C_INFsoto sig=p3_psoto ant=p5_psoto
+  Resuelta arista p5soto: vertOrig=V11soto pareja=p5_psoto cara=C_PEN_OUTsoto sig=p6soto ant=p4soto
+  Resuelta arista p5_psoto: vertOrig=V12soto pareja=p5soto cara=C_INFsoto sig=p4_psoto ant=p6_psoto
+  Resuelta arista p6soto: vertOrig=V12soto pareja=p6_psoto cara=C_PEN_OUTsoto sig=e3_psoto ant=p5soto
+  Resuelta arista p6_psoto: vertOrig=I4soto pareja=p6soto cara=C_INFsoto sig=p5_psoto ant=e4_psoto
+  Resuelta arista p7soto: vertOrig=I4soto pareja=p7_psoto cara=C_PEN_INsoto sig=p8soto ant=e3soto
+  Resuelta arista p7_psoto: vertOrig=V13soto pareja=p7soto cara=C_OUTERsoto sig=e4soto ant=p8_psoto
+  Resuelta arista p8soto: vertOrig=V13soto pareja=p8_psoto cara=C_PEN_INsoto sig=h4_psoto ant=p7soto
+  Resuelta arista p8_psoto: vertOrig=I2soto pareja=p8soto cara=C_OUTERsoto sig=p7_psoto ant=h5_psoto
+  Resuelta arista p9soto: vertOrig=I2soto pareja=p9_psoto cara=C_PEN_HOLEsoto sig=p1soto ant=h4soto
+  Resuelta arista p9_psoto: vertOrig=V9soto pareja=p9soto cara=C_HOLE_EMPTYsoto sig=h5soto ant=p1_psoto
+  Vértice V1soto: incidente=e1soto
+  Vértice V2soto: incidente=e2soto
+  Vértice V3soto: incidente=e5soto
+  Vértice V4soto: incidente=e6soto
+  Vértice V5soto: incidente=h1soto
+  Vértice V6soto: incidente=h6soto
+  Vértice V7soto: incidente=h4soto
+  Vértice V8soto: incidente=h2soto
+  Vértice V9soto: incidente=p1soto
+  Vértice V10soto: incidente=p4soto
+  Vértice V11soto: incidente=p5soto
+  Vértice V12soto: incidente=p6soto
+  Vértice V13soto: incidente=p8soto
+  Vértice I1soto: incidente=h3soto
+  Vértice I2soto: incidente=p9soto
+  Vértice I3soto: incidente=e3soto
+  Vértice I4soto: incidente=e4soto
+  Cara resuelta C_INFsoto: externo=None internos=['e1_psoto']
+  Cara resuelta C_OUTERsoto: externo=e1soto internos=[]
+  Cara resuelta C_PEN_OUTsoto: externo=p3soto internos=[]
+  Cara resuelta C_PEN_INsoto: externo=e3soto internos=[]
+  Cara resuelta C_PEN_HOLEsoto: externo=h3soto internos=[]
+  Cara resuelta C_HOLE_EMPTYsoto: externo=h1soto internos=[]
+  Capa soto: 17 vértices, 42 aristas, 6 caras, 3 activas
+  Segmento extraído: e1soto de soto (0.0,0.0)->(10.0,0.0)
+  Segmento extraído: e2soto de soto (10.0,0.0)->(10.0,3.0)
+  Segmento extraído: e3soto de soto (10.0,3.0)->(10.0,9.0)
+  Segmento extraído: e4soto de soto (10.0,9.0)->(10.0,10.0)
+  Segmento extraído: e5soto de soto (10.0,10.0)->(0.0,10.0)
+  Segmento extraído: e6soto de soto (0.0,10.0)->(0.0,0.0)
+  Segmento extraído: h1soto de soto (2.0,2.0)->(8.0,2.0)
+  Segmento extraído: h2soto de soto (8.0,2.0)->(8.0,3.0)
+  Segmento extraído: h3soto de soto (8.0,3.0)->(8.0,8.0)
+  Segmento extraído: h4soto de soto (8.0,8.0)->(4.0,8.0)
+  Segmento extraído: h5soto de soto (4.0,8.0)->(2.0,8.0)
+  Segmento extraído: h6soto de soto (2.0,8.0)->(2.0,2.0)
+  Segmento extraído: p1soto de soto (4.0,3.0)->(8.0,3.0)
+  Segmento extraído: p2soto de soto (8.0,3.0)->(10.0,3.0)
+  Segmento extraído: p3soto de soto (10.0,3.0)->(12.0,3.0)
+  Segmento extraído: p4soto de soto (12.0,3.0)->(14.0,6.0)
+  Segmento extraído: p5soto de soto (14.0,6.0)->(12.0,9.0)
+  Segmento extraído: p6soto de soto (12.0,9.0)->(10.0,9.0)
+  Segmento extraído: p7soto de soto (10.0,9.0)->(4.0,9.0)
+  Segmento extraído: p8soto de soto (4.0,9.0)->(4.0,8.0)
+  Segmento extraído: p9soto de soto (4.0,8.0)->(4.0,3.0)
 
---- Intersecciones incrementales: layer04 vs segmentos previos (0) ---
+--- Intersecciones incrementales: soto vs segmentos previos (0) ---
 
---- Intersecciones internas: layer04 (3 segmentos) ---
-  s41layer04 ∩ s51layer04: [(10.0, 0.0)]
-  s41layer04 ∩ s61layer04: [(10.0, 10.0)]
-  s51layer04 ∩ s61layer04: [(2.0, 5.0)]
+--- Intersecciones internas: soto (21 segmentos) ---
+  e1soto ∩ e2soto: [(10.0, 0.0)]
+  e1soto ∩ e6soto: [(0.0, 0.0)]
+  e2soto ∩ e3soto: [(10.0, 3.0)]
+  e2soto ∩ p2soto: [(10.0, 3.0)]
+  e2soto ∩ p3soto: [(10.0, 3.0)]
+  e3soto ∩ e4soto: [(10.0, 9.0)]
+  e3soto ∩ p2soto: [(10.0, 3.0)]
+  e3soto ∩ p3soto: [(10.0, 3.0)]
+  e3soto ∩ p6soto: [(10.0, 9.0)]
+  e3soto ∩ p7soto: [(10.0, 9.0)]
+  e4soto ∩ e5soto: [(10.0, 10.0)]
+  e4soto ∩ p6soto: [(10.0, 9.0)]
+  e4soto ∩ p7soto: [(10.0, 9.0)]
+  e5soto ∩ e6soto: [(0.0, 10.0)]
+  h1soto ∩ h2soto: [(8.0, 2.0)]
+  h1soto ∩ h6soto: [(2.0, 2.0)]
+  h2soto ∩ h3soto: [(8.0, 3.0)]
+  h2soto ∩ p1soto: [(8.0, 3.0)]
+  h2soto ∩ p2soto: [(8.0, 3.0)]
+  h3soto ∩ h4soto: [(8.0, 8.0)]
+  h3soto ∩ p1soto: [(8.0, 3.0)]
+  h3soto ∩ p2soto: [(8.0, 3.0)]
+  h4soto ∩ h5soto: [(4.0, 8.0)]
+  h4soto ∩ p8soto: [(4.0, 8.0)]
+  h4soto ∩ p9soto: [(4.0, 8.0)]
+  h5soto ∩ h6soto: [(2.0, 8.0)]
+  h5soto ∩ p8soto: [(4.0, 8.0)]
+  h5soto ∩ p9soto: [(4.0, 8.0)]
+  p1soto ∩ p2soto: [(8.0, 3.0)]
+  p1soto ∩ p9soto: [(4.0, 3.0)]
+  p2soto ∩ p3soto: [(10.0, 3.0)]
+  p3soto ∩ p4soto: [(12.0, 3.0)]
+  p4soto ∩ p5soto: [(14.0, 6.0)]
+  p5soto ∩ p6soto: [(12.0, 9.0)]
+  p6soto ∩ p7soto: [(10.0, 9.0)]
+  p7soto ∩ p8soto: [(4.0, 9.0)]
+  p8soto ∩ p9soto: [(4.0, 8.0)]
 
-Total de segmentos originales: 3
+========== Cargando capa: layerSoto2 ==========
+  Vértice leído: V1layerSoto2 (1.0, 1.0) incidente=e1
+  Vértice leído: V2layerSoto2 (5.0, 1.0) incidente=e1_t
+  Vértice leído: V3layerSoto2 (6.0, 4.0) incidente=e2_t
+  Vértice leído: V4layerSoto2 (3.0, 7.0) incidente=e3_t
+  Vértice leído: V5layerSoto2 (0.0, 4.0) incidente=e4_t
+  Vértice leído: V6layerSoto2 (10.0, 2.0) incidente=f1
+  Vértice leído: V7layerSoto2 (14.0, 2.0) incidente=f1_t
+  Vértice leído: V8layerSoto2 (16.0, 5.0) incidente=f2_t
+  Vértice leído: V9layerSoto2 (14.0, 9.0) incidente=f3_t
+  Vértice leído: V10layerSoto2 (10.0, 9.0) incidente=f4_t
+  Vértice leído: V11layerSoto2 (8.0, 5.0) incidente=f5_t
+  Vértice leído: V12layerSoto2 (20.0, 20.0) incidente=g1
+  Vértice leído: V13layerSoto2 (30.0, 20.0) incidente=g1_t
+  Vértice leído: V14layerSoto2 (30.0, 30.0) incidente=g2_t
+  Vértice leído: V15layerSoto2 (20.0, 30.0) incidente=g3_t
+  Vértice leído: V16layerSoto2 (23.0, 23.0) incidente=h1
+  Vértice leído: V17layerSoto2 (27.0, 23.0) incidente=h1_t
+  Vértice leído: V18layerSoto2 (25.0, 28.0) incidente=h2_t
+  Vértice leído: V19layerSoto2 (15.0, 15.0) incidente=i1
+  Vértice leído: V20layerSoto2 (18.0, 15.0) incidente=i1_t
+  Vértice leído: V21layerSoto2 (16.5, 18.0) incidente=i2_t
+  Arista leída: e1layerSoto2 orig=V1 pareja=e1_t cara=FACE1 sig=e2 ant=e5
+  Arista leída: e1_tlayerSoto2 orig=V2 pareja=e1 cara=C_INF sig=e5_t ant=e2_t
+  Arista leída: e2layerSoto2 orig=V2 pareja=e2_t cara=FACE1 sig=e3 ant=e1
+  Arista leída: e2_tlayerSoto2 orig=V3 pareja=e2 cara=C_INF sig=e1_t ant=e3_t
+  Arista leída: e3layerSoto2 orig=V3 pareja=e3_t cara=FACE1 sig=e4 ant=e2
+  Arista leída: e3_tlayerSoto2 orig=V4 pareja=e3 cara=C_INF sig=e2_t ant=e4_t
+  Arista leída: e4layerSoto2 orig=V4 pareja=e4_t cara=FACE1 sig=e5 ant=e3
+  Arista leída: e4_tlayerSoto2 orig=V5 pareja=e4 cara=C_INF sig=e3_t ant=e5_t
+  Arista leída: e5layerSoto2 orig=V5 pareja=e5_t cara=FACE1 sig=e1 ant=e4
+  Arista leída: e5_tlayerSoto2 orig=V1 pareja=e5 cara=C_INF sig=e4_t ant=e1_t
+  Arista leída: f1layerSoto2 orig=V6 pareja=f1_t cara=FACE2 sig=f2 ant=f6
+  Arista leída: f1_tlayerSoto2 orig=V7 pareja=f1 cara=C_INF sig=f6_t ant=f2_t
+  Arista leída: f2layerSoto2 orig=V7 pareja=f2_t cara=FACE2 sig=f3 ant=f1
+  Arista leída: f2_tlayerSoto2 orig=V8 pareja=f2 cara=C_INF sig=f1_t ant=f3_t
+  Arista leída: f3layerSoto2 orig=V8 pareja=f3_t cara=FACE2 sig=f4 ant=f2
+  Arista leída: f3_tlayerSoto2 orig=V9 pareja=f3 cara=C_INF sig=f2_t ant=f4_t
+  Arista leída: f4layerSoto2 orig=V9 pareja=f4_t cara=FACE2 sig=f5 ant=f3
+  Arista leída: f4_tlayerSoto2 orig=V10 pareja=f4 cara=C_INF sig=f3_t ant=f5_t
+  Arista leída: f5layerSoto2 orig=V10 pareja=f5_t cara=FACE2 sig=f6 ant=f4
+  Arista leída: f5_tlayerSoto2 orig=V11 pareja=f5 cara=C_INF sig=f4_t ant=f6_t
+  Arista leída: f6layerSoto2 orig=V11 pareja=f6_t cara=FACE2 sig=f1 ant=f5
+  Arista leída: f6_tlayerSoto2 orig=V6 pareja=f6 cara=C_INF sig=f5_t ant=f1_t
+  Arista leída: g1layerSoto2 orig=V12 pareja=g1_t cara=FACE3 sig=g2 ant=g4
+  Arista leída: g1_tlayerSoto2 orig=V13 pareja=g1 cara=C_INF sig=g4_t ant=g2_t
+  Arista leída: g2layerSoto2 orig=V13 pareja=g2_t cara=FACE3 sig=g3 ant=g1
+  Arista leída: g2_tlayerSoto2 orig=V14 pareja=g2 cara=C_INF sig=g1_t ant=g3_t
+  Arista leída: g3layerSoto2 orig=V14 pareja=g3_t cara=FACE3 sig=g4 ant=g2
+  Arista leída: g3_tlayerSoto2 orig=V15 pareja=g3 cara=C_INF sig=g2_t ant=g4_t
+  Arista leída: g4layerSoto2 orig=V15 pareja=g4_t cara=FACE3 sig=g1 ant=g3
+  Arista leída: g4_tlayerSoto2 orig=V12 pareja=g4 cara=C_INF sig=g3_t ant=g1_t
+  Arista leída: h1layerSoto2 orig=V16 pareja=h1_t cara=FACE4 sig=h2 ant=h3
+  Arista leída: h1_tlayerSoto2 orig=V17 pareja=h1 cara=FACE3 sig=h3_t ant=h2_t
+  Arista leída: h2layerSoto2 orig=V17 pareja=h2_t cara=FACE4 sig=h3 ant=h1
+  Arista leída: h2_tlayerSoto2 orig=V18 pareja=h2 cara=FACE3 sig=h1_t ant=h3_t
+  Arista leída: h3layerSoto2 orig=V18 pareja=h3_t cara=FACE4 sig=h1 ant=h2
+  Arista leída: h3_tlayerSoto2 orig=V16 pareja=h3 cara=FACE3 sig=h2_t ant=h1_t
+  Arista leída: i1layerSoto2 orig=V19 pareja=i1_t cara=FACE5 sig=i2 ant=i3
+  Arista leída: i1_tlayerSoto2 orig=V20 pareja=i1 cara=C_INF sig=i3_t ant=i2_t
+  Arista leída: i2layerSoto2 orig=V20 pareja=i2_t cara=FACE5 sig=i3 ant=i1
+  Arista leída: i2_tlayerSoto2 orig=V21 pareja=i2 cara=C_INF sig=i1_t ant=i3_t
+  Arista leída: i3layerSoto2 orig=V21 pareja=i3_t cara=FACE5 sig=i1 ant=i2
+  Arista leída: i3_tlayerSoto2 orig=V19 pareja=i3 cara=C_INF sig=i2_t ant=i1_t
+  Cara leída: C_INFlayerSoto2 externo=None internos=[e1_t,f1_t,g1_t,i1_t]
+  Cara leída: FACE1layerSoto2 externo=e1 internos=None
+  Cara leída: FACE2layerSoto2 externo=f1 internos=None
+  Cara leída: FACE3layerSoto2 externo=g1 internos=[h1_t]
+  Cara leída: FACE4layerSoto2 externo=h1 internos=None
+  Cara leída: FACE5layerSoto2 externo=i1 internos=None
+  Activa leída: FACE2layerSoto2
+  Activa leída: FACE4layerSoto2
+  Resuelta arista e1layerSoto2: vertOrig=V1layerSoto2 pareja=e1_tlayerSoto2 cara=FACE1layerSoto2 sig=e2layerSoto2 ant=e5layerSoto2
+  Resuelta arista e1_tlayerSoto2: vertOrig=V2layerSoto2 pareja=e1layerSoto2 cara=C_INFlayerSoto2 sig=e5_tlayerSoto2 ant=e2_tlayerSoto2
+  Resuelta arista e2layerSoto2: vertOrig=V2layerSoto2 pareja=e2_tlayerSoto2 cara=FACE1layerSoto2 sig=e3layerSoto2 ant=e1layerSoto2
+  Resuelta arista e2_tlayerSoto2: vertOrig=V3layerSoto2 pareja=e2layerSoto2 cara=C_INFlayerSoto2 sig=e1_tlayerSoto2 ant=e3_tlayerSoto2
+  Resuelta arista e3layerSoto2: vertOrig=V3layerSoto2 pareja=e3_tlayerSoto2 cara=FACE1layerSoto2 sig=e4layerSoto2 ant=e2layerSoto2
+  Resuelta arista e3_tlayerSoto2: vertOrig=V4layerSoto2 pareja=e3layerSoto2 cara=C_INFlayerSoto2 sig=e2_tlayerSoto2 ant=e4_tlayerSoto2
+  Resuelta arista e4layerSoto2: vertOrig=V4layerSoto2 pareja=e4_tlayerSoto2 cara=FACE1layerSoto2 sig=e5layerSoto2 ant=e3layerSoto2
+  Resuelta arista e4_tlayerSoto2: vertOrig=V5layerSoto2 pareja=e4layerSoto2 cara=C_INFlayerSoto2 sig=e3_tlayerSoto2 ant=e5_tlayerSoto2
+  Resuelta arista e5layerSoto2: vertOrig=V5layerSoto2 pareja=e5_tlayerSoto2 cara=FACE1layerSoto2 sig=e1layerSoto2 ant=e4layerSoto2
+  Resuelta arista e5_tlayerSoto2: vertOrig=V1layerSoto2 pareja=e5layerSoto2 cara=C_INFlayerSoto2 sig=e4_tlayerSoto2 ant=e1_tlayerSoto2
+  Resuelta arista f1layerSoto2: vertOrig=V6layerSoto2 pareja=f1_tlayerSoto2 cara=FACE2layerSoto2 sig=f2layerSoto2 ant=f6layerSoto2
+  Resuelta arista f1_tlayerSoto2: vertOrig=V7layerSoto2 pareja=f1layerSoto2 cara=C_INFlayerSoto2 sig=f6_tlayerSoto2 ant=f2_tlayerSoto2
+  Resuelta arista f2layerSoto2: vertOrig=V7layerSoto2 pareja=f2_tlayerSoto2 cara=FACE2layerSoto2 sig=f3layerSoto2 ant=f1layerSoto2
+  Resuelta arista f2_tlayerSoto2: vertOrig=V8layerSoto2 pareja=f2layerSoto2 cara=C_INFlayerSoto2 sig=f1_tlayerSoto2 ant=f3_tlayerSoto2
+  Resuelta arista f3layerSoto2: vertOrig=V8layerSoto2 pareja=f3_tlayerSoto2 cara=FACE2layerSoto2 sig=f4layerSoto2 ant=f2layerSoto2
+  Resuelta arista f3_tlayerSoto2: vertOrig=V9layerSoto2 pareja=f3layerSoto2 cara=C_INFlayerSoto2 sig=f2_tlayerSoto2 ant=f4_tlayerSoto2
+  Resuelta arista f4layerSoto2: vertOrig=V9layerSoto2 pareja=f4_tlayerSoto2 cara=FACE2layerSoto2 sig=f5layerSoto2 ant=f3layerSoto2
+  Resuelta arista f4_tlayerSoto2: vertOrig=V10layerSoto2 pareja=f4layerSoto2 cara=C_INFlayerSoto2 sig=f3_tlayerSoto2 ant=f5_tlayerSoto2
+  Resuelta arista f5layerSoto2: vertOrig=V10layerSoto2 pareja=f5_tlayerSoto2 cara=FACE2layerSoto2 sig=f6layerSoto2 ant=f4layerSoto2
+  Resuelta arista f5_tlayerSoto2: vertOrig=V11layerSoto2 pareja=f5layerSoto2 cara=C_INFlayerSoto2 sig=f4_tlayerSoto2 ant=f6_tlayerSoto2
+  Resuelta arista f6layerSoto2: vertOrig=V11layerSoto2 pareja=f6_tlayerSoto2 cara=FACE2layerSoto2 sig=f1layerSoto2 ant=f5layerSoto2
+  Resuelta arista f6_tlayerSoto2: vertOrig=V6layerSoto2 pareja=f6layerSoto2 cara=C_INFlayerSoto2 sig=f5_tlayerSoto2 ant=f1_tlayerSoto2
+  Resuelta arista g1layerSoto2: vertOrig=V12layerSoto2 pareja=g1_tlayerSoto2 cara=FACE3layerSoto2 sig=g2layerSoto2 ant=g4layerSoto2
+  Resuelta arista g1_tlayerSoto2: vertOrig=V13layerSoto2 pareja=g1layerSoto2 cara=C_INFlayerSoto2 sig=g4_tlayerSoto2 ant=g2_tlayerSoto2
+  Resuelta arista g2layerSoto2: vertOrig=V13layerSoto2 pareja=g2_tlayerSoto2 cara=FACE3layerSoto2 sig=g3layerSoto2 ant=g1layerSoto2
+  Resuelta arista g2_tlayerSoto2: vertOrig=V14layerSoto2 pareja=g2layerSoto2 cara=C_INFlayerSoto2 sig=g1_tlayerSoto2 ant=g3_tlayerSoto2
+  Resuelta arista g3layerSoto2: vertOrig=V14layerSoto2 pareja=g3_tlayerSoto2 cara=FACE3layerSoto2 sig=g4layerSoto2 ant=g2layerSoto2
+  Resuelta arista g3_tlayerSoto2: vertOrig=V15layerSoto2 pareja=g3layerSoto2 cara=C_INFlayerSoto2 sig=g2_tlayerSoto2 ant=g4_tlayerSoto2
+  Resuelta arista g4layerSoto2: vertOrig=V15layerSoto2 pareja=g4_tlayerSoto2 cara=FACE3layerSoto2 sig=g1layerSoto2 ant=g3layerSoto2
+  Resuelta arista g4_tlayerSoto2: vertOrig=V12layerSoto2 pareja=g4layerSoto2 cara=C_INFlayerSoto2 sig=g3_tlayerSoto2 ant=g1_tlayerSoto2
+  Resuelta arista h1layerSoto2: vertOrig=V16layerSoto2 pareja=h1_tlayerSoto2 cara=FACE4layerSoto2 sig=h2layerSoto2 ant=h3layerSoto2
+  Resuelta arista h1_tlayerSoto2: vertOrig=V17layerSoto2 pareja=h1layerSoto2 cara=FACE3layerSoto2 sig=h3_tlayerSoto2 ant=h2_tlayerSoto2
+  Resuelta arista h2layerSoto2: vertOrig=V17layerSoto2 pareja=h2_tlayerSoto2 cara=FACE4layerSoto2 sig=h3layerSoto2 ant=h1layerSoto2
+  Resuelta arista h2_tlayerSoto2: vertOrig=V18layerSoto2 pareja=h2layerSoto2 cara=FACE3layerSoto2 sig=h1_tlayerSoto2 ant=h3_tlayerSoto2
+  Resuelta arista h3layerSoto2: vertOrig=V18layerSoto2 pareja=h3_tlayerSoto2 cara=FACE4layerSoto2 sig=h1layerSoto2 ant=h2layerSoto2
+  Resuelta arista h3_tlayerSoto2: vertOrig=V16layerSoto2 pareja=h3layerSoto2 cara=FACE3layerSoto2 sig=h2_tlayerSoto2 ant=h1_tlayerSoto2
+  Resuelta arista i1layerSoto2: vertOrig=V19layerSoto2 pareja=i1_tlayerSoto2 cara=FACE5layerSoto2 sig=i2layerSoto2 ant=i3layerSoto2
+  Resuelta arista i1_tlayerSoto2: vertOrig=V20layerSoto2 pareja=i1layerSoto2 cara=C_INFlayerSoto2 sig=i3_tlayerSoto2 ant=i2_tlayerSoto2
+  Resuelta arista i2layerSoto2: vertOrig=V20layerSoto2 pareja=i2_tlayerSoto2 cara=FACE5layerSoto2 sig=i3layerSoto2 ant=i1layerSoto2
+  Resuelta arista i2_tlayerSoto2: vertOrig=V21layerSoto2 pareja=i2layerSoto2 cara=C_INFlayerSoto2 sig=i1_tlayerSoto2 ant=i3_tlayerSoto2
+  Resuelta arista i3layerSoto2: vertOrig=V21layerSoto2 pareja=i3_tlayerSoto2 cara=FACE5layerSoto2 sig=i1layerSoto2 ant=i2layerSoto2
+  Resuelta arista i3_tlayerSoto2: vertOrig=V19layerSoto2 pareja=i3layerSoto2 cara=C_INFlayerSoto2 sig=i2_tlayerSoto2 ant=i1_tlayerSoto2
+  Vértice V1layerSoto2: incidente=e1layerSoto2
+  Vértice V2layerSoto2: incidente=e1_tlayerSoto2
+  Vértice V3layerSoto2: incidente=e2_tlayerSoto2
+  Vértice V4layerSoto2: incidente=e3_tlayerSoto2
+  Vértice V5layerSoto2: incidente=e4_tlayerSoto2
+  Vértice V6layerSoto2: incidente=f1layerSoto2
+  Vértice V7layerSoto2: incidente=f1_tlayerSoto2
+  Vértice V8layerSoto2: incidente=f2_tlayerSoto2
+  Vértice V9layerSoto2: incidente=f3_tlayerSoto2
+  Vértice V10layerSoto2: incidente=f4_tlayerSoto2
+  Vértice V11layerSoto2: incidente=f5_tlayerSoto2
+  Vértice V12layerSoto2: incidente=g1layerSoto2
+  Vértice V13layerSoto2: incidente=g1_tlayerSoto2
+  Vértice V14layerSoto2: incidente=g2_tlayerSoto2
+  Vértice V15layerSoto2: incidente=g3_tlayerSoto2
+  Vértice V16layerSoto2: incidente=h1layerSoto2
+  Vértice V17layerSoto2: incidente=h1_tlayerSoto2
+  Vértice V18layerSoto2: incidente=h2_tlayerSoto2
+  Vértice V19layerSoto2: incidente=i1layerSoto2
+  Vértice V20layerSoto2: incidente=i1_tlayerSoto2
+  Vértice V21layerSoto2: incidente=i2_tlayerSoto2
+  Cara resuelta C_INFlayerSoto2: externo=None internos=['e1_tlayerSoto2', 'f1_tlayerSoto2', 'g1_tlayerSoto2', 'i1_tlayerSoto2']
+  Cara resuelta FACE1layerSoto2: externo=e1layerSoto2 internos=[]
+  Cara resuelta FACE2layerSoto2: externo=f1layerSoto2 internos=[]
+  Cara resuelta FACE3layerSoto2: externo=g1layerSoto2 internos=['h1_tlayerSoto2']
+  Cara resuelta FACE4layerSoto2: externo=h1layerSoto2 internos=[]
+  Cara resuelta FACE5layerSoto2: externo=i1layerSoto2 internos=[]
+  Capa layerSoto2: 21 vértices, 42 aristas, 6 caras, 2 activas
+  Segmento extraído: e1layerSoto2 de layerSoto2 (1.0,1.0)->(5.0,1.0)
+  Segmento extraído: e2layerSoto2 de layerSoto2 (5.0,1.0)->(6.0,4.0)
+  Segmento extraído: e3layerSoto2 de layerSoto2 (6.0,4.0)->(3.0,7.0)
+  Segmento extraído: e4layerSoto2 de layerSoto2 (3.0,7.0)->(0.0,4.0)
+  Segmento extraído: e5layerSoto2 de layerSoto2 (0.0,4.0)->(1.0,1.0)
+  Segmento extraído: f1layerSoto2 de layerSoto2 (10.0,2.0)->(14.0,2.0)
+  Segmento extraído: f2layerSoto2 de layerSoto2 (14.0,2.0)->(16.0,5.0)
+  Segmento extraído: f3layerSoto2 de layerSoto2 (16.0,5.0)->(14.0,9.0)
+  Segmento extraído: f4layerSoto2 de layerSoto2 (14.0,9.0)->(10.0,9.0)
+  Segmento extraído: f5layerSoto2 de layerSoto2 (10.0,9.0)->(8.0,5.0)
+  Segmento extraído: f6layerSoto2 de layerSoto2 (8.0,5.0)->(10.0,2.0)
+  Segmento extraído: g1layerSoto2 de layerSoto2 (20.0,20.0)->(30.0,20.0)
+  Segmento extraído: g2layerSoto2 de layerSoto2 (30.0,20.0)->(30.0,30.0)
+  Segmento extraído: g3layerSoto2 de layerSoto2 (30.0,30.0)->(20.0,30.0)
+  Segmento extraído: g4layerSoto2 de layerSoto2 (20.0,30.0)->(20.0,20.0)
+  Segmento extraído: h1layerSoto2 de layerSoto2 (23.0,23.0)->(27.0,23.0)
+  Segmento extraído: h2layerSoto2 de layerSoto2 (27.0,23.0)->(25.0,28.0)
+  Segmento extraído: h3layerSoto2 de layerSoto2 (25.0,28.0)->(23.0,23.0)
+  Segmento extraído: i1layerSoto2 de layerSoto2 (15.0,15.0)->(18.0,15.0)
+  Segmento extraído: i2layerSoto2 de layerSoto2 (18.0,15.0)->(16.5,18.0)
+  Segmento extraído: i3layerSoto2 de layerSoto2 (16.5,18.0)->(15.0,15.0)
+
+--- Intersecciones incrementales: layerSoto2 vs segmentos previos (21) ---
+  e2layerSoto2 (layerSoto2) ∩ h1soto (soto): [(5.333333, 2.0)]
+  e2layerSoto2 (layerSoto2) ∩ p1soto (soto): [(5.666667, 3.0)]
+  e3layerSoto2 (layerSoto2) ∩ p9soto (soto): [(4.0, 6.0)]
+  e4layerSoto2 (layerSoto2) ∩ e6soto (soto): [(0.0, 4.0)]
+  e4layerSoto2 (layerSoto2) ∩ h6soto (soto): [(2.0, 6.0)]
+  e5layerSoto2 (layerSoto2) ∩ e6soto (soto): [(0.0, 4.0)]
+  f1layerSoto2 (layerSoto2) ∩ e2soto (soto): [(10.0, 2.0)]
+  f4layerSoto2 (layerSoto2) ∩ e3soto (soto): [(10.0, 9.0)]
+  f4layerSoto2 (layerSoto2) ∩ e4soto (soto): [(10.0, 9.0)]
+  f4layerSoto2 (layerSoto2) ∩ p5soto (soto): [(12.0, 9.0)]
+  f4layerSoto2 (layerSoto2) ∩ p6soto (soto): [(10.0, 9.0), (12.0, 9.0)]
+  f4layerSoto2 (layerSoto2) ∩ p7soto (soto): [(10.0, 9.0)]
+  f5layerSoto2 (layerSoto2) ∩ e3soto (soto): [(10.0, 9.0)]
+  f5layerSoto2 (layerSoto2) ∩ e4soto (soto): [(10.0, 9.0)]
+  f5layerSoto2 (layerSoto2) ∩ h3soto (soto): [(8.0, 5.0)]
+  f5layerSoto2 (layerSoto2) ∩ p6soto (soto): [(10.0, 9.0)]
+  f5layerSoto2 (layerSoto2) ∩ p7soto (soto): [(10.0, 9.0)]
+  f6layerSoto2 (layerSoto2) ∩ e2soto (soto): [(10.0, 2.0)]
+  f6layerSoto2 (layerSoto2) ∩ h3soto (soto): [(8.0, 5.0)]
+  f6layerSoto2 (layerSoto2) ∩ p2soto (soto): [(9.333333, 3.0)]
+
+--- Intersecciones internas: layerSoto2 (21 segmentos) ---
+  e1layerSoto2 ∩ e2layerSoto2: [(5.0, 1.0)]
+  e1layerSoto2 ∩ e5layerSoto2: [(1.0, 1.0)]
+  e2layerSoto2 ∩ e3layerSoto2: [(6.0, 4.0)]
+  e3layerSoto2 ∩ e4layerSoto2: [(3.0, 7.0)]
+  e4layerSoto2 ∩ e5layerSoto2: [(0.0, 4.0)]
+  f1layerSoto2 ∩ f2layerSoto2: [(14.0, 2.0)]
+  f1layerSoto2 ∩ f6layerSoto2: [(10.0, 2.0)]
+  f2layerSoto2 ∩ f3layerSoto2: [(16.0, 5.0)]
+  f3layerSoto2 ∩ f4layerSoto2: [(14.0, 9.0)]
+  f4layerSoto2 ∩ f5layerSoto2: [(10.0, 9.0)]
+  f5layerSoto2 ∩ f6layerSoto2: [(8.0, 5.0)]
+  g1layerSoto2 ∩ g2layerSoto2: [(30.0, 20.0)]
+  g1layerSoto2 ∩ g4layerSoto2: [(20.0, 20.0)]
+  g2layerSoto2 ∩ g3layerSoto2: [(30.0, 30.0)]
+  g3layerSoto2 ∩ g4layerSoto2: [(20.0, 30.0)]
+  h1layerSoto2 ∩ h2layerSoto2: [(27.0, 23.0)]
+  h1layerSoto2 ∩ h3layerSoto2: [(23.0, 23.0)]
+  h2layerSoto2 ∩ h3layerSoto2: [(25.0, 28.0)]
+  i1layerSoto2 ∩ i2layerSoto2: [(18.0, 15.0)]
+  i1layerSoto2 ∩ i3layerSoto2: [(15.0, 15.0)]
+  i2layerSoto2 ∩ i3layerSoto2: [(16.5, 18.0)]
+
+========== Cargando capa: layerSoto3 ==========
+  Vértice leído: C1layerSoto3 (0.0, 0.0) incidente=c1
+  Vértice leído: C2layerSoto3 (10.0, 2.0) incidente=c2
+  Vértice leído: C3layerSoto3 (18.0, 1.0) incidente=c3
+  Vértice leído: C4layerSoto3 (25.0, 3.0) incidente=c4
+  Vértice leído: C5layerSoto3 (30.0, 8.0) incidente=c5
+  Vértice leído: C6layerSoto3 (32.0, 15.0) incidente=c6
+  Vértice leído: C7layerSoto3 (28.0, 22.0) incidente=c7
+  Vértice leído: C8layerSoto3 (22.0, 28.0) incidente=c8
+  Vértice leído: C9layerSoto3 (15.0, 30.0) incidente=c9
+  Vértice leído: C10layerSoto3 (8.0, 28.0) incidente=c10
+  Vértice leído: C11layerSoto3 (2.0, 22.0) incidente=c11
+  Vértice leído: C12layerSoto3 (0.0, 15.0) incidente=c12
+  Vértice leído: L1layerSoto3 (5.0, 6.0) incidente=l1
+  Vértice leído: L2layerSoto3 (8.0, 5.0) incidente=l2
+  Vértice leído: L3layerSoto3 (12.0, 6.0) incidente=l3
+  Vértice leído: L4layerSoto3 (10.0, 10.0) incidente=l4
+  Vértice leído: L5layerSoto3 (6.0, 10.0) incidente=l5
+  Vértice leído: I1layerSoto3 (7.0, 7.0) incidente=i1
+  Vértice leído: I2layerSoto3 (9.0, 7.0) incidente=i2
+  Vértice leído: I3layerSoto3 (8.0, 9.0) incidente=i3
+  Vértice leído: F1layerSoto3 (14.0, 12.0) incidente=f1
+  Vértice leído: F2layerSoto3 (18.0, 11.0) incidente=f2
+  Vértice leído: F3layerSoto3 (20.0, 15.0) incidente=f3
+  Vértice leído: F4layerSoto3 (16.0, 16.0) incidente=f4
+  Vértice leído: F5layerSoto3 (14.0, 15.0) incidente=f5
+  Vértice leído: M1layerSoto3 (22.0, 10.0) incidente=m1
+  Vértice leído: M2layerSoto3 (26.0, 9.0) incidente=m2
+  Vértice leído: M3layerSoto3 (28.0, 12.0) incidente=m3
+  Vértice leído: M4layerSoto3 (24.0, 14.0) incidente=m4
+  Vértice leído: M5layerSoto3 (22.0, 13.0) incidente=m5
+  Vértice leído: R1layerSoto3 (4.0, 18.0) incidente=r1
+  Vértice leído: R2layerSoto3 (6.0, 16.0) incidente=r2
+  Vértice leído: R3layerSoto3 (10.0, 17.0) incidente=r3
+  Vértice leído: R4layerSoto3 (12.0, 19.0) incidente=r4
+  Vértice leído: R5layerSoto3 (8.0, 21.0) incidente=r5
+  Vértice leído: R6layerSoto3 (5.0, 20.0) incidente=r6
+  Vértice leído: P1layerSoto3 (15.0, 20.0) incidente=p1
+  Vértice leído: P2layerSoto3 (18.0, 19.0) incidente=p2
+  Vértice leído: P3layerSoto3 (20.0, 21.0) incidente=p3
+  Vértice leído: P4layerSoto3 (17.0, 23.0) incidente=p4
+  Vértice leído: P5layerSoto3 (14.0, 22.0) incidente=p5
+  Vértice leído: S1layerSoto3 (26.0, 18.0) incidente=s1
+  Vértice leído: S2layerSoto3 (28.0, 20.0) incidente=s2
+  Vértice leído: S3layerSoto3 (25.0, 22.0) incidente=s3
+  Vértice leído: S4layerSoto3 (23.0, 19.0) incidente=s4
+  Arista leída: c1layerSoto3 orig=C1 pareja=c1_t cara=ISLA sig=c2 ant=c12
+  Arista leída: c1_tlayerSoto3 orig=C2 pareja=c1 cara=INF sig=c12_t ant=c2_t
+  Arista leída: c2layerSoto3 orig=C2 pareja=c2_t cara=ISLA sig=c3 ant=c1
+  Arista leída: c2_tlayerSoto3 orig=C3 pareja=c2 cara=INF sig=c1_t ant=c3_t
+  Arista leída: c3layerSoto3 orig=C3 pareja=c3_t cara=ISLA sig=c4 ant=c2
+  Arista leída: c3_tlayerSoto3 orig=C4 pareja=c3 cara=INF sig=c2_t ant=c4_t
+  Arista leída: c4layerSoto3 orig=C4 pareja=c4_t cara=ISLA sig=c5 ant=c3
+  Arista leída: c4_tlayerSoto3 orig=C5 pareja=c4 cara=INF sig=c3_t ant=c5_t
+  Arista leída: c5layerSoto3 orig=C5 pareja=c5_t cara=ISLA sig=c6 ant=c4
+  Arista leída: c5_tlayerSoto3 orig=C6 pareja=c5 cara=INF sig=c4_t ant=c6_t
+  Arista leída: c6layerSoto3 orig=C6 pareja=c6_t cara=ISLA sig=c7 ant=c5
+  Arista leída: c6_tlayerSoto3 orig=C7 pareja=c6 cara=INF sig=c5_t ant=c7_t
+  Arista leída: c7layerSoto3 orig=C7 pareja=c7_t cara=ISLA sig=c8 ant=c6
+  Arista leída: c7_tlayerSoto3 orig=C8 pareja=c7 cara=INF sig=c6_t ant=c8_t
+  Arista leída: c8layerSoto3 orig=C8 pareja=c8_t cara=ISLA sig=c9 ant=c7
+  Arista leída: c8_tlayerSoto3 orig=C9 pareja=c8 cara=INF sig=c7_t ant=c9_t
+  Arista leída: c9layerSoto3 orig=C9 pareja=c9_t cara=ISLA sig=c10 ant=c8
+  Arista leída: c9_tlayerSoto3 orig=C10 pareja=c9 cara=INF sig=c8_t ant=c10_t
+  Arista leída: c10layerSoto3 orig=C10 pareja=c10_t cara=ISLA sig=c11 ant=c9
+  Arista leída: c10_tlayerSoto3 orig=C11 pareja=c10 cara=INF sig=c9_t ant=c11_t
+  Arista leída: c11layerSoto3 orig=C11 pareja=c11_t cara=ISLA sig=c12 ant=c10
+  Arista leída: c11_tlayerSoto3 orig=C12 pareja=c11 cara=INF sig=c10_t ant=c12_t
+  Arista leída: c12layerSoto3 orig=C12 pareja=c12_t cara=ISLA sig=c1 ant=c11
+  Arista leída: c12_tlayerSoto3 orig=C1 pareja=c12 cara=INF sig=c11_t ant=c1_t
+  Arista leída: l1layerSoto3 orig=L1 pareja=l1_t cara=LAGO sig=l2 ant=l5
+  Arista leída: l1_tlayerSoto3 orig=L2 pareja=l1 cara=ISLA sig=l5_t ant=l2_t
+  Arista leída: l2layerSoto3 orig=L2 pareja=l2_t cara=LAGO sig=l3 ant=l1
+  Arista leída: l2_tlayerSoto3 orig=L3 pareja=l2 cara=ISLA sig=l1_t ant=l3_t
+  Arista leída: l3layerSoto3 orig=L3 pareja=l3_t cara=LAGO sig=l4 ant=l2
+  Arista leída: l3_tlayerSoto3 orig=L4 pareja=l3 cara=ISLA sig=l2_t ant=l4_t
+  Arista leída: l4layerSoto3 orig=L4 pareja=l4_t cara=LAGO sig=l5 ant=l3
+  Arista leída: l4_tlayerSoto3 orig=L5 pareja=l4 cara=ISLA sig=l3_t ant=l5_t
+  Arista leída: l5layerSoto3 orig=L5 pareja=l5_t cara=LAGO sig=l1 ant=l4
+  Arista leída: l5_tlayerSoto3 orig=L1 pareja=l5 cara=ISLA sig=l4_t ant=l1_t
+  Arista leída: i1layerSoto3 orig=I1 pareja=i1_t cara=ISLOTE sig=i2 ant=i3
+  Arista leída: i1_tlayerSoto3 orig=I2 pareja=i1 cara=LAGO sig=i3_t ant=i2_t
+  Arista leída: i2layerSoto3 orig=I2 pareja=i2_t cara=ISLOTE sig=i3 ant=i1
+  Arista leída: i2_tlayerSoto3 orig=I3 pareja=i2 cara=LAGO sig=i1_t ant=i3_t
+  Arista leída: i3layerSoto3 orig=I3 pareja=i3_t cara=ISLOTE sig=i1 ant=i2
+  Arista leída: i3_tlayerSoto3 orig=I1 pareja=i3 cara=LAGO sig=i2_t ant=i1_t
+  Arista leída: f1layerSoto3 orig=F1 pareja=f1_t cara=BOSQUE sig=f2 ant=f5
+  Arista leída: f1_tlayerSoto3 orig=F2 pareja=f1 cara=ISLA sig=f5_t ant=f2_t
+  Arista leída: f2layerSoto3 orig=F2 pareja=f2_t cara=BOSQUE sig=f3 ant=f1
+  Arista leída: f2_tlayerSoto3 orig=F3 pareja=f2 cara=ISLA sig=f1_t ant=f3_t
+  Arista leída: f3layerSoto3 orig=F3 pareja=f3_t cara=BOSQUE sig=f4 ant=f2
+  Arista leída: f3_tlayerSoto3 orig=F4 pareja=f3 cara=ISLA sig=f2_t ant=f4_t
+  Arista leída: f4layerSoto3 orig=F4 pareja=f4_t cara=BOSQUE sig=f5 ant=f3
+  Arista leída: f4_tlayerSoto3 orig=F5 pareja=f4 cara=ISLA sig=f3_t ant=f5_t
+  Arista leída: f5layerSoto3 orig=F5 pareja=f5_t cara=BOSQUE sig=f1 ant=f4
+  Arista leída: f5_tlayerSoto3 orig=F1 pareja=f5 cara=ISLA sig=f4_t ant=f1_t
+  Arista leída: m1layerSoto3 orig=M1 pareja=m1_t cara=MONTE sig=m2 ant=m5
+  Arista leída: m1_tlayerSoto3 orig=M2 pareja=m1 cara=ISLA sig=m5_t ant=m2_t
+  Arista leída: m2layerSoto3 orig=M2 pareja=m2_t cara=MONTE sig=m3 ant=m1
+  Arista leída: m2_tlayerSoto3 orig=M3 pareja=m2 cara=ISLA sig=m1_t ant=m3_t
+  Arista leída: m3layerSoto3 orig=M3 pareja=m3_t cara=MONTE sig=m4 ant=m2
+  Arista leída: m3_tlayerSoto3 orig=M4 pareja=m3 cara=ISLA sig=m2_t ant=m4_t
+  Arista leída: m4layerSoto3 orig=M4 pareja=m4_t cara=MONTE sig=m5 ant=m3
+  Arista leída: m4_tlayerSoto3 orig=M5 pareja=m4 cara=ISLA sig=m3_t ant=m5_t
+  Arista leída: m5layerSoto3 orig=M5 pareja=m5_t cara=MONTE sig=m1 ant=m4
+  Arista leída: m5_tlayerSoto3 orig=M1 pareja=m5 cara=ISLA sig=m4_t ant=m1_t
+  Arista leída: r1layerSoto3 orig=R1 pareja=r1_t cara=RIO sig=r2 ant=r6
+  Arista leída: r1_tlayerSoto3 orig=R2 pareja=r1 cara=ISLA sig=r6_t ant=r2_t
+  Arista leída: r2layerSoto3 orig=R2 pareja=r2_t cara=RIO sig=r3 ant=r1
+  Arista leída: r2_tlayerSoto3 orig=R3 pareja=r2 cara=ISLA sig=r1_t ant=r3_t
+  Arista leída: r3layerSoto3 orig=R3 pareja=r3_t cara=RIO sig=r4 ant=r2
+  Arista leída: r3_tlayerSoto3 orig=R4 pareja=r3 cara=ISLA sig=r2_t ant=r4_t
+  Arista leída: r4layerSoto3 orig=R4 pareja=r4_t cara=RIO sig=r5 ant=r3
+  Arista leída: r4_tlayerSoto3 orig=R5 pareja=r4 cara=ISLA sig=r3_t ant=r5_t
+  Arista leída: r5layerSoto3 orig=R5 pareja=r5_t cara=RIO sig=r6 ant=r4
+  Arista leída: r5_tlayerSoto3 orig=R6 pareja=r5 cara=ISLA sig=r4_t ant=r6_t
+  Arista leída: r6layerSoto3 orig=R6 pareja=r6_t cara=RIO sig=r1 ant=r5
+  Arista leída: r6_tlayerSoto3 orig=R1 pareja=r6 cara=ISLA sig=r5_t ant=r1_t
+  Arista leída: p1layerSoto3 orig=P1 pareja=p1_t cara=PUEBLO sig=p2 ant=p5
+  Arista leída: p1_tlayerSoto3 orig=P2 pareja=p1 cara=ISLA sig=p5_t ant=p2_t
+  Arista leída: p2layerSoto3 orig=P2 pareja=p2_t cara=PUEBLO sig=p3 ant=p1
+  Arista leída: p2_tlayerSoto3 orig=P3 pareja=p2 cara=ISLA sig=p1_t ant=p3_t
+  Arista leída: p3layerSoto3 orig=P3 pareja=p3_t cara=PUEBLO sig=p4 ant=p2
+  Arista leída: p3_tlayerSoto3 orig=P4 pareja=p3 cara=ISLA sig=p2_t ant=p4_t
+  Arista leída: p4layerSoto3 orig=P4 pareja=p4_t cara=PUEBLO sig=p5 ant=p3
+  Arista leída: p4_tlayerSoto3 orig=P5 pareja=p4 cara=ISLA sig=p3_t ant=p5_t
+  Arista leída: p5layerSoto3 orig=P5 pareja=p5_t cara=PUEBLO sig=p1 ant=p4
+  Arista leída: p5_tlayerSoto3 orig=P1 pareja=p5 cara=ISLA sig=p4_t ant=p1_t
+  Arista leída: s1layerSoto3 orig=S1 pareja=s1_t cara=SABANA sig=s2 ant=s4
+  Arista leída: s1_tlayerSoto3 orig=S2 pareja=s1 cara=ISLA sig=s4_t ant=s2_t
+  Arista leída: s2layerSoto3 orig=S2 pareja=s2_t cara=SABANA sig=s3 ant=s1
+  Arista leída: s2_tlayerSoto3 orig=S3 pareja=s2 cara=ISLA sig=s1_t ant=s3_t
+  Arista leída: s3layerSoto3 orig=S3 pareja=s3_t cara=SABANA sig=s4 ant=s2
+  Arista leída: s3_tlayerSoto3 orig=S4 pareja=s3 cara=ISLA sig=s2_t ant=s4_t
+  Arista leída: s4layerSoto3 orig=S4 pareja=s4_t cara=SABANA sig=s1 ant=s3
+  Arista leída: s4_tlayerSoto3 orig=S1 pareja=s4 cara=ISLA sig=s3_t ant=s1_t
+  Cara leída: INFlayerSoto3 externo=None internos=[c1_t]
+  Cara leída: ISLAlayerSoto3 externo=c1 internos=[l1_t,f1_t,m1_t,r1_t,p1_t,s1_t]
+  Cara leída: LAGOlayerSoto3 externo=l1 internos=[i1_t]
+  Cara leída: ISLOTElayerSoto3 externo=i1 internos=None
+  Cara leída: BOSQUElayerSoto3 externo=f1 internos=None
+  Cara leída: MONTElayerSoto3 externo=m1 internos=None
+  Cara leída: RIOlayerSoto3 externo=r1 internos=None
+  Cara leída: PUEBLOlayerSoto3 externo=p1 internos=None
+  Cara leída: SABANAlayerSoto3 externo=s1 internos=None
+  Activa leída: PUEBLOlayerSoto3
+  Activa leída: BOSQUElayerSoto3
+  Activa leída: ISLOTElayerSoto3
+  Activa leída: RIOlayerSoto3
+  Resuelta arista c1layerSoto3: vertOrig=C1layerSoto3 pareja=c1_tlayerSoto3 cara=ISLAlayerSoto3 sig=c2layerSoto3 ant=c12layerSoto3
+  Resuelta arista c1_tlayerSoto3: vertOrig=C2layerSoto3 pareja=c1layerSoto3 cara=INFlayerSoto3 sig=c12_tlayerSoto3 ant=c2_tlayerSoto3
+  Resuelta arista c2layerSoto3: vertOrig=C2layerSoto3 pareja=c2_tlayerSoto3 cara=ISLAlayerSoto3 sig=c3layerSoto3 ant=c1layerSoto3
+  Resuelta arista c2_tlayerSoto3: vertOrig=C3layerSoto3 pareja=c2layerSoto3 cara=INFlayerSoto3 sig=c1_tlayerSoto3 ant=c3_tlayerSoto3
+  Resuelta arista c3layerSoto3: vertOrig=C3layerSoto3 pareja=c3_tlayerSoto3 cara=ISLAlayerSoto3 sig=c4layerSoto3 ant=c2layerSoto3
+  Resuelta arista c3_tlayerSoto3: vertOrig=C4layerSoto3 pareja=c3layerSoto3 cara=INFlayerSoto3 sig=c2_tlayerSoto3 ant=c4_tlayerSoto3
+  Resuelta arista c4layerSoto3: vertOrig=C4layerSoto3 pareja=c4_tlayerSoto3 cara=ISLAlayerSoto3 sig=c5layerSoto3 ant=c3layerSoto3
+  Resuelta arista c4_tlayerSoto3: vertOrig=C5layerSoto3 pareja=c4layerSoto3 cara=INFlayerSoto3 sig=c3_tlayerSoto3 ant=c5_tlayerSoto3
+  Resuelta arista c5layerSoto3: vertOrig=C5layerSoto3 pareja=c5_tlayerSoto3 cara=ISLAlayerSoto3 sig=c6layerSoto3 ant=c4layerSoto3
+  Resuelta arista c5_tlayerSoto3: vertOrig=C6layerSoto3 pareja=c5layerSoto3 cara=INFlayerSoto3 sig=c4_tlayerSoto3 ant=c6_tlayerSoto3
+  Resuelta arista c6layerSoto3: vertOrig=C6layerSoto3 pareja=c6_tlayerSoto3 cara=ISLAlayerSoto3 sig=c7layerSoto3 ant=c5layerSoto3
+  Resuelta arista c6_tlayerSoto3: vertOrig=C7layerSoto3 pareja=c6layerSoto3 cara=INFlayerSoto3 sig=c5_tlayerSoto3 ant=c7_tlayerSoto3
+  Resuelta arista c7layerSoto3: vertOrig=C7layerSoto3 pareja=c7_tlayerSoto3 cara=ISLAlayerSoto3 sig=c8layerSoto3 ant=c6layerSoto3
+  Resuelta arista c7_tlayerSoto3: vertOrig=C8layerSoto3 pareja=c7layerSoto3 cara=INFlayerSoto3 sig=c6_tlayerSoto3 ant=c8_tlayerSoto3
+  Resuelta arista c8layerSoto3: vertOrig=C8layerSoto3 pareja=c8_tlayerSoto3 cara=ISLAlayerSoto3 sig=c9layerSoto3 ant=c7layerSoto3
+  Resuelta arista c8_tlayerSoto3: vertOrig=C9layerSoto3 pareja=c8layerSoto3 cara=INFlayerSoto3 sig=c7_tlayerSoto3 ant=c9_tlayerSoto3
+  Resuelta arista c9layerSoto3: vertOrig=C9layerSoto3 pareja=c9_tlayerSoto3 cara=ISLAlayerSoto3 sig=c10layerSoto3 ant=c8layerSoto3
+  Resuelta arista c9_tlayerSoto3: vertOrig=C10layerSoto3 pareja=c9layerSoto3 cara=INFlayerSoto3 sig=c8_tlayerSoto3 ant=c10_tlayerSoto3
+  Resuelta arista c10layerSoto3: vertOrig=C10layerSoto3 pareja=c10_tlayerSoto3 cara=ISLAlayerSoto3 sig=c11layerSoto3 ant=c9layerSoto3
+  Resuelta arista c10_tlayerSoto3: vertOrig=C11layerSoto3 pareja=c10layerSoto3 cara=INFlayerSoto3 sig=c9_tlayerSoto3 ant=c11_tlayerSoto3
+  Resuelta arista c11layerSoto3: vertOrig=C11layerSoto3 pareja=c11_tlayerSoto3 cara=ISLAlayerSoto3 sig=c12layerSoto3 ant=c10layerSoto3
+  Resuelta arista c11_tlayerSoto3: vertOrig=C12layerSoto3 pareja=c11layerSoto3 cara=INFlayerSoto3 sig=c10_tlayerSoto3 ant=c12_tlayerSoto3
+  Resuelta arista c12layerSoto3: vertOrig=C12layerSoto3 pareja=c12_tlayerSoto3 cara=ISLAlayerSoto3 sig=c1layerSoto3 ant=c11layerSoto3
+  Resuelta arista c12_tlayerSoto3: vertOrig=C1layerSoto3 pareja=c12layerSoto3 cara=INFlayerSoto3 sig=c11_tlayerSoto3 ant=c1_tlayerSoto3
+  Resuelta arista l1layerSoto3: vertOrig=L1layerSoto3 pareja=l1_tlayerSoto3 cara=LAGOlayerSoto3 sig=l2layerSoto3 ant=l5layerSoto3
+  Resuelta arista l1_tlayerSoto3: vertOrig=L2layerSoto3 pareja=l1layerSoto3 cara=ISLAlayerSoto3 sig=l5_tlayerSoto3 ant=l2_tlayerSoto3
+  Resuelta arista l2layerSoto3: vertOrig=L2layerSoto3 pareja=l2_tlayerSoto3 cara=LAGOlayerSoto3 sig=l3layerSoto3 ant=l1layerSoto3
+  Resuelta arista l2_tlayerSoto3: vertOrig=L3layerSoto3 pareja=l2layerSoto3 cara=ISLAlayerSoto3 sig=l1_tlayerSoto3 ant=l3_tlayerSoto3
+  Resuelta arista l3layerSoto3: vertOrig=L3layerSoto3 pareja=l3_tlayerSoto3 cara=LAGOlayerSoto3 sig=l4layerSoto3 ant=l2layerSoto3
+  Resuelta arista l3_tlayerSoto3: vertOrig=L4layerSoto3 pareja=l3layerSoto3 cara=ISLAlayerSoto3 sig=l2_tlayerSoto3 ant=l4_tlayerSoto3
+  Resuelta arista l4layerSoto3: vertOrig=L4layerSoto3 pareja=l4_tlayerSoto3 cara=LAGOlayerSoto3 sig=l5layerSoto3 ant=l3layerSoto3
+  Resuelta arista l4_tlayerSoto3: vertOrig=L5layerSoto3 pareja=l4layerSoto3 cara=ISLAlayerSoto3 sig=l3_tlayerSoto3 ant=l5_tlayerSoto3
+  Resuelta arista l5layerSoto3: vertOrig=L5layerSoto3 pareja=l5_tlayerSoto3 cara=LAGOlayerSoto3 sig=l1layerSoto3 ant=l4layerSoto3
+  Resuelta arista l5_tlayerSoto3: vertOrig=L1layerSoto3 pareja=l5layerSoto3 cara=ISLAlayerSoto3 sig=l4_tlayerSoto3 ant=l1_tlayerSoto3
+  Resuelta arista i1layerSoto3: vertOrig=I1layerSoto3 pareja=i1_tlayerSoto3 cara=ISLOTElayerSoto3 sig=i2layerSoto3 ant=i3layerSoto3
+  Resuelta arista i1_tlayerSoto3: vertOrig=I2layerSoto3 pareja=i1layerSoto3 cara=LAGOlayerSoto3 sig=i3_tlayerSoto3 ant=i2_tlayerSoto3
+  Resuelta arista i2layerSoto3: vertOrig=I2layerSoto3 pareja=i2_tlayerSoto3 cara=ISLOTElayerSoto3 sig=i3layerSoto3 ant=i1layerSoto3
+  Resuelta arista i2_tlayerSoto3: vertOrig=I3layerSoto3 pareja=i2layerSoto3 cara=LAGOlayerSoto3 sig=i1_tlayerSoto3 ant=i3_tlayerSoto3
+  Resuelta arista i3layerSoto3: vertOrig=I3layerSoto3 pareja=i3_tlayerSoto3 cara=ISLOTElayerSoto3 sig=i1layerSoto3 ant=i2layerSoto3
+  Resuelta arista i3_tlayerSoto3: vertOrig=I1layerSoto3 pareja=i3layerSoto3 cara=LAGOlayerSoto3 sig=i2_tlayerSoto3 ant=i1_tlayerSoto3
+  Resuelta arista f1layerSoto3: vertOrig=F1layerSoto3 pareja=f1_tlayerSoto3 cara=BOSQUElayerSoto3 sig=f2layerSoto3 ant=f5layerSoto3
+  Resuelta arista f1_tlayerSoto3: vertOrig=F2layerSoto3 pareja=f1layerSoto3 cara=ISLAlayerSoto3 sig=f5_tlayerSoto3 ant=f2_tlayerSoto3
+  Resuelta arista f2layerSoto3: vertOrig=F2layerSoto3 pareja=f2_tlayerSoto3 cara=BOSQUElayerSoto3 sig=f3layerSoto3 ant=f1layerSoto3
+  Resuelta arista f2_tlayerSoto3: vertOrig=F3layerSoto3 pareja=f2layerSoto3 cara=ISLAlayerSoto3 sig=f1_tlayerSoto3 ant=f3_tlayerSoto3
+  Resuelta arista f3layerSoto3: vertOrig=F3layerSoto3 pareja=f3_tlayerSoto3 cara=BOSQUElayerSoto3 sig=f4layerSoto3 ant=f2layerSoto3
+  Resuelta arista f3_tlayerSoto3: vertOrig=F4layerSoto3 pareja=f3layerSoto3 cara=ISLAlayerSoto3 sig=f2_tlayerSoto3 ant=f4_tlayerSoto3
+  Resuelta arista f4layerSoto3: vertOrig=F4layerSoto3 pareja=f4_tlayerSoto3 cara=BOSQUElayerSoto3 sig=f5layerSoto3 ant=f3layerSoto3
+  Resuelta arista f4_tlayerSoto3: vertOrig=F5layerSoto3 pareja=f4layerSoto3 cara=ISLAlayerSoto3 sig=f3_tlayerSoto3 ant=f5_tlayerSoto3
+  Resuelta arista f5layerSoto3: vertOrig=F5layerSoto3 pareja=f5_tlayerSoto3 cara=BOSQUElayerSoto3 sig=f1layerSoto3 ant=f4layerSoto3
+  Resuelta arista f5_tlayerSoto3: vertOrig=F1layerSoto3 pareja=f5layerSoto3 cara=ISLAlayerSoto3 sig=f4_tlayerSoto3 ant=f1_tlayerSoto3
+  Resuelta arista m1layerSoto3: vertOrig=M1layerSoto3 pareja=m1_tlayerSoto3 cara=MONTElayerSoto3 sig=m2layerSoto3 ant=m5layerSoto3
+  Resuelta arista m1_tlayerSoto3: vertOrig=M2layerSoto3 pareja=m1layerSoto3 cara=ISLAlayerSoto3 sig=m5_tlayerSoto3 ant=m2_tlayerSoto3
+  Resuelta arista m2layerSoto3: vertOrig=M2layerSoto3 pareja=m2_tlayerSoto3 cara=MONTElayerSoto3 sig=m3layerSoto3 ant=m1layerSoto3
+  Resuelta arista m2_tlayerSoto3: vertOrig=M3layerSoto3 pareja=m2layerSoto3 cara=ISLAlayerSoto3 sig=m1_tlayerSoto3 ant=m3_tlayerSoto3
+  Resuelta arista m3layerSoto3: vertOrig=M3layerSoto3 pareja=m3_tlayerSoto3 cara=MONTElayerSoto3 sig=m4layerSoto3 ant=m2layerSoto3
+  Resuelta arista m3_tlayerSoto3: vertOrig=M4layerSoto3 pareja=m3layerSoto3 cara=ISLAlayerSoto3 sig=m2_tlayerSoto3 ant=m4_tlayerSoto3
+  Resuelta arista m4layerSoto3: vertOrig=M4layerSoto3 pareja=m4_tlayerSoto3 cara=MONTElayerSoto3 sig=m5layerSoto3 ant=m3layerSoto3
+  Resuelta arista m4_tlayerSoto3: vertOrig=M5layerSoto3 pareja=m4layerSoto3 cara=ISLAlayerSoto3 sig=m3_tlayerSoto3 ant=m5_tlayerSoto3
+  Resuelta arista m5layerSoto3: vertOrig=M5layerSoto3 pareja=m5_tlayerSoto3 cara=MONTElayerSoto3 sig=m1layerSoto3 ant=m4layerSoto3
+  Resuelta arista m5_tlayerSoto3: vertOrig=M1layerSoto3 pareja=m5layerSoto3 cara=ISLAlayerSoto3 sig=m4_tlayerSoto3 ant=m1_tlayerSoto3
+  Resuelta arista r1layerSoto3: vertOrig=R1layerSoto3 pareja=r1_tlayerSoto3 cara=RIOlayerSoto3 sig=r2layerSoto3 ant=r6layerSoto3
+  Resuelta arista r1_tlayerSoto3: vertOrig=R2layerSoto3 pareja=r1layerSoto3 cara=ISLAlayerSoto3 sig=r6_tlayerSoto3 ant=r2_tlayerSoto3
+  Resuelta arista r2layerSoto3: vertOrig=R2layerSoto3 pareja=r2_tlayerSoto3 cara=RIOlayerSoto3 sig=r3layerSoto3 ant=r1layerSoto3
+  Resuelta arista r2_tlayerSoto3: vertOrig=R3layerSoto3 pareja=r2layerSoto3 cara=ISLAlayerSoto3 sig=r1_tlayerSoto3 ant=r3_tlayerSoto3
+  Resuelta arista r3layerSoto3: vertOrig=R3layerSoto3 pareja=r3_tlayerSoto3 cara=RIOlayerSoto3 sig=r4layerSoto3 ant=r2layerSoto3
+  Resuelta arista r3_tlayerSoto3: vertOrig=R4layerSoto3 pareja=r3layerSoto3 cara=ISLAlayerSoto3 sig=r2_tlayerSoto3 ant=r4_tlayerSoto3
+  Resuelta arista r4layerSoto3: vertOrig=R4layerSoto3 pareja=r4_tlayerSoto3 cara=RIOlayerSoto3 sig=r5layerSoto3 ant=r3layerSoto3
+  Resuelta arista r4_tlayerSoto3: vertOrig=R5layerSoto3 pareja=r4layerSoto3 cara=ISLAlayerSoto3 sig=r3_tlayerSoto3 ant=r5_tlayerSoto3
+  Resuelta arista r5layerSoto3: vertOrig=R5layerSoto3 pareja=r5_tlayerSoto3 cara=RIOlayerSoto3 sig=r6layerSoto3 ant=r4layerSoto3
+  Resuelta arista r5_tlayerSoto3: vertOrig=R6layerSoto3 pareja=r5layerSoto3 cara=ISLAlayerSoto3 sig=r4_tlayerSoto3 ant=r6_tlayerSoto3
+  Resuelta arista r6layerSoto3: vertOrig=R6layerSoto3 pareja=r6_tlayerSoto3 cara=RIOlayerSoto3 sig=r1layerSoto3 ant=r5layerSoto3
+  Resuelta arista r6_tlayerSoto3: vertOrig=R1layerSoto3 pareja=r6layerSoto3 cara=ISLAlayerSoto3 sig=r5_tlayerSoto3 ant=r1_tlayerSoto3
+  Resuelta arista p1layerSoto3: vertOrig=P1layerSoto3 pareja=p1_tlayerSoto3 cara=PUEBLOlayerSoto3 sig=p2layerSoto3 ant=p5layerSoto3
+  Resuelta arista p1_tlayerSoto3: vertOrig=P2layerSoto3 pareja=p1layerSoto3 cara=ISLAlayerSoto3 sig=p5_tlayerSoto3 ant=p2_tlayerSoto3
+  Resuelta arista p2layerSoto3: vertOrig=P2layerSoto3 pareja=p2_tlayerSoto3 cara=PUEBLOlayerSoto3 sig=p3layerSoto3 ant=p1layerSoto3
+  Resuelta arista p2_tlayerSoto3: vertOrig=P3layerSoto3 pareja=p2layerSoto3 cara=ISLAlayerSoto3 sig=p1_tlayerSoto3 ant=p3_tlayerSoto3
+  Resuelta arista p3layerSoto3: vertOrig=P3layerSoto3 pareja=p3_tlayerSoto3 cara=PUEBLOlayerSoto3 sig=p4layerSoto3 ant=p2layerSoto3
+  Resuelta arista p3_tlayerSoto3: vertOrig=P4layerSoto3 pareja=p3layerSoto3 cara=ISLAlayerSoto3 sig=p2_tlayerSoto3 ant=p4_tlayerSoto3
+  Resuelta arista p4layerSoto3: vertOrig=P4layerSoto3 pareja=p4_tlayerSoto3 cara=PUEBLOlayerSoto3 sig=p5layerSoto3 ant=p3layerSoto3
+  Resuelta arista p4_tlayerSoto3: vertOrig=P5layerSoto3 pareja=p4layerSoto3 cara=ISLAlayerSoto3 sig=p3_tlayerSoto3 ant=p5_tlayerSoto3
+  Resuelta arista p5layerSoto3: vertOrig=P5layerSoto3 pareja=p5_tlayerSoto3 cara=PUEBLOlayerSoto3 sig=p1layerSoto3 ant=p4layerSoto3
+  Resuelta arista p5_tlayerSoto3: vertOrig=P1layerSoto3 pareja=p5layerSoto3 cara=ISLAlayerSoto3 sig=p4_tlayerSoto3 ant=p1_tlayerSoto3
+  Resuelta arista s1layerSoto3: vertOrig=S1layerSoto3 pareja=s1_tlayerSoto3 cara=SABANAlayerSoto3 sig=s2layerSoto3 ant=s4layerSoto3
+  Resuelta arista s1_tlayerSoto3: vertOrig=S2layerSoto3 pareja=s1layerSoto3 cara=ISLAlayerSoto3 sig=s4_tlayerSoto3 ant=s2_tlayerSoto3
+  Resuelta arista s2layerSoto3: vertOrig=S2layerSoto3 pareja=s2_tlayerSoto3 cara=SABANAlayerSoto3 sig=s3layerSoto3 ant=s1layerSoto3
+  Resuelta arista s2_tlayerSoto3: vertOrig=S3layerSoto3 pareja=s2layerSoto3 cara=ISLAlayerSoto3 sig=s1_tlayerSoto3 ant=s3_tlayerSoto3
+  Resuelta arista s3layerSoto3: vertOrig=S3layerSoto3 pareja=s3_tlayerSoto3 cara=SABANAlayerSoto3 sig=s4layerSoto3 ant=s2layerSoto3
+  Resuelta arista s3_tlayerSoto3: vertOrig=S4layerSoto3 pareja=s3layerSoto3 cara=ISLAlayerSoto3 sig=s2_tlayerSoto3 ant=s4_tlayerSoto3
+  Resuelta arista s4layerSoto3: vertOrig=S4layerSoto3 pareja=s4_tlayerSoto3 cara=SABANAlayerSoto3 sig=s1layerSoto3 ant=s3layerSoto3
+  Resuelta arista s4_tlayerSoto3: vertOrig=S1layerSoto3 pareja=s4layerSoto3 cara=ISLAlayerSoto3 sig=s3_tlayerSoto3 ant=s1_tlayerSoto3
+  Vértice C1layerSoto3: incidente=c1layerSoto3
+  Vértice C2layerSoto3: incidente=c2layerSoto3
+  Vértice C3layerSoto3: incidente=c3layerSoto3
+  Vértice C4layerSoto3: incidente=c4layerSoto3
+  Vértice C5layerSoto3: incidente=c5layerSoto3
+  Vértice C6layerSoto3: incidente=c6layerSoto3
+  Vértice C7layerSoto3: incidente=c7layerSoto3
+  Vértice C8layerSoto3: incidente=c8layerSoto3
+  Vértice C9layerSoto3: incidente=c9layerSoto3
+  Vértice C10layerSoto3: incidente=c10layerSoto3
+  Vértice C11layerSoto3: incidente=c11layerSoto3
+  Vértice C12layerSoto3: incidente=c12layerSoto3
+  Vértice L1layerSoto3: incidente=l1layerSoto3
+  Vértice L2layerSoto3: incidente=l2layerSoto3
+  Vértice L3layerSoto3: incidente=l3layerSoto3
+  Vértice L4layerSoto3: incidente=l4layerSoto3
+  Vértice L5layerSoto3: incidente=l5layerSoto3
+  Vértice I1layerSoto3: incidente=i1layerSoto3
+  Vértice I2layerSoto3: incidente=i2layerSoto3
+  Vértice I3layerSoto3: incidente=i3layerSoto3
+  Vértice F1layerSoto3: incidente=f1layerSoto3
+  Vértice F2layerSoto3: incidente=f2layerSoto3
+  Vértice F3layerSoto3: incidente=f3layerSoto3
+  Vértice F4layerSoto3: incidente=f4layerSoto3
+  Vértice F5layerSoto3: incidente=f5layerSoto3
+  Vértice M1layerSoto3: incidente=m1layerSoto3
+  Vértice M2layerSoto3: incidente=m2layerSoto3
+  Vértice M3layerSoto3: incidente=m3layerSoto3
+  Vértice M4layerSoto3: incidente=m4layerSoto3
+  Vértice M5layerSoto3: incidente=m5layerSoto3
+  Vértice R1layerSoto3: incidente=r1layerSoto3
+  Vértice R2layerSoto3: incidente=r2layerSoto3
+  Vértice R3layerSoto3: incidente=r3layerSoto3
+  Vértice R4layerSoto3: incidente=r4layerSoto3
+  Vértice R5layerSoto3: incidente=r5layerSoto3
+  Vértice R6layerSoto3: incidente=r6layerSoto3
+  Vértice P1layerSoto3: incidente=p1layerSoto3
+  Vértice P2layerSoto3: incidente=p2layerSoto3
+  Vértice P3layerSoto3: incidente=p3layerSoto3
+  Vértice P4layerSoto3: incidente=p4layerSoto3
+  Vértice P5layerSoto3: incidente=p5layerSoto3
+  Vértice S1layerSoto3: incidente=s1layerSoto3
+  Vértice S2layerSoto3: incidente=s2layerSoto3
+  Vértice S3layerSoto3: incidente=s3layerSoto3
+  Vértice S4layerSoto3: incidente=s4layerSoto3
+  Cara resuelta INFlayerSoto3: externo=None internos=['c1_tlayerSoto3']
+  Cara resuelta ISLAlayerSoto3: externo=c1layerSoto3 internos=['l1_tlayerSoto3', 'f1_tlayerSoto3', 'm1_tlayerSoto3', 'r1_tlayerSoto3', 'p1_tlayerSoto3', 's1_tlayerSoto3']
+  Cara resuelta LAGOlayerSoto3: externo=l1layerSoto3 internos=['i1_tlayerSoto3']
+  Cara resuelta ISLOTElayerSoto3: externo=i1layerSoto3 internos=[]
+  Cara resuelta BOSQUElayerSoto3: externo=f1layerSoto3 internos=[]
+  Cara resuelta MONTElayerSoto3: externo=m1layerSoto3 internos=[]
+  Cara resuelta RIOlayerSoto3: externo=r1layerSoto3 internos=[]
+  Cara resuelta PUEBLOlayerSoto3: externo=p1layerSoto3 internos=[]
+  Cara resuelta SABANAlayerSoto3: externo=s1layerSoto3 internos=[]
+  Capa layerSoto3: 45 vértices, 90 aristas, 9 caras, 4 activas
+  Segmento extraído: c1layerSoto3 de layerSoto3 (0.0,0.0)->(10.0,2.0)
+  Segmento extraído: c2layerSoto3 de layerSoto3 (10.0,2.0)->(18.0,1.0)
+  Segmento extraído: c3layerSoto3 de layerSoto3 (18.0,1.0)->(25.0,3.0)
+  Segmento extraído: c4layerSoto3 de layerSoto3 (25.0,3.0)->(30.0,8.0)
+  Segmento extraído: c5layerSoto3 de layerSoto3 (30.0,8.0)->(32.0,15.0)
+  Segmento extraído: c6layerSoto3 de layerSoto3 (32.0,15.0)->(28.0,22.0)
+  Segmento extraído: c7layerSoto3 de layerSoto3 (28.0,22.0)->(22.0,28.0)
+  Segmento extraído: c8layerSoto3 de layerSoto3 (22.0,28.0)->(15.0,30.0)
+  Segmento extraído: c9layerSoto3 de layerSoto3 (15.0,30.0)->(8.0,28.0)
+  Segmento extraído: c10layerSoto3 de layerSoto3 (8.0,28.0)->(2.0,22.0)
+  Segmento extraído: c11layerSoto3 de layerSoto3 (2.0,22.0)->(0.0,15.0)
+  Segmento extraído: c12layerSoto3 de layerSoto3 (0.0,15.0)->(0.0,0.0)
+  Segmento extraído: l1layerSoto3 de layerSoto3 (5.0,6.0)->(8.0,5.0)
+  Segmento extraído: l2layerSoto3 de layerSoto3 (8.0,5.0)->(12.0,6.0)
+  Segmento extraído: l3layerSoto3 de layerSoto3 (12.0,6.0)->(10.0,10.0)
+  Segmento extraído: l4layerSoto3 de layerSoto3 (10.0,10.0)->(6.0,10.0)
+  Segmento extraído: l5layerSoto3 de layerSoto3 (6.0,10.0)->(5.0,6.0)
+  Segmento extraído: i1layerSoto3 de layerSoto3 (7.0,7.0)->(9.0,7.0)
+  Segmento extraído: i2layerSoto3 de layerSoto3 (9.0,7.0)->(8.0,9.0)
+  Segmento extraído: i3layerSoto3 de layerSoto3 (8.0,9.0)->(7.0,7.0)
+  Segmento extraído: f1layerSoto3 de layerSoto3 (14.0,12.0)->(18.0,11.0)
+  Segmento extraído: f2layerSoto3 de layerSoto3 (18.0,11.0)->(20.0,15.0)
+  Segmento extraído: f3layerSoto3 de layerSoto3 (20.0,15.0)->(16.0,16.0)
+  Segmento extraído: f4layerSoto3 de layerSoto3 (16.0,16.0)->(14.0,15.0)
+  Segmento extraído: f5layerSoto3 de layerSoto3 (14.0,15.0)->(14.0,12.0)
+  Segmento extraído: m1layerSoto3 de layerSoto3 (22.0,10.0)->(26.0,9.0)
+  Segmento extraído: m2layerSoto3 de layerSoto3 (26.0,9.0)->(28.0,12.0)
+  Segmento extraído: m3layerSoto3 de layerSoto3 (28.0,12.0)->(24.0,14.0)
+  Segmento extraído: m4layerSoto3 de layerSoto3 (24.0,14.0)->(22.0,13.0)
+  Segmento extraído: m5layerSoto3 de layerSoto3 (22.0,13.0)->(22.0,10.0)
+  Segmento extraído: r1layerSoto3 de layerSoto3 (4.0,18.0)->(6.0,16.0)
+  Segmento extraído: r2layerSoto3 de layerSoto3 (6.0,16.0)->(10.0,17.0)
+  Segmento extraído: r3layerSoto3 de layerSoto3 (10.0,17.0)->(12.0,19.0)
+  Segmento extraído: r4layerSoto3 de layerSoto3 (12.0,19.0)->(8.0,21.0)
+  Segmento extraído: r5layerSoto3 de layerSoto3 (8.0,21.0)->(5.0,20.0)
+  Segmento extraído: r6layerSoto3 de layerSoto3 (5.0,20.0)->(4.0,18.0)
+  Segmento extraído: p1layerSoto3 de layerSoto3 (15.0,20.0)->(18.0,19.0)
+  Segmento extraído: p2layerSoto3 de layerSoto3 (18.0,19.0)->(20.0,21.0)
+  Segmento extraído: p3layerSoto3 de layerSoto3 (20.0,21.0)->(17.0,23.0)
+  Segmento extraído: p4layerSoto3 de layerSoto3 (17.0,23.0)->(14.0,22.0)
+  Segmento extraído: p5layerSoto3 de layerSoto3 (14.0,22.0)->(15.0,20.0)
+  Segmento extraído: s1layerSoto3 de layerSoto3 (26.0,18.0)->(28.0,20.0)
+  Segmento extraído: s2layerSoto3 de layerSoto3 (28.0,20.0)->(25.0,22.0)
+  Segmento extraído: s3layerSoto3 de layerSoto3 (25.0,22.0)->(23.0,19.0)
+  Segmento extraído: s4layerSoto3 de layerSoto3 (23.0,19.0)->(26.0,18.0)
+
+--- Intersecciones incrementales: layerSoto3 vs segmentos previos (42) ---
+  c1layerSoto3 (layerSoto3) ∩ e1soto (soto): [(0.0, 0.0)]
+  c1layerSoto3 (layerSoto3) ∩ e2soto (soto): [(10.0, 2.0)]
+  c1layerSoto3 (layerSoto3) ∩ e6soto (soto): [(0.0, 0.0)]
+  c1layerSoto3 (layerSoto3) ∩ e1layerSoto2 (layerSoto2): [(5.0, 1.0)]
+  c1layerSoto3 (layerSoto3) ∩ e2layerSoto2 (layerSoto2): [(5.0, 1.0)]
+  c1layerSoto3 (layerSoto3) ∩ f1layerSoto2 (layerSoto2): [(10.0, 2.0)]
+  c1layerSoto3 (layerSoto3) ∩ f6layerSoto2 (layerSoto2): [(10.0, 2.0)]
+  c2layerSoto3 (layerSoto3) ∩ e2soto (soto): [(10.0, 2.0)]
+  c2layerSoto3 (layerSoto3) ∩ f1layerSoto2 (layerSoto2): [(10.0, 2.0)]
+  c2layerSoto3 (layerSoto3) ∩ f6layerSoto2 (layerSoto2): [(10.0, 2.0)]
+  c6layerSoto3 (layerSoto3) ∩ g1layerSoto2 (layerSoto2): [(29.142857, 20.0)]
+  c7layerSoto3 (layerSoto3) ∩ h1layerSoto2 (layerSoto2): [(27.0, 23.0)]
+  c7layerSoto3 (layerSoto3) ∩ h2layerSoto2 (layerSoto2): [(27.0, 23.0)]
+  c7layerSoto3 (layerSoto3) ∩ h3layerSoto2 (layerSoto2): [(24.142857, 25.857143)]
+  c8layerSoto3 (layerSoto3) ∩ g4layerSoto2 (layerSoto2): [(20.0, 28.571429)]
+  c12layerSoto3 (layerSoto3) ∩ e1soto (soto): [(0.0, 0.0)]
+  c12layerSoto3 (layerSoto3) ∩ e5soto (soto): [(0.0, 10.0)]
+  c12layerSoto3 (layerSoto3) ∩ e6soto (soto): [(0.0, 0.0), (0.0, 10.0)]
+  c12layerSoto3 (layerSoto3) ∩ e4layerSoto2 (layerSoto2): [(0.0, 4.0)]
+  c12layerSoto3 (layerSoto3) ∩ e5layerSoto2 (layerSoto2): [(0.0, 4.0)]
+  l1layerSoto3 (layerSoto3) ∩ h3soto (soto): [(8.0, 5.0)]
+  l1layerSoto3 (layerSoto3) ∩ f5layerSoto2 (layerSoto2): [(8.0, 5.0)]
+  l1layerSoto3 (layerSoto3) ∩ f6layerSoto2 (layerSoto2): [(8.0, 5.0)]
+  l2layerSoto3 (layerSoto3) ∩ e3soto (soto): [(10.0, 5.5)]
+  l2layerSoto3 (layerSoto3) ∩ h3soto (soto): [(8.0, 5.0)]
+  l2layerSoto3 (layerSoto3) ∩ f5layerSoto2 (layerSoto2): [(8.0, 5.0)]
+  l2layerSoto3 (layerSoto3) ∩ f6layerSoto2 (layerSoto2): [(8.0, 5.0)]
+  l3layerSoto3 (layerSoto3) ∩ e4soto (soto): [(10.0, 10.0)]
+  l3layerSoto3 (layerSoto3) ∩ e5soto (soto): [(10.0, 10.0)]
+  l3layerSoto3 (layerSoto3) ∩ p6soto (soto): [(10.5, 9.0)]
+  l3layerSoto3 (layerSoto3) ∩ f4layerSoto2 (layerSoto2): [(10.5, 9.0)]
+  l4layerSoto3 (layerSoto3) ∩ e4soto (soto): [(10.0, 10.0)]
+  l4layerSoto3 (layerSoto3) ∩ e5soto (soto): [(6.0, 10.0), (10.0, 10.0)]
+  l5layerSoto3 (layerSoto3) ∩ e5soto (soto): [(6.0, 10.0)]
+  l5layerSoto3 (layerSoto3) ∩ h4soto (soto): [(5.5, 8.0)]
+  l5layerSoto3 (layerSoto3) ∩ p7soto (soto): [(5.75, 9.0)]
+  i1layerSoto3 (layerSoto3) ∩ h3soto (soto): [(8.0, 7.0)]
+  i1layerSoto3 (layerSoto3) ∩ f5layerSoto2 (layerSoto2): [(9.0, 7.0)]
+  i2layerSoto3 (layerSoto3) ∩ p7soto (soto): [(8.0, 9.0)]
+  i2layerSoto3 (layerSoto3) ∩ f5layerSoto2 (layerSoto2): [(9.0, 7.0)]
+  i3layerSoto3 (layerSoto3) ∩ h4soto (soto): [(7.5, 8.0)]
+  i3layerSoto3 (layerSoto3) ∩ p7soto (soto): [(8.0, 9.0)]
+  f3layerSoto3 (layerSoto3) ∩ i2layerSoto2 (layerSoto2): [(17.714286, 15.571429)]
+  f4layerSoto3 (layerSoto3) ∩ i3layerSoto2 (layerSoto2): [(15.333333, 15.666667)]
+  p2layerSoto3 (layerSoto3) ∩ g4layerSoto2 (layerSoto2): [(20.0, 21.0)]
+  p3layerSoto3 (layerSoto3) ∩ g4layerSoto2 (layerSoto2): [(20.0, 21.0)]
+  s1layerSoto3 (layerSoto3) ∩ g1layerSoto2 (layerSoto2): [(28.0, 20.0)]
+  s2layerSoto3 (layerSoto3) ∩ g1layerSoto2 (layerSoto2): [(28.0, 20.0)]
+  s3layerSoto3 (layerSoto3) ∩ g1layerSoto2 (layerSoto2): [(23.666667, 20.0)]
+
+--- Intersecciones internas: layerSoto3 (45 segmentos) ---
+  c1layerSoto3 ∩ c2layerSoto3: [(10.0, 2.0)]
+  c1layerSoto3 ∩ c12layerSoto3: [(0.0, 0.0)]
+  c2layerSoto3 ∩ c3layerSoto3: [(18.0, 1.0)]
+  c3layerSoto3 ∩ c4layerSoto3: [(25.0, 3.0)]
+  c4layerSoto3 ∩ c5layerSoto3: [(30.0, 8.0)]
+  c5layerSoto3 ∩ c6layerSoto3: [(32.0, 15.0)]
+  c6layerSoto3 ∩ c7layerSoto3: [(28.0, 22.0)]
+  c7layerSoto3 ∩ c8layerSoto3: [(22.0, 28.0)]
+  c8layerSoto3 ∩ c9layerSoto3: [(15.0, 30.0)]
+  c9layerSoto3 ∩ c10layerSoto3: [(8.0, 28.0)]
+  c10layerSoto3 ∩ c11layerSoto3: [(2.0, 22.0)]
+  c11layerSoto3 ∩ c12layerSoto3: [(0.0, 15.0)]
+  l1layerSoto3 ∩ l2layerSoto3: [(8.0, 5.0)]
+  l1layerSoto3 ∩ l5layerSoto3: [(5.0, 6.0)]
+  l2layerSoto3 ∩ l3layerSoto3: [(12.0, 6.0)]
+  l3layerSoto3 ∩ l4layerSoto3: [(10.0, 10.0)]
+  l4layerSoto3 ∩ l5layerSoto3: [(6.0, 10.0)]
+  i1layerSoto3 ∩ i2layerSoto3: [(9.0, 7.0)]
+  i1layerSoto3 ∩ i3layerSoto3: [(7.0, 7.0)]
+  i2layerSoto3 ∩ i3layerSoto3: [(8.0, 9.0)]
+  f1layerSoto3 ∩ f2layerSoto3: [(18.0, 11.0)]
+  f1layerSoto3 ∩ f5layerSoto3: [(14.0, 12.0)]
+  f2layerSoto3 ∩ f3layerSoto3: [(20.0, 15.0)]
+  f3layerSoto3 ∩ f4layerSoto3: [(16.0, 16.0)]
+  f4layerSoto3 ∩ f5layerSoto3: [(14.0, 15.0)]
+  m1layerSoto3 ∩ m2layerSoto3: [(26.0, 9.0)]
+  m1layerSoto3 ∩ m5layerSoto3: [(22.0, 10.0)]
+  m2layerSoto3 ∩ m3layerSoto3: [(28.0, 12.0)]
+  m3layerSoto3 ∩ m4layerSoto3: [(24.0, 14.0)]
+  m4layerSoto3 ∩ m5layerSoto3: [(22.0, 13.0)]
+  r1layerSoto3 ∩ r2layerSoto3: [(6.0, 16.0)]
+  r1layerSoto3 ∩ r6layerSoto3: [(4.0, 18.0)]
+  r2layerSoto3 ∩ r3layerSoto3: [(10.0, 17.0)]
+  r3layerSoto3 ∩ r4layerSoto3: [(12.0, 19.0)]
+  r4layerSoto3 ∩ r5layerSoto3: [(8.0, 21.0)]
+  r5layerSoto3 ∩ r6layerSoto3: [(5.0, 20.0)]
+  p1layerSoto3 ∩ p2layerSoto3: [(18.0, 19.0)]
+  p1layerSoto3 ∩ p5layerSoto3: [(15.0, 20.0)]
+  p2layerSoto3 ∩ p3layerSoto3: [(20.0, 21.0)]
+  p3layerSoto3 ∩ p4layerSoto3: [(17.0, 23.0)]
+  p4layerSoto3 ∩ p5layerSoto3: [(14.0, 22.0)]
+  s1layerSoto3 ∩ s2layerSoto3: [(28.0, 20.0)]
+  s1layerSoto3 ∩ s4layerSoto3: [(26.0, 18.0)]
+  s2layerSoto3 ∩ s3layerSoto3: [(25.0, 22.0)]
+  s3layerSoto3 ∩ s4layerSoto3: [(23.0, 19.0)]
+
+Total de segmentos originales: 87
 
 --- Partiendo segmentos ---
-  Segmento s41layer04 partido en 1 subsegmentos: puntos=[(10.0, 10.0), (10.0, 0.0)]
-    Subsegmento g0 (10.0,10.0)->(10.0,0.0) layer=layer04
-  Segmento s51layer04 partido en 1 subsegmentos: puntos=[(10.0, 0.0), (2.0, 5.0)]
-    Subsegmento g1 (10.0,0.0)->(2.0,5.0) layer=layer04
-  Segmento s61layer04 partido en 1 subsegmentos: puntos=[(2.0, 5.0), (10.0, 10.0)]
-    Subsegmento g2 (2.0,5.0)->(10.0,10.0) layer=layer04
+  Segmento e1soto partido en 1 subsegmentos: puntos=[(0.0, 0.0), (10.0, 0.0)]
+    Subsegmento g0 (0.0,0.0)->(10.0,0.0) layer=soto
+  Segmento e2soto partido en 2 subsegmentos: puntos=[(10.0, 0.0), (10.0, 2.0), (10.0, 3.0)]
+    Subsegmento g1 (10.0,0.0)->(10.0,2.0) layer=soto
+    Subsegmento g2 (10.0,2.0)->(10.0,3.0) layer=soto
+  Segmento e3soto partido en 2 subsegmentos: puntos=[(10.0, 3.0), (10.0, 5.5), (10.0, 9.0)]
+    Subsegmento g3 (10.0,3.0)->(10.0,5.5) layer=soto
+    Subsegmento g4 (10.0,5.5)->(10.0,9.0) layer=soto
+  Segmento e4soto partido en 1 subsegmentos: puntos=[(10.0, 9.0), (10.0, 10.0)]
+    Subsegmento g5 (10.0,9.0)->(10.0,10.0) layer=soto
+  Segmento e5soto partido en 2 subsegmentos: puntos=[(10.0, 10.0), (6.0, 10.0), (0.0, 10.0)]
+    Subsegmento g6 (10.0,10.0)->(6.0,10.0) layer=soto
+    Subsegmento g7 (6.0,10.0)->(0.0,10.0) layer=soto
+  Segmento e6soto partido en 2 subsegmentos: puntos=[(0.0, 10.0), (0.0, 4.0), (0.0, 0.0)]
+    Subsegmento g8 (0.0,10.0)->(0.0,4.0) layer=soto
+    Subsegmento g9 (0.0,4.0)->(0.0,0.0) layer=soto
+  Segmento h1soto partido en 2 subsegmentos: puntos=[(2.0, 2.0), (5.333333333333333, 2.0), (8.0, 2.0)]
+    Subsegmento g10 (2.0,2.0)->(5.333333333333333,2.0) layer=soto
+    Subsegmento g11 (5.333333333333333,2.0)->(8.0,2.0) layer=soto
+  Segmento h2soto partido en 1 subsegmentos: puntos=[(8.0, 2.0), (8.0, 3.0)]
+    Subsegmento g12 (8.0,2.0)->(8.0,3.0) layer=soto
+  Segmento h3soto partido en 3 subsegmentos: puntos=[(8.0, 3.0), (8.0, 5.0), (8.0, 7.0), (8.0, 8.0)]
+    Subsegmento g13 (8.0,3.0)->(8.0,5.0) layer=soto
+    Subsegmento g14 (8.0,5.0)->(8.0,7.0) layer=soto
+    Subsegmento g15 (8.0,7.0)->(8.0,8.0) layer=soto
+  Segmento h4soto partido en 3 subsegmentos: puntos=[(8.0, 8.0), (7.5, 8.0), (5.5, 8.0), (4.0, 8.0)]
+    Subsegmento g16 (8.0,8.0)->(7.5,8.0) layer=soto
+    Subsegmento g17 (7.5,8.0)->(5.5,8.0) layer=soto
+    Subsegmento g18 (5.5,8.0)->(4.0,8.0) layer=soto
+  Segmento h5soto partido en 1 subsegmentos: puntos=[(4.0, 8.0), (2.0, 8.0)]
+    Subsegmento g19 (4.0,8.0)->(2.0,8.0) layer=soto
+  Segmento h6soto partido en 2 subsegmentos: puntos=[(2.0, 8.0), (2.0, 6.0), (2.0, 2.0)]
+    Subsegmento g20 (2.0,8.0)->(2.0,6.0) layer=soto
+    Subsegmento g21 (2.0,6.0)->(2.0,2.0) layer=soto
+  Segmento p1soto partido en 2 subsegmentos: puntos=[(4.0, 3.0), (5.666666666666667, 3.0), (8.0, 3.0)]
+    Subsegmento g22 (4.0,3.0)->(5.666666666666667,3.0) layer=soto
+    Subsegmento g23 (5.666666666666667,3.0)->(8.0,3.0) layer=soto
+  Segmento p2soto partido en 2 subsegmentos: puntos=[(8.0, 3.0), (9.333333333333334, 3.0), (10.0, 3.0)]
+    Subsegmento g24 (8.0,3.0)->(9.333333333333334,3.0) layer=soto
+    Subsegmento g25 (9.333333333333334,3.0)->(10.0,3.0) layer=soto
+  Segmento p3soto partido en 1 subsegmentos: puntos=[(10.0, 3.0), (12.0, 3.0)]
+    Subsegmento g26 (10.0,3.0)->(12.0,3.0) layer=soto
+  Segmento p4soto partido en 1 subsegmentos: puntos=[(12.0, 3.0), (14.0, 6.0)]
+    Subsegmento g27 (12.0,3.0)->(14.0,6.0) layer=soto
+  Segmento p5soto partido en 1 subsegmentos: puntos=[(14.0, 6.0), (12.0, 9.0)]
+    Subsegmento g28 (14.0,6.0)->(12.0,9.0) layer=soto
+  Segmento p6soto partido en 2 subsegmentos: puntos=[(12.0, 9.0), (10.5, 9.0), (10.0, 9.0)]
+    Subsegmento g29 (12.0,9.0)->(10.5,9.0) layer=soto
+    Subsegmento g30 (10.5,9.0)->(10.0,9.0) layer=soto
+  Segmento p7soto partido en 3 subsegmentos: puntos=[(10.0, 9.0), (8.0, 9.0), (5.75, 9.0), (4.0, 9.0)]
+    Subsegmento g31 (10.0,9.0)->(8.0,9.0) layer=soto
+    Subsegmento g32 (8.0,9.0)->(5.75,9.0) layer=soto
+    Subsegmento g33 (5.75,9.0)->(4.0,9.0) layer=soto
+  Segmento p8soto partido en 1 subsegmentos: puntos=[(4.0, 9.0), (4.0, 8.0)]
+    Subsegmento g34 (4.0,9.0)->(4.0,8.0) layer=soto
+  Segmento p9soto partido en 2 subsegmentos: puntos=[(4.0, 8.0), (4.0, 6.0), (4.0, 3.0)]
+    Subsegmento g35 (4.0,8.0)->(4.0,6.0) layer=soto
+    Subsegmento g36 (4.0,6.0)->(4.0,3.0) layer=soto
+  Segmento e1layerSoto2 partido en 1 subsegmentos: puntos=[(1.0, 1.0), (5.0, 1.0)]
+    Subsegmento g37 (1.0,1.0)->(5.0,1.0) layer=layerSoto2
+  Segmento e2layerSoto2 partido en 3 subsegmentos: puntos=[(5.0, 1.0), (5.333333333333333, 2.0), (5.666666666666667, 3.0), (6.0, 4.0)]
+    Subsegmento g38 (5.0,1.0)->(5.333333333333333,2.0) layer=layerSoto2
+    Subsegmento g39 (5.333333333333333,2.0)->(5.666666666666667,3.0) layer=layerSoto2
+    Subsegmento g40 (5.666666666666667,3.0)->(6.0,4.0) layer=layerSoto2
+  Segmento e3layerSoto2 partido en 2 subsegmentos: puntos=[(6.0, 4.0), (4.0, 6.0), (3.0, 7.0)]
+    Subsegmento g41 (6.0,4.0)->(4.0,6.0) layer=layerSoto2
+    Subsegmento g42 (4.0,6.0)->(3.0,7.0) layer=layerSoto2
+  Segmento e4layerSoto2 partido en 2 subsegmentos: puntos=[(3.0, 7.0), (2.0, 6.0), (0.0, 4.0)]
+    Subsegmento g43 (3.0,7.0)->(2.0,6.0) layer=layerSoto2
+    Subsegmento g44 (2.0,6.0)->(0.0,4.0) layer=layerSoto2
+  Segmento e5layerSoto2 partido en 1 subsegmentos: puntos=[(0.0, 4.0), (1.0, 1.0)]
+    Subsegmento g45 (0.0,4.0)->(1.0,1.0) layer=layerSoto2
+  Segmento f1layerSoto2 partido en 1 subsegmentos: puntos=[(10.0, 2.0), (14.0, 2.0)]
+    Subsegmento g46 (10.0,2.0)->(14.0,2.0) layer=layerSoto2
+  Segmento f2layerSoto2 partido en 1 subsegmentos: puntos=[(14.0, 2.0), (16.0, 5.0)]
+    Subsegmento g47 (14.0,2.0)->(16.0,5.0) layer=layerSoto2
+  Segmento f3layerSoto2 partido en 1 subsegmentos: puntos=[(16.0, 5.0), (14.0, 9.0)]
+    Subsegmento g48 (16.0,5.0)->(14.0,9.0) layer=layerSoto2
+  Segmento f4layerSoto2 partido en 3 subsegmentos: puntos=[(14.0, 9.0), (12.0, 9.0), (10.5, 9.0), (10.0, 9.0)]
+    Subsegmento g49 (14.0,9.0)->(12.0,9.0) layer=layerSoto2
+    Subsegmento g50 (12.0,9.0)->(10.5,9.0) layer=layerSoto2
+    Subsegmento g51 (10.5,9.0)->(10.0,9.0) layer=layerSoto2
+  Segmento f5layerSoto2 partido en 2 subsegmentos: puntos=[(10.0, 9.0), (9.0, 7.0), (8.0, 5.0)]
+    Subsegmento g52 (10.0,9.0)->(9.0,7.0) layer=layerSoto2
+    Subsegmento g53 (9.0,7.0)->(8.0,5.0) layer=layerSoto2
+  Segmento f6layerSoto2 partido en 2 subsegmentos: puntos=[(8.0, 5.0), (9.333333333333334, 3.0), (10.0, 2.0)]
+    Subsegmento g54 (8.0,5.0)->(9.333333333333334,3.0) layer=layerSoto2
+    Subsegmento g55 (9.333333333333334,3.0)->(10.0,2.0) layer=layerSoto2
+  Segmento g1layerSoto2 partido en 4 subsegmentos: puntos=[(20.0, 20.0), (23.666666666666668, 20.0), (28.0, 20.0), (29.142857142857142, 20.0), (30.0, 20.0)]
+    Subsegmento g56 (20.0,20.0)->(23.666666666666668,20.0) layer=layerSoto2
+    Subsegmento g57 (23.666666666666668,20.0)->(28.0,20.0) layer=layerSoto2
+    Subsegmento g58 (28.0,20.0)->(29.142857142857142,20.0) layer=layerSoto2
+    Subsegmento g59 (29.142857142857142,20.0)->(30.0,20.0) layer=layerSoto2
+  Segmento g2layerSoto2 partido en 1 subsegmentos: puntos=[(30.0, 20.0), (30.0, 30.0)]
+    Subsegmento g60 (30.0,20.0)->(30.0,30.0) layer=layerSoto2
+  Segmento g3layerSoto2 partido en 1 subsegmentos: puntos=[(30.0, 30.0), (20.0, 30.0)]
+    Subsegmento g61 (30.0,30.0)->(20.0,30.0) layer=layerSoto2
+  Segmento g4layerSoto2 partido en 3 subsegmentos: puntos=[(20.0, 30.0), (20.0, 28.571428571428573), (20.0, 21.0), (20.0, 20.0)]
+    Subsegmento g62 (20.0,30.0)->(20.0,28.571428571428573) layer=layerSoto2
+    Subsegmento g63 (20.0,28.571428571428573)->(20.0,21.0) layer=layerSoto2
+    Subsegmento g64 (20.0,21.0)->(20.0,20.0) layer=layerSoto2
+  Segmento h1layerSoto2 partido en 1 subsegmentos: puntos=[(23.0, 23.0), (27.0, 23.0)]
+    Subsegmento g65 (23.0,23.0)->(27.0,23.0) layer=layerSoto2
+  Segmento h2layerSoto2 partido en 1 subsegmentos: puntos=[(27.0, 23.0), (25.0, 28.0)]
+    Subsegmento g66 (27.0,23.0)->(25.0,28.0) layer=layerSoto2
+  Segmento h3layerSoto2 partido en 2 subsegmentos: puntos=[(25.0, 28.0), (24.142857142857142, 25.857142857142858), (23.0, 23.0)]
+    Subsegmento g67 (25.0,28.0)->(24.142857142857142,25.857142857142858) layer=layerSoto2
+    Subsegmento g68 (24.142857142857142,25.857142857142858)->(23.0,23.0) layer=layerSoto2
+  Segmento i1layerSoto2 partido en 1 subsegmentos: puntos=[(15.0, 15.0), (18.0, 15.0)]
+    Subsegmento g69 (15.0,15.0)->(18.0,15.0) layer=layerSoto2
+  Segmento i2layerSoto2 partido en 2 subsegmentos: puntos=[(18.0, 15.0), (17.714285714285715, 15.571428571428571), (16.5, 18.0)]
+    Subsegmento g70 (18.0,15.0)->(17.714285714285715,15.571428571428571) layer=layerSoto2
+    Subsegmento g71 (17.714285714285715,15.571428571428571)->(16.5,18.0) layer=layerSoto2
+  Segmento i3layerSoto2 partido en 2 subsegmentos: puntos=[(16.5, 18.0), (15.333333333333334, 15.666666666666666), (15.0, 15.0)]
+    Subsegmento g72 (16.5,18.0)->(15.333333333333334,15.666666666666666) layer=layerSoto2
+    Subsegmento g73 (15.333333333333334,15.666666666666666)->(15.0,15.0) layer=layerSoto2
+  Segmento c1layerSoto3 partido en 2 subsegmentos: puntos=[(0.0, 0.0), (5.0, 1.0), (10.0, 2.0)]
+    Subsegmento g74 (0.0,0.0)->(5.0,1.0) layer=layerSoto3
+    Subsegmento g75 (5.0,1.0)->(10.0,2.0) layer=layerSoto3
+  Segmento c2layerSoto3 partido en 1 subsegmentos: puntos=[(10.0, 2.0), (18.0, 1.0)]
+    Subsegmento g76 (10.0,2.0)->(18.0,1.0) layer=layerSoto3
+  Segmento c3layerSoto3 partido en 1 subsegmentos: puntos=[(18.0, 1.0), (25.0, 3.0)]
+    Subsegmento g77 (18.0,1.0)->(25.0,3.0) layer=layerSoto3
+  Segmento c4layerSoto3 partido en 1 subsegmentos: puntos=[(25.0, 3.0), (30.0, 8.0)]
+    Subsegmento g78 (25.0,3.0)->(30.0,8.0) layer=layerSoto3
+  Segmento c5layerSoto3 partido en 1 subsegmentos: puntos=[(30.0, 8.0), (32.0, 15.0)]
+    Subsegmento g79 (30.0,8.0)->(32.0,15.0) layer=layerSoto3
+  Segmento c6layerSoto3 partido en 2 subsegmentos: puntos=[(32.0, 15.0), (29.142857142857142, 20.0), (28.0, 22.0)]
+    Subsegmento g80 (32.0,15.0)->(29.142857142857142,20.0) layer=layerSoto3
+    Subsegmento g81 (29.142857142857142,20.0)->(28.0,22.0) layer=layerSoto3
+  Segmento c7layerSoto3 partido en 3 subsegmentos: puntos=[(28.0, 22.0), (27.0, 23.0), (24.142857142857142, 25.857142857142858), (22.0, 28.0)]
+    Subsegmento g82 (28.0,22.0)->(27.0,23.0) layer=layerSoto3
+    Subsegmento g83 (27.0,23.0)->(24.142857142857142,25.857142857142858) layer=layerSoto3
+    Subsegmento g84 (24.142857142857142,25.857142857142858)->(22.0,28.0) layer=layerSoto3
+  Segmento c8layerSoto3 partido en 2 subsegmentos: puntos=[(22.0, 28.0), (20.0, 28.571428571428573), (15.0, 30.0)]
+    Subsegmento g85 (22.0,28.0)->(20.0,28.571428571428573) layer=layerSoto3
+    Subsegmento g86 (20.0,28.571428571428573)->(15.0,30.0) layer=layerSoto3
+  Segmento c9layerSoto3 partido en 1 subsegmentos: puntos=[(15.0, 30.0), (8.0, 28.0)]
+    Subsegmento g87 (15.0,30.0)->(8.0,28.0) layer=layerSoto3
+  Segmento c10layerSoto3 partido en 1 subsegmentos: puntos=[(8.0, 28.0), (2.0, 22.0)]
+    Subsegmento g88 (8.0,28.0)->(2.0,22.0) layer=layerSoto3
+  Segmento c11layerSoto3 partido en 1 subsegmentos: puntos=[(2.0, 22.0), (0.0, 15.0)]
+    Subsegmento g89 (2.0,22.0)->(0.0,15.0) layer=layerSoto3
+  Segmento c12layerSoto3 partido en 3 subsegmentos: puntos=[(0.0, 15.0), (0.0, 10.0), (0.0, 4.0), (0.0, 0.0)]
+    Subsegmento g90 (0.0,15.0)->(0.0,10.0) layer=layerSoto3
+    Subsegmento g91 (0.0,10.0)->(0.0,4.0) layer=layerSoto3
+    Subsegmento g92 (0.0,4.0)->(0.0,0.0) layer=layerSoto3
+  Segmento l1layerSoto3 partido en 1 subsegmentos: puntos=[(5.0, 6.0), (8.0, 5.0)]
+    Subsegmento g93 (5.0,6.0)->(8.0,5.0) layer=layerSoto3
+  Segmento l2layerSoto3 partido en 2 subsegmentos: puntos=[(8.0, 5.0), (10.0, 5.5), (12.0, 6.0)]
+    Subsegmento g94 (8.0,5.0)->(10.0,5.5) layer=layerSoto3
+    Subsegmento g95 (10.0,5.5)->(12.0,6.0) layer=layerSoto3
+  Segmento l3layerSoto3 partido en 2 subsegmentos: puntos=[(12.0, 6.0), (10.5, 9.0), (10.0, 10.0)]
+    Subsegmento g96 (12.0,6.0)->(10.5,9.0) layer=layerSoto3
+    Subsegmento g97 (10.5,9.0)->(10.0,10.0) layer=layerSoto3
+  Segmento l4layerSoto3 partido en 1 subsegmentos: puntos=[(10.0, 10.0), (6.0, 10.0)]
+    Subsegmento g98 (10.0,10.0)->(6.0,10.0) layer=layerSoto3
+  Segmento l5layerSoto3 partido en 3 subsegmentos: puntos=[(6.0, 10.0), (5.75, 9.0), (5.5, 8.0), (5.0, 6.0)]
+    Subsegmento g99 (6.0,10.0)->(5.75,9.0) layer=layerSoto3
+    Subsegmento g100 (5.75,9.0)->(5.5,8.0) layer=layerSoto3
+    Subsegmento g101 (5.5,8.0)->(5.0,6.0) layer=layerSoto3
+  Segmento i1layerSoto3 partido en 2 subsegmentos: puntos=[(7.0, 7.0), (8.0, 7.0), (9.0, 7.0)]
+    Subsegmento g102 (7.0,7.0)->(8.0,7.0) layer=layerSoto3
+    Subsegmento g103 (8.0,7.0)->(9.0,7.0) layer=layerSoto3
+  Segmento i2layerSoto3 partido en 1 subsegmentos: puntos=[(9.0, 7.0), (8.0, 9.0)]
+    Subsegmento g104 (9.0,7.0)->(8.0,9.0) layer=layerSoto3
+  Segmento i3layerSoto3 partido en 2 subsegmentos: puntos=[(8.0, 9.0), (7.5, 8.0), (7.0, 7.0)]
+    Subsegmento g105 (8.0,9.0)->(7.5,8.0) layer=layerSoto3
+    Subsegmento g106 (7.5,8.0)->(7.0,7.0) layer=layerSoto3
+  Segmento f1layerSoto3 partido en 1 subsegmentos: puntos=[(14.0, 12.0), (18.0, 11.0)]
+    Subsegmento g107 (14.0,12.0)->(18.0,11.0) layer=layerSoto3
+  Segmento f2layerSoto3 partido en 1 subsegmentos: puntos=[(18.0, 11.0), (20.0, 15.0)]
+    Subsegmento g108 (18.0,11.0)->(20.0,15.0) layer=layerSoto3
+  Segmento f3layerSoto3 partido en 2 subsegmentos: puntos=[(20.0, 15.0), (17.714285714285715, 15.571428571428571), (16.0, 16.0)]
+    Subsegmento g109 (20.0,15.0)->(17.714285714285715,15.571428571428571) layer=layerSoto3
+    Subsegmento g110 (17.714285714285715,15.571428571428571)->(16.0,16.0) layer=layerSoto3
+  Segmento f4layerSoto3 partido en 2 subsegmentos: puntos=[(16.0, 16.0), (15.333333333333334, 15.666666666666666), (14.0, 15.0)]
+    Subsegmento g111 (16.0,16.0)->(15.333333333333334,15.666666666666666) layer=layerSoto3
+    Subsegmento g112 (15.333333333333334,15.666666666666666)->(14.0,15.0) layer=layerSoto3
+  Segmento f5layerSoto3 partido en 1 subsegmentos: puntos=[(14.0, 15.0), (14.0, 12.0)]
+    Subsegmento g113 (14.0,15.0)->(14.0,12.0) layer=layerSoto3
+  Segmento m1layerSoto3 partido en 1 subsegmentos: puntos=[(22.0, 10.0), (26.0, 9.0)]
+    Subsegmento g114 (22.0,10.0)->(26.0,9.0) layer=layerSoto3
+  Segmento m2layerSoto3 partido en 1 subsegmentos: puntos=[(26.0, 9.0), (28.0, 12.0)]
+    Subsegmento g115 (26.0,9.0)->(28.0,12.0) layer=layerSoto3
+  Segmento m3layerSoto3 partido en 1 subsegmentos: puntos=[(28.0, 12.0), (24.0, 14.0)]
+    Subsegmento g116 (28.0,12.0)->(24.0,14.0) layer=layerSoto3
+  Segmento m4layerSoto3 partido en 1 subsegmentos: puntos=[(24.0, 14.0), (22.0, 13.0)]
+    Subsegmento g117 (24.0,14.0)->(22.0,13.0) layer=layerSoto3
+  Segmento m5layerSoto3 partido en 1 subsegmentos: puntos=[(22.0, 13.0), (22.0, 10.0)]
+    Subsegmento g118 (22.0,13.0)->(22.0,10.0) layer=layerSoto3
+  Segmento r1layerSoto3 partido en 1 subsegmentos: puntos=[(4.0, 18.0), (6.0, 16.0)]
+    Subsegmento g119 (4.0,18.0)->(6.0,16.0) layer=layerSoto3
+  Segmento r2layerSoto3 partido en 1 subsegmentos: puntos=[(6.0, 16.0), (10.0, 17.0)]
+    Subsegmento g120 (6.0,16.0)->(10.0,17.0) layer=layerSoto3
+  Segmento r3layerSoto3 partido en 1 subsegmentos: puntos=[(10.0, 17.0), (12.0, 19.0)]
+    Subsegmento g121 (10.0,17.0)->(12.0,19.0) layer=layerSoto3
+  Segmento r4layerSoto3 partido en 1 subsegmentos: puntos=[(12.0, 19.0), (8.0, 21.0)]
+    Subsegmento g122 (12.0,19.0)->(8.0,21.0) layer=layerSoto3
+  Segmento r5layerSoto3 partido en 1 subsegmentos: puntos=[(8.0, 21.0), (5.0, 20.0)]
+    Subsegmento g123 (8.0,21.0)->(5.0,20.0) layer=layerSoto3
+  Segmento r6layerSoto3 partido en 1 subsegmentos: puntos=[(5.0, 20.0), (4.0, 18.0)]
+    Subsegmento g124 (5.0,20.0)->(4.0,18.0) layer=layerSoto3
+  Segmento p1layerSoto3 partido en 1 subsegmentos: puntos=[(15.0, 20.0), (18.0, 19.0)]
+    Subsegmento g125 (15.0,20.0)->(18.0,19.0) layer=layerSoto3
+  Segmento p2layerSoto3 partido en 1 subsegmentos: puntos=[(18.0, 19.0), (20.0, 21.0)]
+    Subsegmento g126 (18.0,19.0)->(20.0,21.0) layer=layerSoto3
+  Segmento p3layerSoto3 partido en 1 subsegmentos: puntos=[(20.0, 21.0), (17.0, 23.0)]
+    Subsegmento g127 (20.0,21.0)->(17.0,23.0) layer=layerSoto3
+  Segmento p4layerSoto3 partido en 1 subsegmentos: puntos=[(17.0, 23.0), (14.0, 22.0)]
+    Subsegmento g128 (17.0,23.0)->(14.0,22.0) layer=layerSoto3
+  Segmento p5layerSoto3 partido en 1 subsegmentos: puntos=[(14.0, 22.0), (15.0, 20.0)]
+    Subsegmento g129 (14.0,22.0)->(15.0,20.0) layer=layerSoto3
+  Segmento s1layerSoto3 partido en 1 subsegmentos: puntos=[(26.0, 18.0), (28.0, 20.0)]
+    Subsegmento g130 (26.0,18.0)->(28.0,20.0) layer=layerSoto3
+  Segmento s2layerSoto3 partido en 1 subsegmentos: puntos=[(28.0, 20.0), (25.0, 22.0)]
+    Subsegmento g131 (28.0,20.0)->(25.0,22.0) layer=layerSoto3
+  Segmento s3layerSoto3 partido en 2 subsegmentos: puntos=[(25.0, 22.0), (23.666666666666668, 20.0), (23.0, 19.0)]
+    Subsegmento g132 (25.0,22.0)->(23.666666666666668,20.0) layer=layerSoto3
+    Subsegmento g133 (23.666666666666668,20.0)->(23.0,19.0) layer=layerSoto3
+  Segmento s4layerSoto3 partido en 1 subsegmentos: puntos=[(23.0, 19.0), (26.0, 18.0)]
+    Subsegmento g134 (23.0,19.0)->(26.0,18.0) layer=layerSoto3
 
 --- Creando vértices a partir de nuevos segmentos ---
-  Nuevo vértice: p1 (10.0,0.0)
-  Nuevo vértice: p2 (10.0,10.0)
-  Nuevo vértice: p3 (2.0,5.0)
+  Nuevo vértice: p1 (0.0,0.0)
+  Nuevo vértice: p2 (10.0,0.0)
+  Nuevo vértice: p3 (10.0,2.0)
+  Nuevo vértice: p4 (10.0,3.0)
+  Nuevo vértice: p5 (10.0,5.5)
+  Nuevo vértice: p6 (10.0,9.0)
+  Nuevo vértice: p7 (10.0,10.0)
+  Nuevo vértice: p8 (0.0,10.0)
+  Nuevo vértice: p9 (6.0,10.0)
+  Nuevo vértice: p10 (0.0,4.0)
+  Nuevo vértice: p11 (0.0,15.0)
+  Nuevo vértice: p12 (2.0,2.0)
+  Nuevo vértice: p13 (5.333333333333333,2.0)
+  Nuevo vértice: p14 (8.0,2.0)
+  Nuevo vértice: p15 (14.0,2.0)
+  Nuevo vértice: p16 (8.0,3.0)
+  Nuevo vértice: p17 (8.0,5.0)
+  Nuevo vértice: p18 (8.0,7.0)
+  Nuevo vértice: p19 (8.0,8.0)
+  Nuevo vértice: p20 (2.0,8.0)
+  Nuevo vértice: p21 (4.0,8.0)
+  Nuevo vértice: p22 (5.5,8.0)
+  Nuevo vértice: p23 (7.5,8.0)
+  Nuevo vértice: p24 (2.0,6.0)
+  Nuevo vértice: p25 (4.0,3.0)
+  Nuevo vértice: p26 (5.666666666666667,3.0)
+  Nuevo vértice: p27 (9.333333333333334,3.0)
+  Nuevo vértice: p28 (12.0,3.0)
+  Nuevo vértice: p29 (14.0,6.0)
+  Nuevo vértice: p30 (12.0,9.0)
+  Nuevo vértice: p31 (4.0,9.0)
+  Nuevo vértice: p32 (5.75,9.0)
+  Nuevo vértice: p33 (8.0,9.0)
+  Nuevo vértice: p34 (10.5,9.0)
+  Nuevo vértice: p35 (14.0,9.0)
+  Nuevo vértice: p36 (4.0,6.0)
+  Nuevo vértice: p37 (1.0,1.0)
+  Nuevo vértice: p38 (5.0,1.0)
+  Nuevo vértice: p39 (6.0,4.0)
+  Nuevo vértice: p40 (3.0,7.0)
+  Nuevo vértice: p41 (16.0,5.0)
+  Nuevo vértice: p42 (9.0,7.0)
+  Nuevo vértice: p43 (20.0,20.0)
+  Nuevo vértice: p44 (23.666666666666668,20.0)
+  Nuevo vértice: p45 (28.0,20.0)
+  Nuevo vértice: p46 (29.142857142857142,20.0)
+  Nuevo vértice: p47 (30.0,20.0)
+  Nuevo vértice: p48 (30.0,30.0)
+  Nuevo vértice: p49 (20.0,30.0)
+  Nuevo vértice: p50 (20.0,21.0)
+  Nuevo vértice: p51 (20.0,28.571428571428573)
+  Nuevo vértice: p52 (23.0,23.0)
+  Nuevo vértice: p53 (27.0,23.0)
+  Nuevo vértice: p54 (25.0,28.0)
+  Nuevo vértice: p55 (24.142857142857142,25.857142857142858)
+  Nuevo vértice: p56 (15.0,15.0)
+  Nuevo vértice: p57 (18.0,15.0)
+  Nuevo vértice: p58 (16.5,18.0)
+  Nuevo vértice: p59 (17.714285714285715,15.571428571428571)
+  Nuevo vértice: p60 (15.333333333333334,15.666666666666666)
+  Nuevo vértice: p61 (18.0,1.0)
+  Nuevo vértice: p62 (25.0,3.0)
+  Nuevo vértice: p63 (30.0,8.0)
+  Nuevo vértice: p64 (32.0,15.0)
+  Nuevo vértice: p65 (28.0,22.0)
+  Nuevo vértice: p66 (22.0,28.0)
+  Nuevo vértice: p67 (15.0,30.0)
+  Nuevo vértice: p68 (8.0,28.0)
+  Nuevo vértice: p69 (2.0,22.0)
+  Nuevo vértice: p70 (5.0,6.0)
+  Nuevo vértice: p71 (12.0,6.0)
+  Nuevo vértice: p72 (7.0,7.0)
+  Nuevo vértice: p73 (26.0,9.0)
+  Nuevo vértice: p74 (22.0,10.0)
+  Nuevo vértice: p75 (18.0,11.0)
+  Nuevo vértice: p76 (14.0,12.0)
+  Nuevo vértice: p77 (20.0,15.0)
+  Nuevo vértice: p78 (16.0,16.0)
+  Nuevo vértice: p79 (14.0,15.0)
+  Nuevo vértice: p80 (28.0,12.0)
+  Nuevo vértice: p81 (24.0,14.0)
+  Nuevo vértice: p82 (22.0,13.0)
+  Nuevo vértice: p83 (6.0,16.0)
+  Nuevo vértice: p84 (4.0,18.0)
+  Nuevo vértice: p85 (10.0,17.0)
+  Nuevo vértice: p86 (12.0,19.0)
+  Nuevo vértice: p87 (8.0,21.0)
+  Nuevo vértice: p88 (5.0,20.0)
+  Nuevo vértice: p89 (18.0,19.0)
+  Nuevo vértice: p90 (15.0,20.0)
+  Nuevo vértice: p91 (17.0,23.0)
+  Nuevo vértice: p92 (14.0,22.0)
+  Nuevo vértice: p93 (26.0,18.0)
+  Nuevo vértice: p94 (25.0,22.0)
+  Nuevo vértice: p95 (23.0,19.0)
 
 --- Creando half-edges ---
   Half-edges: s1 (de p1 a p2) y s2 (de p2 a p1)
-  Half-edges: s3 (de p1 a p3) y s4 (de p3 a p1)
-  Half-edges: s5 (de p3 a p2) y s6 (de p2 a p3)
+  Half-edges: s3 (de p2 a p3) y s4 (de p3 a p2)
+  Half-edges: s5 (de p3 a p4) y s6 (de p4 a p3)
+  Half-edges: s7 (de p4 a p5) y s8 (de p5 a p4)
+  Half-edges: s9 (de p5 a p6) y s10 (de p6 a p5)
+  Half-edges: s11 (de p6 a p7) y s12 (de p7 a p6)
+  Half-edges: s13 (de p8 a p9) y s14 (de p9 a p8)
+  Half-edges: s15 (de p9 a p7) y s16 (de p7 a p9)
+  Half-edges: s17 (de p1 a p10) y s18 (de p10 a p1)
+  Half-edges: s19 (de p10 a p8) y s20 (de p8 a p10)
+  Half-edges: s21 (de p8 a p11) y s22 (de p11 a p8)
+  Half-edges: s23 (de p12 a p13) y s24 (de p13 a p12)
+  Half-edges: s25 (de p13 a p14) y s26 (de p14 a p13)
+  Half-edges: s27 (de p14 a p3) y s28 (de p3 a p14)
+  Half-edges: s29 (de p3 a p15) y s30 (de p15 a p3)
+  Half-edges: s31 (de p14 a p16) y s32 (de p16 a p14)
+  Half-edges: s33 (de p16 a p17) y s34 (de p17 a p16)
+  Half-edges: s35 (de p17 a p18) y s36 (de p18 a p17)
+  Half-edges: s37 (de p18 a p19) y s38 (de p19 a p18)
+  Half-edges: s39 (de p20 a p21) y s40 (de p21 a p20)
+  Half-edges: s41 (de p21 a p22) y s42 (de p22 a p21)
+  Half-edges: s43 (de p22 a p23) y s44 (de p23 a p22)
+  Half-edges: s45 (de p23 a p19) y s46 (de p19 a p23)
+  Half-edges: s47 (de p12 a p24) y s48 (de p24 a p12)
+  Half-edges: s49 (de p24 a p20) y s50 (de p20 a p24)
+  Half-edges: s51 (de p25 a p26) y s52 (de p26 a p25)
+  Half-edges: s53 (de p26 a p16) y s54 (de p16 a p26)
+  Half-edges: s55 (de p16 a p27) y s56 (de p27 a p16)
+  Half-edges: s57 (de p27 a p4) y s58 (de p4 a p27)
+  Half-edges: s59 (de p4 a p28) y s60 (de p28 a p4)
+  Half-edges: s61 (de p28 a p29) y s62 (de p29 a p28)
+  Half-edges: s63 (de p30 a p29) y s64 (de p29 a p30)
+  Half-edges: s65 (de p31 a p32) y s66 (de p32 a p31)
+  Half-edges: s67 (de p32 a p33) y s68 (de p33 a p32)
+  Half-edges: s69 (de p33 a p6) y s70 (de p6 a p33)
+  Half-edges: s71 (de p6 a p34) y s72 (de p34 a p6)
+  Half-edges: s73 (de p34 a p30) y s74 (de p30 a p34)
+  Half-edges: s75 (de p30 a p35) y s76 (de p35 a p30)
+  Half-edges: s77 (de p25 a p36) y s78 (de p36 a p25)
+  Half-edges: s79 (de p36 a p21) y s80 (de p21 a p36)
+  Half-edges: s81 (de p21 a p31) y s82 (de p31 a p21)
+  Half-edges: s83 (de p37 a p38) y s84 (de p38 a p37)
+  Half-edges: s85 (de p38 a p13) y s86 (de p13 a p38)
+  Half-edges: s87 (de p13 a p26) y s88 (de p26 a p13)
+  Half-edges: s89 (de p26 a p39) y s90 (de p39 a p26)
+  Half-edges: s91 (de p39 a p36) y s92 (de p36 a p39)
+  Half-edges: s93 (de p36 a p40) y s94 (de p40 a p36)
+  Half-edges: s95 (de p10 a p24) y s96 (de p24 a p10)
+  Half-edges: s97 (de p24 a p40) y s98 (de p40 a p24)
+  Half-edges: s99 (de p10 a p37) y s100 (de p37 a p10)
+  Half-edges: s101 (de p15 a p41) y s102 (de p41 a p15)
+  Half-edges: s103 (de p35 a p41) y s104 (de p41 a p35)
+  Half-edges: s105 (de p17 a p42) y s106 (de p42 a p17)
+  Half-edges: s107 (de p42 a p6) y s108 (de p6 a p42)
+  Half-edges: s109 (de p17 a p27) y s110 (de p27 a p17)
+  Half-edges: s111 (de p27 a p3) y s112 (de p3 a p27)
+  Half-edges: s113 (de p43 a p44) y s114 (de p44 a p43)
+  Half-edges: s115 (de p44 a p45) y s116 (de p45 a p44)
+  Half-edges: s117 (de p45 a p46) y s118 (de p46 a p45)
+  Half-edges: s119 (de p46 a p47) y s120 (de p47 a p46)
+  Half-edges: s121 (de p47 a p48) y s122 (de p48 a p47)
+  Half-edges: s123 (de p49 a p48) y s124 (de p48 a p49)
+  Half-edges: s125 (de p43 a p50) y s126 (de p50 a p43)
+  Half-edges: s127 (de p50 a p51) y s128 (de p51 a p50)
+  Half-edges: s129 (de p51 a p49) y s130 (de p49 a p51)
+  Half-edges: s131 (de p52 a p53) y s132 (de p53 a p52)
+  Half-edges: s133 (de p54 a p53) y s134 (de p53 a p54)
+  Half-edges: s135 (de p52 a p55) y s136 (de p55 a p52)
+  Half-edges: s137 (de p55 a p54) y s138 (de p54 a p55)
+  Half-edges: s139 (de p56 a p57) y s140 (de p57 a p56)
+  Half-edges: s141 (de p58 a p59) y s142 (de p59 a p58)
+  Half-edges: s143 (de p59 a p57) y s144 (de p57 a p59)
+  Half-edges: s145 (de p56 a p60) y s146 (de p60 a p56)
+  Half-edges: s147 (de p60 a p58) y s148 (de p58 a p60)
+  Half-edges: s149 (de p1 a p38) y s150 (de p38 a p1)
+  Half-edges: s151 (de p38 a p3) y s152 (de p3 a p38)
+  Half-edges: s153 (de p61 a p3) y s154 (de p3 a p61)
+  Half-edges: s155 (de p61 a p62) y s156 (de p62 a p61)
+  Half-edges: s157 (de p62 a p63) y s158 (de p63 a p62)
+  Half-edges: s159 (de p63 a p64) y s160 (de p64 a p63)
+  Half-edges: s161 (de p65 a p46) y s162 (de p46 a p65)
+  Half-edges: s163 (de p46 a p64) y s164 (de p64 a p46)
+  Half-edges: s165 (de p65 a p53) y s166 (de p53 a p65)
+  Half-edges: s167 (de p53 a p55) y s168 (de p55 a p53)
+  Half-edges: s169 (de p55 a p66) y s170 (de p66 a p55)
+  Half-edges: s171 (de p66 a p51) y s172 (de p51 a p66)
+  Half-edges: s173 (de p51 a p67) y s174 (de p67 a p51)
+  Half-edges: s175 (de p68 a p67) y s176 (de p67 a p68)
+  Half-edges: s177 (de p69 a p68) y s178 (de p68 a p69)
+  Half-edges: s179 (de p11 a p69) y s180 (de p69 a p11)
+  Half-edges: s181 (de p17 a p70) y s182 (de p70 a p17)
+  Half-edges: s183 (de p17 a p5) y s184 (de p5 a p17)
+  Half-edges: s185 (de p5 a p71) y s186 (de p71 a p5)
+  Half-edges: s187 (de p7 a p34) y s188 (de p34 a p7)
+  Half-edges: s189 (de p34 a p71) y s190 (de p71 a p34)
+  Half-edges: s191 (de p70 a p22) y s192 (de p22 a p70)
+  Half-edges: s193 (de p22 a p32) y s194 (de p32 a p22)
+  Half-edges: s195 (de p32 a p9) y s196 (de p9 a p32)
+  Half-edges: s197 (de p72 a p18) y s198 (de p18 a p72)
+  Half-edges: s199 (de p18 a p42) y s200 (de p42 a p18)
+  Half-edges: s201 (de p33 a p42) y s202 (de p42 a p33)
+  Half-edges: s203 (de p72 a p23) y s204 (de p23 a p72)
+  Half-edges: s205 (de p23 a p33) y s206 (de p33 a p23)
+  Half-edges: s207 (de p73 a p74) y s208 (de p74 a p73)
+  Half-edges: s209 (de p74 a p75) y s210 (de p75 a p74)
+  Half-edges: s211 (de p75 a p76) y s212 (de p76 a p75)
+  Half-edges: s213 (de p75 a p77) y s214 (de p77 a p75)
+  Half-edges: s215 (de p77 a p59) y s216 (de p59 a p77)
+  Half-edges: s217 (de p59 a p78) y s218 (de p78 a p59)
+  Half-edges: s219 (de p79 a p60) y s220 (de p60 a p79)
+  Half-edges: s221 (de p60 a p78) y s222 (de p78 a p60)
+  Half-edges: s223 (de p76 a p79) y s224 (de p79 a p76)
+  Half-edges: s225 (de p73 a p80) y s226 (de p80 a p73)
+  Half-edges: s227 (de p80 a p81) y s228 (de p81 a p80)
+  Half-edges: s229 (de p82 a p81) y s230 (de p81 a p82)
+  Half-edges: s231 (de p74 a p82) y s232 (de p82 a p74)
+  Half-edges: s233 (de p83 a p84) y s234 (de p84 a p83)
+  Half-edges: s235 (de p83 a p85) y s236 (de p85 a p83)
+  Half-edges: s237 (de p85 a p86) y s238 (de p86 a p85)
+  Half-edges: s239 (de p86 a p87) y s240 (de p87 a p86)
+  Half-edges: s241 (de p88 a p87) y s242 (de p87 a p88)
+  Half-edges: s243 (de p84 a p88) y s244 (de p88 a p84)
+  Half-edges: s245 (de p89 a p90) y s246 (de p90 a p89)
+  Half-edges: s247 (de p89 a p50) y s248 (de p50 a p89)
+  Half-edges: s249 (de p50 a p91) y s250 (de p91 a p50)
+  Half-edges: s251 (de p92 a p91) y s252 (de p91 a p92)
+  Half-edges: s253 (de p92 a p90) y s254 (de p90 a p92)
+  Half-edges: s255 (de p93 a p45) y s256 (de p45 a p93)
+  Half-edges: s257 (de p45 a p94) y s258 (de p94 a p45)
+  Half-edges: s259 (de p95 a p44) y s260 (de p44 a p95)
+  Half-edges: s261 (de p44 a p94) y s262 (de p94 a p44)
+  Half-edges: s263 (de p93 a p95) y s264 (de p95 a p93)
 
 --- Conectando half-edges (siguiente/anterior) ---
-  Vértice p1: aristas incidentes ordenadas: ['s1', 's3']
-  Vértice p2: aristas incidentes ordenadas: ['s6', 's2']
-  Vértice p3: aristas incidentes ordenadas: ['s4', 's5']
-    Enlace: s2.siguiente = s3, s3.anterior = s2
-    Enlace: s4.siguiente = s1, s1.anterior = s4
-    Enlace: s5.siguiente = s2, s2.anterior = s5
-    Enlace: s1.siguiente = s6, s6.anterior = s1
-    Enlace: s3.siguiente = s5, s5.anterior = s3
-    Enlace: s6.siguiente = s4, s4.anterior = s6
+  Vértice p1: aristas incidentes ordenadas: ['s1', 's149', 's17']
+  Vértice p2: aristas incidentes ordenadas: ['s3', 's2']
+  Vértice p3: aristas incidentes ordenadas: ['s152', 's4', 's154', 's29', 's5', 's112', 's28']
+  Vértice p4: aristas incidentes ordenadas: ['s6', 's59', 's7', 's58']
+  Vértice p5: aristas incidentes ordenadas: ['s184', 's8', 's185', 's9']
+  Vértice p6: aristas incidentes ordenadas: ['s108', 's10', 's71', 's11', 's70']
+  Vértice p7: aristas incidentes ordenadas: ['s12', 's187', 's16']
+  Vértice p8: aristas incidentes ordenadas: ['s20', 's13', 's21']
+  Vértice p9: aristas incidentes ordenadas: ['s196', 's15', 's14']
+  Vértice p10: aristas incidentes ordenadas: ['s18', 's99', 's95', 's19']
+  Vértice p11: aristas incidentes ordenadas: ['s22', 's179']
+  Vértice p12: aristas incidentes ordenadas: ['s23', 's47']
+  Vértice p13: aristas incidentes ordenadas: ['s86', 's25', 's87', 's24']
+  Vértice p14: aristas incidentes ordenadas: ['s27', 's31', 's26']
+  Vértice p15: aristas incidentes ordenadas: ['s101', 's30']
+  Vértice p16: aristas incidentes ordenadas: ['s32', 's55', 's33', 's54']
+  Vértice p17: aristas incidentes ordenadas: ['s34', 's109', 's183', 's105', 's35', 's181']
+  Vértice p18: aristas incidentes ordenadas: ['s36', 's199', 's37', 's198']
+  Vértice p19: aristas incidentes ordenadas: ['s38', 's46']
+  Vértice p20: aristas incidentes ordenadas: ['s50', 's39']
+  Vértice p21: aristas incidentes ordenadas: ['s80', 's41', 's81', 's40']
+  Vértice p22: aristas incidentes ordenadas: ['s192', 's43', 's193', 's42']
+  Vértice p23: aristas incidentes ordenadas: ['s204', 's45', 's205', 's44']
+  Vértice p24: aristas incidentes ordenadas: ['s96', 's48', 's97', 's49']
+  Vértice p25: aristas incidentes ordenadas: ['s51', 's77']
+  Vértice p26: aristas incidentes ordenadas: ['s88', 's53', 's89', 's52']
+  Vértice p27: aristas incidentes ordenadas: ['s111', 's57', 's110', 's56']
+  Vértice p28: aristas incidentes ordenadas: ['s61', 's60']
+  Vértice p29: aristas incidentes ordenadas: ['s62', 's64']
+  Vértice p30: aristas incidentes ordenadas: ['s63', 's75', 's74']
+  Vértice p31: aristas incidentes ordenadas: ['s82', 's65']
+  Vértice p32: aristas incidentes ordenadas: ['s194', 's67', 's195', 's66']
+  Vértice p33: aristas incidentes ordenadas: ['s206', 's201', 's69', 's68']
+  Vértice p34: aristas incidentes ordenadas: ['s189', 's73', 's188', 's72']
+  Vértice p35: aristas incidentes ordenadas: ['s103', 's76']
+  Vértice p36: aristas incidentes ordenadas: ['s78', 's92', 's79', 's93']
+  Vértice p37: aristas incidentes ordenadas: ['s83', 's100']
+  Vértice p38: aristas incidentes ordenadas: ['s150', 's151', 's85', 's84']
+  Vértice p39: aristas incidentes ordenadas: ['s90', 's91']
+  Vértice p40: aristas incidentes ordenadas: ['s98', 's94']
+  Vértice p41: aristas incidentes ordenadas: ['s102', 's104']
+  Vértice p42: aristas incidentes ordenadas: ['s106', 's107', 's202', 's200']
+  Vértice p43: aristas incidentes ordenadas: ['s113', 's125']
+  Vértice p44: aristas incidentes ordenadas: ['s260', 's115', 's261', 's114']
+  Vértice p45: aristas incidentes ordenadas: ['s256', 's117', 's257', 's116']
+  Vértice p46: aristas incidentes ordenadas: ['s163', 's119', 's162', 's118']
+  Vértice p47: aristas incidentes ordenadas: ['s121', 's120']
+  Vértice p48: aristas incidentes ordenadas: ['s122', 's124']
+  Vértice p49: aristas incidentes ordenadas: ['s130', 's123']
+  Vértice p50: aristas incidentes ordenadas: ['s248', 's126', 's127', 's249']
+  Vértice p51: aristas incidentes ordenadas: ['s128', 's172', 's129', 's173']
+  Vértice p52: aristas incidentes ordenadas: ['s131', 's135']
+  Vértice p53: aristas incidentes ordenadas: ['s166', 's134', 's167', 's132']
+  Vértice p54: aristas incidentes ordenadas: ['s138', 's133']
+  Vértice p55: aristas incidentes ordenadas: ['s136', 's168', 's137', 's169']
+  Vértice p56: aristas incidentes ordenadas: ['s139', 's145']
+  Vértice p57: aristas incidentes ordenadas: ['s144', 's140']
+  Vértice p58: aristas incidentes ordenadas: ['s148', 's141']
+  Vértice p59: aristas incidentes ordenadas: ['s143', 's216', 's142', 's217']
+  Vértice p60: aristas incidentes ordenadas: ['s220', 's146', 's221', 's147']
+  Vértice p61: aristas incidentes ordenadas: ['s155', 's153']
+  Vértice p62: aristas incidentes ordenadas: ['s156', 's157']
+  Vértice p63: aristas incidentes ordenadas: ['s158', 's159']
+  Vértice p64: aristas incidentes ordenadas: ['s160', 's164']
+  Vértice p65: aristas incidentes ordenadas: ['s161', 's165']
+  Vértice p66: aristas incidentes ordenadas: ['s170', 's171']
+  Vértice p67: aristas incidentes ordenadas: ['s176', 's174']
+  Vértice p68: aristas incidentes ordenadas: ['s178', 's175']
+  Vértice p69: aristas incidentes ordenadas: ['s180', 's177']
+  Vértice p70: aristas incidentes ordenadas: ['s182', 's191']
+  Vértice p71: aristas incidentes ordenadas: ['s186', 's190']
+  Vértice p72: aristas incidentes ordenadas: ['s197', 's203']
+  Vértice p73: aristas incidentes ordenadas: ['s225', 's207']
+  Vértice p74: aristas incidentes ordenadas: ['s208', 's231', 's209']
+  Vértice p75: aristas incidentes ordenadas: ['s210', 's213', 's211']
+  Vértice p76: aristas incidentes ordenadas: ['s212', 's223']
+  Vértice p77: aristas incidentes ordenadas: ['s214', 's215']
+  Vértice p78: aristas incidentes ordenadas: ['s222', 's218']
+  Vértice p79: aristas incidentes ordenadas: ['s224', 's219']
+  Vértice p80: aristas incidentes ordenadas: ['s226', 's227']
+  Vértice p81: aristas incidentes ordenadas: ['s230', 's228']
+  Vértice p82: aristas incidentes ordenadas: ['s232', 's229']
+  Vértice p83: aristas incidentes ordenadas: ['s235', 's233']
+  Vértice p84: aristas incidentes ordenadas: ['s234', 's243']
+  Vértice p85: aristas incidentes ordenadas: ['s236', 's237']
+  Vértice p86: aristas incidentes ordenadas: ['s238', 's239']
+  Vértice p87: aristas incidentes ordenadas: ['s242', 's240']
+  Vértice p88: aristas incidentes ordenadas: ['s244', 's241']
+  Vértice p89: aristas incidentes ordenadas: ['s247', 's245']
+  Vértice p90: aristas incidentes ordenadas: ['s246', 's254']
+  Vértice p91: aristas incidentes ordenadas: ['s252', 's250']
+  Vértice p92: aristas incidentes ordenadas: ['s253', 's251']
+  Vértice p93: aristas incidentes ordenadas: ['s255', 's263']
+  Vértice p94: aristas incidentes ordenadas: ['s262', 's258']
+  Vértice p95: aristas incidentes ordenadas: ['s264', 's259']
+    Enlace: s2.siguiente = s17, s17.anterior = s2
+    Enlace: s150.siguiente = s1, s1.anterior = s150
+    Enlace: s18.siguiente = s149, s149.anterior = s18
+    Enlace: s4.siguiente = s2, s2.anterior = s4
+    Enlace: s1.siguiente = s3, s3.anterior = s1
+    Enlace: s151.siguiente = s28, s28.anterior = s151
+    Enlace: s3.siguiente = s152, s152.anterior = s3
+    Enlace: s153.siguiente = s4, s4.anterior = s153
+    Enlace: s30.siguiente = s154, s154.anterior = s30
+    Enlace: s6.siguiente = s29, s29.anterior = s6
+    Enlace: s111.siguiente = s5, s5.anterior = s111
+    Enlace: s27.siguiente = s112, s112.anterior = s27
+    Enlace: s5.siguiente = s58, s58.anterior = s5
+    Enlace: s60.siguiente = s6, s6.anterior = s60
+    Enlace: s8.siguiente = s59, s59.anterior = s8
+    Enlace: s57.siguiente = s7, s7.anterior = s57
+    Enlace: s183.siguiente = s9, s9.anterior = s183
+    Enlace: s7.siguiente = s184, s184.anterior = s7
+    Enlace: s186.siguiente = s8, s8.anterior = s186
+    Enlace: s10.siguiente = s185, s185.anterior = s10
+    Enlace: s107.siguiente = s70, s70.anterior = s107
+    Enlace: s9.siguiente = s108, s108.anterior = s9
+    Enlace: s72.siguiente = s10, s10.anterior = s72
+    Enlace: s12.siguiente = s71, s71.anterior = s12
+    Enlace: s69.siguiente = s11, s11.anterior = s69
+    Enlace: s11.siguiente = s16, s16.anterior = s11
+    Enlace: s188.siguiente = s12, s12.anterior = s188
+    Enlace: s15.siguiente = s187, s187.anterior = s15
+    Enlace: s19.siguiente = s21, s21.anterior = s19
+    Enlace: s14.siguiente = s20, s20.anterior = s14
+    Enlace: s22.siguiente = s13, s13.anterior = s22
+    Enlace: s195.siguiente = s14, s14.anterior = s195
+    Enlace: s16.siguiente = s196, s196.anterior = s16
+    Enlace: s13.siguiente = s15, s15.anterior = s13
+    Enlace: s17.siguiente = s19, s19.anterior = s17
+    Enlace: s100.siguiente = s18, s18.anterior = s100
+    Enlace: s96.siguiente = s99, s99.anterior = s96
+    Enlace: s20.siguiente = s95, s95.anterior = s20
+    Enlace: s21.siguiente = s179, s179.anterior = s21
+    Enlace: s180.siguiente = s22, s22.anterior = s180
+    Enlace: s24.siguiente = s47, s47.anterior = s24
+    Enlace: s48.siguiente = s23, s23.anterior = s48
+    Enlace: s85.siguiente = s24, s24.anterior = s85
+    Enlace: s26.siguiente = s86, s86.anterior = s26
+    Enlace: s88.siguiente = s25, s25.anterior = s88
+    Enlace: s23.siguiente = s87, s87.anterior = s23
+    Enlace: s28.siguiente = s26, s26.anterior = s28
+    Enlace: s32.siguiente = s27, s27.anterior = s32
+    Enlace: s25.siguiente = s31, s31.anterior = s25
+    Enlace: s102.siguiente = s30, s30.anterior = s102
+    Enlace: s29.siguiente = s101, s101.anterior = s29
+    Enlace: s31.siguiente = s54, s54.anterior = s31
+    Enlace: s56.siguiente = s32, s32.anterior = s56
+    Enlace: s34.siguiente = s55, s55.anterior = s34
+    Enlace: s53.siguiente = s33, s33.anterior = s53
+    Enlace: s33.siguiente = s181, s181.anterior = s33
+    Enlace: s110.siguiente = s34, s34.anterior = s110
+    Enlace: s184.siguiente = s109, s109.anterior = s184
+    Enlace: s106.siguiente = s183, s183.anterior = s106
+    Enlace: s36.siguiente = s105, s105.anterior = s36
+    Enlace: s182.siguiente = s35, s35.anterior = s182
+    Enlace: s35.siguiente = s198, s198.anterior = s35
+    Enlace: s200.siguiente = s36, s36.anterior = s200
+    Enlace: s38.siguiente = s199, s199.anterior = s38
+    Enlace: s197.siguiente = s37, s37.anterior = s197
+    Enlace: s37.siguiente = s46, s46.anterior = s37
+    Enlace: s45.siguiente = s38, s38.anterior = s45
+    Enlace: s49.siguiente = s39, s39.anterior = s49
+    Enlace: s40.siguiente = s50, s50.anterior = s40
+    Enlace: s79.siguiente = s40, s40.anterior = s79
+    Enlace: s42.siguiente = s80, s80.anterior = s42
+    Enlace: s82.siguiente = s41, s41.anterior = s82
+    Enlace: s39.siguiente = s81, s81.anterior = s39
+    Enlace: s191.siguiente = s42, s42.anterior = s191
+    Enlace: s44.siguiente = s192, s192.anterior = s44
+    Enlace: s194.siguiente = s43, s43.anterior = s194
+    Enlace: s41.siguiente = s193, s193.anterior = s41
+    Enlace: s203.siguiente = s44, s44.anterior = s203
+    Enlace: s46.siguiente = s204, s204.anterior = s46
+    Enlace: s206.siguiente = s45, s45.anterior = s206
+    Enlace: s43.siguiente = s205, s205.anterior = s43
+    Enlace: s95.siguiente = s49, s49.anterior = s95
+    Enlace: s47.siguiente = s96, s96.anterior = s47
+    Enlace: s98.siguiente = s48, s48.anterior = s98
+    Enlace: s50.siguiente = s97, s97.anterior = s50
+    Enlace: s52.siguiente = s77, s77.anterior = s52
+    Enlace: s78.siguiente = s51, s51.anterior = s78
+    Enlace: s87.siguiente = s52, s52.anterior = s87
+    Enlace: s54.siguiente = s88, s88.anterior = s54
+    Enlace: s90.siguiente = s53, s53.anterior = s90
+    Enlace: s51.siguiente = s89, s89.anterior = s51
+    Enlace: s112.siguiente = s56, s56.anterior = s112
+    Enlace: s58.siguiente = s111, s111.anterior = s58
+    Enlace: s109.siguiente = s57, s57.anterior = s109
+    Enlace: s55.siguiente = s110, s110.anterior = s55
+    Enlace: s62.siguiente = s60, s60.anterior = s62
+    Enlace: s59.siguiente = s61, s61.anterior = s59
+    Enlace: s61.siguiente = s64, s64.anterior = s61
+    Enlace: s63.siguiente = s62, s62.anterior = s63
+    Enlace: s64.siguiente = s74, s74.anterior = s64
+    Enlace: s76.siguiente = s63, s63.anterior = s76
+    Enlace: s73.siguiente = s75, s75.anterior = s73
+    Enlace: s81.siguiente = s65, s65.anterior = s81
+    Enlace: s66.siguiente = s82, s82.anterior = s66
+    Enlace: s193.siguiente = s66, s66.anterior = s193
+    Enlace: s68.siguiente = s194, s194.anterior = s68
+    Enlace: s196.siguiente = s67, s67.anterior = s196
+    Enlace: s65.siguiente = s195, s195.anterior = s65
+    Enlace: s205.siguiente = s68, s68.anterior = s205
+    Enlace: s202.siguiente = s206, s206.anterior = s202
+    Enlace: s70.siguiente = s201, s201.anterior = s70
+    Enlace: s67.siguiente = s69, s69.anterior = s67
+    Enlace: s190.siguiente = s72, s72.anterior = s190
+    Enlace: s74.siguiente = s189, s189.anterior = s74
+    Enlace: s187.siguiente = s73, s73.anterior = s187
+    Enlace: s71.siguiente = s188, s188.anterior = s71
+    Enlace: s104.siguiente = s76, s76.anterior = s104
+    Enlace: s75.siguiente = s103, s103.anterior = s75
+    Enlace: s77.siguiente = s93, s93.anterior = s77
+    Enlace: s91.siguiente = s78, s78.anterior = s91
+    Enlace: s80.siguiente = s92, s92.anterior = s80
+    Enlace: s94.siguiente = s79, s79.anterior = s94
+    Enlace: s84.siguiente = s100, s100.anterior = s84
+    Enlace: s99.siguiente = s83, s83.anterior = s99
+    Enlace: s149.siguiente = s84, s84.anterior = s149
+    Enlace: s152.siguiente = s150, s150.anterior = s152
+    Enlace: s86.siguiente = s151, s151.anterior = s86
+    Enlace: s83.siguiente = s85, s85.anterior = s83
+    Enlace: s89.siguiente = s91, s91.anterior = s89
+    Enlace: s92.siguiente = s90, s90.anterior = s92
+    Enlace: s97.siguiente = s94, s94.anterior = s97
+    Enlace: s93.siguiente = s98, s98.anterior = s93
+    Enlace: s101.siguiente = s104, s104.anterior = s101
+    Enlace: s103.siguiente = s102, s102.anterior = s103
+    Enlace: s105.siguiente = s200, s200.anterior = s105
+    Enlace: s108.siguiente = s106, s106.anterior = s108
+    Enlace: s201.siguiente = s107, s107.anterior = s201
+    Enlace: s199.siguiente = s202, s202.anterior = s199
+    Enlace: s114.siguiente = s125, s125.anterior = s114
+    Enlace: s126.siguiente = s113, s113.anterior = s126
+    Enlace: s259.siguiente = s114, s114.anterior = s259
+    Enlace: s116.siguiente = s260, s260.anterior = s116
+    Enlace: s262.siguiente = s115, s115.anterior = s262
+    Enlace: s113.siguiente = s261, s261.anterior = s113
+    Enlace: s255.siguiente = s116, s116.anterior = s255
+    Enlace: s118.siguiente = s256, s256.anterior = s118
+    Enlace: s258.siguiente = s117, s117.anterior = s258
+    Enlace: s115.siguiente = s257, s257.anterior = s115
+    Enlace: s164.siguiente = s118, s118.anterior = s164
+    Enlace: s120.siguiente = s163, s163.anterior = s120
+    Enlace: s161.siguiente = s119, s119.anterior = s161
+    Enlace: s117.siguiente = s162, s162.anterior = s117
+    Enlace: s122.siguiente = s120, s120.anterior = s122
+    Enlace: s119.siguiente = s121, s121.anterior = s119
+    Enlace: s121.siguiente = s124, s124.anterior = s121
+    Enlace: s123.siguiente = s122, s122.anterior = s123
+    Enlace: s129.siguiente = s123, s123.anterior = s129
+    Enlace: s124.siguiente = s130, s130.anterior = s124
+    Enlace: s247.siguiente = s249, s249.anterior = s247
+    Enlace: s125.siguiente = s248, s248.anterior = s125
+    Enlace: s128.siguiente = s126, s126.anterior = s128
+    Enlace: s250.siguiente = s127, s127.anterior = s250
+    Enlace: s127.siguiente = s173, s173.anterior = s127
+    Enlace: s171.siguiente = s128, s128.anterior = s171
+    Enlace: s130.siguiente = s172, s172.anterior = s130
+    Enlace: s174.siguiente = s129, s129.anterior = s174
+    Enlace: s132.siguiente = s135, s135.anterior = s132
+    Enlace: s136.siguiente = s131, s131.anterior = s136
+    Enlace: s165.siguiente = s132, s132.anterior = s165
+    Enlace: s133.siguiente = s166, s166.anterior = s133
+    Enlace: s168.siguiente = s134, s134.anterior = s168
+    Enlace: s131.siguiente = s167, s167.anterior = s131
+    Enlace: s137.siguiente = s133, s133.anterior = s137
+    Enlace: s134.siguiente = s138, s138.anterior = s134
+    Enlace: s135.siguiente = s169, s169.anterior = s135
+    Enlace: s167.siguiente = s136, s136.anterior = s167
+    Enlace: s138.siguiente = s168, s168.anterior = s138
+    Enlace: s170.siguiente = s137, s137.anterior = s170
+    Enlace: s140.siguiente = s145, s145.anterior = s140
+    Enlace: s146.siguiente = s139, s139.anterior = s146
+    Enlace: s143.siguiente = s140, s140.anterior = s143
+    Enlace: s139.siguiente = s144, s144.anterior = s139
+    Enlace: s147.siguiente = s141, s141.anterior = s147
+    Enlace: s142.siguiente = s148, s148.anterior = s142
+    Enlace: s144.siguiente = s217, s217.anterior = s144
+    Enlace: s215.siguiente = s143, s143.anterior = s215
+    Enlace: s141.siguiente = s216, s216.anterior = s141
+    Enlace: s218.siguiente = s142, s142.anterior = s218
+    Enlace: s219.siguiente = s147, s147.anterior = s219
+    Enlace: s145.siguiente = s220, s220.anterior = s145
+    Enlace: s222.siguiente = s146, s146.anterior = s222
+    Enlace: s148.siguiente = s221, s221.anterior = s148
+    Enlace: s156.siguiente = s153, s153.anterior = s156
+    Enlace: s154.siguiente = s155, s155.anterior = s154
+    Enlace: s155.siguiente = s157, s157.anterior = s155
+    Enlace: s158.siguiente = s156, s156.anterior = s158
+    Enlace: s157.siguiente = s159, s159.anterior = s157
+    Enlace: s160.siguiente = s158, s158.anterior = s160
+    Enlace: s159.siguiente = s164, s164.anterior = s159
+    Enlace: s163.siguiente = s160, s160.anterior = s163
+    Enlace: s162.siguiente = s165, s165.anterior = s162
+    Enlace: s166.siguiente = s161, s161.anterior = s166
+    Enlace: s169.siguiente = s171, s171.anterior = s169
+    Enlace: s172.siguiente = s170, s170.anterior = s172
+    Enlace: s175.siguiente = s174, s174.anterior = s175
+    Enlace: s173.siguiente = s176, s176.anterior = s173
+    Enlace: s177.siguiente = s175, s175.anterior = s177
+    Enlace: s176.siguiente = s178, s178.anterior = s176
+    Enlace: s179.siguiente = s177, s177.anterior = s179
+    Enlace: s178.siguiente = s180, s180.anterior = s178
+    Enlace: s181.siguiente = s191, s191.anterior = s181
+    Enlace: s192.siguiente = s182, s182.anterior = s192
+    Enlace: s185.siguiente = s190, s190.anterior = s185
+    Enlace: s189.siguiente = s186, s186.anterior = s189
+    Enlace: s198.siguiente = s203, s203.anterior = s198
+    Enlace: s204.siguiente = s197, s197.anterior = s204
+    Enlace: s226.siguiente = s207, s207.anterior = s226
+    Enlace: s208.siguiente = s225, s225.anterior = s208
+    Enlace: s207.siguiente = s209, s209.anterior = s207
+    Enlace: s232.siguiente = s208, s208.anterior = s232
+    Enlace: s210.siguiente = s231, s231.anterior = s210
+    Enlace: s209.siguiente = s211, s211.anterior = s209
+    Enlace: s214.siguiente = s210, s210.anterior = s214
+    Enlace: s212.siguiente = s213, s213.anterior = s212
+    Enlace: s211.siguiente = s223, s223.anterior = s211
+    Enlace: s224.siguiente = s212, s212.anterior = s224
+    Enlace: s213.siguiente = s215, s215.anterior = s213
+    Enlace: s216.siguiente = s214, s214.anterior = s216
+    Enlace: s221.siguiente = s218, s218.anterior = s221
+    Enlace: s217.siguiente = s222, s222.anterior = s217
+    Enlace: s223.siguiente = s219, s219.anterior = s223
+    Enlace: s220.siguiente = s224, s224.anterior = s220
+    Enlace: s225.siguiente = s227, s227.anterior = s225
+    Enlace: s228.siguiente = s226, s226.anterior = s228
+    Enlace: s229.siguiente = s228, s228.anterior = s229
+    Enlace: s227.siguiente = s230, s230.anterior = s227
+    Enlace: s231.siguiente = s229, s229.anterior = s231
+    Enlace: s230.siguiente = s232, s232.anterior = s230
+    Enlace: s236.siguiente = s233, s233.anterior = s236
+    Enlace: s234.siguiente = s235, s235.anterior = s234
+    Enlace: s233.siguiente = s243, s243.anterior = s233
+    Enlace: s244.siguiente = s234, s234.anterior = s244
+    Enlace: s235.siguiente = s237, s237.anterior = s235
+    Enlace: s238.siguiente = s236, s236.anterior = s238
+    Enlace: s237.siguiente = s239, s239.anterior = s237
+    Enlace: s240.siguiente = s238, s238.anterior = s240
+    Enlace: s241.siguiente = s240, s240.anterior = s241
+    Enlace: s239.siguiente = s242, s242.anterior = s239
+    Enlace: s243.siguiente = s241, s241.anterior = s243
+    Enlace: s242.siguiente = s244, s244.anterior = s242
+    Enlace: s248.siguiente = s245, s245.anterior = s248
+    Enlace: s246.siguiente = s247, s247.anterior = s246
+    Enlace: s245.siguiente = s254, s254.anterior = s245
+    Enlace: s253.siguiente = s246, s246.anterior = s253
+    Enlace: s251.siguiente = s250, s250.anterior = s251
+    Enlace: s249.siguiente = s252, s252.anterior = s249
+    Enlace: s254.siguiente = s251, s251.anterior = s254
+    Enlace: s252.siguiente = s253, s253.anterior = s252
+    Enlace: s256.siguiente = s263, s263.anterior = s256
+    Enlace: s264.siguiente = s255, s255.anterior = s264
+    Enlace: s261.siguiente = s258, s258.anterior = s261
+    Enlace: s257.siguiente = s262, s262.anterior = s257
+    Enlace: s263.siguiente = s259, s259.anterior = s263
+    Enlace: s260.siguiente = s264, s264.anterior = s260
 
 --- Formando caras (ciclos) ---
   Iniciando ciclo desde s1
-    Añadida s1 (10.0,0.0), siguiente=s6
-    Añadida s6 (10.0,10.0), siguiente=s4
-    Añadida s4 (2.0,5.0), siguiente=s1
-  Ciclo cerrado con 3 aristas, área=40.0
+    Añadida s1 (0.0,0.0), siguiente=s3
+    Añadida s3 (10.0,0.0), siguiente=s152
+    Añadida s152 (10.0,2.0), siguiente=s150
+    Añadida s150 (5.0,1.0), siguiente=s1
+  Ciclo cerrado con 4 aristas, área=10.0
   Cara creada: f1
   Iniciando ciclo desde s2
-    Añadida s2 (10.0,10.0), siguiente=s3
-    Añadida s3 (10.0,0.0), siguiente=s5
-    Añadida s5 (2.0,5.0), siguiente=s2
-  Ciclo cerrado con 3 aristas, área=-40.0
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
   Área <= 0 -> ignorado
-  Iniciando ciclo desde s3
-    Añadida s3 (10.0,0.0), siguiente=s5
-    Añadida s5 (2.0,5.0), siguiente=s2
-    Añadida s2 (10.0,10.0), siguiente=s3
-  Ciclo cerrado con 3 aristas, área=-40.0
+  Iniciando ciclo desde s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
   Área <= 0 -> ignorado
   Iniciando ciclo desde s5
-    Añadida s5 (2.0,5.0), siguiente=s2
-    Añadida s2 (10.0,10.0), siguiente=s3
-    Añadida s3 (10.0,0.0), siguiente=s5
-  Ciclo cerrado con 3 aristas, área=-40.0
+    Añadida s5 (10.0,2.0), siguiente=s58
+    Añadida s58 (10.0,3.0), siguiente=s111
+    Añadida s111 (9.333333333333334,3.0), siguiente=s5
+  Ciclo cerrado con 3 aristas, área=0.3333333333333339
+  Cara creada: f2
+  Iniciando ciclo desde s6
+    Añadida s6 (10.0,3.0), siguiente=s29
+    Añadida s29 (10.0,2.0), siguiente=s101
+    Añadida s101 (14.0,2.0), siguiente=s104
+    Añadida s104 (16.0,5.0), siguiente=s76
+    Añadida s76 (14.0,9.0), siguiente=s63
+    Añadida s63 (12.0,9.0), siguiente=s62
+    Añadida s62 (14.0,6.0), siguiente=s60
+    Añadida s60 (12.0,3.0), siguiente=s6
+  Ciclo cerrado con 8 aristas, área=17.0
+  Cara creada: f3
+  Iniciando ciclo desde s7
+    Añadida s7 (10.0,3.0), siguiente=s184
+    Añadida s184 (10.0,5.5), siguiente=s109
+    Añadida s109 (8.0,5.0), siguiente=s57
+    Añadida s57 (9.333333333333334,3.0), siguiente=s7
+  Ciclo cerrado con 4 aristas, área=3.1666666666666643
+  Cara creada: f4
+  Iniciando ciclo desde s8
+    Añadida s8 (10.0,5.5), siguiente=s59
+    Añadida s59 (10.0,3.0), siguiente=s61
+    Añadida s61 (12.0,3.0), siguiente=s64
+    Añadida s64 (14.0,6.0), siguiente=s74
+    Añadida s74 (12.0,9.0), siguiente=s189
+    Añadida s189 (10.5,9.0), siguiente=s186
+    Añadida s186 (12.0,6.0), siguiente=s8
+  Ciclo cerrado con 7 aristas, área=13.75
+  Cara creada: f5
+  Iniciando ciclo desde s9
+    Añadida s9 (10.0,5.5), siguiente=s108
+    Añadida s108 (10.0,9.0), siguiente=s106
+    Añadida s106 (9.0,7.0), siguiente=s183
+    Añadida s183 (8.0,5.0), siguiente=s9
+  Ciclo cerrado con 4 aristas, área=3.5
+  Cara creada: f6
+  Iniciando ciclo desde s10
+    Añadida s10 (10.0,9.0), siguiente=s185
+    Añadida s185 (10.0,5.5), siguiente=s190
+    Añadida s190 (12.0,6.0), siguiente=s72
+    Añadida s72 (10.5,9.0), siguiente=s10
+  Ciclo cerrado con 4 aristas, área=4.25
+  Cara creada: f7
+  Iniciando ciclo desde s11
+    Añadida s11 (10.0,9.0), siguiente=s16
+    Añadida s16 (10.0,10.0), siguiente=s196
+    Añadida s196 (6.0,10.0), siguiente=s67
+    Añadida s67 (5.75,9.0), siguiente=s69
+    Añadida s69 (8.0,9.0), siguiente=s11
+  Ciclo cerrado con 5 aristas, área=4.125
+  Cara creada: f8
+  Iniciando ciclo desde s12
+    Añadida s12 (10.0,10.0), siguiente=s71
+    Añadida s71 (10.0,9.0), siguiente=s188
+    Añadida s188 (10.5,9.0), siguiente=s12
+  Ciclo cerrado con 3 aristas, área=0.25
+  Cara creada: f9
+  Iniciando ciclo desde s13
+    Añadida s13 (0.0,10.0), siguiente=s15
+    Añadida s15 (6.0,10.0), siguiente=s187
+    Añadida s187 (10.0,10.0), siguiente=s73
+    Añadida s73 (10.5,9.0), siguiente=s75
+    Añadida s75 (12.0,9.0), siguiente=s103
+    Añadida s103 (14.0,9.0), siguiente=s102
+    Añadida s102 (16.0,5.0), siguiente=s30
+    Añadida s30 (14.0,2.0), siguiente=s154
+    Añadida s154 (10.0,2.0), siguiente=s155
+    Añadida s155 (18.0,1.0), siguiente=s157
+    Añadida s157 (25.0,3.0), siguiente=s159
+    Añadida s159 (30.0,8.0), siguiente=s164
+    Añadida s164 (32.0,15.0), siguiente=s118
+    Añadida s118 (29.142857142857142,20.0), siguiente=s256
+    Añadida s256 (28.0,20.0), siguiente=s263
+    Añadida s263 (26.0,18.0), siguiente=s259
+    Añadida s259 (23.0,19.0), siguiente=s114
+    Añadida s114 (23.666666666666668,20.0), siguiente=s125
+    Añadida s125 (20.0,20.0), siguiente=s248
+    Añadida s248 (20.0,21.0), siguiente=s245
+    Añadida s245 (18.0,19.0), siguiente=s254
+    Añadida s254 (15.0,20.0), siguiente=s251
+    Añadida s251 (14.0,22.0), siguiente=s250
+    Añadida s250 (17.0,23.0), siguiente=s127
+    Añadida s127 (20.0,21.0), siguiente=s173
+    Añadida s173 (20.0,28.571428571428573), siguiente=s176
+    Añadida s176 (15.0,30.0), siguiente=s178
+    Añadida s178 (8.0,28.0), siguiente=s180
+    Añadida s180 (2.0,22.0), siguiente=s22
+    Añadida s22 (0.0,15.0), siguiente=s13
+  Ciclo cerrado con 30 aristas, área=537.3690476190477
+  Cara creada: f10
+  Iniciando ciclo desde s14
+    Añadida s14 (6.0,10.0), siguiente=s20
+    Añadida s20 (0.0,10.0), siguiente=s95
+    Añadida s95 (0.0,4.0), siguiente=s49
+    Añadida s49 (2.0,6.0), siguiente=s39
+    Añadida s39 (2.0,8.0), siguiente=s81
+    Añadida s81 (4.0,8.0), siguiente=s65
+    Añadida s65 (4.0,9.0), siguiente=s195
+    Añadida s195 (5.75,9.0), siguiente=s14
+  Ciclo cerrado con 8 aristas, área=15.875
+  Cara creada: f11
+  Iniciando ciclo desde s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
   Área <= 0 -> ignorado
-  Total de caras finitas creadas: 1
+  Iniciando ciclo desde s18
+    Añadida s18 (0.0,4.0), siguiente=s149
+    Añadida s149 (0.0,0.0), siguiente=s84
+    Añadida s84 (5.0,1.0), siguiente=s100
+    Añadida s100 (1.0,1.0), siguiente=s18
+  Ciclo cerrado con 4 aristas, área=4.0
+  Cara creada: f12
+  Iniciando ciclo desde s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s23
+    Añadida s23 (2.0,2.0), siguiente=s87
+    Añadida s87 (5.333333333333333,2.0), siguiente=s52
+    Añadida s52 (5.666666666666667,3.0), siguiente=s77
+    Añadida s77 (4.0,3.0), siguiente=s93
+    Añadida s93 (4.0,6.0), siguiente=s98
+    Añadida s98 (3.0,7.0), siguiente=s48
+    Añadida s48 (2.0,6.0), siguiente=s23
+  Ciclo cerrado con 7 aristas, área=10.5
+  Cara creada: f13
+  Iniciando ciclo desde s24
+    Añadida s24 (5.333333333333333,2.0), siguiente=s47
+    Añadida s47 (2.0,2.0), siguiente=s96
+    Añadida s96 (2.0,6.0), siguiente=s99
+    Añadida s99 (0.0,4.0), siguiente=s83
+    Añadida s83 (1.0,1.0), siguiente=s85
+    Añadida s85 (5.0,1.0), siguiente=s24
+  Ciclo cerrado con 6 aristas, área=9.666666666666666
+  Cara creada: f14
+  Iniciando ciclo desde s25
+    Añadida s25 (5.333333333333333,2.0), siguiente=s31
+    Añadida s31 (8.0,2.0), siguiente=s54
+    Añadida s54 (8.0,3.0), siguiente=s88
+    Añadida s88 (5.666666666666667,3.0), siguiente=s25
+  Ciclo cerrado con 4 aristas, área=2.5
+  Cara creada: f15
+  Iniciando ciclo desde s26
+    Añadida s26 (8.0,2.0), siguiente=s86
+    Añadida s86 (5.333333333333333,2.0), siguiente=s151
+    Añadida s151 (5.0,1.0), siguiente=s28
+    Añadida s28 (10.0,2.0), siguiente=s26
+  Ciclo cerrado con 4 aristas, área=2.3333333333333335
+  Cara creada: f16
+  Iniciando ciclo desde s27
+    Añadida s27 (8.0,2.0), siguiente=s112
+    Añadida s112 (10.0,2.0), siguiente=s56
+    Añadida s56 (9.333333333333334,3.0), siguiente=s32
+    Añadida s32 (8.0,3.0), siguiente=s27
+  Ciclo cerrado con 4 aristas, área=1.666666666666666
+  Cara creada: f17
+  Iniciando ciclo desde s33
+    Añadida s33 (8.0,3.0), siguiente=s181
+    Añadida s181 (8.0,5.0), siguiente=s191
+    Añadida s191 (5.0,6.0), siguiente=s42
+    Añadida s42 (5.5,8.0), siguiente=s80
+    Añadida s80 (4.0,8.0), siguiente=s92
+    Añadida s92 (4.0,6.0), siguiente=s90
+    Añadida s90 (6.0,4.0), siguiente=s53
+    Añadida s53 (5.666666666666667,3.0), siguiente=s33
+  Ciclo cerrado con 8 aristas, área=9.166666666666666
+  Cara creada: f18
+  Iniciando ciclo desde s34
+    Añadida s34 (8.0,5.0), siguiente=s55
+    Añadida s55 (8.0,3.0), siguiente=s110
+    Añadida s110 (9.333333333333334,3.0), siguiente=s34
+  Ciclo cerrado con 3 aristas, área=1.3333333333333357
+  Cara creada: f19
+  Iniciando ciclo desde s35
+    Añadida s35 (8.0,5.0), siguiente=s198
+    Añadida s198 (8.0,7.0), siguiente=s203
+    Añadida s203 (7.0,7.0), siguiente=s44
+    Añadida s44 (7.5,8.0), siguiente=s192
+    Añadida s192 (5.5,8.0), siguiente=s182
+    Añadida s182 (5.0,6.0), siguiente=s35
+  Ciclo cerrado con 6 aristas, área=6.25
+  Cara creada: f20
+  Iniciando ciclo desde s36
+    Añadida s36 (8.0,7.0), siguiente=s105
+    Añadida s105 (8.0,5.0), siguiente=s200
+    Añadida s200 (9.0,7.0), siguiente=s36
+  Ciclo cerrado con 3 aristas, área=1.0
+  Cara creada: f21
+  Iniciando ciclo desde s37
+    Añadida s37 (8.0,7.0), siguiente=s46
+    Añadida s46 (8.0,8.0), siguiente=s204
+    Añadida s204 (7.5,8.0), siguiente=s197
+    Añadida s197 (7.0,7.0), siguiente=s37
+  Ciclo cerrado con 4 aristas, área=0.75
+  Cara creada: f22
+  Iniciando ciclo desde s38
+    Añadida s38 (8.0,8.0), siguiente=s199
+    Añadida s199 (8.0,7.0), siguiente=s202
+    Añadida s202 (9.0,7.0), siguiente=s206
+    Añadida s206 (8.0,9.0), siguiente=s45
+    Añadida s45 (7.5,8.0), siguiente=s38
+  Ciclo cerrado con 5 aristas, área=1.25
+  Cara creada: f23
+  Iniciando ciclo desde s40
+    Añadida s40 (4.0,8.0), siguiente=s50
+    Añadida s50 (2.0,8.0), siguiente=s97
+    Añadida s97 (2.0,6.0), siguiente=s94
+    Añadida s94 (3.0,7.0), siguiente=s79
+    Añadida s79 (4.0,6.0), siguiente=s40
+  Ciclo cerrado con 5 aristas, área=3.0
+  Cara creada: f24
+  Iniciando ciclo desde s41
+    Añadida s41 (4.0,8.0), siguiente=s193
+    Añadida s193 (5.5,8.0), siguiente=s66
+    Añadida s66 (5.75,9.0), siguiente=s82
+    Añadida s82 (4.0,9.0), siguiente=s41
+  Ciclo cerrado con 4 aristas, área=1.625
+  Cara creada: f25
+  Iniciando ciclo desde s43
+    Añadida s43 (5.5,8.0), siguiente=s205
+    Añadida s205 (7.5,8.0), siguiente=s68
+    Añadida s68 (8.0,9.0), siguiente=s194
+    Añadida s194 (5.75,9.0), siguiente=s43
+  Ciclo cerrado con 4 aristas, área=2.125
+  Cara creada: f26
+  Iniciando ciclo desde s51
+    Añadida s51 (4.0,3.0), siguiente=s89
+    Añadida s89 (5.666666666666667,3.0), siguiente=s91
+    Añadida s91 (6.0,4.0), siguiente=s78
+    Añadida s78 (4.0,6.0), siguiente=s51
+  Ciclo cerrado con 4 aristas, área=3.833333333333334
+  Cara creada: f27
+  Iniciando ciclo desde s70
+    Añadida s70 (10.0,9.0), siguiente=s201
+    Añadida s201 (8.0,9.0), siguiente=s107
+    Añadida s107 (9.0,7.0), siguiente=s70
+  Ciclo cerrado con 3 aristas, área=2.0
+  Cara creada: f28
+  Iniciando ciclo desde s113
+    Añadida s113 (20.0,20.0), siguiente=s261
+    Añadida s261 (23.666666666666668,20.0), siguiente=s258
+    Añadida s258 (25.0,22.0), siguiente=s117
+    Añadida s117 (28.0,20.0), siguiente=s162
+    Añadida s162 (29.142857142857142,20.0), siguiente=s165
+    Añadida s165 (28.0,22.0), siguiente=s132
+    Añadida s132 (27.0,23.0), siguiente=s135
+    Añadida s135 (23.0,23.0), siguiente=s169
+    Añadida s169 (24.142857142857142,25.857142857142858), siguiente=s171
+    Añadida s171 (22.0,28.0), siguiente=s128
+    Añadida s128 (20.0,28.571428571428573), siguiente=s126
+    Añadida s126 (20.0,21.0), siguiente=s113
+  Ciclo cerrado con 12 aristas, área=37.666666666666686
+  Cara creada: f29
+  Iniciando ciclo desde s115
+    Añadida s115 (23.666666666666668,20.0), siguiente=s257
+    Añadida s257 (28.0,20.0), siguiente=s262
+    Añadida s262 (25.0,22.0), siguiente=s115
+  Ciclo cerrado con 3 aristas, área=4.333333333333314
+  Cara creada: f30
+  Iniciando ciclo desde s116
+    Añadida s116 (28.0,20.0), siguiente=s260
+    Añadida s260 (23.666666666666668,20.0), siguiente=s264
+    Añadida s264 (23.0,19.0), siguiente=s255
+    Añadida s255 (26.0,18.0), siguiente=s116
+  Ciclo cerrado con 4 aristas, área=6.166666666666657
+  Cara creada: f31
+  Iniciando ciclo desde s119
+    Añadida s119 (29.142857142857142,20.0), siguiente=s121
+    Añadida s121 (30.0,20.0), siguiente=s124
+    Añadida s124 (30.0,30.0), siguiente=s130
+    Añadida s130 (20.0,30.0), siguiente=s172
+    Añadida s172 (20.0,28.571428571428573), siguiente=s170
+    Añadida s170 (22.0,28.0), siguiente=s137
+    Añadida s137 (24.142857142857142,25.857142857142858), siguiente=s133
+    Añadida s133 (25.0,28.0), siguiente=s166
+    Añadida s166 (27.0,23.0), siguiente=s161
+    Añadida s161 (28.0,22.0), siguiente=s119
+  Ciclo cerrado con 10 aristas, área=48.00000000000006
+  Cara creada: f32
+  Iniciando ciclo desde s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s131
+    Añadida s131 (23.0,23.0), siguiente=s167
+    Añadida s167 (27.0,23.0), siguiente=s136
+    Añadida s136 (24.142857142857142,25.857142857142858), siguiente=s131
+  Ciclo cerrado con 3 aristas, área=5.714285714285666
+  Cara creada: f33
+  Iniciando ciclo desde s134
+    Añadida s134 (27.0,23.0), siguiente=s138
+    Añadida s138 (25.0,28.0), siguiente=s168
+    Añadida s168 (24.142857142857142,25.857142857142858), siguiente=s134
+  Ciclo cerrado con 3 aristas, área=4.285714285714278
+  Cara creada: f34
+  Iniciando ciclo desde s139
+    Añadida s139 (15.0,15.0), siguiente=s144
+    Añadida s144 (18.0,15.0), siguiente=s217
+    Añadida s217 (17.714285714285715,15.571428571428571), siguiente=s222
+    Añadida s222 (16.0,16.0), siguiente=s146
+    Añadida s146 (15.333333333333334,15.666666666666666), siguiente=s139
+  Ciclo cerrado con 5 aristas, área=2.095238095238088
+  Cara creada: f35
+  Iniciando ciclo desde s140
+    Añadida s140 (18.0,15.0), siguiente=s145
+    Añadida s145 (15.0,15.0), siguiente=s220
+    Añadida s220 (15.333333333333334,15.666666666666666), siguiente=s224
+    Añadida s224 (14.0,15.0), siguiente=s212
+    Añadida s212 (14.0,12.0), siguiente=s213
+    Añadida s213 (18.0,11.0), siguiente=s215
+    Añadida s215 (20.0,15.0), siguiente=s143
+    Añadida s143 (17.714285714285715,15.571428571428571), siguiente=s140
+  Ciclo cerrado con 8 aristas, área=18.904761904761926
+  Cara creada: f36
+  Iniciando ciclo desde s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s142
+    Añadida s142 (17.714285714285715,15.571428571428571), siguiente=s148
+    Añadida s148 (16.5,18.0), siguiente=s221
+    Añadida s221 (15.333333333333334,15.666666666666666), siguiente=s218
+    Añadida s218 (16.0,16.0), siguiente=s142
+  Ciclo cerrado con 4 aristas, área=2.404761904761912
+  Cara creada: f37
+  Iniciando ciclo desde s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+  Ciclo cerrado con 18 aristas, área=-792.7857142857142
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s179
+    Añadida s179 (0.0,15.0), siguiente=s177
+    Añadida s177 (2.0,22.0), siguiente=s175
+    Añadida s175 (8.0,28.0), siguiente=s174
+    Añadida s174 (15.0,30.0), siguiente=s129
+    Añadida s129 (20.0,28.571428571428573), siguiente=s123
+    Añadida s123 (20.0,30.0), siguiente=s122
+    Añadida s122 (30.0,30.0), siguiente=s120
+    Añadida s120 (30.0,20.0), siguiente=s163
+    Añadida s163 (29.142857142857142,20.0), siguiente=s160
+    Añadida s160 (32.0,15.0), siguiente=s158
+    Añadida s158 (30.0,8.0), siguiente=s156
+    Añadida s156 (25.0,3.0), siguiente=s153
+    Añadida s153 (18.0,1.0), siguiente=s4
+    Añadida s4 (10.0,2.0), siguiente=s2
+    Añadida s2 (10.0,0.0), siguiente=s17
+    Añadida s17 (0.0,0.0), siguiente=s19
+    Añadida s19 (0.0,4.0), siguiente=s21
+    Añadida s21 (0.0,10.0), siguiente=s179
+  Ciclo cerrado con 18 aristas, área=-792.7857142857143
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s208
+    Añadida s208 (22.0,10.0), siguiente=s225
+    Añadida s225 (26.0,9.0), siguiente=s227
+    Añadida s227 (28.0,12.0), siguiente=s230
+    Añadida s230 (24.0,14.0), siguiente=s232
+    Añadida s232 (22.0,13.0), siguiente=s208
+  Ciclo cerrado con 5 aristas, área=20.0
+  Cara creada: f38
+  Iniciando ciclo desde s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s231
+    Añadida s231 (22.0,10.0), siguiente=s229
+    Añadida s229 (22.0,13.0), siguiente=s228
+    Añadida s228 (24.0,14.0), siguiente=s226
+    Añadida s226 (28.0,12.0), siguiente=s207
+    Añadida s207 (26.0,9.0), siguiente=s209
+    Añadida s209 (22.0,10.0), siguiente=s211
+    Añadida s211 (18.0,11.0), siguiente=s223
+    Añadida s223 (14.0,12.0), siguiente=s219
+    Añadida s219 (14.0,15.0), siguiente=s147
+    Añadida s147 (15.333333333333334,15.666666666666666), siguiente=s141
+    Añadida s141 (16.5,18.0), siguiente=s216
+    Añadida s216 (17.714285714285715,15.571428571428571), siguiente=s214
+    Añadida s214 (20.0,15.0), siguiente=s210
+    Añadida s210 (18.0,11.0), siguiente=s231
+  Ciclo cerrado con 14 aristas, área=-43.404761904761926
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s233
+    Añadida s233 (6.0,16.0), siguiente=s243
+    Añadida s243 (4.0,18.0), siguiente=s241
+    Añadida s241 (5.0,20.0), siguiente=s240
+    Añadida s240 (8.0,21.0), siguiente=s238
+    Añadida s238 (12.0,19.0), siguiente=s236
+    Añadida s236 (10.0,17.0), siguiente=s233
+  Ciclo cerrado con 6 aristas, área=-24.5
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s234
+    Añadida s234 (4.0,18.0), siguiente=s235
+    Añadida s235 (6.0,16.0), siguiente=s237
+    Añadida s237 (10.0,17.0), siguiente=s239
+    Añadida s239 (12.0,19.0), siguiente=s242
+    Añadida s242 (8.0,21.0), siguiente=s244
+    Añadida s244 (5.0,20.0), siguiente=s234
+  Ciclo cerrado con 6 aristas, área=24.5
+  Cara creada: f39
+  Iniciando ciclo desde s236
+    Añadida s236 (10.0,17.0), siguiente=s233
+    Añadida s233 (6.0,16.0), siguiente=s243
+    Añadida s243 (4.0,18.0), siguiente=s241
+    Añadida s241 (5.0,20.0), siguiente=s240
+    Añadida s240 (8.0,21.0), siguiente=s238
+    Añadida s238 (12.0,19.0), siguiente=s236
+  Ciclo cerrado con 6 aristas, área=-24.5
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s238
+    Añadida s238 (12.0,19.0), siguiente=s236
+    Añadida s236 (10.0,17.0), siguiente=s233
+    Añadida s233 (6.0,16.0), siguiente=s243
+    Añadida s243 (4.0,18.0), siguiente=s241
+    Añadida s241 (5.0,20.0), siguiente=s240
+    Añadida s240 (8.0,21.0), siguiente=s238
+  Ciclo cerrado con 6 aristas, área=-24.5
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s240
+    Añadida s240 (8.0,21.0), siguiente=s238
+    Añadida s238 (12.0,19.0), siguiente=s236
+    Añadida s236 (10.0,17.0), siguiente=s233
+    Añadida s233 (6.0,16.0), siguiente=s243
+    Añadida s243 (4.0,18.0), siguiente=s241
+    Añadida s241 (5.0,20.0), siguiente=s240
+  Ciclo cerrado con 6 aristas, área=-24.5
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s241
+    Añadida s241 (5.0,20.0), siguiente=s240
+    Añadida s240 (8.0,21.0), siguiente=s238
+    Añadida s238 (12.0,19.0), siguiente=s236
+    Añadida s236 (10.0,17.0), siguiente=s233
+    Añadida s233 (6.0,16.0), siguiente=s243
+    Añadida s243 (4.0,18.0), siguiente=s241
+  Ciclo cerrado con 6 aristas, área=-24.5
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s243
+    Añadida s243 (4.0,18.0), siguiente=s241
+    Añadida s241 (5.0,20.0), siguiente=s240
+    Añadida s240 (8.0,21.0), siguiente=s238
+    Añadida s238 (12.0,19.0), siguiente=s236
+    Añadida s236 (10.0,17.0), siguiente=s233
+    Añadida s233 (6.0,16.0), siguiente=s243
+  Ciclo cerrado con 6 aristas, área=-24.5
+  Área <= 0 -> ignorado
+  Iniciando ciclo desde s246
+    Añadida s246 (15.0,20.0), siguiente=s247
+    Añadida s247 (18.0,19.0), siguiente=s249
+    Añadida s249 (20.0,21.0), siguiente=s252
+    Añadida s252 (17.0,23.0), siguiente=s253
+    Añadida s253 (14.0,22.0), siguiente=s246
+  Ciclo cerrado con 5 aristas, área=14.0
+  Cara creada: f40
+  Total de caras finitas creadas: 40
 
 --- Creando cara infinita (f0) ---
-  Aristas sin cara: ['s2', 's3', 's5']
+  Aristas sin cara: ['s2', 's4', 's17', 's19', 's21', 's120', 's122', 's123', 's129', 's141', 's147', 's153', 's156', 's158', 's160', 's163', 's174', 's175', 's177', 's179', 's207', 's209', 's210', 's211', 's214', 's216', 's219', 's223', 's226', 's228', 's229', 's231', 's233', 's236', 's238', 's240', 's241', 's243']
+    Hueco representado por s2, ciclo de 18 aristas
+    Hueco representado por s141, ciclo de 14 aristas
+    Hueco representado por s233, ciclo de 6 aristas
+  f0 tiene 3 hueco(s) representados por: ['s2', 's141', 's233']
 
 === RESUMEN FINAL ===
-Vértices totales: 3
-Aristas totales (half‑edges): 6
-Caras totales (incluyendo f0): 2
-  Vértice p1: (10.0, 0.0) incidente=s1
-  Vértice p2: (10.0, 10.0) incidente=s2
-  Vértice p3: (2.0, 5.0) incidente=s4
-  Arista s1: orig=p1 pareja=s2 cara=f1 sig=s6 ant=s4
-  Arista s2: orig=p2 pareja=s1 cara=f0 sig=s3 ant=s5
-  Arista s3: orig=p1 pareja=s4 cara=f0 sig=s5 ant=s2
-  Arista s4: orig=p3 pareja=s3 cara=f1 sig=s1 ant=s6
-  Arista s5: orig=p3 pareja=s6 cara=f0 sig=s2 ant=s3
-  Arista s6: orig=p2 pareja=s5 cara=f1 sig=s4 ant=s1
+Vértices totales: 95
+Aristas totales (half‑edges): 264
+Caras totales (incluyendo f0): 41
+  Vértice p1: (0.0, 0.0) incidente=s1
+  Vértice p2: (10.0, 0.0) incidente=s2
+  Vértice p3: (10.0, 2.0) incidente=s4
+  Vértice p4: (10.0, 3.0) incidente=s6
+  Vértice p5: (10.0, 5.5) incidente=s8
+  Vértice p6: (10.0, 9.0) incidente=s10
+  Vértice p7: (10.0, 10.0) incidente=s12
+  Vértice p8: (0.0, 10.0) incidente=s13
+  Vértice p9: (6.0, 10.0) incidente=s14
+  Vértice p10: (0.0, 4.0) incidente=s18
+  Vértice p11: (0.0, 15.0) incidente=s22
+  Vértice p12: (2.0, 2.0) incidente=s23
+  Vértice p13: (5.333333333333333, 2.0) incidente=s24
+  Vértice p14: (8.0, 2.0) incidente=s26
+  Vértice p15: (14.0, 2.0) incidente=s30
+  Vértice p16: (8.0, 3.0) incidente=s32
+  Vértice p17: (8.0, 5.0) incidente=s34
+  Vértice p18: (8.0, 7.0) incidente=s36
+  Vértice p19: (8.0, 8.0) incidente=s38
+  Vértice p20: (2.0, 8.0) incidente=s39
+  Vértice p21: (4.0, 8.0) incidente=s40
+  Vértice p22: (5.5, 8.0) incidente=s42
+  Vértice p23: (7.5, 8.0) incidente=s44
+  Vértice p24: (2.0, 6.0) incidente=s48
+  Vértice p25: (4.0, 3.0) incidente=s51
+  Vértice p26: (5.666666666666667, 3.0) incidente=s52
+  Vértice p27: (9.333333333333334, 3.0) incidente=s56
+  Vértice p28: (12.0, 3.0) incidente=s60
+  Vértice p29: (14.0, 6.0) incidente=s62
+  Vértice p30: (12.0, 9.0) incidente=s63
+  Vértice p31: (4.0, 9.0) incidente=s65
+  Vértice p32: (5.75, 9.0) incidente=s66
+  Vértice p33: (8.0, 9.0) incidente=s68
+  Vértice p34: (10.5, 9.0) incidente=s72
+  Vértice p35: (14.0, 9.0) incidente=s76
+  Vértice p36: (4.0, 6.0) incidente=s78
+  Vértice p37: (1.0, 1.0) incidente=s83
+  Vértice p38: (5.0, 1.0) incidente=s84
+  Vértice p39: (6.0, 4.0) incidente=s90
+  Vértice p40: (3.0, 7.0) incidente=s94
+  Vértice p41: (16.0, 5.0) incidente=s102
+  Vértice p42: (9.0, 7.0) incidente=s106
+  Vértice p43: (20.0, 20.0) incidente=s113
+  Vértice p44: (23.666666666666668, 20.0) incidente=s114
+  Vértice p45: (28.0, 20.0) incidente=s116
+  Vértice p46: (29.142857142857142, 20.0) incidente=s118
+  Vértice p47: (30.0, 20.0) incidente=s120
+  Vértice p48: (30.0, 30.0) incidente=s122
+  Vértice p49: (20.0, 30.0) incidente=s123
+  Vértice p50: (20.0, 21.0) incidente=s126
+  Vértice p51: (20.0, 28.571428571428573) incidente=s128
+  Vértice p52: (23.0, 23.0) incidente=s131
+  Vértice p53: (27.0, 23.0) incidente=s132
+  Vértice p54: (25.0, 28.0) incidente=s133
+  Vértice p55: (24.142857142857142, 25.857142857142858) incidente=s136
+  Vértice p56: (15.0, 15.0) incidente=s139
+  Vértice p57: (18.0, 15.0) incidente=s140
+  Vértice p58: (16.5, 18.0) incidente=s141
+  Vértice p59: (17.714285714285715, 15.571428571428571) incidente=s142
+  Vértice p60: (15.333333333333334, 15.666666666666666) incidente=s146
+  Vértice p61: (18.0, 1.0) incidente=s153
+  Vértice p62: (25.0, 3.0) incidente=s156
+  Vértice p63: (30.0, 8.0) incidente=s158
+  Vértice p64: (32.0, 15.0) incidente=s160
+  Vértice p65: (28.0, 22.0) incidente=s161
+  Vértice p66: (22.0, 28.0) incidente=s170
+  Vértice p67: (15.0, 30.0) incidente=s174
+  Vértice p68: (8.0, 28.0) incidente=s175
+  Vértice p69: (2.0, 22.0) incidente=s177
+  Vértice p70: (5.0, 6.0) incidente=s182
+  Vértice p71: (12.0, 6.0) incidente=s186
+  Vértice p72: (7.0, 7.0) incidente=s197
+  Vértice p73: (26.0, 9.0) incidente=s207
+  Vértice p74: (22.0, 10.0) incidente=s208
+  Vértice p75: (18.0, 11.0) incidente=s210
+  Vértice p76: (14.0, 12.0) incidente=s212
+  Vértice p77: (20.0, 15.0) incidente=s214
+  Vértice p78: (16.0, 16.0) incidente=s218
+  Vértice p79: (14.0, 15.0) incidente=s219
+  Vértice p80: (28.0, 12.0) incidente=s226
+  Vértice p81: (24.0, 14.0) incidente=s228
+  Vértice p82: (22.0, 13.0) incidente=s229
+  Vértice p83: (6.0, 16.0) incidente=s233
+  Vértice p84: (4.0, 18.0) incidente=s234
+  Vértice p85: (10.0, 17.0) incidente=s236
+  Vértice p86: (12.0, 19.0) incidente=s238
+  Vértice p87: (8.0, 21.0) incidente=s240
+  Vértice p88: (5.0, 20.0) incidente=s241
+  Vértice p89: (18.0, 19.0) incidente=s245
+  Vértice p90: (15.0, 20.0) incidente=s246
+  Vértice p91: (17.0, 23.0) incidente=s250
+  Vértice p92: (14.0, 22.0) incidente=s251
+  Vértice p93: (26.0, 18.0) incidente=s255
+  Vértice p94: (25.0, 22.0) incidente=s258
+  Vértice p95: (23.0, 19.0) incidente=s259
+  Arista s1: orig=p1 pareja=s2 cara=f1 sig=s3 ant=s150
+  Arista s2: orig=p2 pareja=s1 cara=f0 sig=s17 ant=s4
+  Arista s3: orig=p2 pareja=s4 cara=f1 sig=s152 ant=s1
+  Arista s4: orig=p3 pareja=s3 cara=f0 sig=s2 ant=s153
+  Arista s5: orig=p3 pareja=s6 cara=f2 sig=s58 ant=s111
+  Arista s6: orig=p4 pareja=s5 cara=f3 sig=s29 ant=s60
+  Arista s7: orig=p4 pareja=s8 cara=f4 sig=s184 ant=s57
+  Arista s8: orig=p5 pareja=s7 cara=f5 sig=s59 ant=s186
+  Arista s9: orig=p5 pareja=s10 cara=f6 sig=s108 ant=s183
+  Arista s10: orig=p6 pareja=s9 cara=f7 sig=s185 ant=s72
+  Arista s11: orig=p6 pareja=s12 cara=f8 sig=s16 ant=s69
+  Arista s12: orig=p7 pareja=s11 cara=f9 sig=s71 ant=s188
+  Arista s13: orig=p8 pareja=s14 cara=f10 sig=s15 ant=s22
+  Arista s14: orig=p9 pareja=s13 cara=f11 sig=s20 ant=s195
+  Arista s15: orig=p9 pareja=s16 cara=f10 sig=s187 ant=s13
+  Arista s16: orig=p7 pareja=s15 cara=f8 sig=s196 ant=s11
+  Arista s17: orig=p1 pareja=s18 cara=f0 sig=s19 ant=s2
+  Arista s18: orig=p10 pareja=s17 cara=f12 sig=s149 ant=s100
+  Arista s19: orig=p10 pareja=s20 cara=f0 sig=s21 ant=s17
+  Arista s20: orig=p8 pareja=s19 cara=f11 sig=s95 ant=s14
+  Arista s21: orig=p8 pareja=s22 cara=f0 sig=s179 ant=s19
+  Arista s22: orig=p11 pareja=s21 cara=f10 sig=s13 ant=s180
+  Arista s23: orig=p12 pareja=s24 cara=f13 sig=s87 ant=s48
+  Arista s24: orig=p13 pareja=s23 cara=f14 sig=s47 ant=s85
+  Arista s25: orig=p13 pareja=s26 cara=f15 sig=s31 ant=s88
+  Arista s26: orig=p14 pareja=s25 cara=f16 sig=s86 ant=s28
+  Arista s27: orig=p14 pareja=s28 cara=f17 sig=s112 ant=s32
+  Arista s28: orig=p3 pareja=s27 cara=f16 sig=s26 ant=s151
+  Arista s29: orig=p3 pareja=s30 cara=f3 sig=s101 ant=s6
+  Arista s30: orig=p15 pareja=s29 cara=f10 sig=s154 ant=s102
+  Arista s31: orig=p14 pareja=s32 cara=f15 sig=s54 ant=s25
+  Arista s32: orig=p16 pareja=s31 cara=f17 sig=s27 ant=s56
+  Arista s33: orig=p16 pareja=s34 cara=f18 sig=s181 ant=s53
+  Arista s34: orig=p17 pareja=s33 cara=f19 sig=s55 ant=s110
+  Arista s35: orig=p17 pareja=s36 cara=f20 sig=s198 ant=s182
+  Arista s36: orig=p18 pareja=s35 cara=f21 sig=s105 ant=s200
+  Arista s37: orig=p18 pareja=s38 cara=f22 sig=s46 ant=s197
+  Arista s38: orig=p19 pareja=s37 cara=f23 sig=s199 ant=s45
+  Arista s39: orig=p20 pareja=s40 cara=f11 sig=s81 ant=s49
+  Arista s40: orig=p21 pareja=s39 cara=f24 sig=s50 ant=s79
+  Arista s41: orig=p21 pareja=s42 cara=f25 sig=s193 ant=s82
+  Arista s42: orig=p22 pareja=s41 cara=f18 sig=s80 ant=s191
+  Arista s43: orig=p22 pareja=s44 cara=f26 sig=s205 ant=s194
+  Arista s44: orig=p23 pareja=s43 cara=f20 sig=s192 ant=s203
+  Arista s45: orig=p23 pareja=s46 cara=f23 sig=s38 ant=s206
+  Arista s46: orig=p19 pareja=s45 cara=f22 sig=s204 ant=s37
+  Arista s47: orig=p12 pareja=s48 cara=f14 sig=s96 ant=s24
+  Arista s48: orig=p24 pareja=s47 cara=f13 sig=s23 ant=s98
+  Arista s49: orig=p24 pareja=s50 cara=f11 sig=s39 ant=s95
+  Arista s50: orig=p20 pareja=s49 cara=f24 sig=s97 ant=s40
+  Arista s51: orig=p25 pareja=s52 cara=f27 sig=s89 ant=s78
+  Arista s52: orig=p26 pareja=s51 cara=f13 sig=s77 ant=s87
+  Arista s53: orig=p26 pareja=s54 cara=f18 sig=s33 ant=s90
+  Arista s54: orig=p16 pareja=s53 cara=f15 sig=s88 ant=s31
+  Arista s55: orig=p16 pareja=s56 cara=f19 sig=s110 ant=s34
+  Arista s56: orig=p27 pareja=s55 cara=f17 sig=s32 ant=s112
+  Arista s57: orig=p27 pareja=s58 cara=f4 sig=s7 ant=s109
+  Arista s58: orig=p4 pareja=s57 cara=f2 sig=s111 ant=s5
+  Arista s59: orig=p4 pareja=s60 cara=f5 sig=s61 ant=s8
+  Arista s60: orig=p28 pareja=s59 cara=f3 sig=s6 ant=s62
+  Arista s61: orig=p28 pareja=s62 cara=f5 sig=s64 ant=s59
+  Arista s62: orig=p29 pareja=s61 cara=f3 sig=s60 ant=s63
+  Arista s63: orig=p30 pareja=s64 cara=f3 sig=s62 ant=s76
+  Arista s64: orig=p29 pareja=s63 cara=f5 sig=s74 ant=s61
+  Arista s65: orig=p31 pareja=s66 cara=f11 sig=s195 ant=s81
+  Arista s66: orig=p32 pareja=s65 cara=f25 sig=s82 ant=s193
+  Arista s67: orig=p32 pareja=s68 cara=f8 sig=s69 ant=s196
+  Arista s68: orig=p33 pareja=s67 cara=f26 sig=s194 ant=s205
+  Arista s69: orig=p33 pareja=s70 cara=f8 sig=s11 ant=s67
+  Arista s70: orig=p6 pareja=s69 cara=f28 sig=s201 ant=s107
+  Arista s71: orig=p6 pareja=s72 cara=f9 sig=s188 ant=s12
+  Arista s72: orig=p34 pareja=s71 cara=f7 sig=s10 ant=s190
+  Arista s73: orig=p34 pareja=s74 cara=f10 sig=s75 ant=s187
+  Arista s74: orig=p30 pareja=s73 cara=f5 sig=s189 ant=s64
+  Arista s75: orig=p30 pareja=s76 cara=f10 sig=s103 ant=s73
+  Arista s76: orig=p35 pareja=s75 cara=f3 sig=s63 ant=s104
+  Arista s77: orig=p25 pareja=s78 cara=f13 sig=s93 ant=s52
+  Arista s78: orig=p36 pareja=s77 cara=f27 sig=s51 ant=s91
+  Arista s79: orig=p36 pareja=s80 cara=f24 sig=s40 ant=s94
+  Arista s80: orig=p21 pareja=s79 cara=f18 sig=s92 ant=s42
+  Arista s81: orig=p21 pareja=s82 cara=f11 sig=s65 ant=s39
+  Arista s82: orig=p31 pareja=s81 cara=f25 sig=s41 ant=s66
+  Arista s83: orig=p37 pareja=s84 cara=f14 sig=s85 ant=s99
+  Arista s84: orig=p38 pareja=s83 cara=f12 sig=s100 ant=s149
+  Arista s85: orig=p38 pareja=s86 cara=f14 sig=s24 ant=s83
+  Arista s86: orig=p13 pareja=s85 cara=f16 sig=s151 ant=s26
+  Arista s87: orig=p13 pareja=s88 cara=f13 sig=s52 ant=s23
+  Arista s88: orig=p26 pareja=s87 cara=f15 sig=s25 ant=s54
+  Arista s89: orig=p26 pareja=s90 cara=f27 sig=s91 ant=s51
+  Arista s90: orig=p39 pareja=s89 cara=f18 sig=s53 ant=s92
+  Arista s91: orig=p39 pareja=s92 cara=f27 sig=s78 ant=s89
+  Arista s92: orig=p36 pareja=s91 cara=f18 sig=s90 ant=s80
+  Arista s93: orig=p36 pareja=s94 cara=f13 sig=s98 ant=s77
+  Arista s94: orig=p40 pareja=s93 cara=f24 sig=s79 ant=s97
+  Arista s95: orig=p10 pareja=s96 cara=f11 sig=s49 ant=s20
+  Arista s96: orig=p24 pareja=s95 cara=f14 sig=s99 ant=s47
+  Arista s97: orig=p24 pareja=s98 cara=f24 sig=s94 ant=s50
+  Arista s98: orig=p40 pareja=s97 cara=f13 sig=s48 ant=s93
+  Arista s99: orig=p10 pareja=s100 cara=f14 sig=s83 ant=s96
+  Arista s100: orig=p37 pareja=s99 cara=f12 sig=s18 ant=s84
+  Arista s101: orig=p15 pareja=s102 cara=f3 sig=s104 ant=s29
+  Arista s102: orig=p41 pareja=s101 cara=f10 sig=s30 ant=s103
+  Arista s103: orig=p35 pareja=s104 cara=f10 sig=s102 ant=s75
+  Arista s104: orig=p41 pareja=s103 cara=f3 sig=s76 ant=s101
+  Arista s105: orig=p17 pareja=s106 cara=f21 sig=s200 ant=s36
+  Arista s106: orig=p42 pareja=s105 cara=f6 sig=s183 ant=s108
+  Arista s107: orig=p42 pareja=s108 cara=f28 sig=s70 ant=s201
+  Arista s108: orig=p6 pareja=s107 cara=f6 sig=s106 ant=s9
+  Arista s109: orig=p17 pareja=s110 cara=f4 sig=s57 ant=s184
+  Arista s110: orig=p27 pareja=s109 cara=f19 sig=s34 ant=s55
+  Arista s111: orig=p27 pareja=s112 cara=f2 sig=s5 ant=s58
+  Arista s112: orig=p3 pareja=s111 cara=f17 sig=s56 ant=s27
+  Arista s113: orig=p43 pareja=s114 cara=f29 sig=s261 ant=s126
+  Arista s114: orig=p44 pareja=s113 cara=f10 sig=s125 ant=s259
+  Arista s115: orig=p44 pareja=s116 cara=f30 sig=s257 ant=s262
+  Arista s116: orig=p45 pareja=s115 cara=f31 sig=s260 ant=s255
+  Arista s117: orig=p45 pareja=s118 cara=f29 sig=s162 ant=s258
+  Arista s118: orig=p46 pareja=s117 cara=f10 sig=s256 ant=s164
+  Arista s119: orig=p46 pareja=s120 cara=f32 sig=s121 ant=s161
+  Arista s120: orig=p47 pareja=s119 cara=f0 sig=s163 ant=s122
+  Arista s121: orig=p47 pareja=s122 cara=f32 sig=s124 ant=s119
+  Arista s122: orig=p48 pareja=s121 cara=f0 sig=s120 ant=s123
+  Arista s123: orig=p49 pareja=s124 cara=f0 sig=s122 ant=s129
+  Arista s124: orig=p48 pareja=s123 cara=f32 sig=s130 ant=s121
+  Arista s125: orig=p43 pareja=s126 cara=f10 sig=s248 ant=s114
+  Arista s126: orig=p50 pareja=s125 cara=f29 sig=s113 ant=s128
+  Arista s127: orig=p50 pareja=s128 cara=f10 sig=s173 ant=s250
+  Arista s128: orig=p51 pareja=s127 cara=f29 sig=s126 ant=s171
+  Arista s129: orig=p51 pareja=s130 cara=f0 sig=s123 ant=s174
+  Arista s130: orig=p49 pareja=s129 cara=f32 sig=s172 ant=s124
+  Arista s131: orig=p52 pareja=s132 cara=f33 sig=s167 ant=s136
+  Arista s132: orig=p53 pareja=s131 cara=f29 sig=s135 ant=s165
+  Arista s133: orig=p54 pareja=s134 cara=f32 sig=s166 ant=s137
+  Arista s134: orig=p53 pareja=s133 cara=f34 sig=s138 ant=s168
+  Arista s135: orig=p52 pareja=s136 cara=f29 sig=s169 ant=s132
+  Arista s136: orig=p55 pareja=s135 cara=f33 sig=s131 ant=s167
+  Arista s137: orig=p55 pareja=s138 cara=f32 sig=s133 ant=s170
+  Arista s138: orig=p54 pareja=s137 cara=f34 sig=s168 ant=s134
+  Arista s139: orig=p56 pareja=s140 cara=f35 sig=s144 ant=s146
+  Arista s140: orig=p57 pareja=s139 cara=f36 sig=s145 ant=s143
+  Arista s141: orig=p58 pareja=s142 cara=f0 sig=s216 ant=s147
+  Arista s142: orig=p59 pareja=s141 cara=f37 sig=s148 ant=s218
+  Arista s143: orig=p59 pareja=s144 cara=f36 sig=s140 ant=s215
+  Arista s144: orig=p57 pareja=s143 cara=f35 sig=s217 ant=s139
+  Arista s145: orig=p56 pareja=s146 cara=f36 sig=s220 ant=s140
+  Arista s146: orig=p60 pareja=s145 cara=f35 sig=s139 ant=s222
+  Arista s147: orig=p60 pareja=s148 cara=f0 sig=s141 ant=s219
+  Arista s148: orig=p58 pareja=s147 cara=f37 sig=s221 ant=s142
+  Arista s149: orig=p1 pareja=s150 cara=f12 sig=s84 ant=s18
+  Arista s150: orig=p38 pareja=s149 cara=f1 sig=s1 ant=s152
+  Arista s151: orig=p38 pareja=s152 cara=f16 sig=s28 ant=s86
+  Arista s152: orig=p3 pareja=s151 cara=f1 sig=s150 ant=s3
+  Arista s153: orig=p61 pareja=s154 cara=f0 sig=s4 ant=s156
+  Arista s154: orig=p3 pareja=s153 cara=f10 sig=s155 ant=s30
+  Arista s155: orig=p61 pareja=s156 cara=f10 sig=s157 ant=s154
+  Arista s156: orig=p62 pareja=s155 cara=f0 sig=s153 ant=s158
+  Arista s157: orig=p62 pareja=s158 cara=f10 sig=s159 ant=s155
+  Arista s158: orig=p63 pareja=s157 cara=f0 sig=s156 ant=s160
+  Arista s159: orig=p63 pareja=s160 cara=f10 sig=s164 ant=s157
+  Arista s160: orig=p64 pareja=s159 cara=f0 sig=s158 ant=s163
+  Arista s161: orig=p65 pareja=s162 cara=f32 sig=s119 ant=s166
+  Arista s162: orig=p46 pareja=s161 cara=f29 sig=s165 ant=s117
+  Arista s163: orig=p46 pareja=s164 cara=f0 sig=s160 ant=s120
+  Arista s164: orig=p64 pareja=s163 cara=f10 sig=s118 ant=s159
+  Arista s165: orig=p65 pareja=s166 cara=f29 sig=s132 ant=s162
+  Arista s166: orig=p53 pareja=s165 cara=f32 sig=s161 ant=s133
+  Arista s167: orig=p53 pareja=s168 cara=f33 sig=s136 ant=s131
+  Arista s168: orig=p55 pareja=s167 cara=f34 sig=s134 ant=s138
+  Arista s169: orig=p55 pareja=s170 cara=f29 sig=s171 ant=s135
+  Arista s170: orig=p66 pareja=s169 cara=f32 sig=s137 ant=s172
+  Arista s171: orig=p66 pareja=s172 cara=f29 sig=s128 ant=s169
+  Arista s172: orig=p51 pareja=s171 cara=f32 sig=s170 ant=s130
+  Arista s173: orig=p51 pareja=s174 cara=f10 sig=s176 ant=s127
+  Arista s174: orig=p67 pareja=s173 cara=f0 sig=s129 ant=s175
+  Arista s175: orig=p68 pareja=s176 cara=f0 sig=s174 ant=s177
+  Arista s176: orig=p67 pareja=s175 cara=f10 sig=s178 ant=s173
+  Arista s177: orig=p69 pareja=s178 cara=f0 sig=s175 ant=s179
+  Arista s178: orig=p68 pareja=s177 cara=f10 sig=s180 ant=s176
+  Arista s179: orig=p11 pareja=s180 cara=f0 sig=s177 ant=s21
+  Arista s180: orig=p69 pareja=s179 cara=f10 sig=s22 ant=s178
+  Arista s181: orig=p17 pareja=s182 cara=f18 sig=s191 ant=s33
+  Arista s182: orig=p70 pareja=s181 cara=f20 sig=s35 ant=s192
+  Arista s183: orig=p17 pareja=s184 cara=f6 sig=s9 ant=s106
+  Arista s184: orig=p5 pareja=s183 cara=f4 sig=s109 ant=s7
+  Arista s185: orig=p5 pareja=s186 cara=f7 sig=s190 ant=s10
+  Arista s186: orig=p71 pareja=s185 cara=f5 sig=s8 ant=s189
+  Arista s187: orig=p7 pareja=s188 cara=f10 sig=s73 ant=s15
+  Arista s188: orig=p34 pareja=s187 cara=f9 sig=s12 ant=s71
+  Arista s189: orig=p34 pareja=s190 cara=f5 sig=s186 ant=s74
+  Arista s190: orig=p71 pareja=s189 cara=f7 sig=s72 ant=s185
+  Arista s191: orig=p70 pareja=s192 cara=f18 sig=s42 ant=s181
+  Arista s192: orig=p22 pareja=s191 cara=f20 sig=s182 ant=s44
+  Arista s193: orig=p22 pareja=s194 cara=f25 sig=s66 ant=s41
+  Arista s194: orig=p32 pareja=s193 cara=f26 sig=s43 ant=s68
+  Arista s195: orig=p32 pareja=s196 cara=f11 sig=s14 ant=s65
+  Arista s196: orig=p9 pareja=s195 cara=f8 sig=s67 ant=s16
+  Arista s197: orig=p72 pareja=s198 cara=f22 sig=s37 ant=s204
+  Arista s198: orig=p18 pareja=s197 cara=f20 sig=s203 ant=s35
+  Arista s199: orig=p18 pareja=s200 cara=f23 sig=s202 ant=s38
+  Arista s200: orig=p42 pareja=s199 cara=f21 sig=s36 ant=s105
+  Arista s201: orig=p33 pareja=s202 cara=f28 sig=s107 ant=s70
+  Arista s202: orig=p42 pareja=s201 cara=f23 sig=s206 ant=s199
+  Arista s203: orig=p72 pareja=s204 cara=f20 sig=s44 ant=s198
+  Arista s204: orig=p23 pareja=s203 cara=f22 sig=s197 ant=s46
+  Arista s205: orig=p23 pareja=s206 cara=f26 sig=s68 ant=s43
+  Arista s206: orig=p33 pareja=s205 cara=f23 sig=s45 ant=s202
+  Arista s207: orig=p73 pareja=s208 cara=f0 sig=s209 ant=s226
+  Arista s208: orig=p74 pareja=s207 cara=f38 sig=s225 ant=s232
+  Arista s209: orig=p74 pareja=s210 cara=f0 sig=s211 ant=s207
+  Arista s210: orig=p75 pareja=s209 cara=f0 sig=s231 ant=s214
+  Arista s211: orig=p75 pareja=s212 cara=f0 sig=s223 ant=s209
+  Arista s212: orig=p76 pareja=s211 cara=f36 sig=s213 ant=s224
+  Arista s213: orig=p75 pareja=s214 cara=f36 sig=s215 ant=s212
+  Arista s214: orig=p77 pareja=s213 cara=f0 sig=s210 ant=s216
+  Arista s215: orig=p77 pareja=s216 cara=f36 sig=s143 ant=s213
+  Arista s216: orig=p59 pareja=s215 cara=f0 sig=s214 ant=s141
+  Arista s217: orig=p59 pareja=s218 cara=f35 sig=s222 ant=s144
+  Arista s218: orig=p78 pareja=s217 cara=f37 sig=s142 ant=s221
+  Arista s219: orig=p79 pareja=s220 cara=f0 sig=s147 ant=s223
+  Arista s220: orig=p60 pareja=s219 cara=f36 sig=s224 ant=s145
+  Arista s221: orig=p60 pareja=s222 cara=f37 sig=s218 ant=s148
+  Arista s222: orig=p78 pareja=s221 cara=f35 sig=s146 ant=s217
+  Arista s223: orig=p76 pareja=s224 cara=f0 sig=s219 ant=s211
+  Arista s224: orig=p79 pareja=s223 cara=f36 sig=s212 ant=s220
+  Arista s225: orig=p73 pareja=s226 cara=f38 sig=s227 ant=s208
+  Arista s226: orig=p80 pareja=s225 cara=f0 sig=s207 ant=s228
+  Arista s227: orig=p80 pareja=s228 cara=f38 sig=s230 ant=s225
+  Arista s228: orig=p81 pareja=s227 cara=f0 sig=s226 ant=s229
+  Arista s229: orig=p82 pareja=s230 cara=f0 sig=s228 ant=s231
+  Arista s230: orig=p81 pareja=s229 cara=f38 sig=s232 ant=s227
+  Arista s231: orig=p74 pareja=s232 cara=f0 sig=s229 ant=s210
+  Arista s232: orig=p82 pareja=s231 cara=f38 sig=s208 ant=s230
+  Arista s233: orig=p83 pareja=s234 cara=f0 sig=s243 ant=s236
+  Arista s234: orig=p84 pareja=s233 cara=f39 sig=s235 ant=s244
+  Arista s235: orig=p83 pareja=s236 cara=f39 sig=s237 ant=s234
+  Arista s236: orig=p85 pareja=s235 cara=f0 sig=s233 ant=s238
+  Arista s237: orig=p85 pareja=s238 cara=f39 sig=s239 ant=s235
+  Arista s238: orig=p86 pareja=s237 cara=f0 sig=s236 ant=s240
+  Arista s239: orig=p86 pareja=s240 cara=f39 sig=s242 ant=s237
+  Arista s240: orig=p87 pareja=s239 cara=f0 sig=s238 ant=s241
+  Arista s241: orig=p88 pareja=s242 cara=f0 sig=s240 ant=s243
+  Arista s242: orig=p87 pareja=s241 cara=f39 sig=s244 ant=s239
+  Arista s243: orig=p84 pareja=s244 cara=f0 sig=s241 ant=s233
+  Arista s244: orig=p88 pareja=s243 cara=f39 sig=s234 ant=s242
+  Arista s245: orig=p89 pareja=s246 cara=f10 sig=s254 ant=s248
+  Arista s246: orig=p90 pareja=s245 cara=f40 sig=s247 ant=s253
+  Arista s247: orig=p89 pareja=s248 cara=f40 sig=s249 ant=s246
+  Arista s248: orig=p50 pareja=s247 cara=f10 sig=s245 ant=s125
+  Arista s249: orig=p50 pareja=s250 cara=f40 sig=s252 ant=s247
+  Arista s250: orig=p91 pareja=s249 cara=f10 sig=s127 ant=s251
+  Arista s251: orig=p92 pareja=s252 cara=f10 sig=s250 ant=s254
+  Arista s252: orig=p91 pareja=s251 cara=f40 sig=s253 ant=s249
+  Arista s253: orig=p92 pareja=s254 cara=f40 sig=s246 ant=s252
+  Arista s254: orig=p90 pareja=s253 cara=f10 sig=s251 ant=s245
+  Arista s255: orig=p93 pareja=s256 cara=f31 sig=s116 ant=s264
+  Arista s256: orig=p45 pareja=s255 cara=f10 sig=s263 ant=s118
+  Arista s257: orig=p45 pareja=s258 cara=f30 sig=s262 ant=s115
+  Arista s258: orig=p94 pareja=s257 cara=f29 sig=s117 ant=s261
+  Arista s259: orig=p95 pareja=s260 cara=f10 sig=s114 ant=s263
+  Arista s260: orig=p44 pareja=s259 cara=f31 sig=s264 ant=s116
+  Arista s261: orig=p44 pareja=s262 cara=f29 sig=s258 ant=s113
+  Arista s262: orig=p94 pareja=s261 cara=f30 sig=s115 ant=s257
+  Arista s263: orig=p93 pareja=s264 cara=f10 sig=s259 ant=s256
+  Arista s264: orig=p95 pareja=s263 cara=f31 sig=s255 ant=s260
   Cara f1: externo=s1 internos=[]
-  Cara f0: externo=None internos=['s2', 's3', 's5']
+  Cara f2: externo=s5 internos=[]
+  Cara f3: externo=s6 internos=[]
+  Cara f4: externo=s7 internos=[]
+  Cara f5: externo=s8 internos=[]
+  Cara f6: externo=s9 internos=[]
+  Cara f7: externo=s10 internos=[]
+  Cara f8: externo=s11 internos=[]
+  Cara f9: externo=s12 internos=[]
+  Cara f10: externo=s13 internos=[]
+  Cara f11: externo=s14 internos=[]
+  Cara f12: externo=s18 internos=[]
+  Cara f13: externo=s23 internos=[]
+  Cara f14: externo=s24 internos=[]
+  Cara f15: externo=s25 internos=[]
+  Cara f16: externo=s26 internos=[]
+  Cara f17: externo=s27 internos=[]
+  Cara f18: externo=s33 internos=[]
+  Cara f19: externo=s34 internos=[]
+  Cara f20: externo=s35 internos=[]
+  Cara f21: externo=s36 internos=[]
+  Cara f22: externo=s37 internos=[]
+  Cara f23: externo=s38 internos=[]
+  Cara f24: externo=s40 internos=[]
+  Cara f25: externo=s41 internos=[]
+  Cara f26: externo=s43 internos=[]
+  Cara f27: externo=s51 internos=[]
+  Cara f28: externo=s70 internos=[]
+  Cara f29: externo=s113 internos=[]
+  Cara f30: externo=s115 internos=[]
+  Cara f31: externo=s116 internos=[]
+  Cara f32: externo=s119 internos=[]
+  Cara f33: externo=s131 internos=[]
+  Cara f34: externo=s134 internos=[]
+  Cara f35: externo=s139 internos=[]
+  Cara f36: externo=s140 internos=[]
+  Cara f37: externo=s142 internos=[]
+  Cara f38: externo=s208 internos=[]
+  Cara f39: externo=s234 internos=[]
+  Cara f40: externo=s246 internos=[]
+  Cara f0: externo=None internos=['s2', 's141', 's233']
 
-Caras activas finales: []
+Caras activas finales: ['f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f18', 'f19', 'f20', 'f21', 'f22', 'f23', 'f25', 'f26', 'f27', 'f28', 'f33', 'f34', 'f35', 'f36', 'f39', 'f40']
