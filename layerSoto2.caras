@@ -1,0 +1,10 @@
+Archivo de caras
+#######################
+Nombre  Interno        Externo
+#######################
+C_INF   [e1_t,f1_t,g1_t,i1_t]   None
+FACE1   None           e1
+FACE2   None           f1
+FACE3   [h1_t]         g1
+FACE4   None           h1
+FACE5   None           i1

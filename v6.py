@@ -820,7 +820,7 @@ def main():
     DEBUG_LOG = open("debug_overlay.log", "w", encoding="utf-8")
     DEBUG_LOG.write("=== INICIO DEL PROCESO DE OVERLAY ===\n")
 
-    listaLayers = ["layer03", "layer02", "layer01", "layer05", "layer04", "soto"]
+    listaLayers = ["layerSoto3"]
     todos_los_segmentos = []
     todas_las_caras_originales = []
     activas_originales = set()

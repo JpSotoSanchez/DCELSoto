@@ -1,0 +1,46 @@
+Archivo de aristas
+#############################################
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+#############################################
+e1      V1      e1_t    FACE1   e2      e5
+e1_t    V2      e1      C_INF   e5_t    e2_t
+e2      V2      e2_t    FACE1   e3      e1
+e2_t    V3      e2      C_INF   e1_t    e3_t
+e3      V3      e3_t    FACE1   e4      e2
+e3_t    V4      e3      C_INF   e2_t    e4_t
+e4      V4      e4_t    FACE1   e5      e3
+e4_t    V5      e4      C_INF   e3_t    e5_t
+e5      V5      e5_t    FACE1   e1      e4
+e5_t    V1      e5      C_INF   e4_t    e1_t
+f1      V6      f1_t    FACE2   f2      f6
+f1_t    V7      f1      C_INF   f6_t    f2_t
+f2      V7      f2_t    FACE2   f3      f1
+f2_t    V8      f2      C_INF   f1_t    f3_t
+f3      V8      f3_t    FACE2   f4      f2
+f3_t    V9      f3      C_INF   f2_t    f4_t
+f4      V9      f4_t    FACE2   f5      f3
+f4_t    V10     f4      C_INF   f3_t    f5_t
+f5      V10     f5_t    FACE2   f6      f4
+f5_t    V11     f5      C_INF   f4_t    f6_t
+f6      V11     f6_t    FACE2   f1      f5
+f6_t    V6      f6      C_INF   f5_t    f1_t
+g1      V12     g1_t    FACE3   g2      g4
+g1_t    V13     g1      C_INF   g4_t    g2_t
+g2      V13     g2_t    FACE3   g3      g1
+g2_t    V14     g2      C_INF   g1_t    g3_t
+g3      V14     g3_t    FACE3   g4      g2
+g3_t    V15     g3      C_INF   g2_t    g4_t
+g4      V15     g4_t    FACE3   g1      g3
+g4_t    V12     g4      C_INF   g3_t    g1_t
+h1      V16     h1_t    FACE4   h2      h3
+h1_t    V17     h1      FACE3   h3_t    h2_t
+h2      V17     h2_t    FACE4   h3      h1
+h2_t    V18     h2      FACE3   h1_t    h3_t
+h3      V18     h3_t    FACE4   h1      h2
+h3_t    V16     h3      FACE3   h2_t    h1_t
+i1      V19     i1_t    FACE5   i2      i3
+i1_t    V20     i1      C_INF   i3_t    i2_t
+i2      V20     i2_t    FACE5   i3      i1
+i2_t    V21     i2      C_INF   i1_t    i3_t
+i3      V21     i3_t    FACE5   i1      i2
+i3_t    V19     i3      C_INF   i2_t    i1_t

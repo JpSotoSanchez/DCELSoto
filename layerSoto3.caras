@@ -1,0 +1,13 @@
+Archivo de caras
+#######################
+Nombre  Interno        Externo
+#######################
+INF     [c1_t]         None
+ISLA    [l1_t,f1_t,m1_t,r1_t,p1_t,s1_t]   c1
+LAGO    [i1_t]         l1
+ISLOTE  None           i1
+BOSQUE  None           f1
+MONTE   None           m1
+RIO     None           r1
+PUEBLO  None           p1
+SABANA  None           s1
