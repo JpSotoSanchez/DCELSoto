@@ -895,7 +895,7 @@ def main():
     DEBUG_LOG.write("=== INICIO DEL PROCESO DE OVERLAY ===\n")
 
     #listaLayers = ["soto", "layerSoto2", "layerSoto3"]
-    #listaLayers = ["layer01", "layer02", "layer03", "layer04", "layer05"]
+    listaLayers = ["layer01", "layer02", "layer03", "layer04", "layer05"]
 
     todos_los_segmentos = []
     todas_las_caras_originales = []
