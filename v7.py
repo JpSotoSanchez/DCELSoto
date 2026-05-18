@@ -421,34 +421,22 @@ def partir_segmentos(segmentos):
     return nuevos
 
 def unificar_segmentos_colineales(segmentos):
-    """
-    Fusiona segmentos colineales que se solapan.
-    Retorna una nueva lista de segmentos únicos (sin duplicados geométricos).
-    """
-    # Agrupar por recta (dirección normalizada + un punto de referencia)
+    """Agrupa segmentos colineales y los parte en trozos no solapados."""
     grupos = defaultdict(list)
     for seg in segmentos:
-        # Vector director
         dx = seg.p2.x - seg.p1.x
         dy = seg.p2.y - seg.p1.y
-        # Normalizar dirección (consideramos ambas orientaciones iguales)
+        # Normalizar dirección
         if dx < -EPS or (abs(dx) < EPS and dy < -EPS):
             dx, dy = -dx, -dy
-        # Punto de referencia: proyección del origen sobre la recta perpendicular
-        # Usamos un punto cualquiera de la recta, por ejemplo el más cercano al origen
-        # Para simplificar, usamos la recta definida por la dirección y el punto seg.p1.
-        # Clave: (dx, dy, proyección del punto (0,0) sobre la recta)
-        # Pero la proyección puede ser inestable. Mejor usar una representación robusta:
-        # Clave = (a, b, c) para la ecuación a*x + b*y + c = 0, normalizada.
         a = dy
         b = -dx
-        c = -(a*seg.p1.x + b*seg.p1.y)
-        # Normalizar para que (a,b) sea unitario y el signo sea consistente
+        c = -(a * seg.p1.x + b * seg.p1.y)
         norm = math.hypot(a, b)
         a /= norm
         b /= norm
         c /= norm
-        # Asegurar un signo único (por ejemplo, hacer que a sea siempre >= 0, o si a==0 que b>=0)
+        # Hacer la representación única
         if a < -EPS or (abs(a) < EPS and b < -EPS):
             a, b, c = -a, -b, -c
         clave = (round(a, 10), round(b, 10), round(c, 10))
@@ -457,29 +445,29 @@ def unificar_segmentos_colineales(segmentos):
     nuevos = []
     contador = 0
     for clave, segs in grupos.items():
-        # Determinar el eje de proyección para ordenar puntos
-        # Usamos el eje donde el segmento varía más
-        if abs(clave[0]) > abs(clave[1]):  # dirección más horizontal
-            coord = lambda p: p.x
+        # Elegir el eje para ordenar
+        if abs(clave[0]) > abs(clave[1]):
+            key_func = lambda p: (p.x, p.y)
         else:
-            coord = lambda p: p.y
+            key_func = lambda p: (p.y, p.x)
 
-        # Recolectar todos los puntos extremos e intersecciones
+        # Recopilar puntos únicos de todos los segmentos del grupo
         puntos_unicos = {}
         for seg in segs:
             for p in [seg.p1, seg.p2] + seg.intersecciones:
-                key = (round(p.x, 8), round(p.y, 8))
-                if key not in puntos_unicos:
-                    puntos_unicos[key] = p
+                # Redondear para unificar puntos muy próximos
+                k = (round(p.x, 8), round(p.y, 8))
+                if k not in puntos_unicos:
+                    puntos_unicos[k] = p
         puntos = list(puntos_unicos.values())
-        puntos.sort(key=coord)
+        puntos.sort(key=key_func)
 
-        # Crear nuevos segmentos entre puntos consecutivos
-        for i in range(len(puntos)-1):
-            a, b = puntos[i], puntos[i+1]
+        # Crear segmentos entre consecutivos (descartando longitudes 0)
+        for i in range(len(puntos) - 1):
+            a, b = puntos[i], puntos[i + 1]
             if puntos_iguales(a, b):
                 continue
-            # El layer puede ser None o una combinación; aquí no es relevante para la DCEL final
+            # El layer puede ser una combinación; para la DCEL ponemos "unified"
             ns = SegmentoOverlay(f"g{contador}", a, b, "unified")
             nuevos.append(ns)
             contador += 1
@@ -645,6 +633,73 @@ def exportar_resultado(vertices, aristas, caras, caras_activas_nombres, base="re
 # ------------------------------------------------------------
 # 6. VISUALIZACIONES (sin cambios, no se tocan para el debug)
 # ------------------------------------------------------------
+
+def visualizar_vertices_dcel(vertices):
+    """Muestra todos los vértices de la DCEL (puntos de intersección y extremos)."""
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.set_aspect('equal')
+    ax.grid(True, linestyle=':', alpha=0.6)
+    ax.set_title("Vértices de la DCEL (intersecciones y extremos)", fontsize=14)
+
+    xs = [v.coordenadas.x for v in vertices]
+    ys = [v.coordenadas.y for v in vertices]
+    ax.scatter(xs, ys, c='red', s=30, zorder=5)
+
+    # Etiquetas si no hay demasiados puntos
+    if len(vertices) <= 50:
+        for v in vertices:
+            ax.annotate(v.nombre, (v.coordenadas.x, v.coordenadas.y),
+                        textcoords="offset points", xytext=(5, 5), fontsize=8)
+
+    plt.tight_layout()
+    plt.show()
+
+
+def visualizar_aristas_dcel(aristas):
+    """Dibuja todas las half‑edges de la DCEL (una línea por par) con flechas de orientación."""
+    fig, ax = plt.subplots(figsize=(10, 8))
+    ax.set_aspect('equal')
+    ax.grid(True, linestyle=':', alpha=0.6)
+    ax.set_title("Aristas de la DCEL (half‑edges dirigidas)", fontsize=14)
+
+    dibujadas = set()
+    for a in aristas:
+        # Para cada par de gemelas, dibujamos solo una línea, pero con flecha en ambos sentidos.
+        # Usamos el nombre de la arista original para evitar duplicados.
+        par = tuple(sorted([a.nombre, a.pareja.nombre]))
+        if par in dibujadas:
+            continue
+        dibujadas.add(par)
+
+        p1 = a.verticeOriginal.coordenadas
+        p2 = a.pareja.verticeOriginal.coordenadas
+
+        # Línea principal
+        ax.plot([p1.x, p2.x], [p1.y, p2.y], color='black', linewidth=1.2)
+
+        # Flecha en la dirección de la half‑edge actual
+        mid_x = (p1.x + p2.x) / 2
+        mid_y = (p1.y + p2.y) / 2
+        dx = p2.x - p1.x
+        dy = p2.y - p1.y
+        ax.annotate('', xy=(mid_x + dx*0.01, mid_y + dy*0.01),
+                    xytext=(mid_x - dx*0.01, mid_y - dy*0.01),
+                    arrowprops=dict(arrowstyle='->', color='blue', lw=1.5))
+
+        # Flecha opuesta (para la gemela)
+        ax.annotate('', xy=(mid_x - dx*0.01, mid_y - dy*0.01),
+                    xytext=(mid_x + dx*0.01, mid_y + dy*0.01),
+                    arrowprops=dict(arrowstyle='->', color='red', lw=1.5))
+
+    # Vértices de las aristas
+    vertices_set = set()
+    for a in aristas:
+        vertices_set.add(a.verticeOriginal)
+    for v in vertices_set:
+        ax.plot(v.coordenadas.x, v.coordenadas.y, 'ko', markersize=3)
+
+    plt.tight_layout()
+    plt.show()
 
 def visualizar_pygame(vertices, aristas, caras, caras_activas_inicial):
     """
@@ -816,21 +871,56 @@ DEBUG_LOG = None
 
 def main():
     global DEBUG_LOG
-    # Abrir archivo de debug (se sobreescribe en cada ejecución)
     DEBUG_LOG = open("debug_overlay.log", "w", encoding="utf-8")
     DEBUG_LOG.write("=== INICIO DEL PROCESO DE OVERLAY ===\n")
 
-    listaLayers = ["layer01", "layer02", "layer03", "layer04", "layer05", "soto", "layersoto2"]
+    #listaLayers = ["soto", "layerSoto2", "layerSoto3"]
+    listaLayers = ["layer04"]
     todos_los_segmentos = []
     todas_las_caras_originales = []
     activas_originales = set()
 
-    # Leer cada capa
+    # Leer cada capa e ir detectando intersecciones incrementalmente
     for layer in listaLayers:
         print(f"Cargando {layer}...")
         _, aris, caras, activas = cargar_layer(layer)
-        segs = extraer_segmentos(aris, layer)
-        todos_los_segmentos.extend(segs)
+        segs_nuevos = extraer_segmentos(aris, layer)
+
+        # Cruzar los segmentos del layer recién cargado contra todos los anteriores
+        DEBUG_LOG.write(f"\n--- Intersecciones incrementales: {layer} vs segmentos previos ({len(todos_los_segmentos)}) ---\n")
+        for s_nuevo in segs_nuevos:
+            for s_prev in todos_los_segmentos:
+                inters = interseccion_segmentos(s_nuevo, s_prev)
+                if inters:
+                    DEBUG_LOG.write(
+                        f"  {s_nuevo.nombre} ({layer}) ∩ {s_prev.nombre} ({s_prev.layer}): "
+                        f"{[(round(p.x,6), round(p.y,6)) for p in inters]}\n"
+                    )
+                for p in inters:
+                    if not any(puntos_iguales(p, q) for q in s_nuevo.intersecciones):
+                        s_nuevo.intersecciones.append(p)
+                    if not any(puntos_iguales(p, q) for q in s_prev.intersecciones):
+                        s_prev.intersecciones.append(p)
+
+        # También detectar intersecciones internas dentro del layer recién cargado
+        DEBUG_LOG.write(f"\n--- Intersecciones internas: {layer} ({len(segs_nuevos)} segmentos) ---\n")
+        n = len(segs_nuevos)
+        for i in range(n):
+            for j in range(i + 1, n):
+                inters = interseccion_segmentos(segs_nuevos[i], segs_nuevos[j])
+                if inters:
+                    DEBUG_LOG.write(
+                        f"  {segs_nuevos[i].nombre} ∩ {segs_nuevos[j].nombre}: "
+                        f"{[(round(p.x,6), round(p.y,6)) for p in inters]}\n"
+                    )
+                for p in inters:
+                    if not any(puntos_iguales(p, q) for q in segs_nuevos[i].intersecciones):
+                        segs_nuevos[i].intersecciones.append(p)
+                    if not any(puntos_iguales(p, q) for q in segs_nuevos[j].intersecciones):
+                        segs_nuevos[j].intersecciones.append(p)
+
+        todos_los_segmentos.extend(segs_nuevos)
+
         for c in caras:
             if c.nombre in activas:
                 activas_originales.add(c.nombre)
@@ -838,20 +928,16 @@ def main():
 
     DEBUG_LOG.write(f"\nTotal de segmentos originales: {len(todos_los_segmentos)}\n")
 
-    # Visualización 1 (opcional, se mantiene)
+    # Visualización 1 (opcional)
     visualizar_capas_originales(listaLayers, todas_las_caras_originales)
 
-    # 1. Detectar intersecciones
-    detectar_intersecciones(todos_los_segmentos)
-
-    # 2. Partir segmentos
+    # 2. Partir segmentos  ← ya NO se llama detectar_intersecciones() aquí
     nuevos_segmentos = partir_segmentos(todos_los_segmentos)
 
     # *** NUEVO: Unificar segmentos colineales ***
     nuevos_segmentos = unificar_segmentos_colineales(nuevos_segmentos)
 
     # 3. Reconstruir DCEL
-    vertices = crear_vertices(nuevos_segmentos)
     vertices = crear_vertices(nuevos_segmentos)
     aristas = crear_aristas(nuevos_segmentos, vertices)
     conectar_aristas(vertices, aristas)
@@ -860,6 +946,15 @@ def main():
         if e.verticeOriginal.aristaAdyacente is None:
             e.verticeOriginal.aristaAdyacente = e
 
+# ---- NUEVAS VISUALIZACIONES ----
+    visualizar_vertices_dcel(vertices)
+    visualizar_aristas_dcel(aristas)
+
+
+    # ---- Verificar aristas sin cara después de conectar ----
+    for a in aristas:
+        if a.siguiente is None or a.anterior is None:
+            print(f"¡Arista {a.nombre} tiene siguiente o anterior None!")
     # 4. Crear caras finitas
     caras_finitas = crear_caras(aristas)
     # 5. Cara infinita

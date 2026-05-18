@@ -3,11 +3,4 @@ Archivo de caras
 Nombre  Interno Externo
 #######################
 f1 [] s1
-f2 [] s26
-f3 [] s35
-f4 [] s42
-f5 [] s46
-f6 [] s64
-f7 [] s76
-f8 [] s85
-f0 [s2,s3,s6,s8,s10,s11,s14,s16,s17,s19,s21,s24,s25,s28,s29,s32,s33,s36,s37,s39,s41,s43,s44,s45,s48,s50,s51,s54,s56,s58,s59,s62,s63,s66,s68,s70,s71,s73,s75,s78,s80,s81,s84,s86,s88,s89,s91] None
+f0 [s2,s3,s5] None
