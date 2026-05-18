@@ -1,428 +1,21 @@
 # =============================================================================
 # main_adaptado_con_pygame_y_matplotlib.py
 # =============================================================================
-# Versión que usa el algoritmo SIMPLE del código combinado (overlay_figuras)
-# con visualizaciones:
-#   1) Capas originales (un color por capa)
-#   2) Resultado final (un color por cara)
-#   3) Interactividad con Pygame
+# Versión con debug exhaustivo para localizar aristas/caras perdidas.
+# Escribe toda la traza en "debug_overlay.log".
 # =============================================================================
 
 import math
-import random
 import os
 import sys
-import heapq
 from collections import defaultdict
+from typing import List, Set
 from dataclasses import dataclass, field
-from typing import Optional, List, Set, Tuple
-
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 import matplotlib.cm as cm
 from matplotlib.patches import Polygon
 import numpy as np
 import pygame
-
-# ------------------------------------------------
-# 1. CLASES GEOMÉTRICAS Y DCEL (simplificadas)
-# ------------------------------------------------
-
-@dataclass(frozen=True)
-class Punto:
-    x: float
-    y: float
-
-    def distancia(self, otro: "Punto") -> float:
-        return math.hypot(self.x - otro.x, self.y - otro.y)
-
-
-class SegmentoOverlay:
-    """Segmento auxiliar para overlay (similar al del código combinado)"""
-    def __init__(self, nombre, p1, p2, layer):
-        self.nombre = nombre
-        self.p1 = p1
-        self.p2 = p2
-        self.layer = layer
-        self.intersecciones = []   # lista de Puntos
-
-    def __repr__(self):
-        return f"Seg({self.nombre}, {self.layer})"
-
-
-class NodoVertice:
-    def __init__(self, nombre, coordenadas):
-        self.nombre = nombre
-        self.coordenadas = coordenadas
-        self.aristaAdyacente = None   # arista incidente
-
-class NodoArista:
-    def __init__(self, nombre):
-        self.nombre = nombre
-        self.verticeOriginal = None
-        self.pareja = None
-        self.cara = None
-        self.siguiente = None
-        self.anterior = None
-
-class NodoCara:
-    def __init__(self, nombre):
-        self.nombre = nombre
-        self.aristasInternos = []     # lista de aristas que inician huecos
-        self.aristasExternos = None   # arista del borde exterior
-
-
-# ------------------------------------------------
-# 2. FUNCIONES GEOMÉTRICAS (iguales al combinado)
-# ------------------------------------------------
-
-EPS = 1e-6
-
-def puntos_iguales(p1: Punto, p2: Punto) -> bool:
-    return abs(p1.x - p2.x) < EPS and abs(p1.y - p2.y) < EPS
-
-def parametro_segmento(seg: SegmentoOverlay, p: Punto) -> float:
-    dx = seg.p2.x - seg.p1.x
-    dy = seg.p2.y - seg.p1.y
-    if abs(dx) > abs(dy):
-        return (p.x - seg.p1.x) / dx if abs(dx) > EPS else 0
-    return (p.y - seg.p1.y) / dy if abs(dy) > EPS else 0
-
-def orient(a: Punto, b: Punto, c: Punto) -> float:
-    return (b.x - a.x)*(c.y - a.y) - (b.y - a.y)*(c.x - a.x)
-
-def interseccion_segmentos(s1: SegmentoOverlay, s2: SegmentoOverlay):
-    """Retorna lista de puntos de intersección (0, 1 o 2)"""
-    p1, p2 = s1.p1, s1.p2
-    q1, q2 = s2.p1, s2.p2
-
-    # Usar la misma función que en overlay_figuras
-    den = (p1.x - p2.x)*(q1.y - q2.y) - (p1.y - p2.y)*(q1.x - q2.x)
-    if abs(den) < EPS:
-        # Colineales -> posible solapamiento
-        # Simplificación: solo consideramos intersecciones puntuales en extremos
-        # Para el overlay completo se necesitaría manejar superposición, pero aquí asumimos segmentos de diferentes capas
-        return []
-    
-    t = ((p1.x - q1.x)*(q1.y - q2.y) - (p1.y - q1.y)*(q1.x - q2.x)) / den
-    u = ((p1.x - q1.x)*(p1.y - p2.y) - (p1.y - q1.y)*(p1.x - p2.x)) / den
-
-    if 0 <= t <= 1 and 0 <= u <= 1:
-        x = p1.x + t*(p2.x - p1.x)
-        y = p1.y + t*(p2.y - p1.y)
-        return [Punto(x, y)]
-    return []
-
-
-# ------------------------------------------------
-# 3. LECTURA DE CAPAS (igual que en main.py original)
-# ------------------------------------------------
-
-def cargar_layer(layer_name: str):
-    vertices = []
-    aristas = []
-    caras = []
-    activas = set()
-
-    # ---------- VÉRTICES ----------
-    try:
-        with open(f"{layer_name}.vertices", "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("#") or line.startswith("Nombre") or line.startswith("Archivo"):
-                    continue
-                partes = line.split()
-                if len(partes) >= 4:
-                    nombre, x, y, incidente = partes[0], partes[1], partes[2], partes[3]
-                    v = NodoVertice(nombre + layer_name, Punto(float(x), float(y)))
-                    v.aristaAdyacente = incidente + layer_name if incidente != "None" else None
-                    vertices.append(v)
-    except FileNotFoundError:
-        print(f"Advertencia: no se encontró {layer_name}.vertices")
-
-    # ---------- ARISTAS ----------
-    try:
-        with open(f"{layer_name}.aristas", "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("#") or line.startswith("Nombre") or line.startswith("Archivo"):
-                    continue
-                partes = line.split()
-                if len(partes) >= 6:
-                    nombre, origen, pareja, cara, sig, ant = partes[:6]
-                    a = NodoArista(nombre + layer_name)
-                    # ¡Corregido! Solo concatenar si no es "None"
-                    a.verticeOriginal = origen + layer_name if origen != "None" else None
-                    a.pareja = pareja + layer_name if pareja != "None" else None
-                    a.cara = cara + layer_name if cara != "None" else None
-                    a.siguiente = sig + layer_name if sig != "None" else None
-                    a.anterior = ant + layer_name if ant != "None" else None
-                    aristas.append(a)
-    except FileNotFoundError:
-        print(f"Advertencia: no se encontró {layer_name}.aristas")
-
-    # ---------- CARAS ----------
-    try:
-        with open(f"{layer_name}.caras", "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith("#") or line.startswith("Nombre") or line.startswith("Archivo"):
-                    continue
-                partes = line.split()
-                if len(partes) >= 3:
-                    nombre, interno, externo = partes[0], partes[1], partes[2]
-                    c = NodoCara(nombre + layer_name)
-                    # interno puede ser "[e1,e2]" o "None"
-                    if interno != "None":
-                        interno_limpio = interno.strip("[]")
-                        if interno_limpio:
-                            c.aristasInternos = [x.strip() + layer_name for x in interno_limpio.split(",") if x.strip()]
-                    # externo se concatena solo si no es "None"
-                    if externo != "None":
-                        c.aristasExternos = externo + layer_name
-                    caras.append(c)
-    except FileNotFoundError:
-        print(f"Advertencia: no se encontró {layer_name}.caras")
-
-    # ---------- ACTIVOS ----------
-    try:
-        with open(f"{layer_name}.activos", "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line and not line.startswith("#") and not line.startswith("Archivo") and not line.startswith("Caras"):
-                    activas.add(line + layer_name)
-    except FileNotFoundError:
-        pass
-
-    # ---------- RESOLVER REFERENCIAS CRUZADAS ----------
-    dict_vertices = {v.nombre: v for v in vertices}
-    dict_aristas = {a.nombre: a for a in aristas}
-    dict_caras = {c.nombre: c for c in caras}
-
-    for a in aristas:
-        if isinstance(a.verticeOriginal, str):
-            a.verticeOriginal = dict_vertices.get(a.verticeOriginal)
-        if isinstance(a.pareja, str):
-            a.pareja = dict_aristas.get(a.pareja)
-        if isinstance(a.cara, str):
-            a.cara = dict_caras.get(a.cara)
-        if isinstance(a.siguiente, str):
-            a.siguiente = dict_aristas.get(a.siguiente)
-        if isinstance(a.anterior, str):
-            a.anterior = dict_aristas.get(a.anterior)
-
-    for v in vertices:
-        if isinstance(v.aristaAdyacente, str):
-            v.aristaAdyacente = dict_aristas.get(v.aristaAdyacente)
-
-    for c in caras:
-        if isinstance(c.aristasExternos, str):
-            c.aristasExternos = dict_aristas.get(c.aristasExternos)
-        nuevos_internos = []
-        for item in c.aristasInternos:
-            if isinstance(item, str):
-                a = dict_aristas.get(item)
-                if a:
-                    nuevos_internos.append(a)
-        c.aristasInternos = nuevos_internos
-
-    return vertices, aristas, caras, activas
-
-# ------------------------------------------------
-# 4. ALGORITMO DE OVERLAY (copiado del combinado)
-# ------------------------------------------------
-
-def extraer_segmentos(aristas, layer_id):
-    """Extrae segmentos de una lista de aristas DCEL"""
-    segmentos = []
-    visitadas = set()
-    for a in aristas:
-        if a.nombre in visitadas:
-            continue
-        p1 = a.verticeOriginal.coordenadas
-        p2 = a.pareja.verticeOriginal.coordenadas
-        seg = SegmentoOverlay(a.nombre, p1, p2, layer_id)
-        segmentos.append(seg)
-        visitadas.add(a.nombre)
-        visitadas.add(a.pareja.nombre)
-    return segmentos
-
-def detectar_intersecciones(segmentos):
-    """Fuerza bruta O(n²) - igual que el combinado"""
-    n = len(segmentos)
-    for i in range(n):
-        for j in range(i+1, n):
-            inters = interseccion_segmentos(segmentos[i], segmentos[j])
-            for p in inters:
-                if not any(puntos_iguales(p, q) for q in segmentos[i].intersecciones):
-                    segmentos[i].intersecciones.append(p)
-                if not any(puntos_iguales(p, q) for q in segmentos[j].intersecciones):
-                    segmentos[j].intersecciones.append(p)
-
-def partir_segmentos(segmentos):
-    """Divide cada segmento por sus puntos de intersección"""
-    nuevos = []
-    contador = 0
-    for s in segmentos:
-        puntos = [s.p1]
-        for p in s.intersecciones:
-            if not puntos_iguales(p, s.p1) and not puntos_iguales(p, s.p2):
-                puntos.append(p)
-        puntos.append(s.p2)
-        puntos.sort(key=lambda pt: parametro_segmento(s, pt))
-        for i in range(len(puntos)-1):
-            a, b = puntos[i], puntos[i+1]
-            if puntos_iguales(a, b):
-                continue
-            ns = SegmentoOverlay(f"g{contador}", a, b, s.layer)
-            nuevos.append(ns)
-            contador += 1
-    return nuevos
-
-def crear_vertices(segmentos):
-    """Crea NodoVertice a partir de los extremos de los segmentos"""
-    vertices = {}
-    contador = 1
-    def obtener_nombre(p):
-        nonlocal contador
-        for nombre, v in vertices.items():
-            if puntos_iguales(v.coordenadas, p):
-                return nombre
-        nombre = f"p{contador}"
-        contador += 1
-        vertices[nombre] = NodoVertice(nombre, p)
-        return nombre
-    for s in segmentos:
-        obtener_nombre(s.p1)
-        obtener_nombre(s.p2)
-    return list(vertices.values())
-
-def crear_aristas(segmentos, vertices):
-    """Crea half-edges para cada segmento"""
-    aristas = []
-    contador = 1
-    # Mapa de coordenadas a objeto vértice
-    mapa = {}
-    for v in vertices:
-        mapa[(round(v.coordenadas.x, 6), round(v.coordenadas.y, 6))] = v
-
-    for s in segmentos:
-        p1 = mapa[(round(s.p1.x,6), round(s.p1.y,6))]
-        p2 = mapa[(round(s.p2.x,6), round(s.p2.y,6))]
-        e1 = NodoArista(f"s{contador}"); contador += 1
-        e2 = NodoArista(f"s{contador}"); contador += 1
-        e1.verticeOriginal = p1
-        e2.verticeOriginal = p2
-        e1.pareja = e2
-        e2.pareja = e1
-        aristas.append(e1)
-        aristas.append(e2)
-    return aristas
-
-def angulo_arista(e: NodoArista) -> float:
-    p1 = e.verticeOriginal.coordenadas
-    p2 = e.pareja.verticeOriginal.coordenadas
-    return math.atan2(p2.y - p1.y, p2.x - p1.x)
-
-def conectar_aristas(vertices, aristas):
-    """Ordena las aristas incidentes por ángulo y enlaza siguiente/anterior"""
-    incidentes = defaultdict(list)
-    for e in aristas:
-        incidentes[e.verticeOriginal.nombre].append(e)
-    for lista in incidentes.values():
-        lista.sort(key=angulo_arista)
-    for lista in incidentes.values():
-        n = len(lista)
-        for i in range(n):
-            e = lista[i]
-            ant = lista[(i-1)%n]   # anterior en el orden angular
-            e.pareja.siguiente = ant
-            ant.anterior = e.pareja
-
-def area_poligono(puntos):
-    area = 0.0
-    n = len(puntos)
-    for i in range(n):
-        x1, y1 = puntos[i]
-        x2, y2 = puntos[(i+1)%n]
-        area += x1*y2 - x2*y1
-    return area / 2.0
-
-def crear_caras(aristas):
-    """Recorre ciclos para formar caras"""
-    caras = {}
-    contador = 1
-    for e in aristas:
-        if e.cara is not None:
-            continue
-        ciclo = []
-        puntos = []
-        actual = e
-        while True:
-            if actual is None or (actual.cara is not None and actual != e):
-                ciclo = []
-                break
-            ciclo.append(actual)
-            puntos.append([actual.verticeOriginal.coordenadas.x, actual.verticeOriginal.coordenadas.y])
-            actual = actual.siguiente
-            if actual == e:
-                break
-        if len(ciclo) < 3:
-            continue
-        area = area_poligono(puntos)
-        if area <= EPS:
-            continue
-        c = NodoCara(f"f{contador}")
-        contador += 1
-        c.aristasExternos = ciclo[0]
-        for ar in ciclo:
-            ar.cara = c
-        caras[c.nombre] = c
-    return list(caras.values())
-
-def crear_cara_infinita(aristas, caras):
-    """Asigna la cara infinita (f0) a las aristas que no tienen cara"""
-    f0 = NodoCara("f0")
-    usadas = set()
-    for e in aristas:
-        if e.cara is None:
-            e.cara = f0
-            if e.nombre not in usadas:
-                f0.aristasInternos.append(e)
-                usadas.add(e.nombre)
-    caras.append(f0)
-
-def exportar_resultado(vertices, aristas, caras, caras_activas_nombres, base="resultado"):
-    """Exporta archivos .vertices, .aristas, .caras, .activos"""
-    # Vértices
-    with open(base + ".vertices", "w", encoding="utf-8") as f:
-        f.write("Archivo de vértices\n#################################\nNombre  x       y       Incidente\n#################################\n")
-        for v in vertices:
-            inc = v.aristaAdyacente.nombre if v.aristaAdyacente else "None"
-            f.write(f"{v.nombre} {v.coordenadas.x:.6f} {v.coordenadas.y:.6f} {inc}\n")
-    # Aristas
-    with open(base + ".aristas", "w", encoding="utf-8") as f:
-        f.write("Archivo de aristas\n#############################################\nNombre  Origen  Pareja  Cara    Sigue   Antes\n#############################################\n")
-        for a in aristas:
-            origen = a.verticeOriginal.nombre if a.verticeOriginal else "None"
-            pareja = a.pareja.nombre if a.pareja else "None"
-            cara = a.cara.nombre if a.cara else "None"
-            sig = a.siguiente.nombre if a.siguiente else "None"
-            ant = a.anterior.nombre if a.anterior else "None"
-            f.write(f"{a.nombre} {origen} {pareja} {cara} {sig} {ant}\n")
-    # Caras
-    with open(base + ".caras", "w", encoding="utf-8") as f:
-        f.write("Archivo de caras\n#######################\nNombre  Interno Externo\n#######################\n")
-        for c in caras:
-            interno = "[" + ",".join([e.nombre for e in c.aristasInternos]) + "]"
-            externo = c.aristasExternos.nombre if c.aristasExternos else "None"
-            f.write(f"{c.nombre} {interno} {externo}\n")
-    # Activos
-    with open(base + ".activos", "w", encoding="utf-8") as f:
-        f.write("Archivo de activos\n#######################\nCaras Activas\n#######################\n")
-        for nombre in caras_activas_nombres:
-            f.write(f"{nombre}\n")
-    print(f"Exportado a {base}.*")
 
 
 # ------------------------------------------------
@@ -542,9 +135,516 @@ def visualizar_resultado_final(vertices, aristas, caras):
     plt.show()
 
 
-# ------------------------------------------------
-# 6. VISUALIZACIÓN CON PYGAME (interactiva)
-# ------------------------------------------------
+# ------------------------------------------------------------
+# 1. CLASES GEOMÉTRICAS (sin cambios)
+# ------------------------------------------------------------
+
+# (Se mantienen las mismas clases Punto, SegmentoOverlay, NodoVertice, NodoArista, NodoCara)
+
+@dataclass(frozen=True)
+class Punto:
+    x: float
+    y: float
+    def distancia(self, otro: "Punto") -> float:
+        return math.hypot(self.x - otro.x, self.y - otro.y)
+
+class SegmentoOverlay:
+    def __init__(self, nombre, p1, p2, layer):
+        self.nombre = nombre
+        self.p1 = p1
+        self.p2 = p2
+        self.layer = layer
+        self.intersecciones = []
+    def __repr__(self):
+        return f"Seg({self.nombre}, {self.layer})"
+
+class NodoVertice:
+    def __init__(self, nombre, coordenadas):
+        self.nombre = nombre
+        self.coordenadas = coordenadas
+        self.aristaAdyacente = None
+
+class NodoArista:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.verticeOriginal = None
+        self.pareja = None
+        self.cara = None
+        self.siguiente = None
+        self.anterior = None
+
+class NodoCara:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.aristasInternos = []
+        self.aristasExternos = None
+
+# ------------------------------------------------------------
+# 2. FUNCIONES GEOMÉTRICAS (sin cambios)
+# ------------------------------------------------------------
+
+EPS = 1e-6
+
+def puntos_iguales(p1: Punto, p2: Punto) -> bool:
+    return abs(p1.x - p2.x) < EPS and abs(p1.y - p2.y) < EPS
+
+def parametro_segmento(seg: SegmentoOverlay, p: Punto) -> float:
+    dx = seg.p2.x - seg.p1.x
+    dy = seg.p2.y - seg.p1.y
+    if abs(dx) > abs(dy):
+        return (p.x - seg.p1.x) / dx if abs(dx) > EPS else 0
+    return (p.y - seg.p1.y) / dy if abs(dy) > EPS else 0
+
+def orient(a: Punto, b: Punto, c: Punto) -> float:
+    return (b.x - a.x)*(c.y - a.y) - (b.y - a.y)*(c.x - a.x)
+
+def punto_en_segmento(p: Punto, a: Punto, b: Punto) -> bool:
+    """Devuelve True si p está sobre el segmento cerrado [a,b] (colinealidad asumida)."""
+    return (min(a.x, b.x) - EPS <= p.x <= max(a.x, b.x) + EPS and
+            min(a.y, b.y) - EPS <= p.y <= max(a.y, b.y) + EPS)
+
+def interseccion_segmentos(s1: SegmentoOverlay, s2: SegmentoOverlay):
+    """Retorna lista de puntos de intersección (0, 1 o 2)."""
+    p1, p2 = s1.p1, s1.p2
+    q1, q2 = s2.p1, s2.p2
+
+    den = (p1.x - p2.x)*(q1.y - q2.y) - (p1.y - p2.y)*(q1.x - q2.x)
+    
+    if abs(den) < EPS:
+        # Caso colineal: verificar si realmente son colineales
+        if abs(orient(p1, p2, q1)) > EPS and abs(orient(p1, p2, q2)) > EPS:
+            return []   # paralelos no colineales
+        
+        # Proyectar sobre el eje principal para ordenar
+        def coord(pt):
+            return pt.x if abs(p2.x - p1.x) > abs(p2.y - p1.y) else pt.y
+        
+        puntos = sorted([p1, p2, q1, q2], key=coord)
+        a, b = puntos[1], puntos[2]   # posible zona de solapamiento
+        
+        if puntos_iguales(a, b):
+            # Un solo punto de contacto
+            if punto_en_segmento(a, p1, p2) and punto_en_segmento(a, q1, q2):
+                return [a]
+            return []
+        
+        # Verificar que ambos puntos pertenecen a ambos segmentos
+        if (punto_en_segmento(a, p1, p2) and punto_en_segmento(a, q1, q2) and
+            punto_en_segmento(b, p1, p2) and punto_en_segmento(b, q1, q2)):
+            return [a, b]
+        return []
+    
+    # Caso no colineal (cálculo de t y u)
+    t = ((p1.x - q1.x)*(q1.y - q2.y) - (p1.y - q1.y)*(q1.x - q2.x)) / den
+    u = ((p1.x - q1.x)*(p1.y - p2.y) - (p1.y - q1.y)*(p1.x - p2.x)) / den
+
+    if 0 <= t <= 1 and 0 <= u <= 1:
+        x = p1.x + t*(p2.x - p1.x)
+        y = p1.y + t*(p2.y - p1.y)
+        return [Punto(x, y)]
+    return []
+
+# ------------------------------------------------------------
+# 3. LECTURA DE CAPAS (se añade debug)
+# ------------------------------------------------------------
+
+def cargar_layer(layer_name: str):
+    vertices = []
+    aristas = []
+    caras = []
+    activas = set()
+
+    DEBUG_LOG.write(f"\n========== Cargando capa: {layer_name} ==========\n")
+
+    # Vértices
+    try:
+        with open(f"{layer_name}.vertices", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or line.startswith("Nombre") or line.startswith("Archivo"):
+                    continue
+                partes = line.split()
+                if len(partes) >= 4:
+                    nombre, x, y, incidente = partes[0], partes[1], partes[2], partes[3]
+                    v = NodoVertice(nombre + layer_name, Punto(float(x), float(y)))
+                    v.aristaAdyacente = incidente + layer_name if incidente != "None" else None
+                    vertices.append(v)
+                    DEBUG_LOG.write(f"  Vértice leído: {v.nombre} ({v.coordenadas.x}, {v.coordenadas.y}) incidente={incidente}\n")
+    except FileNotFoundError:
+        DEBUG_LOG.write(f"  [AVISO] No se encontró {layer_name}.vertices\n")
+
+    # Aristas
+    try:
+        with open(f"{layer_name}.aristas", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or line.startswith("Nombre") or line.startswith("Archivo"):
+                    continue
+                partes = line.split()
+                if len(partes) >= 6:
+                    nombre, origen, pareja, cara, sig, ant = partes[:6]
+                    a = NodoArista(nombre + layer_name)
+                    a.verticeOriginal = origen + layer_name if origen != "None" else None
+                    a.pareja = pareja + layer_name if pareja != "None" else None
+                    a.cara = cara + layer_name if cara != "None" else None
+                    a.siguiente = sig + layer_name if sig != "None" else None
+                    a.anterior = ant + layer_name if ant != "None" else None
+                    aristas.append(a)
+                    DEBUG_LOG.write(f"  Arista leída: {a.nombre} orig={origen} pareja={pareja} cara={cara} sig={sig} ant={ant}\n")
+    except FileNotFoundError:
+        DEBUG_LOG.write(f"  [AVISO] No se encontró {layer_name}.aristas\n")
+
+    # Caras
+    try:
+        with open(f"{layer_name}.caras", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or line.startswith("Nombre") or line.startswith("Archivo"):
+                    continue
+                partes = line.split()
+                if len(partes) >= 3:
+                    nombre, interno, externo = partes[0], partes[1], partes[2]
+                    c = NodoCara(nombre + layer_name)
+                    if interno != "None":
+                        interno_limpio = interno.strip("[]")
+                        if interno_limpio:
+                            c.aristasInternos = [x.strip() + layer_name for x in interno_limpio.split(",") if x.strip()]
+                    if externo != "None":
+                        c.aristasExternos = externo + layer_name
+                    caras.append(c)
+                    DEBUG_LOG.write(f"  Cara leída: {c.nombre} externo={externo} internos={interno}\n")
+    except FileNotFoundError:
+        DEBUG_LOG.write(f"  [AVISO] No se encontró {layer_name}.caras\n")
+
+    # Activos
+    try:
+        with open(f"{layer_name}.activos", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#") and not line.startswith("Archivo") and not line.startswith("Caras"):
+                    activas.add(line + layer_name)
+                    DEBUG_LOG.write(f"  Activa leída: {line + layer_name}\n")
+    except FileNotFoundError:
+        DEBUG_LOG.write(f"  [AVISO] No se encontró {layer_name}.activos\n")
+
+    # Resolver referencias cruzadas
+    dict_vertices = {v.nombre: v for v in vertices}
+    dict_aristas = {a.nombre: a for a in aristas}
+    dict_caras = {c.nombre: c for c in caras}
+
+    for a in aristas:
+        if isinstance(a.verticeOriginal, str):
+            a.verticeOriginal = dict_vertices.get(a.verticeOriginal)
+        if isinstance(a.pareja, str):
+            a.pareja = dict_aristas.get(a.pareja)
+        if isinstance(a.cara, str):
+            a.cara = dict_caras.get(a.cara)
+        if isinstance(a.siguiente, str):
+            a.siguiente = dict_aristas.get(a.siguiente)
+        if isinstance(a.anterior, str):
+            a.anterior = dict_aristas.get(a.anterior)
+        DEBUG_LOG.write(f"  Resuelta arista {a.nombre}: vertOrig={a.verticeOriginal.nombre if a.verticeOriginal else 'None'} pareja={a.pareja.nombre if a.pareja else 'None'} cara={a.cara.nombre if a.cara else 'None'} sig={a.siguiente.nombre if a.siguiente else 'None'} ant={a.anterior.nombre if a.anterior else 'None'}\n")
+
+    for v in vertices:
+        if isinstance(v.aristaAdyacente, str):
+            v.aristaAdyacente = dict_aristas.get(v.aristaAdyacente)
+        DEBUG_LOG.write(f"  Vértice {v.nombre}: incidente={v.aristaAdyacente.nombre if v.aristaAdyacente else 'None'}\n")
+
+    for c in caras:
+        if isinstance(c.aristasExternos, str):
+            c.aristasExternos = dict_aristas.get(c.aristasExternos)
+        nuevos_internos = []
+        for item in c.aristasInternos:
+            if isinstance(item, str):
+                a = dict_aristas.get(item)
+                if a:
+                    nuevos_internos.append(a)
+        c.aristasInternos = nuevos_internos
+        DEBUG_LOG.write(f"  Cara resuelta {c.nombre}: externo={c.aristasExternos.nombre if c.aristasExternos else 'None'} internos={[e.nombre for e in c.aristasInternos]}\n")
+
+    DEBUG_LOG.write(f"  Capa {layer_name}: {len(vertices)} vértices, {len(aristas)} aristas, {len(caras)} caras, {len(activas)} activas\n")
+    return vertices, aristas, caras, activas
+
+# ------------------------------------------------------------
+# 4. ALGORITMO DE OVERLAY (se añade debug)
+# ------------------------------------------------------------
+
+def extraer_segmentos(aristas, layer_id):
+    segmentos = []
+    visitadas = set()
+    for a in aristas:
+        if a.nombre in visitadas:
+            continue
+        p1 = a.verticeOriginal.coordenadas
+        p2 = a.pareja.verticeOriginal.coordenadas
+        seg = SegmentoOverlay(a.nombre, p1, p2, layer_id)
+        segmentos.append(seg)
+        visitadas.add(a.nombre)
+        visitadas.add(a.pareja.nombre)
+        DEBUG_LOG.write(f"  Segmento extraído: {seg.nombre} de {layer_id} ({p1.x},{p1.y})->({p2.x},{p2.y})\n")
+    return segmentos
+
+def detectar_intersecciones(segmentos):
+    DEBUG_LOG.write("\n--- Detectando intersecciones ---\n")
+    n = len(segmentos)
+    for i in range(n):
+        for j in range(i+1, n):
+            inters = interseccion_segmentos(segmentos[i], segmentos[j])
+            if inters:
+                DEBUG_LOG.write(f"  Intersección entre {segmentos[i].nombre} y {segmentos[j].nombre}: {[(p.x,p.y) for p in inters]}\n")
+            for p in inters:
+                if not any(puntos_iguales(p, q) for q in segmentos[i].intersecciones):
+                    segmentos[i].intersecciones.append(p)
+                if not any(puntos_iguales(p, q) for q in segmentos[j].intersecciones):
+                    segmentos[j].intersecciones.append(p)
+
+def partir_segmentos(segmentos):
+    DEBUG_LOG.write("\n--- Partiendo segmentos ---\n")
+    nuevos = []
+    contador = 0
+    for s in segmentos:
+        puntos = [s.p1]
+        for p in s.intersecciones:
+            if not puntos_iguales(p, s.p1) and not puntos_iguales(p, s.p2):
+                puntos.append(p)
+        puntos.append(s.p2)
+        puntos.sort(key=lambda pt: parametro_segmento(s, pt))
+        DEBUG_LOG.write(f"  Segmento {s.nombre} partido en {len(puntos)-1} subsegmentos: puntos={[(p.x,p.y) for p in puntos]}\n")
+        for i in range(len(puntos)-1):
+            a, b = puntos[i], puntos[i+1]
+            if puntos_iguales(a, b):
+                continue
+            ns = SegmentoOverlay(f"g{contador}", a, b, s.layer)
+            nuevos.append(ns)
+            DEBUG_LOG.write(f"    Subsegmento {ns.nombre} ({a.x},{a.y})->({b.x},{b.y}) layer={ns.layer}\n")
+            contador += 1
+    return nuevos
+
+def unificar_segmentos_colineales(segmentos):
+    """
+    Fusiona segmentos colineales que se solapan.
+    Retorna una nueva lista de segmentos únicos (sin duplicados geométricos).
+    """
+    # Agrupar por recta (dirección normalizada + un punto de referencia)
+    grupos = defaultdict(list)
+    for seg in segmentos:
+        # Vector director
+        dx = seg.p2.x - seg.p1.x
+        dy = seg.p2.y - seg.p1.y
+        # Normalizar dirección (consideramos ambas orientaciones iguales)
+        if dx < -EPS or (abs(dx) < EPS and dy < -EPS):
+            dx, dy = -dx, -dy
+        # Punto de referencia: proyección del origen sobre la recta perpendicular
+        # Usamos un punto cualquiera de la recta, por ejemplo el más cercano al origen
+        # Para simplificar, usamos la recta definida por la dirección y el punto seg.p1.
+        # Clave: (dx, dy, proyección del punto (0,0) sobre la recta)
+        # Pero la proyección puede ser inestable. Mejor usar una representación robusta:
+        # Clave = (a, b, c) para la ecuación a*x + b*y + c = 0, normalizada.
+        a = dy
+        b = -dx
+        c = -(a*seg.p1.x + b*seg.p1.y)
+        # Normalizar para que (a,b) sea unitario y el signo sea consistente
+        norm = math.hypot(a, b)
+        a /= norm
+        b /= norm
+        c /= norm
+        # Asegurar un signo único (por ejemplo, hacer que a sea siempre >= 0, o si a==0 que b>=0)
+        if a < -EPS or (abs(a) < EPS and b < -EPS):
+            a, b, c = -a, -b, -c
+        clave = (round(a, 10), round(b, 10), round(c, 10))
+        grupos[clave].append(seg)
+
+    nuevos = []
+    contador = 0
+    for clave, segs in grupos.items():
+        # Determinar el eje de proyección para ordenar puntos
+        # Usamos el eje donde el segmento varía más
+        if abs(clave[0]) > abs(clave[1]):  # dirección más horizontal
+            coord = lambda p: p.x
+        else:
+            coord = lambda p: p.y
+
+        # Recolectar todos los puntos extremos e intersecciones
+        puntos_unicos = {}
+        for seg in segs:
+            for p in [seg.p1, seg.p2] + seg.intersecciones:
+                key = (round(p.x, 8), round(p.y, 8))
+                if key not in puntos_unicos:
+                    puntos_unicos[key] = p
+        puntos = list(puntos_unicos.values())
+        puntos.sort(key=coord)
+
+        # Crear nuevos segmentos entre puntos consecutivos
+        for i in range(len(puntos)-1):
+            a, b = puntos[i], puntos[i+1]
+            if puntos_iguales(a, b):
+                continue
+            # El layer puede ser None o una combinación; aquí no es relevante para la DCEL final
+            ns = SegmentoOverlay(f"g{contador}", a, b, "unified")
+            nuevos.append(ns)
+            contador += 1
+
+    return nuevos
+
+def crear_vertices(segmentos):
+    DEBUG_LOG.write("\n--- Creando vértices a partir de nuevos segmentos ---\n")
+    vertices = {}
+    contador = 1
+    def obtener_nombre(p):
+        nonlocal contador
+        for nombre, v in vertices.items():
+            if puntos_iguales(v.coordenadas, p):
+                return nombre
+        nombre = f"p{contador}"
+        contador += 1
+        vertices[nombre] = NodoVertice(nombre, p)
+        DEBUG_LOG.write(f"  Nuevo vértice: {nombre} ({p.x},{p.y})\n")
+        return nombre
+    for s in segmentos:
+        obtener_nombre(s.p1)
+        obtener_nombre(s.p2)
+    return list(vertices.values())
+
+def crear_aristas(segmentos, vertices):
+    DEBUG_LOG.write("\n--- Creando half-edges ---\n")
+    aristas = []
+    contador = 1
+    mapa = {}
+    for v in vertices:
+        mapa[(round(v.coordenadas.x, 6), round(v.coordenadas.y, 6))] = v
+    for s in segmentos:
+        p1 = mapa[(round(s.p1.x,6), round(s.p1.y,6))]
+        p2 = mapa[(round(s.p2.x,6), round(s.p2.y,6))]
+        e1 = NodoArista(f"s{contador}"); contador += 1
+        e2 = NodoArista(f"s{contador}"); contador += 1
+        e1.verticeOriginal = p1
+        e2.verticeOriginal = p2
+        e1.pareja = e2
+        e2.pareja = e1
+        aristas.append(e1)
+        aristas.append(e2)
+        DEBUG_LOG.write(f"  Half-edges: {e1.nombre} (de {p1.nombre} a {p2.nombre}) y {e2.nombre} (de {p2.nombre} a {p1.nombre})\n")
+    return aristas
+
+def angulo_arista(e: NodoArista) -> float:
+    p1 = e.verticeOriginal.coordenadas
+    p2 = e.pareja.verticeOriginal.coordenadas
+    return math.atan2(p2.y - p1.y, p2.x - p1.x)
+
+def conectar_aristas(vertices, aristas):
+    DEBUG_LOG.write("\n--- Conectando half-edges (siguiente/anterior) ---\n")
+    incidentes = defaultdict(list)
+    for e in aristas:
+        incidentes[e.verticeOriginal.nombre].append(e)
+    for v_nombre, lista in incidentes.items():
+        lista.sort(key=angulo_arista)
+        DEBUG_LOG.write(f"  Vértice {v_nombre}: aristas incidentes ordenadas: {[e.nombre for e in lista]}\n")
+    for v_nombre, lista in incidentes.items():
+        n = len(lista)
+        for i in range(n):
+            e = lista[i]
+            ant = lista[(i-1)%n]
+            e.pareja.siguiente = ant
+            ant.anterior = e.pareja
+            DEBUG_LOG.write(f"    Enlace: {e.pareja.nombre}.siguiente = {ant.nombre}, {ant.nombre}.anterior = {e.pareja.nombre}\n")
+
+def area_poligono(puntos):
+    area = 0.0
+    n = len(puntos)
+    for i in range(n):
+        x1, y1 = puntos[i]
+        x2, y2 = puntos[(i+1)%n]
+        area += x1*y2 - x2*y1
+    return area / 2.0
+
+def crear_caras(aristas):
+    DEBUG_LOG.write("\n--- Formando caras (ciclos) ---\n")
+    caras = {}
+    contador = 1
+    for e in aristas:
+        if e.cara is not None:
+            continue
+        DEBUG_LOG.write(f"  Iniciando ciclo desde {e.nombre}\n")
+        ciclo = []
+        puntos = []
+        actual = e
+        while True:
+            if actual is None or (actual.cara is not None and actual != e):
+                DEBUG_LOG.write(f"    Ciclo abortado: actual es None o ya tiene cara.\n")
+                ciclo = []
+                break
+            ciclo.append(actual)
+            puntos.append([actual.verticeOriginal.coordenadas.x, actual.verticeOriginal.coordenadas.y])
+            DEBUG_LOG.write(f"    Añadida {actual.nombre} ({actual.verticeOriginal.coordenadas.x},{actual.verticeOriginal.coordenadas.y}), siguiente={actual.siguiente.nombre if actual.siguiente else 'None'}\n")
+            actual = actual.siguiente
+            if actual == e:
+                break
+        if len(ciclo) < 3:
+            DEBUG_LOG.write(f"  Ciclo de {len(ciclo)} aristas -> ignorado\n")
+            continue
+        area = area_poligono(puntos)
+        DEBUG_LOG.write(f"  Ciclo cerrado con {len(ciclo)} aristas, área={area}\n")
+        if area <= EPS:
+            DEBUG_LOG.write(f"  Área <= 0 -> ignorado\n")
+            continue
+        c = NodoCara(f"f{contador}")
+        contador += 1
+        c.aristasExternos = ciclo[0]
+        for ar in ciclo:
+            ar.cara = c
+        caras[c.nombre] = c
+        DEBUG_LOG.write(f"  Cara creada: {c.nombre}\n")
+    DEBUG_LOG.write(f"  Total de caras finitas creadas: {len(caras)}\n")
+    return list(caras.values())
+
+def crear_cara_infinita(aristas, caras):
+    DEBUG_LOG.write("\n--- Creando cara infinita (f0) ---\n")
+    f0 = NodoCara("f0")
+    usadas = set()
+    sin_cara = [e for e in aristas if e.cara is None]
+    DEBUG_LOG.write(f"  Aristas sin cara: {[e.nombre for e in sin_cara]}\n")
+    for e in sin_cara:
+        e.cara = f0
+        if e.nombre not in usadas:
+            f0.aristasInternos.append(e)
+            usadas.add(e.nombre)
+    caras.append(f0)
+
+# ------------------------------------------------------------
+# 5. EXPORTAR (se añade volcado de debug final)
+# ------------------------------------------------------------
+
+def exportar_resultado(vertices, aristas, caras, caras_activas_nombres, base="resultado"):
+    # (código de exportación sin cambios, no necesita debug extra)
+    with open(base + ".vertices", "w", encoding="utf-8") as f:
+        f.write("Archivo de vértices\n#################################\nNombre  x       y       Incidente\n#################################\n")
+        for v in vertices:
+            inc = v.aristaAdyacente.nombre if v.aristaAdyacente else "None"
+            f.write(f"{v.nombre} {v.coordenadas.x:.6f} {v.coordenadas.y:.6f} {inc}\n")
+    with open(base + ".aristas", "w", encoding="utf-8") as f:
+        f.write("Archivo de aristas\n#############################################\nNombre  Origen  Pareja  Cara    Sigue   Antes\n#############################################\n")
+        for a in aristas:
+            origen = a.verticeOriginal.nombre if a.verticeOriginal else "None"
+            pareja = a.pareja.nombre if a.pareja else "None"
+            cara = a.cara.nombre if a.cara else "None"
+            sig = a.siguiente.nombre if a.siguiente else "None"
+            ant = a.anterior.nombre if a.anterior else "None"
+            f.write(f"{a.nombre} {origen} {pareja} {cara} {sig} {ant}\n")
+    with open(base + ".caras", "w", encoding="utf-8") as f:
+        f.write("Archivo de caras\n#######################\nNombre  Interno Externo\n#######################\n")
+        for c in caras:
+            interno = "[" + ",".join([e.nombre for e in c.aristasInternos]) + "]"
+            externo = c.aristasExternos.nombre if c.aristasExternos else "None"
+            f.write(f"{c.nombre} {interno} {externo}\n")
+    with open(base + ".activos", "w", encoding="utf-8") as f:
+        f.write("Archivo de activos\n#######################\nCaras Activas\n#######################\n")
+        for nombre in caras_activas_nombres:
+            f.write(f"{nombre}\n")
+    print(f"Exportado a {base}.*")
+
+# ------------------------------------------------------------
+# 6. VISUALIZACIONES (sin cambios, no se tocan para el debug)
+# ------------------------------------------------------------
 
 def visualizar_pygame(vertices, aristas, caras, caras_activas_inicial):
     """
@@ -707,15 +807,22 @@ def visualizar_pygame(vertices, aristas, caras, caras_activas_inicial):
     pygame.quit()
 
 
-# ------------------------------------------------
-# 7. FUNCIÓN PRINCIPAL
-# ------------------------------------------------
+# ------------------------------------------------------------
+# 7. FUNCIÓN PRINCIPAL (con debug)
+# ------------------------------------------------------------
+
+# Variable global para el archivo de debug
+DEBUG_LOG = None
 
 def main():
-    # Capas a cargar (igual que en el main original)
-    listaLayers = ["layer03", "layer04", "layer05", "layer01", "layer02", "soto"]
+    global DEBUG_LOG
+    # Abrir archivo de debug (se sobreescribe en cada ejecución)
+    DEBUG_LOG = open("debug_overlay.log", "w", encoding="utf-8")
+    DEBUG_LOG.write("=== INICIO DEL PROCESO DE OVERLAY ===\n")
+
+    listaLayers = ["layer03", "layer02", "layer01", "layer05", "layer04", "soto"]
     todos_los_segmentos = []
-    todas_las_caras_originales = []   # para recordar qué caras estaban activas
+    todas_las_caras_originales = []
     activas_originales = set()
 
     # Leer cada capa
@@ -724,58 +831,82 @@ def main():
         verts, aris, caras, activas = cargar_layer(layer)
         segs = extraer_segmentos(aris, layer)
         todos_los_segmentos.extend(segs)
-        # Guardar qué caras estaban activas (para después clasificar)
         for c in caras:
             if c.nombre in activas:
                 activas_originales.add(c.nombre)
             todas_las_caras_originales.append(c)
 
-    print(f"Segmentos totales: {len(todos_los_segmentos)}")
+    DEBUG_LOG.write(f"\nTotal de segmentos originales: {len(todos_los_segmentos)}\n")
 
-    # ===== VISUALIZACIÓN 1: CAPAS ORIGINALES =====
+    # Visualización 1 (opcional, se mantiene)
     visualizar_capas_originales(listaLayers, todas_las_caras_originales)
 
-    # 1. Detectar intersecciones (fuerza bruta)
+    # 1. Detectar intersecciones
     detectar_intersecciones(todos_los_segmentos)
 
     # 2. Partir segmentos
     nuevos_segmentos = partir_segmentos(todos_los_segmentos)
-    print(f"Segmentos después de partir: {len(nuevos_segmentos)}")
+
+    # *** NUEVO: Unificar segmentos colineales ***
+    nuevos_segmentos = unificar_segmentos_colineales(nuevos_segmentos)
 
     # 3. Reconstruir DCEL
+    vertices = crear_vertices(nuevos_segmentos)
     vertices = crear_vertices(nuevos_segmentos)
     aristas = crear_aristas(nuevos_segmentos, vertices)
     conectar_aristas(vertices, aristas)
 
-    # Asignar arista incidente a cada vértice (cualquiera que salga)
     for e in aristas:
         if e.verticeOriginal.aristaAdyacente is None:
             e.verticeOriginal.aristaAdyacente = e
 
     # 4. Crear caras finitas
     caras_finitas = crear_caras(aristas)
-    # 5. Crear cara infinita
+    # 5. Cara infinita
     crear_cara_infinita(aristas, caras_finitas)
 
-    print(f"Caras resultantes: {len(caras_finitas)}")
+    DEBUG_LOG.write(f"\n=== RESUMEN FINAL ===\n")
+    DEBUG_LOG.write(f"Vértices totales: {len(vertices)}\n")
+    DEBUG_LOG.write(f"Aristas totales (half‑edges): {len(aristas)}\n")
+    DEBUG_LOG.write(f"Caras totales (incluyendo f0): {len(caras_finitas)}\n")
+    for v in vertices:
+        DEBUG_LOG.write(f"  Vértice {v.nombre}: ({v.coordenadas.x}, {v.coordenadas.y}) incidente={v.aristaAdyacente.nombre if v.aristaAdyacente else 'None'}\n")
+    for a in aristas:
+        DEBUG_LOG.write(f"  Arista {a.nombre}: orig={a.verticeOriginal.nombre if a.verticeOriginal else '?'} pareja={a.pareja.nombre if a.pareja else '?'} cara={a.cara.nombre if a.cara else '?'} sig={a.siguiente.nombre if a.siguiente else '?'} ant={a.anterior.nombre if a.anterior else '?'}\n")
+    for c in caras_finitas:
+        DEBUG_LOG.write(f"  Cara {c.nombre}: externo={c.aristasExternos.nombre if c.aristasExternos else 'None'} internos={[e.nombre for e in c.aristasInternos]}\n")
 
-    # 6. Clasificar qué caras son activas (usando punto interior)
+    # 6. Clasificar caras activas (se puede añadir debug si se desea)
+    # (se mantiene la clasificación sin cambios)
     poligonos_activos = []
     for c in todas_las_caras_originales:
         if c.nombre not in activas_originales:
             continue
-        if c.aristasExternos is None:
-            continue
-        pts = []
-        inicio = c.aristasExternos
-        actual = inicio
-        while actual:
-            pts.append(actual.verticeOriginal.coordenadas)
-            actual = actual.siguiente
-            if actual == inicio or actual is None:
-                break
-        if len(pts) >= 3:
-            poligonos_activos.append(pts)
+        # 1. Si tiene arista exterior, usamos ese ciclo
+        if c.aristasExternos is not None:
+            pts = []
+            inicio = c.aristasExternos
+            actual = inicio
+            while actual:
+                pts.append(actual.verticeOriginal.coordenadas)
+                actual = actual.siguiente
+                if actual == inicio or actual is None:
+                    break
+            if len(pts) >= 3:
+                poligonos_activos.append(pts)
+        # 2. Si no tiene exterior pero tiene ciclos internos (agujeros activos)
+        else:
+            for a_int in c.aristasInternos:
+                pts = []
+                inicio = a_int
+                actual = inicio
+                while actual:
+                    pts.append(actual.verticeOriginal.coordenadas)
+                    actual = actual.siguiente
+                    if actual == inicio or actual is None:
+                        break
+                if len(pts) >= 3:
+                    poligonos_activos.append(pts)
 
     def punto_en_poligono(pt, poly):
         x, y = pt.x, pt.y
@@ -822,15 +953,17 @@ def main():
         if activa:
             caras_activas.append(c.nombre)
 
-    # 7. Exportar resultados
+    DEBUG_LOG.write(f"\nCaras activas finales: {caras_activas}\n")
+
+    # 7. Exportar
     exportar_resultado(vertices, aristas, caras_finitas, caras_activas, "resultado_simple")
 
-    print("Proceso completado. Archivos exportados.")
+    print("Proceso completado. Archivos exportados y debug escrito en debug_overlay.log")
 
-    # ===== VISUALIZACIÓN 2: RESULTADO FINAL =====
+    DEBUG_LOG.close()   # Cerrar archivo de debug
+
+    # Visualizaciones (se mantienen)
     visualizar_resultado_final(vertices, aristas, caras_finitas)
-
-    # 8. Visualizar con Pygame
     visualizar_pygame(vertices, aristas, caras_finitas, caras_activas)
 
 
