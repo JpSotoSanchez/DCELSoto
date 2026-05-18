@@ -828,7 +828,7 @@ def main():
     # Leer cada capa
     for layer in listaLayers:
         print(f"Cargando {layer}...")
-        verts, aris, caras, activas = cargar_layer(layer)
+        _, aris, caras, activas = cargar_layer(layer)
         segs = extraer_segmentos(aris, layer)
         todos_los_segmentos.extend(segs)
         for c in caras:
