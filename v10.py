@@ -420,7 +420,7 @@ def partir_segmentos(segmentos):
     return nuevos
 
 def unificar_segmentos_colineales(segmentos):
-    """Agrupa segmentos colineales y los parte en trozos no solapados."""
+    """Agrupa segmentos colineales y los fusiona SOLO donde realmente hay cobertura."""
     grupos = defaultdict(list)
     for seg in segmentos:
         dx = seg.p2.x - seg.p1.x
@@ -450,26 +450,40 @@ def unificar_segmentos_colineales(segmentos):
         else:
             key_func = lambda p: (p.y, p.x)
 
-        # Recopilar puntos únicos de todos los segmentos del grupo
+        # Recopilar todos los puntos únicos (extremos e intersecciones)
         puntos_unicos = {}
         for seg in segs:
             for p in [seg.p1, seg.p2] + seg.intersecciones:
-                # Redondear para unificar puntos muy próximos
                 k = (round(p.x, 8), round(p.y, 8))
                 if k not in puntos_unicos:
                     puntos_unicos[k] = p
         puntos = list(puntos_unicos.values())
         puntos.sort(key=key_func)
 
-        # Crear segmentos entre consecutivos (descartando longitudes 0)
-        for i in range(len(puntos) - 1):
-            a, b = puntos[i], puntos[i + 1]
-            if puntos_iguales(a, b):
-                continue
-            # El layer puede ser una combinación; para la DCEL ponemos "unified"
-            ns = SegmentoOverlay(f"g{contador}", a, b, "unified")
-            nuevos.append(ns)
-            contador += 1
+        # Mapeo de punto a índice para calcular coberturas
+        pt_to_idx = { (round(p.x,8), round(p.y,8)): i for i, p in enumerate(puntos) }
+
+        # Inicializar cobertura a 0
+        cobertura = [0] * (len(puntos) - 1)
+
+        # Marcar cobertura basada en los segmentos originales
+        for seg in segs:
+            i1 = pt_to_idx[(round(seg.p1.x,8), round(seg.p1.y,8))]
+            i2 = pt_to_idx[(round(seg.p2.x,8), round(seg.p2.y,8))]
+            if i1 > i2:
+                i1, i2 = i2, i1
+            for idx in range(i1, i2):
+                cobertura[idx] += 1
+
+        # Crear segmentos solo para intervalos con cobertura > 0
+        for i in range(len(puntos)-1):
+            if cobertura[i] > 0:
+                a, b = puntos[i], puntos[i+1]
+                if puntos_iguales(a, b):
+                    continue
+                ns = SegmentoOverlay(f"g{contador}", a, b, "unified")
+                nuevos.append(ns)
+                contador += 1
 
     return nuevos
 
@@ -1008,7 +1022,9 @@ def main():
 
     #listaLayers = ["soto", "layerSoto2", "layerSoto3"]
     listaLayers = ["layer01", "layer02", "layer03", "layer04", "layer05"]
-
+    #listaLayers = ["layer02SIA"]
+    #listaLayers = ["layer01SIA"]
+    
     todos_los_segmentos = []
     todas_las_caras_originales = []
     activas_originales = set()
