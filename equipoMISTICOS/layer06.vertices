@@ -1,0 +1,5 @@
+Nombre	x	y	Incidente
+v1	-5.0	5.0	s1
+v2	5.0	-5.0	s1_twin
+v3	-5.0	-5.0	s2
+v4	5.0	5.0	s2_twin

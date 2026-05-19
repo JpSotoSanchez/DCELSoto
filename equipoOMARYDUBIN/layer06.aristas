@@ -1,0 +1,13 @@
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+s81     p81     s82     f10     s83     s811
+s82     p82     s81     None    s812    s84
+s83     p82     s84     f10     s85     s81
+s84     p83     s83     None    s82     s86
+s85     p83     s86     f10     s87     s83
+s86     p84     s85     None    s84     s88
+s87     p84     s88     f10     s89     s85
+s88     p85     s87     None    s86     s810
+s89     p85     s810    f10     s811    s87
+s810    p86     s89     None    s88     s812
+s811    p86     s812    f10     s81     s89
+s812    p81     s811    None    s810    s82

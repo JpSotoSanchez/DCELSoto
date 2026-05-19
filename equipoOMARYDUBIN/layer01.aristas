@@ -1,0 +1,15 @@
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+s31     p31     s32     f3      s313    s35
+s32     p36     s31     None    s312    s314
+s33     p32     s34     f3      s35     s313
+s34     p33     s33     f5      s36     s37
+s35     p33     s36     f3      s31     s33
+s36     p36     s35     f5      s37     s34
+s37     p34     s38     f5      s34     s36
+s38     p33     s37     f11     s39     s311
+s39     p34     s310    f11     s311    s38
+s310    p35     s39     None    s314    s312
+s311    p35     s312    f11     s38     s39
+s312    p36     s311    None    s32     s310
+s313    p31     s314    f3      s33     s31
+s314    p32     s313    None    s32     s310

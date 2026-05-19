@@ -1,0 +1,25 @@
+#################################################################
+Nombre          Origen          Pareja          Cara                      Sigue           Antes
+#################################################################
+Arista1         Vertice3        Arista1_pareja  CARA2                     s21             Arista11_pareja
+Arista1_pareja  Vertice4        Arista1         CARA2                     Arista11        s22
+Arista2         Vertice6        Arista2_pareja  CARA2                     Arista8         Arista3
+Arista2_pareja  Vertice7        Arista2         CARA2                     Arista3_pareja  Arista8_pareja
+Arista3         Vertice8        Arista3_pareja  CARA2                     Arista2         Arista7_pareja
+Arista3_pareja  Vertice6        Arista3         CARA2                     Arista7         Arista2_pareja
+Arista4         Vertice9        Arista4_pareja  f1                        Arista4_pareja  Arista4_pareja
+Arista4_pareja  Vertice10       Arista4         f1                        Arista4         Arista4
+Arista5         Vertice1        Arista5_pareja  CARA2                     Arista9         Arista5_pareja
+Arista6         Vertice2        Arista6_pareja  CARA2                     Arista7_pareja  s21
+Arista7         Vertice8        Arista7_pareja  CARA2                     Arista5_pareja  Arista3_pareja
+Arista6_pareja  Vertice11       Arista6         CARA2                     Arista6         Arista9_pareja
+Arista5_pareja  Vertice11       Arista5         CARA2                     s21             Arista7
+Arista7_pareja  Vertice11       Arista7         CARA2                     Arista3         Arista6
+Arista8         Vertice7        Arista8_pareja  CARA2                     Arista10_pareja Arista2
+Arista9         Vertice11       Arista9_pareja  CARA2                     Arista11_pareja Arista5
+Arista10        Vertice5        Arista10_pareja CARA2                     Arista9_pareja  s21
+Arista11        Vertice3        Arista11_pareja CARA2                     Arista8_pareja  Arista1_pareja
+Arista9_pareja  Vertice12       Arista9         CARA2                     Arista6_pareja  Arista10
+Arista8_pareja  Vertice12       Arista8         CARA2                     Arista2_pareja  Arista11
+Arista11_pareja Vertice12       Arista11        CARA2                     Arista1         Arista9
+Arista10_pareja Vertice12       Arista10        CARA2                     s22             Arista8

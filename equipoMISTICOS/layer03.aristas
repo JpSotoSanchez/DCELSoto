@@ -1,0 +1,9 @@
+Nombre	Origen	Pareja	Cara	Sigue	Antes
+s1	v1	s1_twin	f1	s2	s4
+s2	v2	s2_twin	f1	s3	s1
+s3	v3	s3_twin	f1	s4	s2
+s4	v4	s4_twin	f1	s1	s3
+s1_twin	v2	s1	f_out	s4_twin	s2_twin
+s2_twin	v3	s2	f_out	s1_twin	s3_twin
+s3_twin	v4	s3	f_out	s2_twin	s4_twin
+s4_twin	v1	s4	f_out	s3_twin	s1_twin

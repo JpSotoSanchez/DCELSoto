@@ -1,0 +1,15 @@
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+s501    p51     s502    f6      s503    s511
+s502    p52     s501    None    s516    s504
+s503    p52     s504    f6      s509    s501
+s504    p53     s503    None    s502    s510
+s509    p53     s510    f7      s511    s503
+s510    p55     s509    None    s504    s514
+s511    p55     s512    f7      s501    s509
+s512    p55     s511    None    s510    s516
+s513    p55     s514    f8      s515    s512
+s514    p56     s513    None    s510    s516
+s515    p56     s516    f8      s517    s513
+s516    p57     s515    None    s512    s514
+s517    p57     s518    f8      s513    s515
+s518    p51     s517    None    s502    s511

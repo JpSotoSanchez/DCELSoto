@@ -1,0 +1,11 @@
+Archivo de aristas LAYER05
+#############################################
+Nombre  	Origen  Pareja  	Cara    Sigue   	Antes
+#############################################
+s51		P1	s51_twin	f1_out	s52		s53
+s52		P2	s52_twin	f1_out	s53		s51
+s53		P3	s53_twin	f1_out	s51		s52
+s51_twin	P2	s51		f1	s53_twin	s52_twin
+s52_twin	P3	s52		f1	s51_twin	s53_twin
+s53_twin	P1	s53		f1	s52_twin	s51_twin
+

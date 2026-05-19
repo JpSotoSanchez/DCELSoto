@@ -1,0 +1,14 @@
+Archivo de aristas LAYER02
+#############################################
+Nombre  	Origen  Pareja  	Cara    Sigue   	Antes
+#############################################
+s21		P1	s21_twin	f1_out	s22		s25
+s22		P2	s22_twin	f1_out	s23		s21
+s23		P3	s23_twin	f1_out	s24		s22
+s24		P4	s24_twin	f1_out	s25		s23
+s25		P5	s25_twin	f1_out	s21		s24
+s21_twin	P2	s21		f1	s25_twin	s22_twin
+s22_twin	P3	s22		f1	s21_twin	s23_twin
+s23_twin	P4	s23		f1	s22_twin	s24_twin
+s24_twin	P5	s24		f1	s23_twin	s25_twin
+s25_twin	P1	s25		f1	s24_twin	s21_twin

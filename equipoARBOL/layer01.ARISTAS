@@ -1,0 +1,6 @@
+Archivo de aristas LAYER02
+#############################################
+Nombre  	Origen  Pareja  	Cara    Sigue   	Antes
+#############################################
+s11		P1	s11_twin	f1	s11_twin	s11_twin
+s11_twin	P2	s11		f1	s11		s11

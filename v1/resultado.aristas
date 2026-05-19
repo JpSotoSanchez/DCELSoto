@@ -1,0 +1,33 @@
+#################################################################
+Nombre          Origen          Pareja          Cara                      Sigue           Antes
+#################################################################
+s11             p1              s12             CARA1                     s21_P           s31_PP_PP
+s12             p2              s11             CARA2                     s32_P_P         s22_PP
+s41             p4              s42             CARA1                     s51_P           s61_PP
+s42             p5              s41             CARA2                     s62_P           s52_PP
+s21_P           p2              s22_PP          CARA1                     s62_PP_P        s11
+s22_P           p3              s21_PP          CARA1                     s61_PP          s32_PP
+s62_P           p4              s61_PP          CARA2                     s22_PP          s42
+s21_PP          V_INT_1         s22_P           CARA1                     s31_P           s61_P_PP
+s22_PP          V_INT_1         s21_P           CARA2                     s12             s62_P
+s61_PP          V_INT_1         s62_P           CARA1                     s41             s22_P
+s11_P           p1              s12_PP          CARA1                     s62_PP_PP       s12_PP
+s61_P_P         p6              s62_PP_PP       CARA1                     s11_PP_P        s51_PP
+s62_PP_P        V_INT_1         s61_P_PP        CARA1                     s12_PP          s21_P
+s12_PP          V_INT_2         s11_P           CARA1                     s11             s62_PP_P
+s61_P_PP        V_INT_2         s62_PP_P        CARA1                     s21_PP          s12_P_PP
+s62_PP_PP       V_INT_2         s61_P_P         CARA1                     s52_P           s11_P
+s31_P           p3              s32_PP          CARA1                     s12_P_PP        s21_PP
+s11_PP_P        V_INT_2         s12_P_PP        CARA1                     s31_PP_P        s61_P_P
+s12_P_P         p2              s11_PP_PP       CARA1                     s32_PP          s11
+s32_PP          V_INT_3         s31_P           CARA1                     s22_P           s12_P_P
+s11_PP_PP       V_INT_3         s12_P_P         CARA1                     s12_P_P         s32_P_PP
+s12_P_PP        V_INT_3         s11_PP_P        CARA1                     s61_P_PP        s31_P
+s31_PP_P        V_INT_3         s32_P_PP        CARA1                     s51_PP          s11_PP_P
+s32_P_P         p1              s31_PP_PP       CARA2                     s52_PP          s12
+s51_P           p5              s52_PP          CARA1                     s32_P_PP        s41
+s52_P           p6              s51_PP          CARA1                     s31_PP_PP       s62_PP_PP
+s31_PP_PP       V_INT_4         s32_P_P         CARA1                     s11             s52_P
+s32_P_PP        V_INT_4         s31_PP_P        CARA1                     s11_PP_PP       s51_P
+s51_PP          V_INT_4         s52_P           CARA1                     s61_P_P         s31_PP_P
+s52_PP          V_INT_4         s51_P           CARA2                     s42             s32_P_P

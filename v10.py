@@ -1017,14 +1017,54 @@ DEBUG_LOG = None
 
 def main():
     global DEBUG_LOG
-    DEBUG_LOG = open("debug_overlay.log", "w", encoding="utf-8")
+    DEBUG_LOG = open("debug/debug_overlay.log", "w", encoding="utf-8")
     DEBUG_LOG.write("=== INICIO DEL PROCESO DE OVERLAY ===\n")
 
-    #listaLayers = ["soto", "layerSoto2", "layerSoto3"]
-    listaLayers = ["layer01", "layer02", "layer03", "layer04", "layer05"]
-    #listaLayers = ["layer02SIA"]
-    #listaLayers = ["layer01SIA"]
+    #67
+    #listaLayers = ["equipo67/layer01", "equipo67/layer02", "equipo67/layer03"]
     
+    #alcaraz
+    #listaLayers = ["equipoALCARAZ/layer01", "equipoALCARAZ/layer02", "equipoALCARAZ/layer03", "equipoALCARAZ/layer04", "equipoALCARAZ/layer05"]
+    #listaLayers = ["equipoALCARAZ/layer01", "equipoALCARAZ/layer02"]
+    #listaLayers = ["equipoALCARAZ/layer03", "equipoALCARAZ/layer04"]
+    #listaLayers = ["equipoALCARAZ/layer03", "equipoALCARAZ/layer04", "equipoALCARAZ/layer05"]
+
+    #arbol
+    #listaLayers = ["equipoARBOL/layer01", "equipoARBOL/layer02", "equipoARBOL/layer03", "equipoARBOL/layer04", "equipoARBOL/layer05"]
+   
+    #arbusto
+    #listaLayers = ["equipoARBUSTO/layerARBUSTO", "equipoARBUSTO/layerARBUSTO2"]
+    
+    #diego
+    #listaLayers = ["equipoDIEGO/caso1_A", "equipoDIEGO/caso1_B"]
+    #listaLayers = ["equipoDIEGO/caso2_A", "equipoDIEGO/caso2_B"]
+    #listaLayers = ["equipoDIEGO/caso1_A", "equipoDIEGO/caso1_B", "equipoDIEGO/caso2_A", "equipoDIEGO/caso2_B"]
+    
+    #falacia del costo hundido
+    #listaLayers = ["equipoFALACIADELCOSTOHUNDIDO/layer01", "equipoFALACIADELCOSTOHUNDIDO/layer02", "equipoFALACIADELCOSTOHUNDIDO/layer03"]
+    
+    #misticos
+    #listaLayers = ["equipoMISTICOS/layer01", "equipoMISTICOS/layer02", "equipoMISTICOS/layer03", "equipoMISTICOS/layer04", "equipoMISTICOS/layer05", "equipoMISTICOS/layer06"]
+    
+    #morenos
+    #listaLayers = ["equipoMORENOS/layer01", "equipoMORENOS/layer02", "equipoMORENOS/layer03", "equipoMORENOS/layer04"]
+    
+    #omar y dubin
+    #listaLayers = ["equipoOMARYDUBIN/layer01", "equipoOMARYDUBIN/layer02", "equipoOMARYDUBIN/layer03", "equipoOMARYDUBIN/layer04", "equipoOMARYDUBIN/layer05", "equipoOMARYDUBIN/layer06"]
+    
+    #pythones
+    #listaLayers = ["equipoPYTHONES/layer11", "equipoPYTHONES/layer12", "equipoPYTHONES/layer13", "equipoPYTHONES/layer14", "equipoPYTHONES/layer15"]
+    
+    #sia
+    #listaLayers = ["equipoSIA/layer01SIA"]
+    #listaLayers = ["equipoSIA/layer02SIA"]
+    #listaLayers = ["equipoSIA/layer01SIA", "equipoSIA/layer02SIA"]
+    
+    #soto
+    #listaLayers = ["equipoSOTO/layerSoto1", "equipoSOTO/layerSoto2", "equipoSOTO/layerSoto3"]
+
+
+
     todos_los_segmentos = []
     todas_las_caras_originales = []
     activas_originales = set()
@@ -1200,9 +1240,9 @@ def main():
     DEBUG_LOG.write(f"\nCaras activas finales: {caras_activas}\n")
 
     # 7. Exportar
-    exportar_resultado(vertices, aristas, caras_finitas, caras_activas, "resultado_simple")
+    exportar_resultado(vertices, aristas, caras_finitas, caras_activas, "resultados/resultado")
 
-    print("Proceso completado. Archivos exportados y debug escrito en debug_overlay.log")
+    print("Proceso completado. Archivos exportados y debug escrito en debug/debug_overlay.log")
 
     DEBUG_LOG.close()   # Cerrar archivo de debug
 

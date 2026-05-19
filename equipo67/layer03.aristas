@@ -1,0 +1,19 @@
+#############################################
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+#############################################
+b1_e1   b1_v1   b1_e1_t f_azul1 b1_e2   b1_e4
+b1_e2   b1_v2   b1_e2_t f_azul1 b1_e3   b1_e1
+b1_e3   b1_v3   b1_e3_t f_azul1 b1_e4   b1_e2
+b1_e4   b1_v4   b1_e4_t f_azul1 b1_e1   b1_e3
+b1_e1_t b1_v2   b1_e1   None    b1_e4_t b1_e2_t
+b1_e2_t b1_v3   b1_e2   None    b1_e1_t b1_e3_t
+b1_e3_t b1_v4   b1_e3   None    b1_e2_t b1_e4_t
+b1_e4_t b1_v1   b1_e4   None    b1_e3_t b1_e1_t
+b2_e1   b2_v1   b2_e1_t f_azul2 b2_e2   b2_e4
+b2_e2   b2_v2   b2_e2_t f_azul2 b2_e3   b2_e1
+b2_e3   b2_v3   b2_e3_t f_azul2 b2_e4   b2_e2
+b2_e4   b2_v4   b2_e4_t f_azul2 b2_e1   b2_e3
+b2_e1_t b2_v2   b2_e1   None    b2_e4_t b2_e2_t
+b2_e2_t b2_v3   b2_e2   None    b2_e1_t b2_e3_t
+b2_e3_t b2_v4   b2_e3   None    b2_e2_t b2_e4_t
+b2_e4_t b2_v1   b2_e4   None    b2_e3_t b2_e1_t

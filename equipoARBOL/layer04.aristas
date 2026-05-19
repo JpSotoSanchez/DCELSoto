@@ -1,0 +1,14 @@
+Archivo de aristas layer04
+#############################################
+Nombre  	Origen  Pareja  	Cara    Sigue   	Antes
+#############################################
+s41		P1	s41_twin	f1_out	s42		s45
+s42		P2	s42_twin	f1_out	s43		s41
+s43		P3	s43_twin	f1_out	s44		s42
+s44		P4	s44_twin	f1_out	s45		s43
+s45		P5	s45_twin	f1_out	s41		s44
+s41_twin	P2	s41		f1	s45_twin	s42_twin
+s42_twin	P3	s42		f1	s41_twin	s43_twin
+s43_twin	P4	s43		f1	s42_twin	s44_twin
+s44_twin	P5	s44		f1	s43_twin	s45_twin
+s45_twin	P1	s45		f1	s44_twin	s41_twin

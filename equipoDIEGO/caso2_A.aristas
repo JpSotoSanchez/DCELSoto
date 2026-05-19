@@ -1,0 +1,26 @@
+Archivo de aristas
+#############################################
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+#############################################
+arista01a   vertice01    arista01b   caraExterior   arista02a   arista08a
+arista01b   vertice02    arista01a   cara01    arista08b   arista02b
+arista02a   vertice02    arista02b   caraExterior   arista03a   arista01a
+arista02b   vertice03    arista02a   cara01    arista01b   arista03b
+arista03a   vertice03    arista03b   caraExterior   arista04a   arista02a
+arista03b   vertice04    arista03a   cara01    arista02b   arista04b
+arista04a   vertice04    arista04b   caraExterior   arista05a   arista03a
+arista04b   vertice05    arista04a   cara01    arista03b   arista05b
+arista05a   vertice05    arista05b   caraExterior   arista06a   arista04a
+arista05b   vertice06    arista05a   cara01    arista04b   arista06b
+arista06a   vertice06    arista06b   caraExterior   arista07a   arista05a
+arista06b   vertice07    arista06a   cara01    arista05b   arista07b
+arista07a   vertice07    arista07b   caraExterior   arista08a   arista06a
+arista07b   vertice08    arista07a   cara01    arista06b   arista08b
+arista08a   vertice08    arista08b   caraExterior   arista01a   arista07a
+arista08b   vertice01    arista08a   cara01    arista07b   arista01b
+arista09a   vertice09    arista09b   caraExterior   arista10a  arista11a
+arista09b   vertice10   arista09a   cara02    arista11b  arista10b
+arista10a  vertice10   arista10b  caraExterior   arista11a  arista09a
+arista10b  vertice11   arista10a  cara02    arista09b   arista11b
+arista11a  vertice11   arista11b  caraExterior   arista09a   arista10a
+arista11b  vertice09    arista11a  cara02    arista10b  arista09b

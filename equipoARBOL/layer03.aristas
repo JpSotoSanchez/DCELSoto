@@ -1,0 +1,12 @@
+Archivo de aristas LAYER03
+#############################################
+Nombre  	Origen  Pareja  	Cara    Sigue   	Antes
+#############################################
+s31		P1	s31_twin	f1_out	s32		s34
+s32		P2	s32_twin	f1_out	s33		s31
+s33		P3	s33_twin	f1_out	s34		s32
+s34		P4	s34_twin	f1_out	s31		s33
+s31_twin	P2	s31		f1	s34_twin	s32_twin
+s32_twin	P3	s32		f1	s31_twin	s33_twin
+s33_twin	P4	s33		f1	s32_twin	s34_twin
+s34_twin	P1	s34		f1	s33_twin	s31_twin

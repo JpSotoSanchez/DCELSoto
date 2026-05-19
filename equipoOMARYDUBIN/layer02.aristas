@@ -1,0 +1,17 @@
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+s401    p41     s402    f4      s403    s415
+s402    p42     s401    None    s416    s404
+s403    p42     s404    f4      s405    s401
+s404    p43     s403    None    s402    s406
+s405    p43     s406    f4      s407    s403
+s406    p44     s405    None    s404    s408
+s407    p44     s408    f4      s409    s405
+s408    p45     s407    None    s406    s410
+s409    p45     s410    f4      s411    s407
+s410    p46     s409    None    s408    s412
+s411    p46     s412    f4      s413    s409
+s412    p47     s411    None    s410    s414
+s413    p47     s414    f4      s415    s411
+s414    p48     s413    None    s412    s416
+s415    p48     s416    f4      s401    s413
+s416    p41     s415    None    s414    s402

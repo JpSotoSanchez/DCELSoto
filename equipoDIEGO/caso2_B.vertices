@@ -1,0 +1,12 @@
+Archivo de vértices
+#################################
+Nombre  x       y       Incidente
+#################################
+vertice01    -2      3       arista01a
+vertice02    0       7       arista02a
+vertice03    5       11      arista03a
+vertice04    11      8       arista04a
+vertice05    19      5       arista05a
+vertice06    18      2       arista06a
+vertice07    10      4       arista07a
+vertice08    4       1       arista08a

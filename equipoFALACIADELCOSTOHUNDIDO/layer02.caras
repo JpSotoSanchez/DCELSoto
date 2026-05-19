@@ -1,0 +1,8 @@
+Archivo de caras
+#######################
+Nombre  Interno             Externo
+#######################
+f1      None                s2
+f2      None                s14
+f3      None                s16
+f4      [s1,s7,s15]         None

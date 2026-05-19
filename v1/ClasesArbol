@@ -1,0 +1,714 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb 11 14:07:58 2026
+
+@author: Josep
+
+MODIFICADO: interseccionSeg devuelve lista de Puntos (0, 1 ó 2).
+En solapamiento colineal se reportan AMBOS extremos del tramo común.
+"""
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from dataclasses import dataclass, field
+import heapq
+import math
+import sys
+import os
+sys.path.append(os.path.abspath(".."))
+
+@dataclass(frozen=True)
+class Punto:
+    x: float
+    y: float
+
+    def distancia(self, otro: "Punto") -> float:
+        return math.hypot(self.x - otro.x, self.y - otro.y)
+
+
+@dataclass(frozen=True)
+class Segmento:
+    name: str
+    p1: Punto
+    p2: Punto
+    boundingBox: tuple = field(init=False)
+    long: float = field(init=False)
+    ang: float = field(init=False)
+    
+    def __repr__(self):
+        return f"Segmento {self.name} p1={self.p1}, p2={self.p2}"
+
+    def __post_init__(self):
+        object.__setattr__(self, "boundingBox", (
+            min(self.p1.x, self.p2.x),
+            max(self.p1.x, self.p2.x),
+            min(self.p1.y, self.p2.y),
+            max(self.p1.y, self.p2.y)
+        ))
+        longitud = self.p1.distancia(self.p2)
+        object.__setattr__(self, "long", longitud)
+
+        if longitud == 0:
+            object.__setattr__(self, "ang", 0.0)
+        else:
+            valor = abs((self.p1.x - self.p2.x) / longitud)
+            valor = max(-1.0, min(1.0, valor))
+            object.__setattr__(self, "ang", math.acos(valor))
+
+    def organAlto(self) -> "Segmento":
+        """Devuelve un nuevo segmento con p1 como el punto más alto."""
+        if self.p1.y > self.p2.y:
+            return self
+        elif self.p1.y == self.p2.y:
+            if self.p1.x < self.p2.x:
+                return self
+            else:
+                return Segmento(self.name, self.p2, self.p1)
+        else:
+            return Segmento(self.name, self.p2, self.p1)
+
+    def yInBound(self, altura: float) -> bool:
+        return self.boundingBox[2] <= altura <= self.boundingBox[3]
+
+    def __hash__(self):
+        return hash((self.p1, self.p2))
+
+    
+class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.padre = None
+        self.izq = None
+        self.der = None
+        self.x = None
+        self.y = None
+
+    def hijos(self):
+        r = []
+        if self.izq:
+            r.append(self.izq)
+        if self.der:
+            r.append(self.der)
+        return r
+
+    def __repr__(self):
+        return f"Nodo {self.valor}"
+
+
+# ── Funciones auxiliares globales ────────────────────────────────────────────
+
+def altura(nodo):
+    """Altura del subárbol enraizado en `nodo`. Nodo None → -1."""
+    if nodo is None:
+        return -1
+    prof_izq = altura(nodo.izq)
+    prof_der = altura(nodo.der)
+    return 1 + max(prof_izq, prof_der)
+
+def mayor(nodo):
+    while nodo.der:
+        nodo = nodo.der
+    return nodo
+
+
+# ── Función auxiliar: x de un segmento a una altura dada ─────────────────────
+
+def x_at_y(seg: "Segmento", y: float) -> float:
+    """Devuelve la coordenada x del segmento en la altura y."""
+    if abs(seg.p1.y - seg.p2.y) < 1e-10:   # segmento horizontal
+        return seg.p1.x
+    t = (y - seg.p1.y) / (seg.p2.y - seg.p1.y)
+    return seg.p1.x + t * (seg.p2.x - seg.p1.x)
+
+
+# ── Árbol AVL ────────────────────────────────────────────────────────────────
+
+class AVL:
+    def __init__(self):
+        self.raiz = None
+
+    # ── utilidades de balance ────────────────────────────────────────────────
+
+    def _altura(self, nodo):
+        return altura(nodo)
+
+    def _factor(self, nodo):
+        if nodo is None:
+            return 0
+        return self._altura(nodo.izq) - self._altura(nodo.der)
+
+    # ── rotaciones ──────────────────────────────────────────────────────────
+
+    def _rotar_derecha(self, y):
+        x = y.izq
+        t2 = x.der
+
+        x.padre = y.padre
+        if y.padre is None:
+            self.raiz = x
+        elif y.padre.izq == y:
+            y.padre.izq = x
+        else:
+            y.padre.der = x
+
+        x.der = y
+        y.padre = x
+
+        y.izq = t2
+        if t2:
+            t2.padre = y
+
+        return x
+
+    def _rotar_izquierda(self, x):
+        y = x.der
+        t2 = y.izq
+
+        y.padre = x.padre
+        if x.padre is None:
+            self.raiz = y
+        elif x.padre.izq == x:
+            x.padre.izq = y
+        else:
+            x.padre.der = y
+
+        y.izq = x
+        x.padre = y
+
+        x.der = t2
+        if t2:
+            t2.padre = x
+
+        return y
+
+    def _rebalancear(self, nodo):
+        actual = nodo
+        while actual is not None:
+            fb = self._factor(actual)
+
+            if fb > 1:
+                if self._factor(actual.izq) < 0:
+                    self._rotar_izquierda(actual.izq)
+                self._rotar_derecha(actual)
+
+            elif fb < -1:
+                if self._factor(actual.der) > 0:
+                    self._rotar_derecha(actual.der)
+                self._rotar_izquierda(actual)
+
+            actual = actual.padre
+
+    # ── insertar ────────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _clave(seg):
+        """Clave de comparación: x en y_sweep, con ángulo como desempate."""
+        return (x_at_y(seg, y_sweep), seg.ang)
+
+    def insertar(self, valor):
+        if not self.raiz:
+            self.raiz = Nodo(valor)
+            return self.raiz
+
+        vk = self._clave(valor)
+        actual = self.raiz
+        while True:
+            ak = self._clave(actual.valor)
+            if actual.valor is valor:
+                return actual
+            elif vk < ak:
+                if not actual.izq:
+                    nuevo = Nodo(valor)
+                    nuevo.padre = actual
+                    actual.izq = nuevo
+                    self._rebalancear(actual)
+                    return nuevo
+                actual = actual.izq
+            else:
+                if not actual.der:
+                    nuevo = Nodo(valor)
+                    nuevo.padre = actual
+                    actual.der = nuevo
+                    self._rebalancear(actual)
+                    return nuevo
+                actual = actual.der
+
+    # ── buscar ──────────────────────────────────────────────────────────────
+
+    def buscar(self, valor):
+        return self.buscarPorIdentidad(valor)
+
+    def buscarContenedores(self, p: "Punto") -> set:
+        """Devuelve el conjunto de segmentos en T que contienen p en su interior."""
+        resultado = set()
+        for nodo in self.inorden():
+            seg = nodo.valor
+            if seg.p1 == p or seg.p2 == p:
+                continue
+            if seg.yInBound(p.y):
+                if abs(x_at_y(seg, p.y) - p.x) < 1e-9:
+                    resultado.add(seg)
+        return resultado
+
+    def buscarVecinosDeX(self, px: float):
+        """Devuelve (nodo_izq, nodo_der) más cercanos a px usando inorden."""
+        nodos = self.inorden()
+        izq = None
+        der = None
+        for n in nodos:
+            ax = x_at_y(n.valor, y_sweep)
+            if ax < px - 1e-9:
+                izq = n
+            elif ax > px + 1e-9:
+                if der is None:
+                    der = n
+        return izq, der
+
+    def buscarEnRangoX(self, x_min: float, x_max: float) -> list:
+        """Devuelve todos los nodos cuya x en y_sweep cae dentro de [x_min, x_max]."""
+        resultado = []
+        for nodo in self.inorden():
+            nx = x_at_y(nodo.valor, y_sweep)
+            if x_min - 1e-9 <= nx <= x_max + 1e-9:
+                resultado.append(nodo)
+        return resultado
+
+    def buscarPorIdentidad(self, seg) -> "Nodo":
+        """Busca el nodo cuyo valor ES el mismo objeto que seg (por identidad)."""
+        for nodo in self.inorden():
+            if nodo.valor is seg:
+                return nodo
+        return None
+
+    def sucesor(self, nodo):
+        """Sucesor en el orden actual de y_sweep (inorden dinámico)."""
+        if nodo is None:
+            return None
+        nodos = self.inorden()
+        for i, n in enumerate(nodos):
+            if n is nodo:
+                return nodos[i+1] if i+1 < len(nodos) else None
+        return None
+
+    def predecesor(self, nodo):
+        """Predecesor en el orden actual de y_sweep (inorden dinámico)."""
+        if nodo is None:
+            return None
+        nodos = self.inorden()
+        for i, n in enumerate(nodos):
+            if n is nodo:
+                return nodos[i-1] if i > 0 else None
+        return None
+
+    # ── eliminar ────────────────────────────────────────────────────────────
+
+    def eliminar(self, valor):
+        nodo = self.buscarPorIdentidad(valor)
+        if nodo:
+            self._eliminar_nodo(nodo)
+
+    def _eliminar_nodo(self, nodo):
+        inicio_rebalanceo = nodo.padre
+
+        if not nodo.izq and not nodo.der:
+            if nodo == self.raiz:
+                self.raiz = None
+            else:
+                padre = nodo.padre
+                if padre.izq == nodo:
+                    padre.izq = None
+                else:
+                    padre.der = None
+
+        elif nodo.izq and not nodo.der:
+            self._reemplazar_con_hijo(nodo, nodo.izq)
+
+        elif nodo.der and not nodo.izq:
+            self._reemplazar_con_hijo(nodo, nodo.der)
+
+        else:
+            sucesor = mayor(nodo.izq)
+            inicio_rebalanceo = sucesor.padre
+            if inicio_rebalanceo == nodo:
+                inicio_rebalanceo = sucesor
+            nodo.valor = sucesor.valor
+            self._eliminar_nodo(sucesor)
+            return
+
+        if inicio_rebalanceo:
+            self._rebalancear(inicio_rebalanceo)
+
+    def _reemplazar_con_hijo(self, nodo, hijo):
+        hijo.padre = nodo.padre
+        if nodo.padre is None:
+            self.raiz = hijo
+        elif nodo.padre.izq == nodo:
+            nodo.padre.izq = hijo
+        else:
+            nodo.padre.der = hijo
+
+    # ── recorridos ──────────────────────────────────────────────────────────
+
+    def _inorden_estructural(self, nodo=None):
+        """Recorrido inorden por estructura del árbol (sin reordenar)."""
+        if nodo is None:
+            nodo = self.raiz
+        l = []
+        if nodo is None:
+            return l
+        if nodo.izq:
+            l.extend(self._inorden_estructural(nodo.izq))
+        l.append(nodo)
+        if nodo.der:
+            l.extend(self._inorden_estructural(nodo.der))
+        return l
+
+    def inorden(self, nodo=None):
+        """Devuelve nodos ordenados por x_at_y(seg, y_sweep) actual."""
+        nodos = self._inorden_estructural(nodo)
+        nodos.sort(key=lambda n: x_at_y(n.valor, y_sweep))
+        return nodos
+
+
+# ── Estado global ─────────────────────────────────────────────────────────────
+
+S = set()
+Q = []
+dictPuntos = {}
+T = AVL()
+R = set()
+y_sweep = 0.0
+_contador_ev = 0
+frames = []          # historial de estados para la animación
+
+
+# ── Dataclass evento ──────────────────────────────────────────────────────────
+
+@dataclass
+class evento:
+    p: Punto
+    eventoL: set = field(default_factory=set)
+    eventoC: set = field(default_factory=set)
+    eventoU: set = field(default_factory=set)
+
+    
+@dataclass
+class Linea:
+    A: float
+    B: float
+    C: float
+
+
+# ── Funciones geométricas ─────────────────────────────────────────────────────
+
+def segALinea(segmento):
+    x1 = segmento.p1.x
+    x2 = segmento.p2.x
+    y1 = segmento.p1.y
+    y2 = segmento.p2.y
+    A = y1 - y2
+    B = x2 - x1
+    C = x1*y2 - y1*x2
+    return Linea(A, B, C)
+
+def interseccionLineas(linea1, linea2):
+    detGen = linea1.A*linea2.B - linea1.B*linea2.A
+    if detGen == 0:
+        return None
+    detX = (-(linea1.C))*linea2.B - linea1.B*(-(linea2.C))
+    detY = linea1.A*(-(linea2.C)) - (-(linea1.C))*linea2.A
+    newX = detX/detGen
+    newY = detY/detGen
+    return Punto(newX, newY)
+
+
+def interseccionSeg(segmento1, segmento2) -> list:
+    """
+    Devuelve una lista de Puntos con las intersecciones entre segmento1 y segmento2:
+      - []        → no se intersectan
+      - [p]       → intersección puntual (caso normal o solapamiento de un punto)
+      - [p1, p2]  → solapamiento colineal: p1 y p2 son los DOS extremos del tramo común
+    """
+    lineaSeg1 = segALinea(segmento1)
+    lineaSeg2 = segALinea(segmento2)
+
+    detGen = lineaSeg1.A * lineaSeg2.B - lineaSeg1.B * lineaSeg2.A
+
+    # ── Caso colineal (detGen ≈ 0) ─────────────────────────────────────────
+    if abs(detGen) < 1e-10:
+        # Verificar que los segmentos son realmente colineales
+        prueba = (lineaSeg2.A * segmento1.p1.x
+                + lineaSeg2.B * segmento1.p1.y
+                + lineaSeg2.C)
+        if abs(prueba) > 1e-9:
+            return []  # paralelos pero no colineales → sin intersección
+
+        dx1 = abs(segmento1.p2.x - segmento1.p1.x)
+        dy1 = abs(segmento1.p2.y - segmento1.p1.y)
+
+        if dx1 >= dy1:
+            # Proyectar sobre el eje X para calcular el solapamiento
+            l1 = min(segmento1.p1.x, segmento1.p2.x)
+            r1 = max(segmento1.p1.x, segmento1.p2.x)
+            l2 = min(segmento2.p1.x, segmento2.p2.x)
+            r2 = max(segmento2.p1.x, segmento2.p2.x)
+            ol  = max(l1, l2)   # inicio del solapamiento en X
+            or_ = min(r1, r2)   # fin   del solapamiento en X
+
+            if ol > or_ + 1e-9:
+                return []  # sin solapamiento
+
+            def x_a_punto(x_val: float) -> Punto:
+                if dx1 < 1e-10:
+                    return Punto(x_val, segmento1.p1.y)
+                t = (x_val - segmento1.p1.x) / (segmento1.p2.x - segmento1.p1.x)
+                return Punto(x_val, segmento1.p1.y + t * (segmento1.p2.y - segmento1.p1.y))
+
+            p_inicio = x_a_punto(ol)
+            if abs(ol - or_) < 1e-9:
+                return [p_inicio]           # solapamiento puntual (extremos tocándose)
+            p_fin = x_a_punto(or_)
+            return [p_inicio, p_fin]        # ← AMBOS extremos del tramo solapado
+
+        else:
+            # Proyectar sobre el eje Y
+            l1 = min(segmento1.p1.y, segmento1.p2.y)
+            r1 = max(segmento1.p1.y, segmento1.p2.y)
+            l2 = min(segmento2.p1.y, segmento2.p2.y)
+            r2 = max(segmento2.p1.y, segmento2.p2.y)
+            ol  = max(l1, l2)
+            or_ = min(r1, r2)
+
+            if ol > or_ + 1e-9:
+                return []
+
+            def y_a_punto(y_val: float) -> Punto:
+                if dy1 < 1e-10:
+                    return Punto(segmento1.p1.x, y_val)
+                t = (y_val - segmento1.p1.y) / (segmento1.p2.y - segmento1.p1.y)
+                return Punto(segmento1.p1.x + t * (segmento1.p2.x - segmento1.p1.x), y_val)
+
+            p_inicio = y_a_punto(ol)
+            if abs(ol - or_) < 1e-9:
+                return [p_inicio]
+            p_fin = y_a_punto(or_)
+            return [p_inicio, p_fin]        # ← AMBOS extremos del tramo solapado
+
+    # ── Caso normal (no colineal) ──────────────────────────────────────────
+    inter = interseccionLineas(lineaSeg1, lineaSeg2)
+    if inter is None:
+        return []
+
+    if (segmento1.boundingBox[0] <= inter.x <= segmento1.boundingBox[1] and
+        segmento1.boundingBox[2] <= inter.y <= segmento1.boundingBox[3] and
+        segmento2.boundingBox[0] <= inter.x <= segmento2.boundingBox[1] and
+        segmento2.boundingBox[2] <= inter.y <= segmento2.boundingBox[3]):
+        return [inter]
+    return []
+
+
+# ── procesarEvento ────────────────────────────────────────────────────────────
+
+def procesarEvento(p):
+    global y_sweep
+    y_sweep = p.p.y
+
+    U = p.eventoU
+    L = p.eventoL
+    C = T.buscarContenedores(p.p)
+
+    unionULC = U | L | C
+    unionUC  = U | C
+
+    if len(unionULC) > 1:
+        R.add((p.p, frozenset(unionULC)))
+
+    for seg in L | C:
+        T.eliminar(seg)
+
+    y_sweep = p.p.y - 1e-9
+    for seg in U | C:
+        T.insertar(seg)
+
+    # ── Caso especial: segmentos horizontales en U ──────────────────────────
+    for seg_h in U:
+        if abs(seg_h.p1.y - seg_h.p2.y) < 1e-9:
+            x_izq = min(seg_h.p1.x, seg_h.p2.x)
+            x_der = max(seg_h.p1.x, seg_h.p2.x)
+            for nodo_v in T.buscarEnRangoX(x_izq, x_der):
+                seg_v = nodo_v.valor
+                # interseccionSeg ahora devuelve lista → iterar
+                for inter in interseccionSeg(seg_h, seg_v):
+                    R.add((inter, frozenset([seg_h, seg_v])))
+
+    if not unionUC:
+        sL, sR = T.buscarVecinosDeX(p.p.x)
+        encuentraEvento(sL, sR, p.p)
+    else:
+        nodos_uc = [T.buscarPorIdentidad(s) for s in unionUC if abs(s.p1.y - s.p2.y) > 1e-9]
+        nodos_uc = [n for n in nodos_uc if n is not None]
+
+        if not nodos_uc:
+            pass
+        else:
+            sPrim   = min(nodos_uc, key=lambda n: x_at_y(n.valor, y_sweep))
+            sL      = T.predecesor(sPrim)
+            encuentraEvento(sL, sPrim, p.p)
+
+            sBiPrim = max(nodos_uc, key=lambda n: x_at_y(n.valor, y_sweep))
+            sR      = T.sucesor(sBiPrim)
+            encuentraEvento(sBiPrim, sR, p.p)
+
+    # ── Capturar frame para la animación ────────────────────────────────────
+    tipo = ("U" if U else "") + ("L" if L else "") + ("C" if C else "")
+    frames.append({
+        'y':         p.p.y,
+        'punto':     p.p,
+        'tipo':      tipo or "?",
+        'activos':   {n.valor for n in T.inorden()},
+        'resultado': list(R),
+    })
+
+
+# ── encuentraEvento ───────────────────────────────────────────────────────────
+
+def encuentraEvento(sL, sR, p: Punto):
+    if sL is None or sR is None:
+        return
+
+    # interseccionSeg devuelve lista → iterar sobre todos los puntos
+    for inter in interseccionSeg(sL.valor, sR.valor):
+        debajo = inter.y < p.y - 1e-9
+        mismaAltura_derecha = abs(inter.y - p.y) < 1e-9 and inter.x > p.x + 1e-9
+
+        if debajo or mismaAltura_derecha:
+            if inter not in dictPuntos:
+                global _contador_ev
+                _contador_ev += 1
+                ev = evento(inter, eventoL=set(), eventoC={sL.valor, sR.valor}, eventoU=set())
+                dictPuntos[inter] = ev
+                heapq.heappush(Q, ((-inter.y, inter.x, _contador_ev), ev))
+
+
+# ── Lectura del archivo ───────────────────────────────────────────────────────
+
+with open("3.in", "r", encoding="utf-8") as f:
+    lineas = [
+        line.strip()
+        for line in f
+        if line.strip() and not line.startswith("#")
+    ]
+
+for linea in lineas:
+    x1, y1, x2, y2, name = linea.split()
+    x1, y1, x2, y2 = map(int, (x1, y1, x2, y2))
+
+    segmento = Segmento(name, Punto(x1, y1), Punto(x2, y2)).organAlto()
+    S.add(segmento)
+
+    if segmento.p1 in dictPuntos:
+        dictPuntos[segmento.p1].eventoU.add(segmento)
+    else:
+        dictPuntos[segmento.p1] = evento(segmento.p1, eventoL=set(), eventoC=set(), eventoU={segmento})
+
+    if segmento.p2 in dictPuntos:
+        dictPuntos[segmento.p2].eventoL.add(segmento)
+    else:
+        dictPuntos[segmento.p2] = evento(segmento.p2, eventoL={segmento}, eventoC=set(), eventoU=set())
+
+for ev in dictPuntos.values():
+    _contador_ev += 1
+    heapq.heappush(Q, ((-ev.p.y, ev.p.x, _contador_ev), ev))
+
+# ── Bucle principal ───────────────────────────────────────────────────────────
+
+while Q:
+    _, eventop = heapq.heappop(Q)
+    procesarEvento(eventop)
+
+print("Intersecciones encontradas:")
+for punto, segs in R:
+    nombres = [s.name for s in segs]
+    print(f"  {punto} → {nombres}")
+print(len(R))
+
+# ── Guardar intersecciones en TXT ─────────────────────────────────────────────
+
+txt_filename = "intersecciones3.txt"
+R_ordenado = sorted(R, key=lambda t: (-t[0].y, t[0].x))   # orden barrido: y desc, x asc
+
+with open(txt_filename, "w", encoding="utf-8") as f:
+    f.write(f"Total de intersecciones: {len(R)}\n")
+    f.write("=" * 40 + "\n")
+    for i, (punto, segs) in enumerate(R_ordenado, 1):
+        nombres = sorted(s.name for s in segs)
+        f.write(f"{i:>4}. ({punto.x:.6g}, {punto.y:.6g})  →  {', '.join(nombres)}\n")
+
+print(f"Intersecciones guardadas en {txt_filename}")
+
+
+# ── Animación ────────────────────────────────────────────────────────────────
+
+# Límites del canvas (calculados una sola vez)
+all_x = [c for seg in S for c in (seg.p1.x, seg.p2.x)]
+all_y = [c for seg in S for c in (seg.p1.y, seg.p2.y)]
+x_min, x_max = min(all_x), max(all_x)
+y_min, y_max = min(all_y), max(all_y)
+pad_x = (x_max - x_min) * 0.03 or 1
+pad_y = (y_max - y_min) * 0.03 or 1
+
+fig, ax = plt.subplots(figsize=(10, 7))
+
+def update(i):
+    frame = frames[i]
+    ax.cla()
+    ax.set_xlim(x_min - pad_x, x_max + pad_x)
+    ax.set_ylim(y_min - pad_y, y_max + pad_y)
+    ax.set_aspect('equal')
+
+    # Todos los segmentos en gris claro
+    for seg in S:
+        ax.plot([seg.p1.x, seg.p2.x], [seg.p1.y, seg.p2.y],
+                color='#cccccc', lw=1, zorder=1)
+
+    # Segmentos activos en T resaltados en azul
+    for seg in frame['activos']:
+        ax.plot([seg.p1.x, seg.p2.x], [seg.p1.y, seg.p2.y],
+                color='steelblue', lw=2, zorder=2)
+
+    # Línea de barrido
+    ax.axhline(y=frame['y'], color='limegreen', linestyle='--', lw=1.2,
+               zorder=3, label=f"y = {frame['y']:.2f}")
+
+    # Intersecciones encontradas hasta este momento
+    for punto, segs in frame['resultado']:
+        ax.plot(punto.x, punto.y, 'ro', markersize=5, zorder=4)
+
+    # Punto del evento actual
+    ax.plot(frame['punto'].x, frame['punto'].y, '*',
+            color='gold', markersize=12, zorder=5, markeredgewidth=0.8)
+
+    ax.set_title(
+        f"Evento {i + 1} / {len(frames)}  |  "
+        f"tipo: {frame['tipo']}  |  "
+        f"intersecciones: {len(frame['resultado'])}",
+        fontsize=10
+    )
+
+ani = animation.FuncAnimation(
+    fig, update,
+    frames=len(frames),
+    interval=80,       # ms por frame; bajar para acelerar
+    repeat=False,
+)
+
+plt.tight_layout()
+
+
+# ── Guardar como MP4 ──────────────────────────────────────────────────────────
+
+filename = "barrido3.mp4"
+fps      = 2          # fotogramas por segundo en el video
+
+ani.save(filename, writer="ffmpeg", fps=fps)
+plt.close()
+print(f"Animación guardada como {filename}")

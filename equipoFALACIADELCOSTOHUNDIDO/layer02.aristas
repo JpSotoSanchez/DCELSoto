@@ -1,0 +1,30 @@
+Archivo de aristas
+#############################################
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+#############################################
+s1      p1      s2      f4      s3      s5
+s2      p2      s1      f1      s6      s4
+s3      p2      s4      f4      s5      s1
+s4      p3      s3      f1      s2      s6
+s5      p3      s6      f4      s1      s3
+s6      p1      s5      f1      s4      s2
+s7      p4      s8      f4      s9      s13
+s8      p5      s7      f2      s14     s10
+s9      p5      s10     f4      s11     s7
+s10     p6      s9      f2      s8      s12
+s11     p6      s12     f4      s13     s9
+s12     p7      s11     f2      s10     s14
+s13     p7      s14     f4      s7      s11
+s14     p4      s13     f2      s12     s8
+s15     p8      s16     f4      s17     s25
+s16     p9      s15     f3      s26     s18
+s17     p9      s18     f4      s19     s15
+s18     p10     s17     f3      s16     s20
+s19     p10     s20     f4      s21     s17
+s20     p11     s19     f3      s18     s22
+s21     p11     s22     f4      s23     s19
+s22     p12     s21     f3      s20     s24
+s23     p12     s24     f4      s25     s21
+s24     p13     s23     f3      s22     s26
+s25     p13     s26     f4      s15     s23
+s26     p8      s25     f3      s24     s16

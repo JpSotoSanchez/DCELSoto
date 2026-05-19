@@ -1,0 +1,6 @@
+Archivo de caras LAYER03
+#######################
+Nombre  Interno Externo
+#######################
+f1_out	[s31]	None
+f1	None	s31_twin

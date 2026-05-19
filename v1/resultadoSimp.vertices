@@ -1,0 +1,15 @@
+#################################
+Nombre          x          y          Incidente
+#################################
+Vertice1        0.0000     0.0000     s21
+Vertice2        10.0000    10.0000    s22
+Vertice3        0.0000     0.0000     Arista1
+Vertice4        0.0000     10.0000    s21
+Vertice5        8.0000     5.0000     s31
+Vertice6        10.0000    10.0000    Arista2
+Vertice7        10.0000    0.0000     s51
+Vertice8        2.0000     5.0000     Arista3
+Vertice9        0.0000     10.0000    Arista4
+Vertice10       10.0000    0.0000     Arista4_pareja
+Vertice11       3.8462     3.8462     Arista6_pareja
+Vertice12       5.0000     3.1250     Arista9_pareja

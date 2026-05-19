@@ -1,0 +1,9 @@
+# Nombre Origen Twin Cara Next Prev
+e1 V1 e2 C1 e3 e7
+e2 V2 e1 None e8 e4
+e3 V2 e4 C1 e5 e1
+e4 V3 e3 None e2 e6
+e5 V3 e6 C1 e7 e3
+e6 V4 e5 None e4 e8
+e7 V4 e8 C1 e1 e5
+e8 V1 e7 None e6 e2

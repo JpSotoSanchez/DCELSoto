@@ -1,0 +1,15 @@
+#############################################
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+#############################################
+r_e1    r_v1    r_e1_t  f_roja  r_e2    r_e6
+r_e2    r_v2    r_e2_t  f_roja  r_e3    r_e1
+r_e3    r_v3    r_e3_t  f_roja  r_e4    r_e2
+r_e4    r_v4    r_e4_t  f_roja  r_e5    r_e3
+r_e5    r_v5    r_e5_t  f_roja  r_e6    r_e4
+r_e6    r_v6    r_e6_t  f_roja  r_e1    r_e5
+r_e1_t  r_v2    r_e1    None    r_e6_t  r_e2_t
+r_e2_t  r_v3    r_e2    None    r_e1_t  r_e3_t
+r_e3_t  r_v4    r_e3    None    r_e2_t  r_e4_t
+r_e4_t  r_v5    r_e4    None    r_e3_t  r_e5_t
+r_e5_t  r_v6    r_e5    None    r_e4_t  r_e6_t
+r_e6_t  r_v1    r_e6    None    r_e5_t  r_e1_t

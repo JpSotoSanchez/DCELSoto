@@ -1,0 +1,6 @@
+Archivo de caras
+#######################
+Nombre  Interno        Externo
+#######################
+caraExterior   [arista01a]     None
+cara01    None          arista01b

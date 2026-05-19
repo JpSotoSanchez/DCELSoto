@@ -1,0 +1,7 @@
+Archivo de caras
+#######################
+Nombre	Interno	Externo
+#######################
+F0	[s11_P]	None
+F3	None	s22_P
+F4	[s12_P]	s62_PP

@@ -1,0 +1,13 @@
+Nombre  Origen  Pareja  Cara    Sigue   Antes
+s71     p71     s72     f9      s73     s711
+s72     p72     s71     None    s712    s74
+s73     p72     s74     f9      s75     s71
+s74     p73     s73     None    s72     s76
+s75     p73     s76     f9      s77     s73
+s76     p74     s75     None    s74     s78
+s77     p74     s78     f9      s79     s75
+s78     p75     s77     None    s76     s710
+s79     p75     s710    f9      s711    s77
+s710    p76     s79     None    s78     s712
+s711    p76     s712    f9      s71     s79
+s712    p71     s711    None    s710    s72
