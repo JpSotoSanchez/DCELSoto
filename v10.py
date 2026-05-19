@@ -1254,7 +1254,7 @@ def main():
     try:
         visualizar_resultado_interactivo(vertices, aristas, caras_finitas, caras_activas)
     except Exception as e:
-        print(e)
+        pass
 
 if __name__ == "__main__":
     main()
