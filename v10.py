@@ -1020,6 +1020,8 @@ def main():
     DEBUG_LOG = open("debug/debug_overlay.log", "w", encoding="utf-8")
     DEBUG_LOG.write("=== INICIO DEL PROCESO DE OVERLAY ===\n")
 
+    listaLayers = []
+
     #67
     #listaLayers = ["equipo67/layer01", "equipo67/layer02", "equipo67/layer03"]
     
@@ -1062,7 +1064,6 @@ def main():
     
     #soto
     #listaLayers = ["equipoSOTO/layerSoto1", "equipoSOTO/layerSoto2", "equipoSOTO/layerSoto3"]
-
 
 
     todos_los_segmentos = []
@@ -1248,8 +1249,12 @@ def main():
 
     # Visualizaciones (se mantienen)
     visualizar_resultado_final(vertices, aristas, caras_finitas)
-    # Sustituye la llamada a Pygame
-    visualizar_resultado_interactivo(vertices, aristas, caras_finitas, caras_activas)
+
+    # Sustituye la llamada a la version interactiva
+    try:
+        visualizar_resultado_interactivo(vertices, aristas, caras_finitas, caras_activas)
+    except Exception as e:
+        print(e)
 
 if __name__ == "__main__":
     main()
